@@ -1,6 +1,6 @@
 describe('Google', () => {
 
-    before(() => {
+    it('Открыть сайт', () => {
         cy.visit('https://google.ru/');
     });
 
