@@ -92,7 +92,7 @@ describe('Google', () => {
 
 В `Cypress` выбираем `google.spec.js`
 
-Видим что в `Chrome` под управлением `Cypress` открылся Google с сообщением о политике Cookie.
+Видим что в `Chrome` под управлением `Cypress` открылся https://google.ru/ с сообщением о политике Cookie.
 
 # 6. Принимаем куки
 
