@@ -17,7 +17,7 @@
 <details>
   <summary>Показать как 🤔</summary>
 
-  ![](gif/remove_tutorial_specs.gif)
+  Скоро будет короткое мини-видео 😂
   
 </details>
 
@@ -34,7 +34,7 @@
 <details>
   <summary>Показать как 🤔</summary>
 
-  ![](gif/remove_tutorial_specs.gif)
+  Скоро будет короткое мини-видео 😂
   
 </details>
 
@@ -58,7 +58,7 @@
 <details>
   <summary>Показать как 🤔</summary>
 
-  ![](gif/remove_tutorial_specs.gif)
+  Скоро будет короткое мини-видео 😂
   
 </details>
 
