@@ -144,39 +144,13 @@ describe('Google', () => {
 
 # 8. Проверяем результаты поиска 
 
-Находим селектор для ссылки из результатов поиска с содержимым `Google Ассистент`.
+Находим селектор для ссылки из результатов поиска с содержимым `Google Ассистент`
 
 Обновляем код:
 ```javascript
 describe('Google', () => {
 
     it('Открыть сайт', () => {
-        cy.visit('https://google.ru/');
-    });
-
-    it('Принять cookie', () => {
-        cy.get('#L2AGLb > .QS5gu').click();
-    });
-
-    it('Ввести запрос', () => {
-        cy.get('.gLFyf').type('Привет google{enter}');
-    });
-
-    it('Ассистент найден', () => {
-        cy.contains('Google Ассистент').should('be.visible');
-    });
-
-});
-```
-
-# 9. Наводим красоту
-
-Заменим первый шаг на хук `before`
-
-```javascript
-describe('Google', () => {
-
-    before(() => {
         cy.visit('https://google.ru/');
     });
 
