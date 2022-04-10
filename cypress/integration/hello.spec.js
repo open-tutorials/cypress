@@ -6,7 +6,6 @@ describe('Привет Cypress', () => {
 
     it('подписаться на рассылку', () => {
         cy.get('#input-footer-email')
-            .click()
             .type('test@test.ru');
 
         cy.get('.styled__Submit-sc-10l91w3-12').click();
