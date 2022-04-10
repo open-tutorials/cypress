@@ -93,7 +93,7 @@
 ```javascript
 describe('Привет Cypress', () => {
 
-    it('Открыть сайт', () => {
+    it('открыть сайт', () => {
         cy.visit('https://www.cypress.io/');
     });
 
@@ -118,17 +118,16 @@ describe('Привет Cypress', () => {
 
 Наводим на поле и копируем код селектора.
 
-Обновляем код:
+Обновляем код теста:
 ```javascript
 describe('Привет Cypress', () => {
 
-    it('Открыть сайт', () => {
+    it('открыть сайт', () => {
         cy.visit('https://www.cypress.io/');
     });
 
-    it('subscribe', () => {
+    it('подписаться на рассылку', () => {
         cy.get('#input-footer-email')
-            .click()
             .type('test@test.ru');
     })
 });
@@ -138,7 +137,7 @@ describe('Привет Cypress', () => {
 
 Находим селектор для кнопки `Subscribe`
 
-Обновляем код:
+Обновляем код теста:
 ```javascript
 describe('Привет Cypress', () => {
 
@@ -146,9 +145,8 @@ describe('Привет Cypress', () => {
         cy.visit('https://www.cypress.io/');
     });
 
-    it('subscribe', () => {
+    it('подписаться на рассылку', () => {
         cy.get('#input-footer-email')
-            .click()
             .type('test@test.ru');
 
         cy.get('.styled__Submit-sc-10l91w3-12').click();
@@ -160,7 +158,7 @@ describe('Привет Cypress', () => {
 
 Находим селектор для элемента с сообщением `Thanks for submitting the form.`
 
-Обновляем код:
+Обновляем код теста:
 ```javascript
 describe('Привет Cypress', () => {
 
@@ -168,7 +166,7 @@ describe('Привет Cypress', () => {
         cy.visit('https://www.cypress.io/');
     });
 
-    it('подписаться', () => {
+    it('подписаться на рассылку', () => {
         cy.get('#input-footer-email')
             .type('test@test.ru');
 
