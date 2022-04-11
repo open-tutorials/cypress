@@ -12,5 +12,6 @@ describe('Привет Cypress', () => {
 
         cy.get('.Subscribe__Label-sc-1hdnlrs-1')
             .should('have.text', 'Thanks for submitting the form.');
-    })
+    });
+    
 });

@@ -88,7 +88,7 @@
 
 Из папки `cypress/integration` удаляем `1-getting-started` и `2-advanced-examples`
 
-В папке `cypress/integration` создаем файл `hello.spec.js` содержимым:
+В папке `cypress/integration` создаем файл `hello-cypress.spec.js` содержимым:
 
 ```javascript
 describe('Привет Cypress', () => {
@@ -109,7 +109,7 @@ describe('Привет Cypress', () => {
 
 В терминале выполняем команду `npm run cypress open`
 
-В окне `Cypress` выбираем `hello.spec.js`
+В окне `Cypress` выбираем `hello-cypress.spec.js`
 
 Видим что в `Chrome` открылся https://www.cypress.io/
 
@@ -216,13 +216,15 @@ cy.get('#input-footer-email')
 
 ## Basic авторизация
 
-Некоторые тестовые задания скрывают под `Basic` авторизаций.
+Некоторые тестовые задания скрываются под `Basic` авторизаций.
 ```javascript
-cy.visit('https://www.cypress.io/', {
-  auth: {
-    username: 'user',
-    password: 'password'
-  },
+it('открыть сайт', () => {
+  cy.visit('https://www.cypress.io/', {
+    auth: {
+      username: 'user',
+      password: 'password'
+    }
+  });
 });
 ```
 
