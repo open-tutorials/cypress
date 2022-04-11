@@ -185,7 +185,7 @@ describe('Привет Cypress', () => {
 });
 ```
 
-## 9. Запускаем headless
+## 9. Запускаем `Cypress` в `Headless`
 
 Закрываем `Cypress` в терминале `CTRL+C` и выполняем команду `npm run cypress run`
 
@@ -234,6 +234,7 @@ https://docs.cypress.io/api/commands/visit#Add-basic-auth-headers
 * [NodeJS](https://ru.wikipedia.org/wiki/Node.js) — среда выволнения кода на `Java Script`.
 * [npm](https://ru.wikipedia.org/wiki/Npm) — менеджер пакетов, входящий в состав `NodeJS`.
 * [package.json](https://www.tech-wiki.online/ru/package-json.html) — манифест прокта на `NodeJS`.
+* [Headless](https://bureau.ru/soviet/20190418/) — это полноценный браузер без графического интерфейса.
 
 # Артефакты
 
