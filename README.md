@@ -216,7 +216,7 @@ cy.get('#input-footer-email')
 
 ## Basic авторизация
 
-Некоторые тестовые задания скрывают под Basic авторизаций.
+Некоторые тестовые задания скрывают под `Basic` авторизаций.
 ```javascript
 cy.visit('https://www.cypress.io/', {
   auth: {
