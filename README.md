@@ -233,7 +233,7 @@ https://docs.cypress.io/api/commands/visit#Add-basic-auth-headers
 * [Visual Code](https://ru.wikipedia.org/wiki/Visual_Studio_Code) — редактор исходного кода.
 * [NodeJS](https://ru.wikipedia.org/wiki/Node.js) — среда выволнения кода на `Java Script`.
 * [npm](https://ru.wikipedia.org/wiki/Npm) — менеджер пакетов, входящий в состав `NodeJS`.
-* [package.json](https://www.tech-wiki.online/ru/package-json.html) — манифест прокта на `NodeJS`.
+* [package.json](https://www.tech-wiki.online/ru/package-json.html) — [манифест](https://en.wikipedia.org/wiki/Manifest_file) прокта на `NodeJS`.
 * [Headless](https://bureau.ru/soviet/20190418/) — это полноценный браузер без графического интерфейса.
 
 # Артефакты
