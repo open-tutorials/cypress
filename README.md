@@ -187,17 +187,17 @@ describe('Привет Cypress', () => {
 
 ## 9. Запускаем headless
 
-Закрываем Cypress в терминале `CTRL+C` и выполняем команду `npm run cypress run`
+Закрываем `Cypress` в терминале `CTRL+C` и выполняем команду `npm run cypress run`
 
 Ждем и смотрим отчет.
 
-Попробуй сломать тест, например измени сообщение
+Пробуем сломать тест, меняем сообщение
 
 ```javascript
 .should('have.text', 'Thanks! for submitting the form.');
 ```
 
-И снова запусти `npm run cypress run`
+И снова запускаем `npm run cypress run`
 
 Бинго 🥳 А теперь поиграйся с https://automationteststore.com/
 
@@ -216,7 +216,7 @@ cy.get('#input-footer-email')
 
 ## Basic авторизация
 
-Некоторые тестовые задания скрываю по Basic авторизаций
+Некоторые тестовые задания скрывают под Basic авторизаций.
 ```javascript
 cy.visit('https://www.cypress.io/', {
   auth: {
@@ -228,6 +228,12 @@ cy.visit('https://www.cypress.io/', {
 
 https://docs.cypress.io/api/commands/visit#Add-basic-auth-headers
 
+# Термины
+
+* [Visual Code](https://ru.wikipedia.org/wiki/Visual_Studio_Code) — редактор исходного кода.
+* [NodeJS](https://ru.wikipedia.org/wiki/Node.js) — среда выволнения кода на `Java Script`.
+* [npm](https://ru.wikipedia.org/wiki/Npm) — менеджер пакетов, входящий в состав `NodeJS`.
+* [package.json](https://www.tech-wiki.online/ru/package-json.html) — манифест прокта на `NodeJS`.
 
 # Артефакты
 
