@@ -237,7 +237,7 @@ it('открыть сайт', () => {
 
 https://docs.cypress.io/api/commands/visit#Add-basic-auth-headers
 
-## Назойливая `Mocha`
+## Назойливая `mocha`
 
 `Visual Code` постоянно добавляет строчку `const { it } = require("mocha");` и код не работает?
 
