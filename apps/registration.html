@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <title>Регистрация в системе</title>
+</head>
+
+<body>
+    <div>
+        <textarea style="display: none"></textarea>
+        <header>
+            <p>Сервис работы с документами.</p>
+        </header>
+        <div>
+            <div>
+                <div>
+                    <h1>Пройдите регистрацию</h1>
+                    <form class="registration">
+                        <header>Это займет 1 минуту</header>
+                        <fieldset name="personal_data">
+                            <input name="first_name" placeholder="Имя">
+                            <input name="last_name" placeholder="Фамилия">
+                        </fieldset>
+                        <textarea name="about" placeholder="Коротко о Вас"></textarea>
+                        <fieldset name="credentials">
+                            <input name="email" placeholder="Email">
+                            <input name="password" type="password" placeholder="Пароль">
+                        </fieldset>
+                        <button type="reset" data-cy="reset">Сбросить</button>
+                        <button type="submit">Продолжить</button>
+                    </form>
+                    <h1>Или войдите</h1>
+                    <form class="login">
+                        <fieldset name="credentials">
+                            <input name="email" placeholder="Email">
+                            <input name="password" type="password" placeholder="Пароль">
+                        </fieldset>
+                        <button type="reset" data-cy="reset">Сбросить</button>
+                        <button type="submit">Войти</button>
+                        <footer>
+                            <p>Забыл пароль? <a href="">Восстановить</a></p>
+                        </footer>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Все права защищены.</p>
+        </footer>
+    </div>
+    <script>
+        function getId() {
+            var rnd = 100000 + Math.floor(Math.random() * 100000);
+            var hash = [];
+            for (var i = rnd; i > 1; i = Math.floor(i / 10)) {
+                var digit = i % 10;
+                hash.push(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'][digit]);
+                hash.push(digit);
+            }
+            return hash.join('');
+        }
+        var elements = document.querySelectorAll(['input', 'form', 'button']);
+        for (var e of elements) {
+            e.setAttribute('id', getId());
+        }
+    </script>
+</body>
+
+</html>
