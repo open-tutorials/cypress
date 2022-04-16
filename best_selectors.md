@@ -45,7 +45,7 @@
 
 ## 2. Скачаем тестовое приложение
 
-Что бы скачать файлы тестового приложения установим утилиту [Wget](https://ru.wikipedia.org/wiki/Wget) через терминал `npm install wget`
+Что бы скачать файлы тестового приложения установим утилиту [Wget](https://ru.wikipedia.org/wiki/Wget) через терминал `npm install node-wget`
 
 И снова, для удобства в `package.json` добавляем команду `wget` в раздел `scripts`:
 
@@ -63,10 +63,10 @@
 
 В терминале выполняем команду:
 ```bash
-npm run wget -d ./apps https://github.com/breslavsky/hello-cypress/apps/registration.html
+npm run wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/main/apps/tesla.html
 ```
 
-Проверяем, что появился файл `~/apps/registration.html`
+Проверяем, что появился файл `~/apps/tesla.html`
 
 `~` — так обозначается путь до корневой папки проекта.
 
@@ -74,9 +74,9 @@ npm run wget -d ./apps https://github.com/breslavsky/hello-cypress/apps/registra
 
 В терминале выполняем команду `npm start`
 
-Открываем в `Chrome` http://localhost:3000
+Открываем в `Chrome` URL http://localhost:3000
 
-Видим список файлов, открываем файл `apps/registration.html`
+Видим список файлов, открываем файл `apps/tesla.html`
 
 ## 5. Запускаем тест приложения
 
@@ -86,7 +86,7 @@ npm run wget -d ./apps https://github.com/breslavsky/hello-cypress/apps/registra
 describe('Регистрация', () => {
 
 it('зарегистрироваться', () => { 
-cy.visit('http://localhost:3000/apps/registration.html'); 
+cy.visit('http://localhost:3000/apps/tesla.html'); 
 });
 
 });
@@ -111,7 +111,7 @@ cy.visit('http://localhost:3000/apps/registration.html');
 describe('Регистрация', () => {
 
     it('зарегистрироваться', () => {
-        cy.visit('http://localhost:3000/apps/registration.html');
+        cy.visit('http://localhost:3000/apps/tesla.html');
         cy.get('#b1h7e4i8d3')
             .type('Иванов');
     });
@@ -242,7 +242,7 @@ cy.get('[data-cy=register]').click();
 
 Переключите язык приложения добавлением параметра `lang` в URL:
 ```javascript
-cy.visit('http://localhost:3000/apps/registration.html?lang=en');
+cy.visit('http://localhost:3000/apps/tesla.html?lang=en');
 ```
 
 Тест больше не проходит, почему?
