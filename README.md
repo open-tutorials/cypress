@@ -37,5 +37,5 @@
 
 # Путь для ассетов
 ```
-https://github.com/breslavsky/hello-cypress/blob/main
+https://raw.githubusercontent.com/breslavsky/hello-cypress/main
 ```
