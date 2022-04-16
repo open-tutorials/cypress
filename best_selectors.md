@@ -75,11 +75,7 @@ npm run wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypr
   <summary>Как поиграться с wget 🤟</summary>
   <p></p>
 
-  Скачаем `Google`
-
-```bash
-npm run wget -- -d google.html https://google.com/
-```
+  Скачаем `Google` в терминале `npm run wget -- -d google.html https://google.com/`
 
   В корне проекта должен появится файл `google.html`, что там?
 
