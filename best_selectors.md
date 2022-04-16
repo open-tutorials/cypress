@@ -73,14 +73,15 @@ npm run wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypr
 
 <details>
   <summary>Как поиграться с wget 🤟</summary>
+  <p></p>
 
-  <p>Скачаем `Google`</p>
+  Скачаем `Google`
 
 ```bash
 npm run wget -- -d google.html https://google.com/
 ```
 
-  <p>В корне проекта должен появится файл `google.html`, что там?</p>
+  В корне проекта должен появится файл `google.html`, что там?
 
 </details>
 
