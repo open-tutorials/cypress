@@ -35,7 +35,12 @@
 7. Развиваем ИТ сленг
 8. [Совместная работа в `Visual Code`](visual_code_share.md)
 
-# Путь для ассетов
+# Базовый URL
+```
+https://github.com/breslavsky/hello-cypress/blob/main/
+```
+
+# URL для картинок
 ```
 https://raw.githubusercontent.com/breslavsky/hello-cypress/main
 ```
