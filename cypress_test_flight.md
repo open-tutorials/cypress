@@ -15,13 +15,7 @@
 
 # Шаги
 
-## 1. Ставим `Visual Code`
-
-Ищем в Google `Visual Code` Скачиваем и устанавливаем.
-
-Запускаем `Visual Code`
-
-## 2. Ставим `NodeJS`
+## 1. Ставим `NodeJS`
 
 `NodeJS` - среда выполнения `Java Script` и менеджер пакетов `npm`
 
@@ -40,6 +34,12 @@
   Потом выполните команду `node test.js`
 
 </details>
+
+## 2. Ставим `Visual Code`
+
+Ищем в Google `Visual Code` Скачиваем и устанавливаем.
+
+Запускаем `Visual Code`
 
 ## 3. Инициализуем проект
 
