@@ -9,6 +9,11 @@
 * Вы инициалировали чистый проект в папке `%/projects/cypress/best_selectors`
 * Вы установили `Cypress` в проект
 * `Cypress` запускается через терминал
+* Проверьте, что у Вас открываются сайты:
+  * https://nodejs.org/
+  * https://www.npmjs.com/
+  * https://github.com/
+  * https://raw.githubusercontent.com/
 
 Выполните 1-4 шаг из мастер-класса [Первый полет на `Cypress`](cypress_test_flight.md)
 

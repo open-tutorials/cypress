@@ -10,6 +10,12 @@
 * Вы знаете как устанавливать программы на компьютере.
 * У Вас права администратор на компьютере.
 * Вы знаете как запустить [терминал командной строки](https://www.youtube.com/watch?v=M4CkQuOAFjw)
+* Проверьте, что у Вас открываются сайты:
+  * https://nodejs.org/
+  * https://www.npmjs.com/
+  * https://github.com/
+  * https://raw.githubusercontent.com/
+  * https://code.visualstudio.com/
 
 Есть вопросы? Пишите в канал поддержки https://chat.epic1h.com/
 
