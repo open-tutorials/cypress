@@ -43,5 +43,5 @@ https://github.com/breslavsky/hello-cypress/blob/main/
 
 # URL для картинок
 ```
-https://raw.githubusercontent.com/breslavsky/hello-cypress/main
+https://raw.githubusercontent.com/breslavsky/hello-cypress/main/
 ```
