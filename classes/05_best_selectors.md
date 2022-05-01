@@ -99,7 +99,7 @@ npm run wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypr
 
 ## 4. Запускаем тест приложения
 
-Создаем файл `cypress/integration/best-selectors.spec.js`:
+Создаем файл `cypress/integration/best-selectors.spec.js`
 
 ```javascript
 describe('Регистрация', () => {
