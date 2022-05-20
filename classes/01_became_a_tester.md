@@ -463,4 +463,3 @@ POST http://localhost:3000/api/login → 404
 </details>
 
 **Как можно использовать вкладку `Network` в `DevTools` для тестирования?**
-
