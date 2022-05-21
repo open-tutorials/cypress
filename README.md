@@ -37,7 +37,7 @@
 
 # Базовый URL
 ```
-https://github.com/breslavsky/hello-cypress/blob/main
+https://github.com/breslavsky/hello-cypress/blob/main/
 ```
 
 # URL для картинок
