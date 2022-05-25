@@ -29,10 +29,10 @@
 # 1. Окружение
 
 * **Устройство:** MacBook M1 Pro (14-inch, 2021) / 32 GB RAM
-* **ОС:** macOS Monterey version: 12.0.1
-* **Экран:** Built-in Liquid Retina XDR Display 3024x1964
-* **Браузер:** Google Chrome 100.0.4896.88 (Official Build) (arm64)
-* [**Параметры сети:**](https://whatismyipaddress.com/) `90.187.49.33`, 100MB, Vodafone Germany
+* **ОС:** macOS Monterey 12.0.1
+* **Экран:** Built-in XDR Display 3024x1964
+* **Браузер:** Google Chrome 100.0.4896.88 (arm64)
+* **Параметры сети:** 90.187.49.33, 100MB, Vodafone Germany
 
 # 2. Предварительные условия
 
