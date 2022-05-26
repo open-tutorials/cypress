@@ -21,15 +21,15 @@
 - [ ] Запусти **OBS**.
 - [ ] В области **Источники** выбери **Запись экрана**.
 
-<img width="463" src="../img/obs/select_display_capture.png">
+<img width="463" height="435" src="../img/obs/select_display_capture.png">
 
 - [ ] В окне добавления нового источника ничего не меняя нажми **OK**.
 
-<img width="380" src="../img/obs/add_display_capture.png">
+<img width="380" height="338" src="../img/obs/add_display_capture.png">
 
 - [ ] Выбери нужный монитор и нажми **OK**.
 
-<img width="754" src="../img/obs/select_display.png">
+<img width="754" height="307" src="../img/obs/select_display.png">
 
 - [ ] Настрой размеры и позицию экрана на сцене.
 
@@ -38,27 +38,41 @@
 ## Добавление камеры
 - [ ] В области **Источники** выбери **Камера**.
 
-<img width="256" src="../img/obs/select_video_capture.png">
+<img width="256" height="162" src="../img/obs/select_video_capture.png">
 
 - [ ] В окне добавления нового источника ничего не меняя нажми **OK**.
 
-<img width="380" src="../img/obs/add_display_capture.png">
+<img width="380" height="338" src="../img/obs/add_display_capture.png">
 
 - [ ] Выбери нужную камеру и **OK**.
 
-<img width="741" src="../img/obs/select_camera.png">
+<img width="741" height="231" src="../img/obs/select_camera.png">
 
 - [ ] Настрой размеры и позицию камеры на сцене.
 
-<img width="100%" src="../img/obs/fit_camera.gif">
+<img width="673" height="486" src="../img/obs/fit_camera.gif">
 
 ## Добавление имени
 - [ ] В области **Источники** выбери **Текст**.
 
+<img width="245" src="../img/obs/select_text.png">
+
+- [ ] В окне добавления нового источника ничего не меняя нажми **OK**.
+
+<img width="373" src="../img/obs/add_text.png">
+
+- [ ] Введи свое имя на русском языке.
+
+<img width="701" src="../img/obs/write_name.png">
+
+- [ ] Настрой размеры и позицию текста на сцене.
+
+<img width="1914" src="../img/obs/fit_name.gif">
+
 ## Запуск виртуальной камеры
 - [ ] Запусти виртуальную камеру **OBS**.
 
-<img width="316" src="../img/obs/start_obs.png">
+<img width="336" height="195" src="../img/obs/start_obs.png">
 
 - [ ] Сверни приложение **OBS**.
 
