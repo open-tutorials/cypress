@@ -46,3 +46,7 @@ https://github.com/breslavsky/hello-cypress/blob/main/
 ```
 https://raw.githubusercontent.com/breslavsky/hello-cypress/main/
 ```
+
+```
+ffmpeg -i my-video.mov -vcodec h264 -acodec mp2 my-video.mp4
+```
