@@ -12,31 +12,31 @@
             <a href="?lang=en">EN</a> |
             <a href="?lang=ru">RU</a>
         </header>
-        <div>
+        <div class="main">
             <div>
                 <div>
                     <h1 data-18n-en="Sign-up">Пройдите регистрацию</h1>
-                    <form class="registration">
+                    <form class="registration" onsubmit="return submitForm('Вы зарегистрированы')">
                         <header data-18n-en="It is required only one minute">Это займет 1 минуту</header>
                         <fieldset name="personal_data">
-                            <input name="first_name" placeholder="Имя" data-18n-en="First Name:placeholder">
-                            <input name="last_name" placeholder="Фамилия" data-18n-en="Last Name:placeholder">
+                            <input name="first_name" placeholder="Имя" required data-18n-en="First Name:placeholder">
+                            <input name="last_name" placeholder="Фамилия" required data-18n-en="Last Name:placeholder">
                         </fieldset>
                         <textarea name="about" placeholder="Коротко о Вас"
                             data-18n-en="About yourself:placeholder"></textarea>
                         <fieldset name="credentials">
-                            <input name="email" placeholder="Email">
-                            <input name="password" type="password" placeholder="Пароль"
+                            <input name="email" placeholder="Email" required>
+                            <input name="password" type="password" placeholder="Пароль" required
                                 data-18n-en="Password:placeholder">
                         </fieldset>
                         <button type="reset" data-cy="reset" data-18n-en="Reset">Сбросить</button>
                         <button type="submit" data-18n-en="Continue">Продолжить</button>
                     </form>
                     <h1 data-18n-en="Sign-in">Или войдите</h1>
-                    <form class="login">
+                    <form class="login" onsubmit="return submitForm('Вы вошли')">
                         <fieldset name="credentials">
-                            <input name="email" placeholder="Email">
-                            <input name="password" type="password" placeholder="Пароль"
+                            <input name="email" placeholder="Email" required>
+                            <input name="password" type="password" placeholder="Пароль" required
                                 data-18n-en="Password:placeholder">
                         </fieldset>
                         <button type="reset" data-cy="reset" data-18n-en="Reset">Сбросить</button>
@@ -56,6 +56,10 @@
         </footer>
     </div>
     <script>
+        function submitForm(title) {
+            document.querySelector('.main').innerHTML = `<div class="success">${title}</div>`
+            return false;
+        }
         function getHash() {
             var rnd = 100000 + Math.floor(Math.random() * 100000);
             var hash = [];

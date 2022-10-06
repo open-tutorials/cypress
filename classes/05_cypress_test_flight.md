@@ -19,15 +19,31 @@
 
 ## Реагируй на пункты
 
-<img width="300" src="../img/tutorial/shit.gif">
+<img width="500" src="../img/tutorial/shit.gif">
 
 ## Оставляй комментарии и вопросы
 
-<img width="300" src="../img/tutorial/commenting.gif">
+<img width="500" src="../img/tutorial/commenting.gif">
 
 ## В конце оставь фидбек
 
-<img width="300" src="../img/tutorial/feedback.gif">
+<img width="500" src="../img/tutorial/feedback.gif">
+
+# 😍 Живая обратная связь
+
+Каждый вторник и четверг я провожу бесплатные онлайн стендапы в Zoom.
+
+Если у тебя есть вопрос или проблема, подключайся:
+- [x] В **18.00** по Москве нажми на [ссылку](https://us05web.zoom.us/j/6630696938?pwd=UktVaVkxL0puajd5T3ZicHZPY2FuUT09)
+- [x] Введи пароль `xyz`
+- [x] Подними руку или напиши вопрос в чате.
+- [x] В случае необходимости, будь готов пошарить свой экран.
+
+@[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
+
+Что бы следить за аннонсами новых туториалов
+* Группа в VK https://vk.com/epic_one_hour
+* Телеграмм канал https://t.me/epic_one_hour 
 
 *****
 
@@ -45,15 +61,21 @@
 - [x] Проверь что в папке проекта появился файл `package.json`
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/fumdib2k?inline=true" type="video/mp4">
 </video>
 </details>
 
-* ❓ Что такое инициализация проекта?
-* ❓ Зачем нужен файл `package.json`?
+> Главный навык хорошего IT специалиста - уметь гуглить!
+>
+> Научись формулировать вопросы и получать ответы самостоятельно.
+>
+> Начни вести свой собственный словарь терминов.
+
+* ❓ Что такое [инициализация](https://www.google.com/search?q=%D0%B8%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F) проекта?
+* ❓ Зачем нужен [файл `package.json`](https://www.google.com/search?q=%D0%97%D0%B0%D1%87%D0%B5%D0%BC+%D1%84%D0%B0%D0%B9%D0%BB+package.json)?
 
 <details>
   <summary>Крутая фишка 😎</summary>
@@ -76,10 +98,10 @@
   }
 ...
 ```
-- [x] Не забудь сохранить файл `CTRL` + `S`
+- [x] Не забудь сохранить файл
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/RHTCffXM?inline=true" type="video/mp4">
@@ -89,7 +111,7 @@
 * ❓ Зачем нужна папка `node_modules`?
 * ❓ Какой версии установлен **Cypress**?
 * ❓ Зачем нужен раздел **dependencies** в `package.json`?
-* ❓ Что такой **JSON**?
+* ❓ Что такое **JSON**?
 
 <details>
   <summary>Зачем добавлять команду в `package.json`?</summary>
@@ -112,7 +134,7 @@
 - [x] Выполни команду `npm run cypress open`
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/egG3Ma3c?inline=true" type="video/mp4">
@@ -131,7 +153,7 @@
 - [x] Перезапусти тест еще раз.
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/Sw73qKOH?inline=true" type="video/mp4">
@@ -157,7 +179,7 @@ cy.visit('https://www.cypress.io/');
 ```
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/Sk48Ckuw?inline=true" type="video/mp4">
@@ -192,6 +214,7 @@ cy.visit('https://www.cypress.io/');
 ## 6. Отключаем перехват ошибок сайта
 
 > На самом сайте Cypress есть ошибка в коде, которая не влияет на его функциональнось, но она мешает тесту успешно выполниться.
+> 
 > Что бы наш тест проходил, нужно отключить перехват ошибок.
 
 - [x] Добавь в конец файла `cypress/support/index.js`:
@@ -205,7 +228,7 @@ return false;
 - [x] Отформатируй код и сохрани файл
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/mJXN2MxL?inline=true" type="video/mp4">
@@ -240,7 +263,7 @@ describe('Функции сайта Cypress', () => {
 - [x] Переключись на окно Cypress.
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/5bLdLRM5?inline=true" type="video/mp4">
@@ -270,7 +293,7 @@ describe('Функции сайта Cypress', () => {
 - [x] Не забудь отформатировать код!
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/tDiRq2JK?inline=true" type="video/mp4">
@@ -301,7 +324,7 @@ describe('Функции сайта Cypress', () => {
 - [x] Не забудь отформатировать код!
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/jfbTFCjy?inline=true" type="video/mp4">
@@ -319,7 +342,7 @@ describe('Функции сайта Cypress', () => {
 - [x] Выполи команду `npm run cypress run`
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/D4HgVHx0?inline=true" type="video/mp4">
@@ -339,7 +362,7 @@ describe('Функции сайта Cypress', () => {
 - [x] Снова запусти Cypress `npm run cypress run`
 
 <details>
-  <summary>Не получается 🤯</summary>
+  <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
   <source src="https://s.epic1h.com/api/public/dl/2h0DxcZY?inline=true" type="video/mp4">
@@ -351,6 +374,8 @@ describe('Функции сайта Cypress', () => {
 Бинго 🥳
 
 - [x] Сделай так, что бы тест снова работал.
+
+*****
 
 # 🤩 Хочу еще
 
@@ -373,13 +398,13 @@ cy.get('#input-footer-email')
 
 Некоторые сайты могут скрываться под [Basic](https://docs.cypress.io/api/commands/visit#Add-basic-auth-headers) авторизаций. 
 
-Например, попробуй зайти: https://finance.dev.fabrique.studio/accounts/login/
+Например, попробуй зайти: http://httpbin.org/basic-auth/foo/bar
 
 ```javascript
-cy.visit('https://www.cypress.io/', {
+cy.visit('http://httpbin.org/basic-auth/foo/bar', {
   auth: {
-    username: 'user',
-    password: 'password'
+    username: 'foo',
+    password: 'bar'
   }
 });
 ```
@@ -413,12 +438,11 @@ cy.visit('https://www.cypress.io/', {
 * [Node.js](https://ru.wikipedia.org/wiki/Node.js) — среда выволнения кода на Java Script.
 * [npm](https://ru.wikipedia.org/wiki/Npm) — менеджер пакетов, входящий в состав Node.js.
 * [JSON](https://ru.wikipedia.org/wiki/JSON) / JavaScript Object Notation — текстовый формат описания данных.
-* [package.json](https://www.tech-wiki.online/ru/package-json.html) — [манифест](https://en.wikipedia.org/wiki/Manifest_file) проекта на **Node.js**
+* [package.json](https://docs.npmjs.com/cli/v8/configuring-npm/package-json) — [манифест](https://en.wikipedia.org/wiki/Manifest_file) проекта на **Node.js**
 * [Headless](https://bureau.ru/soviet/20190418/) — полноценный браузер без графического интерфейса.
 
 # Артефакты
 
 * [Список рецептов](https://example.cypress.io/)
 * [Todo-приложение для тестирования](https://example.cypress.io/todo)
-* [Видео Cypress Automation для новичков](https://www.youtube.com/watch?v=N0Eqlz5G-Jo)
 * [Первый взгляд на Cypress для end2end тестирования](https://www.youtube.com/watch?v=k7Z5_jJPOlU) 

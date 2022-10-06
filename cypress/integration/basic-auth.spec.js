@@ -1,12 +1,10 @@
 describe('Basic авторизация', () => {
-
     it('открыть сайт', () => {
-        cy.visit('https://finance.dev.fabrique.studio/accounts/login/', {
+        cy.visit('http://httpbin.org/basic-auth/foo/bar', {
             auth: {
-                username: 'fabrique',
-                password: 'fabrique'
+              username: 'foo',
+              password: 'bar'
             }
-        });
+          });
     });
-
 });

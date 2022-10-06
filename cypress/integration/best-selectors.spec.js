@@ -7,6 +7,8 @@ describe('Регистрация', () => {
         cy.get('form.registration [name=email]').type('test@test.com');
         cy.get('form.registration [name=password]').type('qwerty');
         cy.get('form.registration [type=submit]').click();
+
+        cy.get('.main .success').should('have.text', 'Вы зарегистрированы');
     });
 
 });
@@ -20,6 +22,18 @@ describe('Вход', () => {
         cy.get('form.login [name=password]').type('qwerty');
         cy.get('form.login [type=submit]').click();
         //cy.contains('Войти').click();
+
+        cy.get('.main .success').should('have.text', 'Вы вошли');
+    });
+
+});
+
+describe('Общий макет', () => {
+
+    it('проверка copyrights', () => {
+        // cy.contains('Все права защищены').should('be.visible');
+        cy.get('body > div > footer p').should('have.text', 'Все права защищены');
+        //cy.get('[data-cy=copyrights]').should('have.text', 'Все права защищены');
     });
 
 });
