@@ -16,3 +16,10 @@ https://www.youtube.com/watch?v=-d9XtUQfN9w&t=1901s
 * фон
 * аннонсы
 * монтаж
+
+Столица мира
+https://www.youtube.com/watch?v=HjgMLXzV84A
+* подача
+* картинка
+* монтаж
+* заставки
