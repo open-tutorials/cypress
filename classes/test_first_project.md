@@ -1,40 +1,222 @@
-https://youtu.be/qVRjhABuyG0
-https://github.com/TonyMckes/conduit-realworld-example-app
-https://github.com/conduitframework/conduit
-https://hevodata.com/learn/docker-postgresql/
-https://demo.realworld.io/#/
+# Туториал: тестируем мама проект на Cypress
 
-https://stackblitz.com/edit/fix-and-learn-js-basics?file=test%2Fmath.test.ts
-
-https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-app-actions/
-
-Дисклеймер
-* сейчас ваш код будет топорным
-* в следующем туториале ваш код будет лучше
-* еще через пару туториалов он будет прекрасен
-
-***
-
-# Туториал: тестируем первый проект из реального мира на Cypress
-
-Подойдет тем, кто хочет .
+Подойдет тем, кто хочет научиться писать авто-тесты на примере реального комплексного WEB-приложения.
 
 # 👍 Что сделаем
 
-* Создадим чистый **Java Script** проект на **Node.js**.
-* Установим **Cypress** через менеджер пакетов **npm**.
-* Напишем авто-тест подписки на рассылку **Cypress**.
+* Опишем тест-кейсы на основе спецификации на проект.
+* Напишем код для тестов.
 
-# Мать всех демо-приложений
+# 🙋‍ Перед началом
 
-Conduit — образцовый полноразмерный клон medium.com
+* Ты инициализировал чистый **Node.js** проект `%/projects/cypress/test_conduit`
+* Ты установил Cypress `npm i cypress@9`
 
-https://github.com/gothinkster/realworld
+# Дисклеймер
 
-https://realworld-docs.netlify.app/docs/specs/frontend-specs/routing
+* 🤭 Сейчас твой код будет не очень.
+* 😉 В следующем туториале твой код будет лучше.
+* 😜 Еще через пару туториалов он будет прекрасен.
 
+***
 
+# 🔢 Шаги
+
+## 1. Мать всех демо-приложений
+
+[Conduit](https://demo.realworld.io/) — open source клон [medium.com](https://www.medium.com)
+> 
+> The mother of all demo apps — exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more 🏅
+
+**Задача: познакомится со спецификацией на проект.**
+
+- [x] Открой проект на [GitHub](https://github.com/gothinkster/realworld)
+- [x] Найди ссылку на спецификацию: **View our starter guide & spec**
+- [x] В спецификации найди раздел: **Frontend → Routing**
+
+<details>
+  <summary>Не получается 📹</summary>
+
+Что серьезно, не смог найти? 😱
+
+</details>
+
+* ❓ Что описано в документе?
+* ❓ Чем это может быть полезно для составления текст-кейсов?
+
+***
+
+## 2. Пишем тест-кейсы на вход и регистрацию
+
+[Routing guidelines](https://realworld-docs.netlify.app/docs/specs/frontend-specs/routing/) — дает нам представление о структуре приложение и его функциональных возможностей.
+
+Это помогает нам понять, что мы будем тестировать.
+
+👇 Напишем тест-кейсы для фичей регистрации и входа.
+
+<block>
+
+### User sign up test case
+
+#### It should register user:
+1. Open https://demo.realworld.io/
+1. Click **Sign Up** button in app header
+1. Url should be `/#/register`
+1. Page title should be **Sign up**
+1. Page should have form
+1. Type `{user_name}` into **Username** form field
+1. Type `{email}` into **Email** form field
+1. Type `{password}` into **Password** form field
+1. Click on **Sign up** button
+1. Header should contains `{user_name}`
+
+#### Where:
+* `{user_name}`
+  * string with pattern `[0-9a-zA-Z_]{5, 10}`
+  * was not registered before
+* `{email}`
+  * valid email
+  * was not registered before
+* `{password}` — string with pattern `[0-9a-zA-Z_]{6, 16}`
+
+</block>
+
+<block>
+
+### User sign in test case
+
+#### It should login user:
+1. Open https://demo.realworld.io/
+1. Click **Sign In** button in app header
+1. Url should be `/#/login`
+1. Page title should be **Sign in**
+1. Page should have form
+1. Type `{email}` into **Email** form field
+1. Type `{password}` into **Password** form field
+1. Click on **Sign in** button
+1. Header should contains `{user_name}`
+
+#### Where:
+* `{email}`
+  * valid email
+  * was registered before
+* `{password}` — current user password
+* `{user_name}` — registered user name for `{email}`
+
+</block>
+
+- [x] Переведи тесты на русский язык и проговори их.
+- [x] Выполни их в ручную.
+
+*** 02:00 ***
+
+## 3. Переносим тест-кейсы в код
+
+- [x] Создай файл теста `signup.js`
+- [x] Добавь заготовку для кода теста:
+
+```javascript
+describe('Sign up', () => {
+    
+    it.only('should register user', () => {
+        
+        // TODO: write test body
+        // cy.visit();
+        // cy.get().click();
+        // cy.url().should('include', 'xyz');
+        // cy.get().should('have.text', 'xyz');
+        // cy.get().should('be.visible');
+        // cy.get().type();
+        // cy.get().should('contain.text', 'xyz');
+
+    });
+
+    it('should login user', () => {
+
+        // TODO: write test body
+
+    });
+
+});
 ```
-$$('input[ng-model$=username]')
-$$('input[ng-model$=email]')
+- [x] Напиши тело теста регистрации пользователя самостоятельно.
+
+*** 15:00 ***
+
+В тест-кейсе описано, что имя пользователя и пароль не должны быть зарегистрированы ранее.
+
+Поэтому, необходимо при каждом запуске теста, генерировать новое имя пользователя и email.
+
+- [x] Добавь в код теста
+
+```javascript
+const rnd = Math.round(Math.random() * 8999) + 1000;
+const username = 'user_' + rnd;
+cy.get('.auth-page form input[ng-model$=username]').type(username);
+
+const email = username + '@gmail.com';
+cy.get('.auth-page form input[ng-model$=email]').type(email);
 ```
+
+* ❓ Что делает `Math.random` и `Math.round`?
+* ❓ Что фактически хранится в константе `rnd`?
+* ❓ Чем отличается `it.only()` от `it()`?
+
+*** 15:00 ***
+
+- [x] Сверь свой код с [примером](cypress/integration/signup1.js)
+- [x] Перенеси к себе участки кода которые пропустил.
+- [x] Запусти тест в **Headless** режиме. 
+
+*** 5:00 ***
+
+- [x] Напиши тело теста логина пользователя.
+
+*** 10:00 ***
+
+- [x] Сверь свой код с [примером](cypress/integration/signup2.js)
+- [x] Перенеси к себе участки кода которые пропустил.
+
+*** 05:00 ***
+
+## 4. Еще 10+ тест-кейсов!
+
+Продолжая следовать спецификации, а так же выполнив визуальный анализ приложения мы можем дополнить список фичей. 
+
+- [x] Создай файл `~/tests/README.md`
+- [x] Добавь Markdown:
+
+```markdown
+# Sign up
+* [register user](register_user.md)
+* [login user](login_user.md)
+* logout user
+
+# User settings
+* edit settings
+
+# Articles 
+* publish article
+* edit article
+* delete article
+* read article
+* like article
+* global articles feed
+* filter articles by tag
+
+# Social
+* subscribe to user
+* unsubscribe from user
+
+# Comments 
+* add comment
+* delete comment
+```
+
+- [x] Создай файлы `tests/register_user.md` и `tests/login_user.md`
+- [x] Перенеси в них Markdown из примеров [register](tests/register_user.md) и [login](tests/login_user.md)
+- [x] Открой файл `~/tests/README.md` в режиме просмотра.
+
+* ❓ Что ты видишь?
+* ❓ Красиво?
+

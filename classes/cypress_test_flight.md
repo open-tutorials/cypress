@@ -171,8 +171,8 @@
 - [x] Создай файл `cypress/integration/hello-cypress.spec.js`:
 
 ```javascript
-describe('Функции сайта Cypress', () => {
-it('Подписаться на рассылку', () => { 
+describe('Cypress WEB site', () => {
+it('should open site', () => { 
 cy.visit('https://www.cypress.io/');
 });
 });
@@ -199,7 +199,7 @@ cy.visit('https://www.cypress.io/');
 
 **Visual Code** постоянно добавляет строчку `const { it } = require("mocha");` и код не работает?
 
-* [x] Пропиши в начале файла теста:
+- [x] Пропиши в начале файла теста:
 ```javascript
 ///<reference types="cypress" />
 ```
@@ -250,8 +250,8 @@ return false;
 - [x] Скопируй код селектора.
 - [x] Обнови код теста:
 ```javascript
-describe('Функции сайта Cypress', () => {
-  it('Подписаться на рассылку', () => {
+describe('Cypress WEB site', () => {
+  it('should subscribe to news letter', () => {
       cy.visit('https://www.cypress.io/');
       cy.get('#input-footer-email').type('test@test.ru');
   });
@@ -282,8 +282,8 @@ describe('Функции сайта Cypress', () => {
 - [x] Найди селектор для кнопки **Subscribe**.
 - [x] Обнови код теста:
 ```javascript
-describe('Функции сайта Cypress', () => {
-  it('Подписаться на рассылку', () => {
+describe('Cypress WEB site', () => {
+  it('should subscribe to news letter', () => {
     cy.visit('https://www.cypress.io/');
     cy.get('#input-footer-email').type('test@test.ru');
     cy.get('.styled__Submit-sc-10l91w3-12').click();
@@ -312,8 +312,8 @@ describe('Функции сайта Cypress', () => {
 - [x] Найди селектор для элемента с сообщением **Thanks for submitting the form**.
 - [x] Обнови код теста:
 ```javascript
-describe('Функции сайта Cypress', () => {
-  it('Подписаться на рассылку', () => {
+describe('Cypress WEB site', () => {
+  it('should subscribe to news letter', () => {
     cy.visit('https://www.cypress.io/');
     cy.get('#input-footer-email').type('test@test.ru');
     cy.get('.styled__Submit-sc-10l91w3-12').click();
@@ -381,8 +381,8 @@ describe('Функции сайта Cypress', () => {
 
 Не хватило? Поиграйся с https://automationteststore.com/
 
-* [x] Добавь пару товаров в корзину.
-* [x] Оформи заказ.
+- [x] Добавь пару товаров в корзину.
+- [x] Оформи заказ.
 
 # 🤟 Быстрые рецепты
 
