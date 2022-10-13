@@ -41,7 +41,7 @@
 
 @[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
 
-Что бы следить за аннонсами новых туториалов
+Что бы следить за анонсами новых туториалов
 * Группа в VK https://vk.com/epic_one_hour
 * Телеграмм канал https://t.me/epic_one_hour 
 

@@ -217,9 +217,9 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 - [x] Создай файлы `test_cases/register_user.md` и `test_cases/login_user.md`
 - [x] Перенеси в них Markdown из примеров [register](test_cases/register_user.md?plain=1) и [login](test_cases/login_user.md?plain=1)
 - [x] Открой файл `README.md` в режиме просмотра.
+<img src="../img/preview_md.png" width="100">
 
 * ❓ Что ты видишь?
-* ❓ Нравится?
 
 ***
 
@@ -248,7 +248,7 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 *** 30:00 ***
 
-Та да! Ты дошел до конца.
+Та да 🥳 Ты дошел до конца.
 
 - [x] Сверь описание тест-кейсов с [примерами](test_cases/test_mama_project)
 - [x] Сверь тесты с [примерами](cypress/integration/test_mama_project)
@@ -259,4 +259,8 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 - У тебя вопросы?
 - Тебе нужна поддержка и мотивация?
 
-Каждый вторник и четверг я проводу стендапы со всеми желающими.
+Каждый вторник и четверг я провожу стендапы в Zoom со всеми желающими.
+
+Все подробности тут в телеграмм 👉 https://t.me/epic_one_hour 
+
+@[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
