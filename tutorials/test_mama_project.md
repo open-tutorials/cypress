@@ -141,6 +141,8 @@ describe('Sign up', () => {
 ```
 - [x] Напиши тело теста регистрации пользователя самостоятельно.
 
+* ❓ Чем отличается `it.only()` от `it()`?
+
 *** 15:00 ***
 
 В тест-кейсе описано, что имя пользователя и пароль не должны быть зарегистрированы ранее.
@@ -160,7 +162,6 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 * ❓ Что делает `Math.random` и `Math.round`?
 * ❓ Что фактически хранится в константе `rnd`?
-* ❓ Чем отличается `it.only()` от `it()`?
 
 *** 15:00 ***
 
@@ -183,7 +184,7 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 Продолжая следовать спецификации, а так же выполнив визуальный анализ приложения мы можем дополнить список фичей. 
 
-- [x] Создай файл `~/tests/README.md`
+- [x] Создай файл `~/test_cases/README.md`
 - [x] Добавь Markdown:
 
 ```markdown
@@ -213,22 +214,24 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 * delete comment
 ```
 
-- [x] Создай файлы `tests/register_user.md` и `tests/login_user.md`
-- [x] Перенеси в них Markdown из примеров [register](tests/register_user.md?plain=1) и [login](tests/login_user.md?plain=1)
+- [x] Создай файлы `test_cases/register_user.md` и `test_cases/login_user.md`
+- [x] Перенеси в них Markdown из примеров [register](test_cases/register_user.md?plain=1) и [login](test_cases/login_user.md?plain=1)
 - [x] Открой файл `README.md` в режиме просмотра.
 
 * ❓ Что ты видишь?
 * ❓ Нравится?
 
+***
+
 ## 5. Тест-кейс выход пользователя
 
-- [x] Создай файл  `~/tests/logout_user.md`
+- [x] Создай файл  `~/test_cases/logout_user.md`
 - [x] Опиши тест-кейс для фичи **logout user** в Markdown
 - [x] Добавь ссылку на новый файл в `README.md`
 
 *** 10:00 ***
 
-- [x] Сверь свой результаты с примером [logout user](tests/logout_user.md?plain=1)
+- [x] Сверь свой результаты с примером [logout user](test_cases/logout_user.md?plain=1)
 - [x] Напиши тест на Cypress.
 
 *** 10:00 ***
@@ -247,7 +250,7 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 Та да! Ты дошел до конца.
 
-- [x] Сверь описание тест-кейсов с [примерами](tests/test_mama_project)
+- [x] Сверь описание тест-кейсов с [примерами](test_cases/test_mama_project)
 - [x] Сверь тесты с [примерами](cypress/integration/test_mama_project)
 
 # Что дальше?
