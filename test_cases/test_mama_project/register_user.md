@@ -1,8 +1,8 @@
 User sign up test case
 
-# It should register user:
+# It should do register user:
 1. Open https://demo.realworld.io/
-1. Click **Sign Up** button in app header
+1. Click **Sign Up** link in app header
 1. Url should be `/#/register`
 1. Page title should be **Sign up**
 1. Page should have form

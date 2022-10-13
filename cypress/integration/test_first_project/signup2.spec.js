@@ -6,12 +6,12 @@ describe('Sign up', () => {
 
     });
 
-    it.only('should login user', () => {
+    it.only('should do login user', () => {
         
         // open https://demo.realworld.io/
         cy.visit('https://demo.realworld.io/');
 
-        // click Sign In button in app header
+        // click Sign In link in app header
         cy.get('.navbar a[href$="/login"]').click();
 
         // url should be /#/login
@@ -36,6 +36,7 @@ describe('Sign up', () => {
 
         // Header should contains {user_name}
         cy.get('.navbar').should('contain.text', 'test_anton');
+        
     });
 
 });

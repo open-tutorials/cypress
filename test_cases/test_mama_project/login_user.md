@@ -1,8 +1,8 @@
 User sign in test case
 
-# It should login user:
+# It should do login user:
 1. Open https://demo.realworld.io/
-1. Click **Sign In** button in app header
+1. Click **Sign In** link in app header
 1. Url should be `/#/login`
 1. Page title should be **Sign in**
 1. Page should have form

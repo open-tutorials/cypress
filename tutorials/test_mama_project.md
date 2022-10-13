@@ -58,9 +58,9 @@
 
 ### User sign up test case
 
-#### It should register user:
+#### It should do register user:
 1. Open https://demo.realworld.io/
-1. Click **Sign Up** button in app header
+1. Click **Sign Up** link in app header
 1. Url should be `/#/register`
 1. Page title should be **Sign up**
 1. Page should have form
@@ -85,9 +85,9 @@
 
 ### User sign in test case
 
-#### It should login user:
+#### It should do login user:
 1. Open https://demo.realworld.io/
-1. Click **Sign In** button in app header
+1. Click **Sign In** link in app header
 1. Url should be `/#/login`
 1. Page title should be **Sign in**
 1. Page should have form
@@ -118,7 +118,7 @@
 ```javascript
 describe('Sign up', () => {
     
-    it.only('should register user', () => {
+    it.only('should do register user', () => {
         
         // TODO: write test body
         // cy.visit();
@@ -131,7 +131,7 @@ describe('Sign up', () => {
 
     });
 
-    it('should login user', () => {
+    it('should do login user', () => {
 
         // TODO: write test body
 
@@ -165,7 +165,7 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 *** 15:00 ***
 
-- [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup1.js)
+- [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup1.spec.js)
 - [x] Перенеси к себе участки кода которые пропустил.
 - [x] Запусти тест в **Headless** режиме. 
 
@@ -175,7 +175,7 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 *** 10:00 ***
 
-- [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup2.js)
+- [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup2.spec.js)
 - [x] Перенеси к себе участки кода которые пропустил.
 
 *** 05:00 ***
@@ -193,8 +193,9 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 * [login user](login_user.md)
 * logout user
 
-# User settings
-* edit settings
+# Commenting 
+* add comment
+* delete comment
 
 # Articles 
 * publish article
@@ -209,9 +210,8 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 * subscribe to user
 * unsubscribe from user
 
-# Comments 
-* add comment
-* delete comment
+# User settings
+* edit settings
 ```
 
 - [x] Создай файлы `test_cases/register_user.md` и `test_cases/login_user.md`
@@ -236,7 +236,7 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 *** 10:00 ***
 
-- [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup3.js)
+- [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup.spec.js)
 
 ## 5. Еще больше тестов
 
@@ -252,8 +252,11 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 - [x] Сверь описание тест-кейсов с [примерами](test_cases/test_mama_project)
 - [x] Сверь тесты с [примерами](cypress/integration/test_mama_project)
+- [x] Подсмотри фишки и улучши свой код!
 
 # Что дальше?
 
 - У тебя вопросы?
-- Тебе нужна поддержка?
+- Тебе нужна поддержка и мотивация?
+
+Каждый вторник и четверг я проводу стендапы со всеми желающими.

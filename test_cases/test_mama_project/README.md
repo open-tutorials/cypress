@@ -1,9 +1,11 @@
 # Sign up
 * [register user](register_user.md)
 * [login user](login_user.md)
+* [logout user](logout_user.md)
 
-# User settings
-* edit settings
+# Commenting
+* [add comment](add_comment.md)
+* [delete comment](delete_comment.md)
 
 # Articles 
 * publish article
@@ -18,6 +20,5 @@
 * subscribe to user
 * unsubscribe from user
 
-# Comments 
-* add comment
-* delete comment
+# User settings
+* edit settings
