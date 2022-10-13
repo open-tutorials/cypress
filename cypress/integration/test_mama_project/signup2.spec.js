@@ -34,7 +34,7 @@ describe('Sign up', () => {
         // click on sign in button
         cy.get('.auth-page form button[type=submit]').click();
 
-        // Header should contains {user_name}
+        // header should contains {user_name}
         cy.get('.navbar').should('contain.text', 'test_anton');
         
     });
