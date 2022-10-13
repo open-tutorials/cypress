@@ -51,6 +51,8 @@ describe('Commenting', () => {
             // TODO: should be find('[data-cy=delete]')
             .find('.card-footer > span i').click();
 
+        comment.should('not.exist');
+
     });
 
 });
