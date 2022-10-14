@@ -8,9 +8,9 @@
 * [delete comment](delete_comment.md)
 
 # Articles 
-* publish article
-* edit article
+* [publish article](publish_article.md)
 * delete article
+* edit article
 * read article
 * like article
 * global articles feed

@@ -235,7 +235,7 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 *** 10:00 ***
 
-- [x] Сверь свой результаты с примером [logout user](test_cases/logout_user.md?plain=1)
+- [x] Сверь свои результаты с примером [logout user](test_cases/logout_user.md?plain=1)
 - [x] Напиши тест на Cypress.
 
 *** 10:00 ***
@@ -257,6 +257,7 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 - [x] Сверь описание тест-кейсов с [примерами](test_cases)
 - [x] Сверь тесты с [примерами](cypress/integration/test_mama_project)
 - [x] Подсмотри фишки и улучши свой код!
+- [x] Запусти все тесты в Headless режиме.
 
 # Что дальше?
 

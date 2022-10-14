@@ -10,6 +10,7 @@ User sign in test case
 1. Type `{password}` into **Password** form field
 1. Click on **Sign in** button
 1. Header should contains `{user_name}`
+1. Url should be `/#/` — main page
 
 # Where:
 * `{email}`

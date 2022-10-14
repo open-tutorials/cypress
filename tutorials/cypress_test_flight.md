@@ -87,18 +87,7 @@
 
 ## 2. Ставим Cypress
 
-- [x] Выполни команду `npm install cypress@9`
-- [x] В `package.json` добавь команду `cypress` в раздел `scripts`:
-
-```json
-...
-  "scripts": {
-    "cypress": "cypress",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
-...
-```
-- [x] Не забудь сохранить файл
+- [x] Выполни команду `npm install cypress@9 --save-dev`
 
 <details>
   <summary>Не получается 📹</summary>
@@ -110,28 +99,20 @@
 
 * ❓ Зачем нужна папка `node_modules`?
 * ❓ Какой версии установлен **Cypress**?
-* ❓ Зачем нужен раздел **dependencies** в `package.json`?
+* ❓ Зачем нужен раздел **devDependencies** в `package.json`?
 * ❓ Что такое **JSON**?
-
-<details>
-  <summary>Зачем добавлять команду в `package.json`?</summary>
-  
-Этого можно и не делать, но запускать в терминале через `./node_modules/.bin/cypress` длинно.
-
-Мы же будем запускать через **NPM** `npm run cypress`
-</details>
 
 <details>
   <summary>Где найти все доступные версии **Cypress**?</summary>
   
-На вкладке версии пакета **Cypress** в репозитарии менеджера пакетов **NPM** https://www.npmjs.com/package/cypress
+На вкладке версии пакета **Cypress** в репозитории менеджера пакетов **NPM** https://www.npmjs.com/package/cypress
 </details>
 
 *****
 
 ## 3. Первый запуск Cypress
 
-- [x] Выполни команду `npm run cypress open`
+- [x] Выполни команду `npx cypress open`
 
 <details>
   <summary>Не получается 📹</summary>
@@ -142,6 +123,7 @@
 </details>
 
 * ❓ Появилась папка `cypress` в корне проекта?
+* ❓ Что делает утилита `npx`?
 * ❓ Что за файлы `.spec.js` лежат в папке `cypress/integration`?
 * ❓ Что ты видишь в окне Cypress?
 
@@ -171,10 +153,10 @@
 - [x] Создай файл `cypress/integration/hello-cypress.spec.js`:
 
 ```javascript
-describe('Cypress WEB site', () => {
-it('should open site', () => { 
+it('should do open site', () => {
+
 cy.visit('https://www.cypress.io/');
-});
+
 });
 ```
 
@@ -191,7 +173,7 @@ cy.visit('https://www.cypress.io/');
   * На MacOS `SHIFT` + `OPTION` + `F`
   * На Linux `CTRL` + `Shift` + `I`
 - [x] Сохрани файл `CTRL` + `S`
-- [x] Выполни команду `npm run cypress open`
+- [x] Выполни команду `npx cypress open`
 - [x] В окне **Cypress** выбери `hello-cypress.spec.js`
 
 <details>
@@ -205,7 +187,6 @@ cy.visit('https://www.cypress.io/');
 ```
 </details>
 
-* ❓ Что такое `describe`?
 * ❓ Что такое `it`?
 * ❓ Что такое `cy.visit`?
 
@@ -213,16 +194,14 @@ cy.visit('https://www.cypress.io/');
 
 ## 6. Отключаем перехват ошибок сайта
 
-> На самом сайте Cypress есть ошибка в коде, которая не влияет на его функциональнось, но она мешает тесту успешно выполниться.
+> На самом сайте Cypress есть ошибка в коде, которая не влияет на его функциональность, но она мешает тесту успешно выполниться.
 > 
 > Что бы наш тест проходил, нужно отключить перехват ошибок.
 
-- [x] Добавь в конец файла `cypress/support/index.js`:
+- [x] Добавь в начало файла теста:
 
 ```javascript
-Cypress.on('uncaught:exception', (err, runnable) => {
-return false;
-});
+Cypress.on('uncaught:exception', () => false);
 ```
 
 - [x] Отформатируй код и сохрани файл
@@ -249,12 +228,13 @@ return false;
 - [x] Наведи на поле ввода **email**.
 - [x] Скопируй код селектора.
 - [x] Обнови код теста:
+
 ```javascript
-describe('Cypress WEB site', () => {
-  it('should subscribe to news letter', () => {
-      cy.visit('https://www.cypress.io/');
-      cy.get('#input-footer-email').type('test@test.ru');
-  });
+it('should do subscribe to news letter', () => {
+
+  cy.visit('https://www.cypress.io/');
+  cy.get('#input-footer-email').type('test@test.ru');
+
 });
 ```
 - [x] Замени **email** в коде на свой.
@@ -281,13 +261,14 @@ describe('Cypress WEB site', () => {
 
 - [x] Найди селектор для кнопки **Subscribe**.
 - [x] Обнови код теста:
+
 ```javascript
-describe('Cypress WEB site', () => {
-  it('should subscribe to news letter', () => {
-    cy.visit('https://www.cypress.io/');
-    cy.get('#input-footer-email').type('test@test.ru');
-    cy.get('.styled__Submit-sc-10l91w3-12').click();
-  });
+it('should do subscribe to news letter', () => {
+
+  cy.visit('https://www.cypress.io/');
+  cy.get('#input-footer-email').type('test@test.ru');
+  cy.get('.styled__Submit-sc-10l91w3-12').click();
+
 });
 ```
 - [x] Не забудь отформатировать код!
@@ -311,14 +292,15 @@ describe('Cypress WEB site', () => {
 
 - [x] Найди селектор для элемента с сообщением **Thanks for submitting the form**.
 - [x] Обнови код теста:
+
 ```javascript
-describe('Cypress WEB site', () => {
-  it('should subscribe to news letter', () => {
-    cy.visit('https://www.cypress.io/');
-    cy.get('#input-footer-email').type('test@test.ru');
-    cy.get('.styled__Submit-sc-10l91w3-12').click();
-    cy.get('.Subscribe__Label-sc-1hdnlrs-1').should('have.text', 'Thanks for submitting the form.');
-  });
+it('should subscribe to news letter', () => {
+
+  cy.visit('https://www.cypress.io/');
+  cy.get('#input-footer-email').type('test@test.ru');
+  cy.get('.styled__Submit-sc-10l91w3-12').click();
+  cy.get('.Subscribe__Label-sc-1hdnlrs-1').should('have.text', 'Thanks for submitting the form.');
+
 });
 ```
 - [x] Не забудь отформатировать код!
@@ -339,7 +321,18 @@ describe('Cypress WEB site', () => {
 ## 10. Запускаем **Cypress** в **Headless**
 
 - [x] Закрой **Cypress** в терминале `CTRL`+`C`
-- [x] Выполи команду `npm run cypress run`
+- [x] Выполни команду `npx cypress run`
+- [x] В `package.json` обнови команду `test` в разделе `scripts`:
+```json
+...
+  "scripts": {
+    ...
+    "test": "cypress run",
+    ...
+  }
+...
+```
+- [x] Выполни команду `npm test`
 
 <details>
   <summary>Не получается 📹</summary>
@@ -359,7 +352,7 @@ describe('Cypress WEB site', () => {
 ```javascript
 .should('have.text', 'Thanks for submitting the form!!!');
 ```
-- [x] Снова запусти Cypress `npm run cypress run`
+- [x] Снова запусти Cypress `npx cypress run`
 
 <details>
   <summary>Не получается 📹</summary>

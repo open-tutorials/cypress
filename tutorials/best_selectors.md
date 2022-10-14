@@ -62,20 +62,10 @@
 
 - [x] Открой **Терминал** → **Новый терминал**
 - [x] Установи пакет `npm install node-wget`
-- [x] Для удобства в `package.json` добавь команду `wget` в раздел `scripts`:
-```json
-...
-  "scripts": {
-    ...
-    "wget": "wget",
-    ...
-  }
-...
-```
 - [x] Создай папку `apps` в корне проекта.
 - [x] В терминале выполни команду:
 ```bash
-npm run wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/main/apps/tesla.html
+npx wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/main/apps/tesla.html
 ```
 - [x] Проверь, что появился файл `~/apps/tesla.html`
 - [x] Обнови страницу в Chrome.
@@ -97,7 +87,7 @@ npm run wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypr
 <details>
   <summary>Как скачать Google 🤟</summary>
 
-- [x] Выполни в терминале `npm run wget -- -d google.html https://google.com/`
+- [x] Выполни в терминале `npx wget -- -d google.html https://google.com/`
 
 * ❓ В корне проекта должен появится файл `google.html`, что там?
 </details>
@@ -111,16 +101,14 @@ npm run wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypr
 - [x] Создай файл `~/cypress/integration/best-selectors.spec.js`
 
 ```javascript
-describe('Регистрация', () => {
+it('should do register user', () => {
 
-it('зарегистрироваться', () => { 
-cy.visit('http://localhost:3000/apps/tesla.html'); 
-});
+cy.visit('http://localhost:3000/apps/tesla.html');
 
 });
 ```
 - [x] Не забудь отформатировать код и сохранить файл!
-- [x] Запусти **Cypress** командой `npm run cypress open`
+- [x] Запусти **Cypress** командой `npx cypress open`
 - [x] В **Cypress** выбери тест `best-selectors.spec.js`
 
 <details>
@@ -147,12 +135,10 @@ cy.visit('http://localhost:3000/apps/tesla.html');
 - [x] Обнови код теста:
 
 ```javascript
-describe('Регистрация', () => {
-
-    it('зарегистрироваться', () => {
-        cy.visit('http://localhost:3000/apps/tesla.html');
-        cy.get('#b1h7e4i8d3').type('Иванов');
-    });
+it('should do register user', () => {
+  
+  cy.visit('http://localhost:3000/apps/tesla.html');
+  cy.get('#b1h7e4i8d3').type('Иванов');
 
 });
 ```
@@ -379,7 +365,7 @@ cy.visit('http://localhost:3000/apps/tesla.html?lang=en');
 
 * ❓ Что делать, если нельзя найти хороший селектор?
 
-> 1. Использовать селектор, который есть. 
+> 1. Использовать лучший из худших.
 > 2. Поставить **задачу разработчикам** на добавление атрибута `data-cy`
 
 Текущая разметка:
@@ -396,11 +382,15 @@ cy.visit('http://localhost:3000/apps/tesla.html?lang=en');
 
 В твоем тесте:
 ```javascript
-// TODO: улучшить селектор [data-cy=copyrights]
-// временно используем contains
-cy.contains('Все права защищены').should('be.visible');
-// или строгую иерархию
-cy.get('body > div > footer p').should('have.text', 'Все права защищены');
+it('should do check copyrights', () => {
+
+  // TODO: улучшить селектор footer [data-cy=copyrights]
+  // временно используем contains
+  cy.contains('Все права защищены').should('be.visible');
+  // или строгую иерархию
+  cy.get('body > div > footer p').should('have.text', 'Все права защищены');
+
+});
 ```
 
 - [x] Зайди как разработчик в `~/apps/tesla.html` и добавь `data-cy` аттрибут:
@@ -415,7 +405,7 @@ cy.get('body > div > footer p').should('have.text', 'Все права защи�
 ```
 - [x] Обнови селектор тесте:
 ```javascript
-cy.get('[data-cy=copyrights]').should('have.text', 'Все права защищены');
+cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права защищены');
 ```
 
 Названия аттрибутов для целей тестирования могут быть разными: `data-for-test`, `data-ui-id`, `data-test-id` и т.д.
