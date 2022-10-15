@@ -9,7 +9,7 @@
 
 # Articles 
 * [publish article](publish_article.md)
-* delete article
+* [delete article](delete_article.md)
 * edit article
 * read article
 * like article
