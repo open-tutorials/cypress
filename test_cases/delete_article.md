@@ -2,15 +2,15 @@ Delete article test case
 
 # It should delete article:
 
-# Before
+## Before
 1. Open https://demo.realworld.io/
 2. Repeat 1-9 from [login user](login_user.md)
 3. Url should be `/#/` — main page
 
-# Add article
+## Add article
 4. Repeat 4-11 from [publish article](publish_article.md)
 
-# Delete article
+## Delete article
 5. Click `{user_name}` link in app header
 6. Url should be `/#@{user_name}` — user profile page
 7. My articles menu item should be active

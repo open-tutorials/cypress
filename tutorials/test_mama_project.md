@@ -115,7 +115,7 @@
 
 ## 3. Переносим тест-кейсы в код
 
-- [x] Создай файл теста `signup.js`
+- [x] Создай файл теста `signup.spec.js`
 - [x] Добавь заготовку для кода теста:
 
 ```javascript
@@ -242,7 +242,7 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 - [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup.spec.js)
 
-## 5. Еще больше тестов
+## 6. Еще больше тестов
 
 Повтори эти действия для оставшихся фичей из `README.md`:
 
