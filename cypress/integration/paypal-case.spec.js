@@ -12,11 +12,6 @@ it('should pay by Pay Pal', () => {
     const rnd = Math.round(Math.random() * 8999) + 1000;
     const email = 'user_' + rnd + '@test.com'
     cy.get('form.step-zero input[name=email]').type(email + '{enter}');
-    cy.window().then((win) => {
-        cy.stub(win, 'open', url => {
-            win.location.href = 'https://the-internet.herokuapp.com/';
-        }).as('popup');
-    });
 
     // TODO: find better solution
     cy.wait(5000);
@@ -25,10 +20,10 @@ it('should pay by Pay Pal', () => {
         .its('0.contentWindow')
         .should('exist')
         .then(iframe => {
-            cy.stub(iframe, 'open').as('open')
+            cy.stub(iframe, 'open')
                 .callsFake(url => {
                     cy.log(url);
-                    //cy.visit(url);
+                    // here is idea was visit paypal
                 });
         });
 
@@ -49,7 +44,6 @@ it('should pay by Pay Pal', () => {
         .its('body').should('not.be.empty')
         .then(cy.wrap)
         .as('paypal_overlay_iframe');
-
 
     // TODO: find better solution
     cy.wait(5000);
