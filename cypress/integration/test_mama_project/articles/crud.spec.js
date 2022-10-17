@@ -1,36 +1,4 @@
-function addArticle() {
-    cy.get('.navbar a[href$="/editor/"]').click();
-    cy.url().should('include', '/#/editor/');
-
-    cy.get('.editor-page form').should('be.visible');
-    // generate unique title every time
-    const title = 'Nice article from ' + new Date().toUTCString();
-    cy.log(title);
-    cy.get('.editor-page form input[ng-model$=title]').type(title);
-
-    // we are using https://loremipsum.io/
-    const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-    cy.get('.editor-page form input[ng-model$=description]').type(description);
-
-    const body = `I like fruits!
-It is **healthy!** It is *tasty.*
-
-My favorite are:
-* banana
-* orange
-* lemon`;
-    cy.get('.editor-page form textarea[ng-model$=body]').type(body);
-
-    const tags = 'fruits, favorite'
-    cy.get('.editor-page form input[ng-model$=tagField]').type(tags);
-
-    // TODO: should be button[type=submit]
-    cy.get('.editor-page form button[type=button]').click();
-
-    cy.get('.article-page h1').should('contains.text', title);
-
-    return title;
-}
+import { addArticle, fillArticle } from "./common";
 
 describe('Articles', () => {
 
@@ -41,13 +9,8 @@ describe('Articles', () => {
         cy.login('test_anton', 'test_anton@gmail.com', 'xyzXYZ123_');
         cy.url().should('match', /\/\#\/$/);
 
+        // see ./common.js
         addArticle();
-
-        // check Markdown is rendered to HTML
-        cy.get('.article-page .article-content').invoke('html')
-            .should('contains', '<strong>healthy!</strong>')
-            .should('contains', '<em>tasty.</em>')
-            .should('contains', '<li>banana</li>');
 
         // TODO: check author username also
 
@@ -101,6 +64,65 @@ describe('Articles', () => {
         // check article deleted
         cy.get('article-list > article-preview').contains(title)
             .should('have.length', 0);
+    });
+
+
+    it.only('should do edit article', () => {
+
+        const username = 'test_anton';
+
+        cy.visit('https://demo.realworld.io/');
+        // see cypress/support/commands.js
+        cy.login('test_anton', 'test_anton@gmail.com', 'xyzXYZ123_');
+        cy.url().should('match', /\/\#\/$/);
+
+        // save added article title
+        const title = addArticle();
+
+        cy.get('.navbar a').contains(username).click();
+        cy.url().should('include', username);
+
+        // my articles should be active
+        cy.get('.articles-toggle > ul > li:first-child a')
+            .should('have.class', 'active');
+
+        cy.get('article-list').should('be.visible');
+
+        // go to added article
+        cy.get('article-list > article-preview').contains(title)
+            .parents('article-preview')
+            .find('a.preview-link').click();
+
+        // TODO: should be `.article-actions a[data-cy=edit]`
+        cy.get('.article-actions a[href*="#/editor"]').click();
+
+        cy.get('.editor-page form').should('be.visible');
+
+        const newTitle = 'Edited article from ' + new Date().toUTCString();
+        cy.log(newTitle);
+        // we are using https://loremipsum.io/
+        const newDescription = 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+        const newBody = `I like fruits!
+It is **tasty** and *healthy.*
+
+My favorite are:
+* banana
+* apple
+* lemon`;
+        const newTags = 'fruits, favorite'
+        fillArticle(newTitle, newDescription, newBody, newTags);
+
+        // TODO: should be button[type=submit]
+        cy.get('.editor-page form button[type=button]').click();
+
+        cy.get('.article-page h1').should('contains.text', newTitle);
+
+        // check Markdown is rendered to HTML
+        cy.get('.article-page .article-content').invoke('html')
+            .should('contains', '<strong>tasty</strong>')
+            .should('contains', '<em>healthy.</em>')
+            .should('contains', '<li>apple</li>');
+
     });
 
 });

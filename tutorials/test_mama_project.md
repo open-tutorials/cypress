@@ -225,6 +225,8 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 
 * ❓ Что ты видишь?
 
+<img width="400" height="235" src="../img/like_a_boss.gif">
+
 ***
 
 ## 5. Тест-кейс — выход пользователя

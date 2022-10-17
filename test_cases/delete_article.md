@@ -14,7 +14,7 @@ Delete article test case
 5. Click `{user_name}` link in app header
 6. Url should be `/#@{user_name}` — user profile page
 7. My articles menu item should be active
-8. Find `{title}` in list
+8. Click on `{title}` link in articles list
 9. Click on **Delete article** button
 10. My articles list should not have `{title}`
 

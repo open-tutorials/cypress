@@ -13,7 +13,7 @@ Add comment to article test case
 6. Scroll to form for posting comment
 7. Type `{comment}` into **Comment** form field
 8. Click on **Post Comment** button
-9.  Comments list should have `{comment}`
+9. Comments list should have `{comment}`
 
 # Where:
 * `{comment}` — string with length from 20 to 50 chars

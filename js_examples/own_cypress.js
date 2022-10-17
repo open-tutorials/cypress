@@ -1,5 +1,3 @@
-console.log(new Date().toISOString());
-
 const it = function (name, callback) {
     console.log(name);
     callback();

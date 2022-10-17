@@ -10,7 +10,7 @@ Publish article test case
 ## Add article 
 4. Click **New Article** item in app header menu
 5. Url should be `/#/editor/`
-6. Page should have add article form 
+6. Page should have add article form
 7. Type `{title}` into **Title** form field
 8. Type `{description}` into **Description** form field
 9. Type `{body}` into **Body** form field
@@ -20,7 +20,8 @@ Publish article test case
 ## Check article
 12. Url should be `/#/article/{slug}`
 13. Page title should be `{title}`
-14. Article body should contains rendered Markdown
+14. Article body should contains `{new_body}` rendered Markdown
+15. Article should have `{tags}`
 
 # Where:
 * `{title}` — string with length from 20 to 30 chars

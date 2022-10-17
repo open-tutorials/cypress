@@ -10,7 +10,7 @@
 # Articles 
 * [publish article](publish_article.md)
 * [delete article](delete_article.md)
-* edit article
+* [edit article](edit_article.md)
 * read article
 * like article
 * global articles feed

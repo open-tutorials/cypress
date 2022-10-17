@@ -1,4 +1,4 @@
-it('should pay by Pay Pal', () => {
+it('should pay by PayPal', () => {
     const paypal = {
         email: '',
         password: ''
