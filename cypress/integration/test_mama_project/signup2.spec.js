@@ -24,17 +24,15 @@ describe('Sign up', () => {
         cy.get('.auth-page form').should('be.visible');
 
         // type email form field
-        cy.get('.auth-page form input[ng-model$=email]')
-            .type('test_anton@gmail.com');
+        cy.get('.auth-page form input[ng-model$=email]').type('test_anton@gmail.com');
 
         // type password form field
-        cy.get('.auth-page form input[ng-model$=password]')
-            .type('xyzXYZ123_');
+        cy.get('.auth-page form input[ng-model$=password]').type('xyzXYZ123_');
 
         // click on sign in button
         cy.get('.auth-page form button[type=submit]').click();
 
-        // header should contains {user_name}
+        // header should contains {username}
         cy.get('.navbar').should('contain.text', 'test_anton');
         
     });

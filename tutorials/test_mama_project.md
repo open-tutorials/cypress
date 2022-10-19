@@ -1,12 +1,12 @@
 # Туториал: тестируем мама проект на Cypress
 
-Подойдет тем, кто хочет научиться писать авто-тесты на примере реального комплексного WEB-приложения.
+Подойдет тем, кто хочет научиться писать авто-тесты на примере реального WEB-приложения.
 
 # 👍 Что сделаем
 
-* Опишем тест-кейсы для фичей на основании спецификации на проект.
+* Опишем тест-кейсы в Markdown на основании спецификации на проект.
 * Прокачаем свой Java Script для Cypress на конкретных примерах.
-* Напишем более чем 10+ тестов на Cypress.
+* Напишем тесты для регистрации, логина и выхода.
 
 # 🙋‍ Перед началом
 
@@ -53,7 +53,7 @@
 
 [Routing guidelines](https://realworld-docs.netlify.app/docs/specs/frontend-specs/routing/) — дает нам представление о структуре приложение и его функциональных возможностей.
 
-Это помогает нам понять, что мы будем тестировать.
+Это помогает понять, что мы будем тестировать.
 
 👇 Напишем тест-кейсы для фичей **регистрации** и **входа.**
 
@@ -67,14 +67,14 @@
 1. Url should be `/#/register`
 1. Page title should be **Sign up**
 1. Page should have form
-1. Type `{user_name}` into **Username** form field
+1. Type `{username}` into **Username** form field
 1. Type `{email}` into **Email** form field
 1. Type `{password}` into **Password** form field
 1. Click on **Sign up** button
-1. Header should contains `{user_name}`
+1. Header should contains `{username}`
 
 #### Where:
-* `{user_name}`
+* `{username}`
   * string with pattern `[0-9a-zA-Z_]{5, 10}`
   * was not registered before
 * `{email}`
@@ -97,25 +97,55 @@
 1. Type `{email}` into **Email** form field
 1. Type `{password}` into **Password** form field
 1. Click on **Sign in** button
-1. Header should contains `{user_name}`
+1. Header should contains `{username}`
 
 #### Where:
 * `{email}`
   * valid email
   * was registered before
 * `{password}` — current user password
-* `{user_name}` — registered user name for `{email}`
+* `{username}` — registered user name for `{email}`
 
 </block>
 
-- [x] Переведи тесты на русский язык и проговори их.
+- [x] Переведи тест-кейсы на русский язык и проговори их.
 - [x] Выполни их в ручную.
 
 *** 02:00 ***
 
 ## 3. Переносим тест-кейсы в код
 
-- [x] Создай файл теста `signup.spec.js`
+Задача любого теста — стабильно выполняться.
+
+Каждый запуск теста будет добавлять в базу данных указанные нами `username` и `email`. 
+Если эти данные повторяться — тест будет провален.
+
+На текущий момент у нас нет доступа к базе данных приложения, поэтому, нам нужно генерировать новое имя пользователя и email при каждом запуске теста.
+
+- [x] Создай файл `~/js_examples/rnd.js` с содержимым
+
+```javascript
+const rnd = Math.round(Math.random() * 8999) + 1000;
+console.log('rnd=', rnd);
+const username = 'user_' + rnd;
+console.log('username=', username);
+const email = username + '@gmail.com';
+console.log('email=', email);
+```
+
+- [x] В терминале выполни `node js_examples/rnd.js`
+- [x] Повтори команду 3-5 раз.
+
+<img width="926" height="298" src="../img/mama_project/rnd.gif">
+
+* ❓ Что делает `Math.random` и `Math.round`?
+* ❓ Что фактически хранится в константе `rnd`?
+
+*** 05:00 ***
+
+Данные тест-кейсы можно объединить в тест-сюит **Sign up**, т.к. они оба связанны с авторизацией пользователя.
+
+- [x] Создай файл теста `~/cypress/integration/signup.spec.js`
 - [x] Добавь заготовку для кода теста:
 
 ```javascript
@@ -123,14 +153,45 @@ describe('Sign up', () => {
     
     it.only('should do register user', () => {
         
-        // TODO: write test body
-        // cy.visit();
-        // cy.get().click();
-        // cy.url().should('include', 'xyz');
-        // cy.get().should('have.text', 'xyz');
-        // cy.get().should('be.visible');
-        // cy.get().type();
-        // cy.get().should('contain.text', 'xyz');
+        // open https://demo.realworld.io/
+        cy.visit('https://demo.realworld.io/');
+        
+        // click Sign Up link in app header
+        cy.get('?').click();
+        
+        // url should be /#/register
+        cy.url().should('include', '?');
+
+        // page title should be Sign up
+        cy.get('?').should('have.text', '?');
+
+        // page should have form
+        cy.get('?').should('be.visible');
+
+        // generate random integer from 1000 to 9999
+        const rnd = Math.round(Math.random() * 8999) + 1000;
+
+        // username was not registered before
+        const username = 'user_' + rnd;
+
+        // email was not registered before
+        const email = username + '@gmail.com';
+
+        // type username form field
+        cy.get('?').type(username);
+
+        // type email form field
+        cy.get('?').type(email);
+
+        // password should be with pattern [0-9a-zA-Z_]{6, 16}
+        // type password form field
+        cy.get('?').type('xyzXYZ123_');
+
+        // click on Sign up button
+        cy.get('?').click();
+
+        // header should contains {username}
+        cy.get('?').should('contain.text', username);
 
     });
 
@@ -144,48 +205,72 @@ describe('Sign up', () => {
 ```
 - [x] Напиши тело теста регистрации пользователя самостоятельно.
 
+* ❓ Зачем нужен `describe`?
 * ❓ Чем отличается `it.only()` от `it()`?
 
 *** 15:00 ***
 
-В тест-кейсе описано, что имя пользователя и пароль не должны быть зарегистрированы ранее.
-
-Поэтому, необходимо при каждом запуске теста, генерировать новое имя пользователя и email.
-
-- [x] Добавь в код теста
-
-```javascript
-const rnd = Math.round(Math.random() * 8999) + 1000;
-const username = 'user_' + rnd;
-cy.get('.auth-page form input[ng-model$=username]').type(username);
-
-const email = username + '@gmail.com';
-cy.get('.auth-page form input[ng-model$=email]').type(email);
-```
-
-* ❓ Что делает `Math.random` и `Math.round`?
-* ❓ Что фактически хранится в константе `rnd`?
-
-*** 15:00 ***
-
 - [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup1.spec.js)
-- [x] Перенеси к себе участки кода которые пропустил.
-- [x] Запусти тест в **Headless** режиме. 
+- [x] Запусти тест в **Headless** режиме.
 
 *** 5:00 ***
 
-- [x] Напиши тело теста логина пользователя.
+- [x] Добавь заготовку для кода теста логина:
+
+```js
+describe('Sign up', () => {
+    
+    it('should register user', () => {
+        
+        // TODO: test body
+
+    });
+
+    it.only('should do login user', () => {
+        
+        // open https://demo.realworld.io/
+        cy.visit('https://demo.realworld.io/');
+
+        // click Sign In link in app header
+        cy.get('?').click();
+
+        // url should be /#/login
+        cy.url().should('include', '?');
+
+        // page title should be Sign in
+        cy.get('?').should('have.text', '?');
+
+        // page should have form
+        cy.get('?').should('be.visible');
+
+        // type email form field
+        cy.get('?').type('?');
+
+        // type password form field
+        cy.get('?').type('?');
+
+        // click on sign in button
+        cy.get('?').click();
+
+        // header should contains {username}
+        cy.get('?').should('contain.text', '?');
+        
+    });
+
+});
+```
+
+- [x] Зарегистрируй в ручную пользователя и пропиши его данные в код.
+- [x] Напиши тело теста.
 
 *** 10:00 ***
 
 - [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup2.spec.js)
-- [x] Перенеси к себе участки кода которые пропустил.
+- [x] Запусти тест в **Headless** режиме.
 
 *** 05:00 ***
 
-## 4. Еще 10+ тест-кейсов!
-
-Продолжая следовать спецификации, а так же выполнив визуальный анализ приложения мы можем дополнить список фичей. 
+## 4. `README` для тест-кейсов
 
 - [x] Создай файл `~/test_cases/README.md`
 - [x] Добавь Markdown:
@@ -195,37 +280,15 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 * [register user](register_user.md)
 * [login user](login_user.md)
 * logout user
-
-# Commenting 
-* add comment
-* delete comment
-
-# Articles 
-* publish article
-* edit article
-* delete article
-* read article
-* like article
-* global articles feed
-* filter articles by tag
-
-# Social
-* subscribe to user
-* unsubscribe from user
-
-# User settings
-* edit settings
 ```
 
 - [x] Создай файлы `test_cases/register_user.md` и `test_cases/login_user.md`
 - [x] Перенеси в них Markdown из примеров [register](test_cases/register_user.md?plain=1) и [login](test_cases/login_user.md?plain=1)
 - [x] Открой файл `README.md` в режиме просмотра.
 
-<img src="../img/preview_md.png" width="217" height="84">
-
 * ❓ Что ты видишь?
 
-<img width="400" height="235" src="../img/like_a_boss.gif">
+<img src="../img/preview_md.png" width="217" height="84">
 
 ***
 
@@ -243,23 +306,9 @@ cy.get('.auth-page form input[ng-model$=email]').type(email);
 *** 10:00 ***
 
 - [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup.spec.js)
-
-## 6. Еще больше тестов
-
-Повтори эти действия для оставшихся фичей из `README.md`:
-
-- [x] Опиши тест-кейс для фичи в Markdown.
-- [x] Добавь ссылку в `README.md`
-- [x] Напиши код следуя описанию тест-кейса.
-
-*** 30:00 ***
+- [x] Запусти все тесты в Headless режиме.
 
 Та да 🥳 Ты дошел до конца.
-
-- [x] Сверь описание тест-кейсов с [примерами](test_cases)
-- [x] Сверь тесты с [примерами](cypress/integration/test_mama_project)
-- [x] Подсмотри фишки и улучши свой код!
-- [x] Запусти все тесты в Headless режиме.
 
 # Что дальше?
 

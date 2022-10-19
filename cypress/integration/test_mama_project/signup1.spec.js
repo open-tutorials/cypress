@@ -1,13 +1,13 @@
 describe('Sign up', () => {
-    
+
     it.only('should do register user', () => {
-        
+
         // open https://demo.realworld.io/
         cy.visit('https://demo.realworld.io/');
-        
+
         // click Sign Up link in app header
         cy.get('.navbar a[href$="/register"]').click();
-        
+
         // url should be /#/register
         cy.url().should('include', '/#/register');
 
@@ -22,14 +22,14 @@ describe('Sign up', () => {
 
         // username was not registered before
         const username = 'user_' + rnd;
-        // type username form field
-        cy.get('.auth-page form input[ng-model$=username]').type(username);
-
+        
         // email was not registered before
         const email = username + '@gmail.com';
+        
+        // type username form field
+        cy.get('.auth-page form input[ng-model$=username]').type(username);
         // type email form field
         cy.get('.auth-page form input[ng-model$=email]').type(email);
-
         // password should be with pattern [0-9a-zA-Z_]{6, 16}
         // type password form field
         cy.get('.auth-page form input[ng-model$=password]').type('xyzXYZ123_');
@@ -39,7 +39,7 @@ describe('Sign up', () => {
 
         // header should contains {username}
         cy.get('.navbar').should('contain.text', username);
-        
+
     });
 
     it('should login user', () => {

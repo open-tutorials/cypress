@@ -1,3 +1,4 @@
 {
+    "baseUrl": "https://demo.realworld.io/",
     "chromeWebSecurity": false
 }
