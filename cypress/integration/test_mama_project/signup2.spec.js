@@ -2,7 +2,7 @@ describe('Sign up', () => {
     
     it('should register user', () => {
         
-        // TODO: write test body
+        // TODO: your test body
 
     });
 

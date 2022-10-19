@@ -1,7 +1,9 @@
+This file contains test cases for [project](https://demo.realworld.io/)
+
 # Sign up
-* [register user](register_user.md)
-* [login user](login_user.md)
-* [logout user](logout_user.md)
+* [x] [register user](register_user.md)
+* [x] [login user](login_user.md)
+* [ ] [logout user](logout_user.md)
 
 # Commenting
 * [add comment](add_comment.md)

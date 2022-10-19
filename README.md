@@ -30,3 +30,6 @@ https://github.com/breslavsky/hello-cypress/blob/main/
 ```
 https://raw.githubusercontent.com/breslavsky/hello-cypress/main/
 ```
+
+# Links
+* https://superuser.com/questions/436056/how-can-i-get-ffmpeg-to-convert-a-mov-to-a-gif

@@ -6,7 +6,7 @@
 
 * Опишем тест-кейсы в Markdown на основании спецификации на проект.
 * Прокачаем свой Java Script для Cypress на конкретных примерах.
-* Напишем тесты для регистрации, логина и выхода.
+* Напишем тесты для регистрации, логина и выхода пользователя.
 
 # 🙋‍ Перед началом
 
@@ -120,23 +120,25 @@
 Каждый запуск теста будет добавлять в базу данных указанные нами `username` и `email`. 
 Если эти данные повторяться — тест будет провален.
 
-На текущий момент у нас нет доступа к базе данных приложения, поэтому, нам нужно генерировать новое имя пользователя и email при каждом запуске теста.
+На текущий момент у нас нет доступа к базе данных приложения.
+
+**Поэтому, нам нужно генерировать новое имя пользователя и email при каждом запуске теста.**
 
 - [x] Создай файл `~/js_examples/rnd.js` с содержимым
 
 ```javascript
 const rnd = Math.round(Math.random() * 8999) + 1000;
-console.log('rnd=', rnd);
+console.log('rnd =', rnd);
 const username = 'user_' + rnd;
-console.log('username=', username);
+console.log('username =', username);
 const email = username + '@gmail.com';
-console.log('email=', email);
+console.log('email =', email);
 ```
 
 - [x] В терминале выполни `node js_examples/rnd.js`
 - [x] Повтори команду 3-5 раз.
 
-<img width="926" height="298" src="../img/mama_project/rnd.gif">
+<img width="926" height="298" src="../img/test_mama_project/rnd.gif">
 
 * ❓ Что делает `Math.random` и `Math.round`?
 * ❓ Что фактически хранится в константе `rnd`?
@@ -197,7 +199,7 @@ describe('Sign up', () => {
 
     it('should do login user', () => {
 
-        // TODO: write test body
+        // TODO: write test body later
 
     });
 
@@ -222,7 +224,7 @@ describe('Sign up', () => {
     
     it('should register user', () => {
         
-        // TODO: test body
+        // TODO: your test body
 
     });
 
@@ -276,19 +278,21 @@ describe('Sign up', () => {
 - [x] Добавь Markdown:
 
 ```markdown
+This file contains test cases for [project](https://demo.realworld.io/)
+
 # Sign up
-* [register user](register_user.md)
-* [login user](login_user.md)
-* logout user
+* [x] [register user](register_user.md)
+* [x] [login user](login_user.md)
+* [ ] logout user
 ```
 
 - [x] Создай файлы `test_cases/register_user.md` и `test_cases/login_user.md`
 - [x] Перенеси в них Markdown из примеров [register](test_cases/register_user.md?plain=1) и [login](test_cases/login_user.md?plain=1)
-- [x] Открой файл `README.md` в режиме просмотра.
+- [x] Открой файл `README.md` в режиме просмотра <img src="../img/preview_md.png" width="217" height="84">
 
 * ❓ Что ты видишь?
 
-<img src="../img/preview_md.png" width="217" height="84">
+<img src="../img/wow.gif" width="427" height="427">
 
 ***
 
@@ -306,6 +310,7 @@ describe('Sign up', () => {
 *** 10:00 ***
 
 - [x] Сверь свой код с [примером](cypress/integration/test_mama_project/signup.spec.js)
+- [x] Найди и выпиши участки кода которые повторяются.
 - [x] Запусти все тесты в Headless режиме.
 
 Та да 🥳 Ты дошел до конца.
