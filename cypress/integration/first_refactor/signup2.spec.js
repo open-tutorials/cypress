@@ -1,4 +1,3 @@
-import { getRandomNumber } from '../../support/utils';
 import meUser from './../../fixtures/me-user.json';
 
 function login() {
@@ -36,7 +35,7 @@ describe('Sign up', () => {
         cy.get('@registerPage').find('h1').should('have.text', 'Sign up');
         cy.get('@registerPage').find('form').should('be.visible').as('registerForm');
 
-        const rnd = getRandomNumber(1000, 9999);
+        const rnd = Math.round(Math.random() * 8999) + 1000;
 
         const username = 'user_' + rnd;
         cy.get('@registerForm').find('input[ng-model$=username]').type(username);

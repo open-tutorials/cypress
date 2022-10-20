@@ -1,24 +1,4 @@
-import { getRandomNumber } from '../../support/utils';
 import meUser from './../../fixtures/me-user.json';
-
-function login() {
-
-    cy.get('.navbar').should('be.visible').as('appHeader');
-
-    cy.get('@appHeader').find('a[href$="/login"]').click();
-    cy.url().should('include', '/#/login');
-
-    cy.get('.auth-page').should('be.visible').as('loginPage');
-    cy.get('@loginPage').find('h1').should('have.text', 'Sign in');
-    cy.get('@loginPage').find('form').should('be.visible').as('loginForm');
-
-    cy.get('@loginForm').find('input[ng-model$=email]').type(meUser.email);
-    cy.get('@loginForm').find('input[ng-model$=password]').type(meUser.password);
-    cy.get('@loginForm').find('button[type=submit]').click();
-
-    cy.get('@appHeader').should('contain.text', meUser.username);
-
-}
 
 describe('Sign up', () => {
 
@@ -36,7 +16,7 @@ describe('Sign up', () => {
         cy.get('@registerPage').find('h1').should('have.text', 'Sign up');
         cy.get('@registerPage').find('form').should('be.visible').as('registerForm');
 
-        const rnd = getRandomNumber(1000, 9999);
+        const rnd = Math.round(Math.random() * 8999) + 1000;
 
         const username = 'user_' + rnd;
         cy.get('@registerForm').find('input[ng-model$=username]').type(username);
@@ -52,13 +32,39 @@ describe('Sign up', () => {
 
     it('should do login user', () => {
 
-        login();
+        cy.get('.navbar').should('be.visible').as('appHeader');
+
+        cy.get('@appHeader').find('a[href$="/login"]').click();
+        cy.url().should('include', '/#/login');
+    
+        cy.get('.auth-page').should('be.visible').as('loginPage');
+        cy.get('@loginPage').find('h1').should('have.text', 'Sign in');
+        cy.get('@loginPage').find('form').should('be.visible').as('loginForm');
+    
+        cy.get('@loginForm').find('input[ng-model$=email]').type(meUser.email);
+        cy.get('@loginForm').find('input[ng-model$=password]').type(meUser.password);
+        cy.get('@loginForm').find('button[type=submit]').click();
+    
+        cy.get('@appHeader').should('contain.text', meUser.username);
 
     });
 
     it('should do logout user', () => {
 
-        login();
+        cy.get('.navbar').should('be.visible').as('appHeader');
+
+        cy.get('@appHeader').find('a[href$="/login"]').click();
+        cy.url().should('include', '/#/login');
+    
+        cy.get('.auth-page').should('be.visible').as('loginPage');
+        cy.get('@loginPage').find('h1').should('have.text', 'Sign in');
+        cy.get('@loginPage').find('form').should('be.visible').as('loginForm');
+    
+        cy.get('@loginForm').find('input[ng-model$=email]').type(meUser.email);
+        cy.get('@loginForm').find('input[ng-model$=password]').type(meUser.password);
+        cy.get('@loginForm').find('button[type=submit]').click();
+    
+        cy.get('@appHeader').should('contain.text', meUser.username);
 
         cy.get('@appHeader').find('a[href$="/settings"]').click();
         cy.url().should('include', '/#/settings');

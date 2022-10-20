@@ -288,11 +288,13 @@ This file contains test cases for [project](https://demo.realworld.io/)
 
 - [x] Создай файлы `test_cases/register_user.md` и `test_cases/login_user.md`
 - [x] Перенеси в них Markdown из примеров [register](test_cases/register_user.md?plain=1) и [login](test_cases/login_user.md?plain=1)
-- [x] Открой файл `README.md` в режиме просмотра <img src="../img/preview_md.png" width="217" height="84">
+- [x] Открой файл `README.md` в режиме просмотра <img src="../img/preview_md.png" width="30" height="30">
 
-* ❓ Что ты видишь?
+<details>
+  <summary>Что ты видишь? 😂</summary>
 
 <img src="../img/wow.gif" width="427" height="427">
+</details>
 
 ***
 

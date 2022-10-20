@@ -1,3 +1,13 @@
+# Туториал: мой первый рефактор в Cypress
+
+Подойдет тем, кто хочет начать писать чистый код тестов на Cypress.
+
+# 👍 Что сделаем
+
+* Наведем чистоту в коде тестов проекта.
+* Узнаем про базовый URL, хуки, алиасы, фикстуры в Cypress.
+* Научимся писать функции на Java Script и использовать их в тестах.
+
 # 🙋‍ Перед началом
 
 * Ты инициализировал чистый **Node.js** проект `%/projects/cypress/my_first_refactor`
@@ -7,21 +17,23 @@
 
 # Шаги
 
-## 1. Базовый URL
+## 1. Готовим код для рефактора
 
-- [x] Создай файл теста `signup.spec.js`
+- [x] Создай файл теста `~/cypress/integration/signup.spec.js`
 - [x] Скопируй код из [примера](cypress/integration/test_mama_project/signup.spec.js)
-- [x] Проанализируй код и выпиши вопросы
-- [x] Прогони тесты из файла в Cypress
+- [x] Проанализируй код.
+- [x] Прогони тесты в Headless.
 
-*** 01:00 ***
+***
 
-Во всех тестах мы открываем один и тот же URL
+## 2. Базовый URL
+
+Во всех тестах мы открываем один и тот же URL https://demo.realworld.io/
+
+**❗ Каждый раз мы повторяем этот участок кода:** 
 ```js
 cy.visit('https://demo.realworld.io/');
 ```
-
-И каждый раз повторяем этот участок кода. Пора это исправить!
 
 - [x] Открой файл `~/cypress.json`
 - [x] Добавь в него содержимое:
@@ -30,180 +42,338 @@ cy.visit('https://demo.realworld.io/');
     "baseUrl": "https://demo.realworld.io/"
 }
 ```
-- [x] Во всех тестах от**рефактор**и
+- [x] Во всех тестах **отрефактори:**
 
-```mermaid
-flowchart LR;
-   Было-- рефактор -->Стало
+```diff
+  describe('Sign up', () => {
+
+      it('should do register user', () => {
+
+-          cy.visit('https://demo.realworld.io/');
++          cy.visit('/');
+
+          // test body ↓
+      }
+
+  }
 ```
-
-<md-diff-code>
-
-    <md-diff-left>
-```js
-describe('Sign up', () => {
-
-    it('should do register user', () => {
-
-        cy.visit('https://demo.realworld.io/');
-
-        // test body ↓
-    }
-
-}
-```
-    </md-diff-left>
-    <md-diff-right>
-```js
-describe('Sign up', () => {
-
-    it('should do register user', () => {
-
-        cy.visit('/');
-
-        // test body ↓
-    }
-
-}
-```
-    </md-diff-right>
-
-</md-diff-code>
 
 * ❓ Зачем нужен файл `cypress.json`?
 * ❓ Что такое базовый URL?
 
-## 2. Хуки
+***
 
-> Хук (hook) — крючёк, ловушка, а по-сути перехват выполнения кода.
+## 3. Хуки
+
+> Хук (hook) — крючек, ловушка, а по-сути перехват выполнения кода.
 
 `beforeEach()` — позволяет выполнить участок кода перед запуском каждого теста `it()`
 
-В каждом тесте мы повторяем открытие главной страницы приложения:
+**❗ В каждом тесте мы повторяем открытие главной страницы приложения:**
 ```js
 cy.visit('/');
 ```
 
-Закинем это в хук `beforeEach` и сократим наш код!
+Закинем это в хук `beforeEach` и сократим наш код:
 
-<md-diff-code>
+```diff
+  describe('Sign up', () => {
 
-    <md-diff-left>
-```js
-describe('Sign up', () => {
++     // will be executed before each it()
++     beforeEach(() => {
++         cy.visit('/');
++     });
 
-    it('should do register user', () => {
+      it('should do register user', () => {
 
-        cy.visit('/');
+-          cy.visit('/');
 
-        // test body ↓
-    }
+         // test body ↓
+      }
 
-    it('should do login user', () => {
+      it('should do login user', () => {
 
-        cy.visit('/');
+-         cy.visit('/');
 
-        // test body ↓
-    }
+          // test body ↓
+      }
 
-    it('should do logout user', () => {
+      it('should do logout user', () => {
 
-        cy.visit('/');
+-         cy.visit('/');
 
-        // test body ↓
-    }
+          // test body ↓
+      }
 
-}
+  }
 ```
-    </md-diff-left>
-    <md-diff-right>
+
+Еще больше **хуков** на сайте [docs.cypress.io](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks)
+
+***
+
+## 4. Алиасы
+
+**❗ Каждый раз мы повторяем часть селекторов для получения элементов:**
 ```js
-describe('Sign up', () => {
-
-    // will be executed before each it()
-    beforeEach(() => {
-        cy.visit('/');
-    });
-
-    it('should do register user', () => {
-
-      // test body ↓
-    }
-
-    it('should do login user', () => {
-
-        // test body ↓
-    }
-
-    it('should do logout user', () => {
-
-        // test body ↓
-    }
-
-}
-```
-    </md-diff-right>
-
-</md-diff-code>
-
-Еще больше **хуков** можно подсмотреть на сайте [docs.cypress.io](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks)
-
-## 3. Алиасы
-
-Мы каждый раз повторяем селекторы для получения элементов:
-```js
-cy.get('.auth-page h1');
+cy.get('.auth-page h1')
 cy.get('.auth-page form')
 cy.get('.auth-page form button[type=submit]')
 ```
 
-Когда мы нашли нужный элемент на странице, мы можем сделать на него `.as()` ссылку:
+Когда мы взяли нужный элемент на странице, мы можем назначить ему алиас — `.as('alias_name')`
 
-
-И далее в коде использовать ссылку через `get('@')`
-
-
-<md-diff-code>
-
-    <md-diff-left>
 ```js
-describe('Sign up', () => {
-
-    it('should do register user', () => {
-
-        cy.visit('https://demo.realworld.io/');
-
-        // test body ↓
-    }
-
-}
+cy.get('.very .long .selector .for form[name=login]').as('loginForm');
 ```
-    </md-diff-left>
-    <md-diff-right>
+
+Далее в коде, взять элемент через алиас — `get('@alias_name')`
+
+Получив ссылку, мы можем найти внутри него другие элементы через — `.find()`
+
 ```js
-describe('Sign up', () => {
-
-    it('should do register user', () => {
-
-        // test body ↓
-
-        cy.get('.auth-page').as('registerPage');
-        cy.get('@registerPage').find('h1').should('have.text', 'Sign up');
-        cy.get('@registerPage').find('form').should('be.visible').as('registerForm');
-
-        // test body ...
-
-        cy.get('@registerForm').find('button[type=submit]').click();
-    }
-
-}
+cy.get('@loginForm').find('input[name=email]').type('?');
+cy.get('@loginForm').find('input[name=password]').type('?');
 ```
-    </md-diff-right>
 
-</md-diff-code>
+- [x] Отрефактори код на использование алиасов:
 
-## 4. Фикстуры
+```diff
+  describe('Sign up', () => {
 
-## 5. Команды в Cypress
+      it('should do register user', () => {
+
+          // test body ...
+
+-         cy.get('.auth-page h1').should('have.text', 'Sign up');
+-         cy.get('.auth-page form').should('be.visible');
++         cy.get('.auth-page').as('registerPage');
++         cy.get('@registerPage').find('h1').should('have.text', 'Sign up');
++         cy.get('@registerPage').find('form').should('be.visible').as('registerForm');
+
+          // test body ...
+
+-         cy.get('.auth-page form button[type=submit]').click();
++         cy.get('@registerForm').find('button[type=submit]').click();
+      }
+
+  }
+```
 
 ***
+
+## 5. Фикстуры
+
+> Фикстуры (fixtures) - фиксированные данные окружения гарантирующие повторяемость процесса тестирования.
+
+В нашем коде для теста входа пользователя мы используем:
+* Email — `test_anton@gmail.com`
+* Пароль — `xyzXYZ123_`
+* Имя пользователя — `test_anton`
+
+- [x] Создай файл `~/cypress/fixtures/me-user.json`
+- [x] Добавь содержимое в формате JSON:
+
+```json
+{
+  "username": "test_anton",
+  "email": "test_anton@gmail.com",
+  "password": "xyzXYZ123_"
+}
+```
+
+- [x] В начало файла теста добавь импорт фикстуры:
+
+```js
+import meUser from './../fixtures/me-user.json';
+```
+
+Имя `meUser` — выбрано нами самостоятельно.
+
+- [x] Отрефактори файл теста:
+
+```diff
+- cy.get('@loginForm').find('input[ng-model$=email]').type('test_anton@gmail.com');
++ cy.get('@loginForm').find('input[ng-model$=email]').type(meUser.email);
+- cy.get('@loginForm').find('input[ng-model$=password]').type('xyzXYZ123_');
++ cy.get('@loginForm').find('input[ng-model$=password]').type(meUser.password);
+
+  // test body ...
+
+- cy.get('.navbar').should('contain.text', 'test_anton');
++ cy.get('.navbar').should('contain.text', meUser.username);
+```
+
+***
+
+- [x] Сверь свой код с [примером](cypress/integration/my_first_refactor/signup1.spec.js)
+
+***
+
+## 6. Функции — переиспользуемые блоки кода
+
+- [x] Создай файл `~/js_examples/say_hello.js` с содержимым:
+
+```javascript
+function sayHelloFor(firstName, lastName) {
+    const fullName = firstName + ' ' + lastName;
+    console.log('Hello', fullName);
+    console.log('Today is', new Date());
+}
+
+sayHelloFor('Bob', 'Marley');
+sayHelloFor('Bill', 'Gates');
+sayHelloFor('Tim', 'Cook');
+```
+
+- [x] В терминале выполни `node js_examples/say_hello.js`
+- [x] Скажи привет самому себе.
+- [x] Поменяй вывод в функции на: Hello Marley Bob.
+
+<details>
+  <summary>Микро изменение</summary>
+
+```js
+const fullName = lastName + ' ' + firstName;
+```
+</details>
+
+> Функции позволяют оформить участок кода в блок и обращаться к нему по имени.
+
+***
+
+### Функция `loginMe()`
+
+**❗ Мы повторяем большой участок кода входа пользователя.**
+
+- [x] Отрефактори исходный код тестов:
+
+```diff
+ import meUser from './../fixtures/me-user.json';
+
++ function loginMe() {
++
++     cy.get('.navbar').should('be.visible').as('appHeader');
++
++     cy.get('@appHeader').find('a[href$="/login"]').click();
++     cy.url().should('include', '/#/login');
++
++     cy.get('.auth-page').should('be.visible').as('loginPage');
++     cy.get('@loginPage').find('h1').should('have.text', 'Sign in');
++     cy.get('@loginPage').find('form').should('be.visible').as('loginForm');
++
++     cy.get('@loginForm').find('input[ng-model$=email]').type(meUser.email);
++     cy.get('@loginForm').find('input[ng-model$=password]').type(meUser.password);
++     cy.get('@loginForm').find('button[type=submit]').click();
++
++     cy.get('@appHeader').should('contain.text', meUser.username);
++
++ }
+
+  describe('Sign up', () => {
+
+      it('should do login user', () => {
+
+-         cy.get('.navbar').should('be.visible').as('appHeader');
+-
+-         cy.get('@appHeader').find('a[href$="/login"]').click();
+-         cy.url().should('include', '/#/login');
+-    
+-         cy.get('.auth-page').should('be.visible').as('loginPage');
+-         cy.get('@loginPage').find('h1').should('have.text', 'Sign in');
+-         cy.get('@loginPage').find('form').should('be.visible').as('loginForm');
+-    
+-         cy.get('@loginForm').find('input[ng-model$=email]').type(meUser.email);
+-         cy.get('@loginForm').find('input[ng-model$=password]').type(meUser.password);
+-         cy.get('@loginForm').find('button[type=submit]').click();
+-    
+-         cy.get('@appHeader').should('contain.text', meUser.username);
++         loginMe();
+
+      });
+    
+      it('should do logout user', () => {
+
+-         cy.get('.navbar').should('be.visible').as('appHeader');
+-
+-         cy.get('@appHeader').find('a[href$="/login"]').click();
+-         cy.url().should('include', '/#/login');
+-    
+-         cy.get('.auth-page').should('be.visible').as('loginPage');
+-         cy.get('@loginPage').find('h1').should('have.text', 'Sign in');
+-         cy.get('@loginPage').find('form').should('be.visible').as('loginForm');
+-    
+-         cy.get('@loginForm').find('input[ng-model$=email]').type(meUser.email);
+-         cy.get('@loginForm').find('input[ng-model$=password]').type(meUser.password);
+-         cy.get('@loginForm').find('button[type=submit]').click();
+-    
+-         cy.get('@appHeader').should('contain.text', meUser.username);
+-
++         loginMe();
+          // test body ...
+
+      });
+
+  }
+```
+
+***
+
+### Функция `getRandomNumber()`
+
+В нашем коде есть участок, где мы генерируем случайное число от 1000 до 9999.
+
+```js
+const rnd = Math.round(Math.random() * 8999) + 1000;
+```
+
+Оформим этот участок в виде отельной функции.
+
+- [x] Создай файл `~/cypress/support/utils.js` с содержимым:
+
+```js
+export function getRandomNumber(min, max) {
+    return Math.round(Math.random() * (max - min))) + min;
+}
+```
+
+- [x] Обнови код:
+
+```diff
++ import { getRandomNumber } from './../support/utils';
+  ...
+- const rnd = Math.round(Math.random() * 8999) + 1000;
++ const rnd = getRandomNumber(1000, 9999);
+  ...
+```
+
+***
+
+* ❓ Почему мы назвали файл `utils.js`?
+* ❓ Почему мы положили его в папку `support`?
+* ❓ Как сгенерировать используя `getRandomNumber()` число от -500 до 500?
+
+На этом сегодня все! Еще раз посмотри насколько хороший код у тебя получился.
+
+# Фидбек пожалуйста 🙏
+
+? Полезный материал ?
+* 🤩 Очень полезный материал
+* 😃 В целом полезный
+* 😐 Возможно что-то пригодится
+* 😒 Нет ничего полезного
+* 😬 Абсолютно бесполезно
+
+? Все ли было понятно ?
+* 🤩 Все понятно на 100%
+* 😃 В целом все понятно
+* 😐 Что-то понятно, что-то нет
+* 😒 Понял только малую часть
+* 😬 Ничего не понял
+
+? Как тебе такой формат Туториала ?
+* 🤩 Очень удобно
+* 😃 Мне понравилось
+* 😐 Нормально
+* 😒 Не удобно
+* 😬 Ужасно

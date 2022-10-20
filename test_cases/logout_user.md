@@ -4,7 +4,7 @@ User logout test case
 
 ## Before
 1. Open https://demo.realworld.io/
-2. Repeat 1-9 from [login user](login_user.md)
+2. Repeat 2-9 from [login user](login_user.md)
 
 ## Logout user
 3. Click **Settings** item in app header menu

@@ -66,7 +66,6 @@ describe('Sign up', () => {
         // TODO: improve selector to button[data-cy=logout]
         cy.get('.settings-page button[ng-click*=logout]').click();
 
-        cy.url().should('match', /\/\#\/$/);
         cy.get('.navbar').should('not.contain.text', username);
     });
 
