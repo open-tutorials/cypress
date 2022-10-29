@@ -2,8 +2,6 @@ import meUser from '../../fixtures/me-user.json';
 
 export function login() {
 
-    cy.get('.navbar').should('be.visible').as('appHeader');
-
     cy.get('@appHeader').find('a[href$="/login"]').click();
     cy.url().should('include', '/#/login');
 

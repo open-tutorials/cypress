@@ -71,12 +71,11 @@ describe('Articles', () => {
 
     beforeEach(() => {
         cy.visit('/');
+        cy.get('.navbar').should('be.visible').as('appHeader');
         login();
     });
 
     it('should do publish article', () => {
-
-        cy.get('.navbar').should('be.visible').as('appHeader');
 
         const article = addArticle();
 
@@ -101,8 +100,6 @@ describe('Articles', () => {
     });
 
     it.only('should do delete article', () => {
-
-        cy.get('.navbar').should('be.visible').as('appHeader');
 
         const article = addArticle();
 

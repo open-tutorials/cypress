@@ -19,12 +19,11 @@ describe('Articles', () => {
 
     beforeEach(() => {
         cy.visit('/');
+        cy.get('.navbar').should('be.visible').as('appHeader');
         login();
     });
 
     it('should do publish article', () => {
-
-        cy.get('.navbar').should('be.visible').as('appHeader');
 
         // open editor
         cy.get('@appHeader').find('a[href$="/editor/"]').click();
