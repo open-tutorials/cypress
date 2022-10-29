@@ -1,4 +1,4 @@
-import { login } from '../../support/write_more_tests/shared';
+import { login } from '/cypress/support/fake_data/shared';
 import { faker } from '@faker-js/faker';
 
 function generateFakeArticle() {

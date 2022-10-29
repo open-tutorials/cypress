@@ -1,4 +1,4 @@
-import meUser from '../../fixtures/me-user.json';
+import meUser from '/cypress/fixtures/me-user.json';
 
 export function login() {
 
