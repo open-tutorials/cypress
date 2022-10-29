@@ -278,7 +278,7 @@ describe('Sign up', () => {
 - [x] Добавь Markdown:
 
 ```markdown
-This file contains test cases for [project](https://demo.realworld.io/)
+This file contains test cases for [Conduit project](https://demo.realworld.io/)
 
 # Sign up
 * [x] [register user](register_user.md)
@@ -324,7 +324,7 @@ This file contains test cases for [project](https://demo.realworld.io/)
 
 Каждый вторник и четверг я провожу стендапы в Zoom со всеми желающими.
 
-Все подробности в Телеграмм 👉 https://t.me/epic_one_hour 
+Все подробности в Телеграм 👉 https://t.me/epic_one_hour 
 
 @[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
 

@@ -20,5 +20,8 @@
     "cypress": "~9.7.0",
     "node-wget": "^0.4.3",
     "tiny-server": "^1.1.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }
