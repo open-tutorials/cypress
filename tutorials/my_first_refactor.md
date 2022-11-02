@@ -11,7 +11,7 @@
 # 🙋‍ Перед началом
 
 * Ты инициализировал чистый **Node.js** проект `%/projects/cypress/my_first_refactor`
-* Ты установил Cypress `npm i cypress@9`
+* Ты установил Cypress `npm i cypress@9 --save-dev`
 
 ***
 
@@ -58,7 +58,7 @@
 -          cy.visit('https://demo.realworld.io/');
 +          cy.visit('/');
 
-          // test body ↓
+          // test body ...
       }
 
   }
@@ -91,21 +91,21 @@
 
 -          cy.visit('/');
 
-         // test body ↓
+         // test body ...
       }
 
       it('should do login user', () => {
 
 -         cy.visit('/');
 
-          // test body ↓
+          // test body ...
       }
 
       it('should do logout user', () => {
 
 -         cy.visit('/');
 
-          // test body ↓
+          // test body ...
       }
 
   }
@@ -130,7 +130,7 @@ cy.get('.auth-page form button[type=submit]')
 cy.get('.very .long .selector .for form[name=login]').as('loginForm');
 ```
 
-Далее в коде, взять элемент через алиас — `get('@alias_name')`
+Далее в коде взять элемент через алиас — `get('@alias_name')`
 
 Получив ссылку, мы можем найти внутри него другие элементы через — `.find()`
 
@@ -367,7 +367,8 @@ export function getRandomNumber(min, max) {
 <details>
   <summary>Теперь ты крут 😎</summary>
 
-<img width="400" height="235" src="../img/like_a_boss.gif">
+<iframe src="https://giphy.com/embed/GN02jU6n6lkuk" 
+  width="480" height="282" frameBorder="0" class="giphy-embed"></iframe>
 </details>
 
 

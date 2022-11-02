@@ -11,7 +11,7 @@
 # 🙋‍ Перед началом
 
 * Ты инициализировал чистый **Node.js** проект `%/projects/cypress/fake_data`
-* Ты установил Cypress `npm i cypress@9`
+* Ты установил Cypress `npm i cypress@9 --save-dev`
 
 ***
 
@@ -62,7 +62,7 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 * **tags** — keywords
 
 <details>
-  <summary>Как мы узнали название полей формы? 📹</summary>
+  <summary>Как мы узнали название полей формы?</summary>
 
 Проинспектируй поля формы в инструментах разработчика Chrome.
 
@@ -173,18 +173,26 @@ npm i @faker-js/faker --save-dev
 - [x] Создай файл `~/js_examples/faker.js` с содержимым:
 
 ```js
-import { faker } from '@faker-js/faker';
+const { faker } = require('@faker-js/faker');
 
 function generateFakeArticle() {
     return {
         title: faker.lorem.sentence(),
-        description: faker.lorem.paragraph()
+        description: faker.lorem.paragraph(),
+        tags: [
+            faker.word.adjective(),
+            faker.word.adjective(),
+            faker.word.adjective()
+        ]
     };
 }
 
 const article = generateFakeArticle();
 console.log('title =', article.title);
 console.log('description =', article.description);
+for (const tag of article.tags) {
+    console.log('tag =', tag);
+}
 ```
 
 - [x] Выполни скрипт `node js_examples/faker.js`
@@ -214,7 +222,7 @@ function generateFakeUser() {
     };
 }
 
-for (let i = 0; i <= 10; i++) {
+for (let i = 0; i <= 5; i++) {
     console.log(generateFakeUser());
 }
 ```
@@ -290,10 +298,10 @@ for (let i = 0; i <= 10; i++) {
 
 Для данного теста тебе потребуется повторить часть теста публикации статьи.
 
-- [x] Чтобы избежать дублирования кода, создай функцию `addArtile() → article`
+- [x] Чтобы избежать дублирования кода создай функцию `addArticle() → article`
 
 ```js
-function addArtile() {
+function addArticle() {
   // open editor
   // ...
   const article = generateFakeArticle();
@@ -328,6 +336,7 @@ cy.get('@myArticles').contains(article.title)
     .should('have.length', 0);
 ```
 
+* ❓ Что делает `parents('?')`?
 * ❓ Что делает `have.length.greaterThan`?
 
 *** 05:00 ***
@@ -366,7 +375,8 @@ cy.get('@myArticles').contains(article.title)
 <details>
   <summary>Теперь ты крут 😎</summary>
 
-<img width="320" height="240" src="../img/nice.gif">
+<iframe src="https://giphy.com/embed/VhWVAa7rUtT3xKX6Cd" 
+  width="480" height="360" frameBorder="0" class="giphy-embed"></iframe>
 </details>
 
 # Фидбек пожалуйста 🙏

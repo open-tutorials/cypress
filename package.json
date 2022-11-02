@@ -22,6 +22,7 @@
     "tiny-server": "^1.1.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^7.6.0",
+    "faker": "^6.6.6"
   }
 }

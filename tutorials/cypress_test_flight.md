@@ -19,15 +19,15 @@
 
 ## Реагируй на пункты
 
-<img width="500" src="../img/tutorial/shit.gif">
+<img width="500" src="../assets/img/shit.gif">
 
 ## Оставляй комментарии и вопросы
 
-<img width="500" src="../img/tutorial/commenting.gif">
+<img width="500" src="../assets/img/commenting.gif">
 
 ## В конце оставь фидбек
 
-<img width="500" src="../img/tutorial/feedback.gif">
+<img width="500" src="../assets/img/feedback.gif">
 
 # 😍 Живая обратная связь
 
@@ -41,9 +41,7 @@
 
 @[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
 
-Что бы следить за анонсами новых туториалов
-* Группа в VK https://vk.com/epic_one_hour
-* Телеграмм канал https://t.me/epic_one_hour 
+Что бы следить за анонсами новых туториалов подписывайся на [телеграмм канал](https://t.me/epic_one_hour)
 
 *****
 
@@ -64,7 +62,7 @@
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/fumdib2k?inline=true" type="video/mp4">
+  <source src="../assets/videos/project_init.mp4" type="video/mp4">
 </video>
 </details>
 
