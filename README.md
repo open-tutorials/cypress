@@ -9,7 +9,7 @@
 1. [Первый полет на Cypress](https://md.epic1h.com/cypress_test_flight)
 1. [Находим лучшие селекторы](https://md.epic1h.com/best_selectors)
 1. [Тестируем мама проект на Cypress](https://md.epic1h.com/test_mama_project)
-1. [Мой первый рефактор в Cypress](https://md.epic1h.com/first_refactor)
+1. [Мой первый рефактор в Cypress](https://md.epic1h.com/my_first_refactor)
 1. [Фейк дата в тестах](https://md.epic1h.com/fake_data)
 1. Как устроен Cypress внутри
 1. Заканчиваем мама проект
