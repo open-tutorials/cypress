@@ -19,15 +19,15 @@
 
 ## Реагируй на пункты
 
-<img width="500" src="../assets/img/shit.gif">
+<img width="500" src="assets/img/shit.gif">
 
 ## Оставляй комментарии и вопросы
 
-<img width="500" src="../assets/img/commenting.gif">
+<img width="500" src="assets/img/commenting.gif">
 
 ## В конце оставь фидбек
 
-<img width="500" src="../assets/img/feedback.gif">
+<img width="500" src="assets/img/feedback.gif">
 
 # 😍 Живая обратная связь
 
@@ -62,7 +62,7 @@
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="../assets/videos/project_init.mp4" type="video/mp4">
+  <source src="assets/videos/test_flight/project_init.mp4" type="video/mp4">
 </video>
 </details>
 
