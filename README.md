@@ -6,13 +6,17 @@
 
 # Туториалы по Cypress
 
-1. [Первый полет на Cypress](tutorials/cypress_test_flight.md)
-1. [Находим лучшие селекторы](tutorials/best_selectors.md)
-1. [Тестируем мама проект на Cypress](tutorials/test_mama_project.md)
-1. [Мой первый рефактор в Cypress](tutorials/first_refactor.md)
-1. [Фейк дата в тестах](tutorials/fake_data.md)
+1. [Первый полет на Cypress](https://md.epic1h.com/cypress_test_flight)
+1. [Находим лучшие селекторы](https://md.epic1h.com/best_selectors)
+1. [Тестируем мама проект на Cypress](https://md.epic1h.com/test_mama_project)
+1. [Мой первый рефактор в Cypress](https://md.epic1h.com/first_refactor)
+1. [Фейк дата в тестах](https://md.epic1h.com/fake_data)
 
-# Скринкасты и GIF
+# Как контрибутить
+
+Присылайте пулрегвесты, если вы хотите улучшить туториалы или добавить новые.
+
+## Скринкасты и GIF
 
 Для сжатия скринкастов в MP4:
 ```bash
@@ -20,7 +24,6 @@ ffmpeg -i my-video.mov -vcodec h264 -acodec mp2 my-video.mp4
 ```
 
 Для конвертации видео в GIF:
-
 ```bash
 ffmpeg -i my-video.mov -pix_fmt rgb24 my-video.gif
 ```
