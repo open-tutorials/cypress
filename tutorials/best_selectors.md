@@ -129,7 +129,7 @@ cy.visit('http://localhost:3000/apps/tesla.html');
 
 - [x] Активируй **selector playground**
 
-<img width="200" src="../img/selector_playground.png">
+<img width="200" src="assets/selector_playground.png">
 
 - [x] Наведи на поле **фамилия** и скопируй код селектора.
 - [x] Обнови код теста:

@@ -138,7 +138,7 @@ console.log('email =', email);
 - [x] В терминале выполни `node js_examples/rnd.js`
 - [x] Повтори команду 3-5 раз.
 
-<img width="926" height="298" src="../img/test_mama_project/rnd.gif">
+<img width="926" height="298" src="assets/test_mama_project/rnd.gif">
 
 * ❓ Что делает `Math.random` и `Math.round`?
 * ❓ Что фактически хранится в константе `rnd`?

@@ -19,15 +19,15 @@
 
 ## Реагируй на пункты
 
-<img width="500" src="assets/img/shit.gif">
+<img width="500" src="assets/shit.gif">
 
 ## Оставляй комментарии и вопросы
 
-<img width="500" src="assets/img/commenting.gif">
+<img width="500" src="assets/commenting.gif">
 
 ## В конце оставь фидбек
 
-<img width="500" src="assets/img/feedback.gif">
+<img width="500" src="assets/feedback.gif">
 
 # 😍 Живая обратная связь
 
@@ -62,7 +62,7 @@
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="assets/videos/test_flight/project_init.mp4" type="video/mp4">
+  <source src="assets/test_flight/project_init.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -91,7 +91,7 @@
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/RHTCffXM?inline=true" type="video/mp4">
+  <source src="assets/test_flight/install_cypress.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -116,7 +116,7 @@
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/egG3Ma3c?inline=true" type="video/mp4">
+  <source src="assets/test_flight/open_cypress.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -136,7 +136,7 @@
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/Sw73qKOH?inline=true" type="video/mp4">
+  <source src="assets/test_flight/run_todo.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -162,7 +162,7 @@ cy.visit('https://www.cypress.io/');
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/Sk48Ckuw?inline=true" type="video/mp4">
+  <source src="assets/test_flight/write_own_test.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -208,7 +208,7 @@ Cypress.on('uncaught:exception', () => false);
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/mJXN2MxL?inline=true" type="video/mp4">
+  <source src="assets/test_flight/catch_exceptions.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -221,7 +221,7 @@ Cypress.on('uncaught:exception', () => false);
 - [x] Прокрути страницу до формы подписки на рассылку.
 - [x] Активируй **selector playground**.
 
-<img width="200" src="../img/selector_playground.png">
+<img width="200" src="assets/selector_playground.png">
 
 - [x] Наведи на поле ввода **email**.
 - [x] Скопируй код селектора.
@@ -244,7 +244,7 @@ it('should do subscribe to news letter', () => {
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/5bLdLRM5?inline=true" type="video/mp4">
+  <source src="assets/test_flight/input_email.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -275,7 +275,7 @@ it('should do subscribe to news letter', () => {
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/tDiRq2JK?inline=true" type="video/mp4">
+  <source src="assets/test_flight/subscribe.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -307,7 +307,7 @@ it('should subscribe to news letter', () => {
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/jfbTFCjy?inline=true" type="video/mp4">
+  <source src="assets/test_flight/check_subscription.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -336,7 +336,7 @@ it('should subscribe to news letter', () => {
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/D4HgVHx0?inline=true" type="video/mp4">
+  <source src="assets/test_flight/run_headless.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -356,7 +356,7 @@ it('should subscribe to news letter', () => {
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/2h0DxcZY?inline=true" type="video/mp4">
+  <source src="assets/test_flight/break_test.mp4" type="video/mp4">
 </video>
 </details>
 
