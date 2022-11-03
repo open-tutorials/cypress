@@ -105,7 +105,7 @@ describe('Basics algorithms', () => {
         cy.wrap(dst).should('eq', 'a2b3c4d5e6xyz');
     });
 
-    it('should un compress string', () => {
+    it('should uncompress string', () => {
         const src = 'a2b3c4d5e6';
         let dst = '';
         for (let i = 1; i < src.length; i++) {
@@ -121,48 +121,6 @@ describe('Basics algorithms', () => {
 
     it('should round number', () => {
 
-    });
-
-    const dict = ['a', '3', 'c', '9', 'e', 'X', 'g', 'h', 'x', 'y'];
-
-    it.only('should crypt string by key', () => {
-        const source = 'Some string here for crypt';
-        const password = 'xyzXYZ';
-
-        function getCheckSum(src) {
-            let sum = 0;
-            for (let i = 0; i < src.length; i++) {
-                sum += (i + 1) * src.charCodeAt(i);
-            }
-            return sum;
-        }
-        const salt = getCheckSum(password);
-
-        let encoded = '';
-        for (let i = 0; i < source.length; i++) {
-            const code = (source.charCodeAt(i) * salt).toString();
-            cy.log(code);
-            for (let j = 0; j < code.length; j++) {
-                encoded += dict[parseInt(code[j])];
-            }
-            encoded += dict[code % 10];
-        }
-
-        cy.debug(encoded);
-
-        let decoded = '';
-        let code = '';
-        for (let i = 0; i < encoded.length; i++) {
-            const char = encoded.charAt(i);
-            const x = dict.indexOf(char);
-            //cy.log(parseInt(code) % 10, char);
-            if (parseInt(code) % 10 === parseInt(x)) {
-                cy.log(code);
-                code = '';
-            } else {
-                code += dict.indexOf(char);
-            }
-        }
     });
 
 });

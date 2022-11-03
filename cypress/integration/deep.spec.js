@@ -1,10 +1,10 @@
 beforeEach(() => {
-    cy.visit('http://localhost:3000/app/index.html');
+    cy.visit('http://localhost:3000/apps/deep.html');
 });
 
 it('should do long like', () => {
 
-    cy.get('section[data-cy=like').as('like');
+    cy.get('section[data-cy=like]').as('like');
     cy.get('@like').find('button').click();
 
     cy.get('@like').find('[data-cy=success]', { timeout: 5000 })
