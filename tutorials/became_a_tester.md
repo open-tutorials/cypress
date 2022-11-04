@@ -42,7 +42,8 @@
 >
 > Тестировщик должен **уничтожить** продукт быстрее, чем его **уничтожит** пользователь.
 
-<img src="/img/crush_test.gif" width="480" height="270">
+<iframe src="https://giphy.com/embed/f1NTdkdbG4XzW" 
+  width="480" height="360" frameBorder="0" class="giphy-embed"></iframe>
 
 *****
 
