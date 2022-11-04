@@ -15,8 +15,8 @@ This file contains test cases for [project](https://demo.realworld.io/)
 * [ ] filter articles by tag
 
 # Commenting
-* [add comment](add_comment.md)
-* [delete comment](delete_comment.md)
+* [ ] [add comment](add_comment.md)
+* [ ] [delete comment](delete_comment.md)
 
 # Social
 * [ ] subscribe to user
