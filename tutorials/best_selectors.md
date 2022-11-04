@@ -40,7 +40,7 @@
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/1h240nTG?inline=true" type="video/mp4">
+  <source src="assets/best_selectors/prepare_server.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -77,7 +77,7 @@ npx wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/0COveY0N?inline=true" type="video/mp4">
+  <source src="assets/best_selectors/load_tesla_app.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -115,7 +115,7 @@ cy.visit('http://localhost:3000/apps/tesla.html');
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/QpORsQE7?inline=true" type="video/mp4">
+  <source src="assets/best_selectors/start_test.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -147,7 +147,7 @@ it('should do register user', () => {
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/FHqKgmxc?inline=true" type="video/mp4">
+  <source src="assets/best_selectors/finding_selectors.mp4" type="video/mp4">
 </video>
 </details>
 
@@ -266,7 +266,7 @@ cy.get('[data-cy=register]').click();
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="https://s.epic1h.com/api/public/dl/x3RWtd5f?inline=true" type="video/mp4">
+  <source src="assets/best_selectors/test_registration_form.mp4" type="video/mp4">
 </video>
 </details>
 
