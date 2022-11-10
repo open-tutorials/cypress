@@ -1,0 +1,23 @@
+<ul class="users">
+
+<li class="user">
+ <p>Bob</p>
+ <a class="go" href="users/1">open</a>
+</li>
+
+<li class="user">
+ <p>Jobs</p>
+ <a class="go" href="users/2">open</a>
+</li>
+
+</ul>
+
+<script>
+
+cy.get('.users')
+ .contains('Jobs')
+ .parents('.user')
+ .find('a.go')
+ .click();
+
+</script>

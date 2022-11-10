@@ -1,0 +1,3 @@
+rnd = 7107
+username = user_7107
+email = user_7107@gmail.com
