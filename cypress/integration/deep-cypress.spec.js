@@ -67,7 +67,7 @@ it('should do check hello from user', () => {
 
 });
 
-it.only('should do change DOM', () => {
+it('should do change DOM', () => {
 
     cy.get('section[data-cy=change-dom]').as('section').scrollIntoView();
     cy.get('@section').find('p').as('message');
