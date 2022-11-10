@@ -128,6 +128,21 @@
         </script>
     </section>
 
+    <h1>Change my DOM</h1>
+    <section data-cy="change-dom">
+        <p>Please change me now.</p>
+
+        <script>
+            function callMe(phone) {
+                const section = document.querySelector('[data-cy=change-dom]');
+                const link = document.createElement('a');
+                link.setAttribute('href', 'tel:' + phone);
+                link.innerText = phone;
+                section.appendChild(link);
+            }
+        </script>
+    </section>
+
     <h1>Mouse long down</h1>
     <section data-cy="mouse-long-down">
         <button onmousedown="longDown()">Press me long</button>

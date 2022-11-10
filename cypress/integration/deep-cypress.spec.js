@@ -67,6 +67,25 @@ it('should do check hello from user', () => {
 
 });
 
+it.only('should do change DOM', () => {
+
+    cy.get('section[data-cy=change-dom]').as('section').scrollIntoView();
+    cy.get('@section').find('p').as('message');
+    cy.get('@message').invoke('css', 'background-color', 'rgb(0, 128, 0)');
+    cy.get('@message').should('have.css', 'background-color', 'rgb(0, 128, 0)');
+    // wait just for demo
+    cy.wait(2000);
+    cy.get('@message').invoke('css', 'background-color', 'rgb(128, 0, 0)');
+    cy.get('@message').should('have.css', 'background-color', 'rgb(128, 0, 0)');
+
+    const phone = '+7 920 736-12-49';
+    cy.window().invoke('callMe', phone);
+
+    cy.get('@section').invoke('html')
+        .should('contain', '<a href="tel:' + phone + '">' + phone + '</a>');
+
+});
+
 it('should do check long mouse down', () => {
 
     cy.get('section[data-cy=mouse-long-down]').as('section');
@@ -112,7 +131,7 @@ it('should do make screenshots', () => {
     cy.get('section[data-cy=make-screenshots]').should('be.visible').as('section').scrollIntoView();
     cy.get('@section').screenshot('before');
     cy.get('@section').find('input[name=user]').type('Elon Musk')
-        .invoke('attr', 'style', 'background:green');
+        .invoke('css', 'background', 'green');
     cy.get('@section').screenshot('after');
 
 });
@@ -186,7 +205,7 @@ describe('Navigation', () => {
     });
 });
 
-it.only('should do check hero', () => {
+it('should do check hero', () => {
 
     console.log('a');
     cy.log('a');
