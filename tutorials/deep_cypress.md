@@ -473,7 +473,7 @@ it.only('should do make screenshots', () => {
     cy.get('section[data-cy=make-screenshots]').should('be.visible').as('section').scrollIntoView();
     cy.get('@section').screenshot('before');
     cy.get('@section').find('input[name=user]').type('Anton')
-        .invoke('attr', 'style', 'background:green');
+        .invoke('css', 'background', 'green');
     cy.get('@section').screenshot('after');
 
 });
@@ -481,7 +481,7 @@ it.only('should do make screenshots', () => {
 
 - [x] Проверь, что тест 🟢 проходит.
 - [x] Найди файлы скриншотов `~/cypress/screenshots`
-- [x] Что делает `invoke('attr', 'style', 'background:green')`?
+- [x] Что делает `invoke('css', 'background', 'green')`?
 - [x] Что значит `before` и `after`?
 
 ***
@@ -663,6 +663,7 @@ it.only('should do check hero', () => {
 
 * ❓ Что такое `Cypress.Promise`?
 * ❓ Что такое  `setTimeout`?
+* ❓ Почему в консоли Chrome порядок не правильный — `acb`?
 
 ***
 

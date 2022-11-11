@@ -18,7 +18,7 @@
 1. [Тестируем мама проект на Cypress](https://md.epic1h.com/test_mama_project)
 1. [Мой первый рефактор в Cypress](https://md.epic1h.com/my_first_refactor)
 1. [Фейк дата в тестах](https://md.epic1h.com/fake_data)
-1. Как устроен Cypress внутри
+1. [Как устроен Cypress внутри](https://md.epic1h.com/deep_cypress)
 1. Заканчиваем мама проект
 1. Собираем мама проект локально
 1. Деплоим маму на своем сервере
