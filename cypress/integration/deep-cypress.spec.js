@@ -22,7 +22,7 @@ it('should do find child in tree', () => {
 
 });
 
-it('should do open conduit by link', () => {
+it.only('should do open conduit by link', () => {
 
     cy.get('section[data-cy=open-conduit-by-link]').as('section');
     cy.get('@section').find('a').invoke('removeAttr', 'target').click();

@@ -38,7 +38,7 @@
 
 ## 2. Загрузка тестового приложения
 
-Веб-сервер готов, нужно скачать [тестовое приложение](https://github.com/breslavsky/hello-cypress/blob/main/apps/deep-cypress.html) с **GitHub**.
+Веб-сервер готов, нужно скачать [тестовое приложение](apps/deep-cypress.html) с **GitHub**.
 
 - [x] Открой **Новый терминал.**
 - [x] Установи пакет `npm i node-wget --save-dev`
@@ -119,7 +119,7 @@ it.only('should do long like', () => {
 ```js
 it.only('should do find child in tree', () => {
 
-    cy.get('section[data-cy=child-tree]').as('section');
+    cy.get('section[data-cy=child-in-tree]').as('section');
     cy.get('@section').find('button').click();
     cy.get('@section').find('[data-cy=daddy] [data-cy=child]').should('be.visible');
 
@@ -152,8 +152,8 @@ it.only('should do find child in tree', () => {
 - [x] Измени код:
 
 ```diff
-- cy.get('@tree').find('[data-cy=daddy]').should('be.visible')
-+ cy.get('@tree').find('[data-cy=daddy]').should('not.contain', 'Loading')
+- cy.get('@section').find('[data-cy=daddy]').should('be.visible')
++ cy.get('@section').find('[data-cy=daddy]').should('not.contain', 'Loading')
 ```
 - [x] Проверь, что тест снова выполняется 🟢 успешно.
 
@@ -163,6 +163,17 @@ it.only('should do find child in tree', () => {
 
 ## 5. Работа с несколькими вкладками
 
+> По умолчанию, браузер [запрещает](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) взаимодействие между HTML документами загруженными из различных источников (доменов).
+>
+> Если нам потребуется в Cypress переходить между различными сайтами, нам нужно отключить данную политику безопасности.
+
+- [x] Добавь в файл `cypress.json`:
+
+```diff
++ "chromeWebSecurity": false
+```
+
+- [x] Перезапусти Cypress.
 - [x] Добавь новый тест:
 
 ```js
@@ -243,20 +254,6 @@ it.only('should do open conduit in window', () => {
 
 ## 7. Работа с iframe
 
-> По умолчанию браузер изолирует фреймы друг от друга на странице.
-
-- [x] Добавь в файл `cypress.json`:
-
-```diff
-+ "chromeWebSecurity": false
-```
-
-- [x] Перезапусти Cypress.
-
-* ❓ Что делает данный параметр?
-
-***
-
 - [x] Добавь новый тест:
 
 ```js
@@ -302,7 +299,7 @@ it.only('should do open conduit signup in iframe', () => {
 it.only('should do check hello from user', () => {
 
     cy.get('section[data-cy=hello-from-user]').as('section');
-    cy.get('@section').find('user-component').as('user');
+    cy.get('@section').find('user-web-component').as('user');
     cy.get('@user').find('p.hello').should('contain.text', 'Hello from');
 
 });
@@ -332,8 +329,8 @@ it.only('should do check hello from user', () => {
 - [x] Измени код:
 
 ```diff
-- cy.get('@section').find('user-component').as('user');
-+ cy.get('@section').find('user-component').shadow().as('user');
+- cy.get('@section').find('user-web-component').as('user');
++ cy.get('@section').find('user-web-component').shadow().as('user');
 ```
 
 - [x] Проверь, что тест 🟢 проходит.
