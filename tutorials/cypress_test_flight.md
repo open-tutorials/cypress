@@ -426,7 +426,7 @@ cy.visit('http://httpbin.org/basic-auth/foo/bar', {
 # Термины
 
 * [Visual Code](https://ru.wikipedia.org/wiki/Visual_Studio_Code) — редактор исходного кода.
-* [Node.js](https://ru.wikipedia.org/wiki/Node.js) — среда выволнения кода на Java Script.
+* [Node.js](https://ru.wikipedia.org/wiki/Node.js) — среда выполнения кода на Java Script.
 * [npm](https://ru.wikipedia.org/wiki/Npm) — менеджер пакетов, входящий в состав Node.js.
 * [JSON](https://ru.wikipedia.org/wiki/JSON) / JavaScript Object Notation — текстовый формат описания данных.
 * [package.json](https://docs.npmjs.com/cli/v8/configuring-npm/package-json) — [манифест](https://en.wikipedia.org/wiki/Manifest_file) проекта на **Node.js**
@@ -434,6 +434,6 @@ cy.visit('http://httpbin.org/basic-auth/foo/bar', {
 
 # Артефакты
 
-* [Список рецептов](https://example.cypress.io/)
+* [Список рецептов Cypress](https://example.cypress.io/)
 * [Todo-приложение для тестирования](https://example.cypress.io/todo)
 * [Первый взгляд на Cypress для end2end тестирования](https://www.youtube.com/watch?v=k7Z5_jJPOlU) 

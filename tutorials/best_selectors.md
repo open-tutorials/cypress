@@ -100,7 +100,7 @@ npx wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/
 
 - [x] Создай файл `~/cypress/integration/best-selectors.spec.js`
 
-```javascript
+```js
 it('should do register user', () => {
 
 cy.visit('http://localhost:3000/apps/tesla.html');
@@ -134,7 +134,7 @@ cy.visit('http://localhost:3000/apps/tesla.html');
 - [x] Наведи на поле **фамилия** и скопируй код селектора.
 - [x] Обнови код теста:
 
-```javascript
+```js
 it('should do register user', () => {
   
   cy.visit('http://localhost:3000/apps/tesla.html');
@@ -178,7 +178,7 @@ it('should do register user', () => {
 <button data-cy="register">Продолжить</button>
 ```
 
-```javascript
+```js
 cy.get('[data-cy=register]').click();
 ```
 
@@ -275,7 +275,7 @@ cy.get('[data-cy=register]').click();
 ***
 
 - [x] Обнови в код теста:
-```javascript
+```js
 cy.get('input[name=last_name]').type('Иванов');
 cy.get('input[name=first_name]').type('Иван');
 ```
@@ -292,7 +292,7 @@ cy.get('input[name=first_name]').type('Иван');
 
 На странице 2 формы **Регистрация** и **Вход** и на каждой из них есть поле **Email**.
 
-* ❓ Что делать когда семантический селектор не уникален? 
+* ❓ Что делать когда семантический селектор не уникален?
 
 ***
 
@@ -326,7 +326,7 @@ cy.get('input[name=first_name]').type('Иван');
 * `form.registration input[name=first_name]` — конкретное поле на конкретной форме.
 * `form[name=registration] button[type=submit]` — кнопка с конкретным поведением на форме.
 * `form[name=registration] button.register` — уникальная кнопка на форме.
-* `aside[data-type=left] .menu a:nth-child(1)` — в левой панели в меню первый пункт.
+* `aside[data-type=left] .menu a[href="/register"]` — в левой панели в меню ссылка на конкретный адрес.
 
 Примеры плохих 🙅 селекторов с контекстами:
 * `form.registration input[type=text]` — полей с типом текст может быть много.
@@ -339,7 +339,7 @@ cy.get('input[name=first_name]').type('Иван');
 
 ## 7. Тест формы входа
 
-- [x] Напиши тест-кейс **вход по email** в тест-сьюитe **Вход в приложение**.
+- [x] Напиши тест **should do login user**.
 - [x] Сверь свой исходный код с [примером](cypress/integration/best-selectors.spec.js)
 
 ***
@@ -353,7 +353,7 @@ cy.get('input[name=first_name]').type('Иван');
 * ❓ Тест успешно пройден?
 
 - [x] Переключи язык приложения добавлением параметра `lang=en` в URL:
-```javascript
+```js
 cy.visit('http://localhost:3000/apps/tesla.html?lang=en');
 ```
 
@@ -381,7 +381,8 @@ cy.visit('http://localhost:3000/apps/tesla.html?lang=en');
 ```
 
 В твоем тесте:
-```javascript
+
+```js
 it('should do check copyrights', () => {
 
   // TODO: улучшить селектор footer [data-cy=copyrights]
@@ -394,6 +395,7 @@ it('should do check copyrights', () => {
 ```
 
 - [x] Зайди как разработчик в `~/apps/tesla.html` и добавь `data-cy` аттрибут:
+
 ```html
 <body>
   <div>
@@ -403,8 +405,10 @@ it('should do check copyrights', () => {
   </div>
 <body>
 ```
+
 - [x] Обнови селектор тесте:
-```javascript
+
+```js
 cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права защищены');
 ```
 
