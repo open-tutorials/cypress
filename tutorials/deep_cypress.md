@@ -14,6 +14,12 @@
 * Ты инициализировал чистый **Node.js** проект `%/projects/cypress/deep_cypress`
 * Ты установил Cypress `npm i cypress@9 --save-dev`
 
+# Дисклеймер
+
+* 🤭 Ты не сможешь понять сразу все участки кода в туториале.
+* 😉 Делай свои собственные эксперименты с тем, что не понимаешь.
+* 😜 Прими данный туториал — как список рецептов для будущих кейсов.
+
 ***
 
 # 🔢 Шаги
@@ -89,6 +95,13 @@ it.only('should do long like', () => {
 * ❓ Что такое `timeout`?
 * ❓ Почему при значении `5000` тест проходит, а при `3000` нет?
 * ❓ Какой `timeout` в Cypress [по умолчанию?](https://www.google.com/search?q=default+timeout+in+cypress)
+
+> Кстати в [Selenium](https://www.selenium.dev/documentation/webdriver/waits/#options) ты бы написал:
+>
+> ```js
+> const locator = By.css('section[data-cy=long-like] [data-cy=success]');
+> driver.wait(until.elementLocated(locator), 3000);
+> ```
 
 ***
 
@@ -213,6 +226,8 @@ it.only('should do open conduit by link', () => {
 
 ## 6. Заглушка функций
 
+### 6.1. Фейкаем `window.open`
+
 - [x] Добавь новый тест:
 
 ```js
@@ -252,12 +267,63 @@ it.only('should do open conduit in window', () => {
 
 ***
 
+### 6.2. Переписываем клик по кнопке
+
+- [x] Добавь новый тест:
+
+```js
+it.only('should do replace button click', () => {
+
+    cy.get('section[data-cy=replace-button-click]').as('section');
+
+    cy.window().then((window) => {
+        return cy.stub().callsFake(() => {
+            console.log('we have implemented own button click function');
+            window.location = 'https://demo.realworld.io/';
+        }).as('fakeClick');
+    });
+
+    cy.get('@fakeClick').then(fake => {
+        return cy.get('@section').find('button')
+            .invoke('off', 'click')
+            .invoke('on', 'click', fake)
+            .click();
+    });
+
+    cy.get('@fakeClick').should('have.been.called');
+    cy.title().should('contain', 'Conduit');
+
+});
+```
+
+- [x] Проверь, что тест 🟢 проходит.
+- [x] Проинспектируй HTML код секции.
+- [x] Закомментируй `invoke('on', ...`
+- [x] Проверь, что тест 🔴 провален.
+
+* ❓ Что мы поместили в алиас `fakeClick`?
+* ❓ Что делает `invoke('off', 'click')`?
+* ❓ Что мы сделали с помощью `invoke('on', 'click', fake)`?
+
+***
+
 ## 7. Работа с iframe
 
 - [x] Добавь новый тест:
 
 ```js
 it.only('should do open conduit signup in iframe', () => {
+
+    // only for demonstration `its`
+    const iframes = [
+        {
+            contentDocument: {
+                body: '<p>Hello from body of iframe document</p>'
+            }
+        }
+    ];
+    cy.wrap(iframes).its('0.contentDocument.body')
+        .should('not.be.empty');
 
     cy.get('section[data-cy=open-conduit-in-iframe]').as('section');
     cy.get('@section').find('iframe')
@@ -274,6 +340,10 @@ it.only('should do open conduit signup in iframe', () => {
 
 * ❓ Что делает команда `its('0.contentDocument.body')`?
 * ❓ На какой элемент ссылается алиас `@conduit`?
+
+- [x] Закомментируй `should('not.be.empty')`
+
+* ❓ Почему тест больше не проходит?
 
 ***
 

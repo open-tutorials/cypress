@@ -13,7 +13,7 @@
 * Ты знаком с основами ручного тестирования приложений.
 * У тебя установлен [Visual Code](https://code.visualstudio.com/) и [Node.js](https://nodejs.org/)
 * Ты инициализировал чистый **Node.js** проект `%/projects/cypress/best_selectors`
-* Ты установил Cypress `npm i cypress@9`
+* Ты установил Cypress `npm i cypress@9 --save-dev`
 
 ***
 

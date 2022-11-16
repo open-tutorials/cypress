@@ -6,6 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Cypress in deep</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
     <style>
         html {
             scroll-behavior: smooth;
@@ -98,6 +100,17 @@
     <h1>Open Conduit as window</h1>
     <section data-cy="open-conduit-in-window">
         <button type="button" onclick="window.open('https://demo.realworld.io/')">Open Conduit</button>
+    </section>
+
+    <h1>Replace button click</h1>
+    <section data-cy="replace-button-click">
+        <button type="button">Open Conduit</button>
+
+        <script>
+            $('[data-cy=replace-button-click] button').on('click', () => {
+                window.open('https://demo.realworld.io/');
+            });
+        </script>
     </section>
 
     <h1>Open Conduit signup in iframe</h1>
@@ -309,6 +322,16 @@
                 margin: 0;
             }
         </style>
+    </section>
+
+    <h1>jQuery features</h1>
+    <section data-cy="jquery-features">
+        <ul class="contains">
+            <li>Elon</li>
+            <li>Bill</li>
+            <li>Marley</li>
+        </ul>
+        <div class="fade-out">I will be fade out!</div>
     </section>
 
 </body>

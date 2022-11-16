@@ -16,13 +16,16 @@ it('should do find child in tree', () => {
     cy.get('section[data-cy=child-in-tree]').as('section');
     cy.get('@section').find('button').click();
 
-    cy.get('@section').find('[data-cy=daddy] [data-cy=child]').should('be.visible');
-    cy.get('@section').find('[data-cy=daddy]').should('not.contain', 'Loading')
+    // cy.get('@section').find('[data-cy=daddy] [data-cy=child]').should('be.visible');
+    //cy.get('@section').find('[data-cy=daddy]').should('not.contain', 'Loading')
+    //    .find('[data-cy=child]').should('be.visible');
+
+    cy.get('@section').find('[data-cy=daddy]').should('be.visible')
         .find('[data-cy=child]').should('be.visible');
 
 });
 
-it.only('should do open conduit by link', () => {
+it('should do open conduit by link', () => {
 
     cy.get('section[data-cy=open-conduit-by-link]').as('section');
     cy.get('@section').find('a').invoke('removeAttr', 'target').click();
@@ -39,15 +42,49 @@ it('should do open conduit in window', () => {
         cy.stub(window, 'open').callsFake((url) => {
             console.log('we have implemented own window.open function');
             window.location = url;
-        });
+        }).as('replacedWindowOpen');
     });
 
     cy.get('@section').find('button').click();
+    cy.get('@replacedWindowOpen').should('have.been.called');
     cy.title().should('contain', 'Conduit');
 
 });
 
-it('should do open conduit signup in iframe', () => {
+it('should do replace button click', () => {
+
+    cy.get('section[data-cy=replace-button-click]').as('section');
+
+    cy.window().then((window) => {
+        return cy.stub().callsFake(() => {
+            console.log('we have implemented own button click function');
+            window.location = 'https://demo.realworld.io/';
+        }).as('fakeClick');
+    });
+
+    cy.get('@fakeClick').then(fake => {
+        return cy.get('@section').find('button')
+            .invoke('off')
+            .invoke('on', 'click', fake)
+            .click();
+    });
+
+    cy.get('@fakeClick').should('have.been.called');
+    cy.title().should('contain', 'Conduit');
+
+});
+
+it.only('should do open conduit signup in iframe', () => {
+
+    const iframes = [
+        {
+            contentDocument: {
+                body: '<p>Hello from body of iframe document</p>'
+            }
+        }
+    ];
+    cy.wrap(iframes).its('0.contentDocument.body')
+        .should('not.be.empty');
 
     cy.get('section[data-cy=open-conduit-in-iframe]').as('section');
     cy.get('@section').find('iframe')
@@ -232,5 +269,28 @@ it('should do check hero', () => {
     console.log(ourHero);
 
     cy.get('@hero').should('eq', 'Iron Man');
+
+});
+
+
+// https://api.jquery.com/category/selectors/
+describe('jQuery features', () => {
+
+    beforeEach(() => {
+        cy.get('[data-cy=jquery-features]').as('section').scrollIntoView();
+        // only for demonstration
+        cy.wait(1000);
+    });
+
+    it('should do check not contains', () => {
+        cy.get('@section').find('.contains li:not(:contains("Bill"))')
+            .should('have.length', 2);
+    });
+
+    it('should do fade out', () => {
+        cy.get('@section').find('.fade-out')
+            .invoke('fadeOut')
+            .should('not.be.visible');
+    });
 
 });
