@@ -341,6 +341,14 @@ cy.get('@myArticles').contains(article.title)
 * ❓ Что делает `parents('?')`?
 * ❓ Что делает `have.length.greaterThan`?
 
+<details>
+  <summary>`parents('?')` in reels 📹</summary>
+
+<video width="408px" height="725px" controls>
+  <source src="artefacts/reels/find_link_in_card.mp4" type="video/mp4">
+</video>
+</details>
+
 *** 05:00 ***
 
 - [x] Сверь свой код с [примером](../cypress/integration/fake_data/articles2.spec.js)
