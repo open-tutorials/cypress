@@ -103,6 +103,13 @@ it.only('should do long like', () => {
 > driver.wait(until.elementLocated(locator), 3000);
 > ```
 
+<details>
+  <summary>Мое объяснение 📹</summary>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jKYUAg3Y9i4?start=2115" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details>
+
 ***
 
 - [x] Добавь в файл `cypress.json`:
@@ -298,7 +305,7 @@ it.only('should do replace button click', () => {
 
 - [x] Проверь, что тест 🟢 проходит.
 - [x] Проинспектируй HTML код секции.
-- [x] Закомментируй `invoke('on', ...`
+- [x] Закомментируй `invoke('on', ...)`
 - [x] Проверь, что тест 🔴 провален.
 
 * ❓ Что мы поместили в алиас `fakeClick`?
@@ -687,7 +694,7 @@ it.only('should do grab users', () => {
 
 ## 16. Промисы для искушенных 🤯
 
-> Промисы — это основа [асинхронного программирования](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise), а Cypress весь асинхронный!
+> Промисы — это основа [асинхронного программирования](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise) в Java Script, а Cypress весь асинхронный!
 
 - [x] Добавь новый тест:
 

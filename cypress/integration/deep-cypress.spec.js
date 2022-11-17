@@ -74,7 +74,7 @@ it('should do replace button click', () => {
 
 });
 
-it.only('should do open conduit signup in iframe', () => {
+it('should do open conduit signup in iframe', () => {
 
     const iframes = [
         {
@@ -158,7 +158,7 @@ it('should do check in mobile', () => {
 
     cy.get('section[data-cy=check-in-mobile]').should('be.visible').as('section').scrollIntoView();
     cy.get('@section').find('iframe').as('giphy').should('have.css', 'opacity', '0');
-    cy.viewport('iphone-4');
+    cy.viewport('iphone-14');
     cy.get('@giphy').should('have.css', 'opacity', '1');
 
 });
@@ -242,7 +242,7 @@ describe('Navigation', () => {
     });
 });
 
-it('should do check hero', () => {
+it.only('should do check hero', () => {
 
     console.log('a');
     cy.log('a');
