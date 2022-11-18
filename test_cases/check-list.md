@@ -1,97 +1,159 @@
-# 1. Sign up   
-   
-## 1.1. App main page  
-   
-- [ ] **1.1.1.** Header    
-- [ ] **1.1.2.** Main menu    
-- [ ] **1.1.3.** Footer  
-    
-## 1.2. Header     
+This file contains check list for [project](https://demo.realworld.io/)
+
+# Layout       
  
-- [ ] **1.2.1.** Logo on the left side            
-- [ ] **1.2.2.** Menu items on the right side      
-    - [ ] **1.2.2.1.** **Home** page    
-    - [ ] **1.2.2.2.** **Sign in** page      
-    - [ ] **1.2.2.3.** **Sign up** page      
-- [ ] **1.2.3.** Welcome-banner in the middle of the page        
-    - [ ] **1.2.2.1.** Name    
-    - [ ] **1.2.2.2.** Slogan  
+## Header     
+ 
+- [ ] Header is visible  
+- [ ] Logo is presented with link to main page  
+- [ ] Menu items are presented    
+
+### For anonymous user             
+- [ ] Menu items        
+    - [ ] **Home** page      
+    - [ ] **Sign in** page        
+    - [ ] **Sign up** page  
+
+### For logged in user  
+- [ ] Menu items    
+    - [ ] **Home** page          
+    - [ ] **New Article** page            
+    - [ ] **Settings** page    
+    - [ ] link to user profile page    	
 	
-## 1.3. Main menu  
+- [ ] Welcome-banner in the middle of the page        
+    - [ ] Name    
+    - [ ] Slogan  
+	
+## Main menu  
 
-- [ ] **1.3.1.** **Global Feed** tab with list of last articles on the left side    
-- [ ] **1.3.2.** **Popular Tags** field on the right side    
-- [ ] **1.3.3.** Paging at the bottom of a page  
+- [ ] **Global Feed** tab with list of last articles on the left side    
+- [ ] **Popular Tags** field on the right side    
+- [ ] Paging at the bottom of a page  
   
-## 1.4. Footer with GitHub link  
+## Footer   
+- [ ] GitHub link    
+- [ ] Contact information  
+- [ ] Legal information
 
-# 2. Articles  
+# UI / UX    
+
+- [ ] All the links are valid and lead to correct pages  
+- [ ] All the fields have placeholders      
+- [ ] All the mandatory fields are validated    
+- [ ] All the mandatory fields have asterix sign  
+- [ ] All the error messages match with the field label  
+- [ ] Home link is on every single page  
+- [ ] Confirmation message is displayed for any kind of update and delete operation  
+- [ ] Scroll bar appears only if required                           
+
+# Features  
+
+## Sign up    
   
-## 2.1. Register user  
+### Register user  
   
-- [ ] **2.1.1.** Fill in registration form with valid data  
-- [ ] **2.1.2.** Check header contains username    
+- [ ] Fill in registration form with valid data  
+- [ ] Check header contains username    
     
-## 2.2. Login user  
+### Login user  
     
-- [ ] **2.2.1.** Fill in authorization form with valid data  
-- [ ] **2.2.2.** Check header contains username  
+- [ ] Fill in authorization form with valid data  
+- [ ] Check header contains username  
   
-## 2.3 Logout user  
+### Logout user  
   
-- [ ] **2.3.1.** Logout user       
-- [ ] **2.3.2.** Check header doesn't contain username  
+- [ ] Logout user       
+- [ ] Check header doesn't contain username  
            
-# 3. Articles  
+## Articles  
 
-## 3.1. Publish article  
+### Publish article  
     
-- [ ] **3.1.1.** Open editor    
-- [ ] **3.1.2.** Fill in form    
-- [ ] **3.1.3.** Save article    
-- [ ] **3.1.4.** Check article data  
+- [ ] Open editor    
+- [ ] Fill in form    
+- [ ] Save article    
+- [ ] Check article data  
   
-## 3.2. Delete article  
+### Delete article  
   
-- [ ] **3.2.1.** Find my article    
-- [ ] **3.2.2.** Delete article    
-- [ ] **3.2.3.** Check article is deleted  
+- [ ] Find my article    
+- [ ] Delete article    
+- [ ] Check article is deleted  
   	
-## 3.3. Edit article  
+### Edit article  
     
-- [ ] **3.3.1.** Find article    
-- [ ] **3.3.2.** Edit article    
-- [ ] **3.3.3.** Check new article data  
+- [ ] Find article    
+- [ ] Edit article    
+- [ ] Check new article data  
     
-## 3.4. Read article  
+### Read article  
   
-- [ ] **3.4.1.** Find article    
-- [ ] **3.4.1.** View article  
+- [ ] Find article    
+- [ ] View article  
       
-## 3.5. Like article  
+### Like article  
   
-- [ ] **3.5.1.** Find article    
-- [ ] **3.5.2.** Mark article with "like" sign  
+- [ ] Find article    
+- [ ] Mark article with "like" sign  
+- [ ] Check article in your favorite article list  
+
+### Unlike article  
+
+- [ ] Find your favorite article  
+- [ ] Mark article with "unlike" sign  
+- [ ] Check article is deleted from your favorite article list  
   
-## 3.6. Global articles feed  
+### Global articles feed  
     
-- [ ] **3.6.1** Open list with articles  
+- [ ] Open list with articles  
   
-## 3.7. Filter articles by tag  
+### Filter articles by tag  
   
-- [ ] **3.7.1.** Open list with articles      
-- [ ] **3.7.2.** Choose tag  
+- [ ] Open list with articles      
+- [ ] Choose tag
+- [ ] Check new tab with articles contains tag    
   
-# 4. Commenting  
+## Commenting  
  
-## 4.1. Add comment to article  
+### Add comment to article  
   
-- [ ] **4.1.1.** Find article    
-- [ ] **4.1.2.** Fill in form with comment    
-- [ ] **4.1.3.** Check comment  
+- [ ] Find article    
+- [ ] Fill in form with comment    
+- [ ] Check comment  
   	
-## 4.2. Delete comment to article  
+### Delete comment to article  
   
-- [ ] **4.2.1.** Find article    
-- [ ] **4.2.2.** Delete comment    
-- [ ] **4.2.3.** Check comment is deleted    
+- [ ] Find article    
+- [ ] Delete comment    
+- [ ] Check comment is deleted  
+
+## Social  
+
+### Subscribe to user  
+
+- [ ] Find user  
+- [ ] Subscribe to user by following him  
+- [ ] Check user in your subscription list
+
+### Unsubscribe from user  
+
+- [ ] Find user you are following  
+- [ ] Unsubscribe from user by unfollowing him  
+- [ ] Check user is deleted from your subscription list  
+
+## User settings  
+
+### Edit settings  
+
+- [ ] Open settings form    
+- [ ] Edit form  
+- [ ] Check new settings data  
+
+# Security  
+
+- [ ] HTTPs is used  
+- [ ] Important information like password displays in encrypted format  
+- [ ] If password is changed user can't login with old password  
+- [ ] Error messages don't display any important information  
+- [ ] Cookies don't store passwords    
