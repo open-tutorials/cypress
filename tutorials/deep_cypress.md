@@ -46,10 +46,9 @@
 
 Веб-сервер готов, нужно скачать [тестовое приложение](apps/deep-cypress.html) с **GitHub**.
 
-- [x] Открой **Новый терминал.**
-- [x] Установи пакет `npm i node-wget --save-dev`
+- [x] Установи Wget `npm i node-wget --save-dev`
 - [x] Создай папку `apps` в корне проекта.
-- [x] В терминале выполни команду:
+- [x] Выполни команду:
 
 ```bash
 npx wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/main/apps/deep-cypress.html

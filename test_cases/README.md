@@ -20,6 +20,7 @@ This file contains test cases for [project](https://demo.realworld.io/)
 
 # Social
 * [ ] subscribe to user
+* [ ] personal articles feed
 * [ ] unsubscribe from user
 
 # User settings

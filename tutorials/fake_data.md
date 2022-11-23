@@ -342,7 +342,7 @@ cy.get('@myArticles').contains(article.title)
 * ❓ Что делает `have.length.greaterThan`?
 
 <details>
-  <summary>`parents('?')` in reels 📹</summary>
+  <summary>`.parents()` in reels 📹</summary>
 
 <video width="408px" height="725px" controls>
   <source src="artefacts/reels/find_link_in_card.mp4" type="video/mp4">
