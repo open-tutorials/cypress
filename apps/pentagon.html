@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Pentagon application</title>
+    <title>Pentagon</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
         integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
@@ -76,7 +76,7 @@
                         el.html('🤩');
                         pin += digit;
 
-                        if (mistakes <= 0 && pin === '05091977') {
+                        if (mistakes <= 0 && pin === atob('MDUwOTE5Nzc=')) {
                             document.location.hash = 'codes';
                             route();
                         }
@@ -151,12 +151,18 @@
         </section>
 
         <section data-name="stop" data-route="#stop">
+            <p>Ха! Ты думал все будет так просто! Ты ни за что не нажмешь на эту чертову кнопку!</p>
             <iframe src="https://giphy.com/embed/YQitE4YNQNahy" width="480" height="270" frameBorder="0"
                 class="giphy-embed" allowFullScreen></iframe>
             <br>
-            <button class="btn btn-primary stop" onclick="stopRockets()">Stop rockets!</button>
+            <stop-button></stop-button>
 
             <script>
+                {
+                    const component = document.querySelector('stop-button');
+                    component.attachShadow({ mode: 'open' });
+                    component.shadowRoot.innerHTML = `<button class="stop" onclick="stopRockets()">Stop rockets!</button>`;
+                }
                 function stopRockets() {
                     document.location.hash = 'win';
                     route();
@@ -167,7 +173,7 @@
                 [data-name=stop] iframe {
                     position: fixed;
                     left: 0;
-                    top: 0;
+                    top: 50px;
                     right: 0;
                     width: 100%;
                 }

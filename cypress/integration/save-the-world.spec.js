@@ -28,15 +28,15 @@ it('put codes', () => {
         cy.get('.digit' + pin[i]).click();
     }
 
-    cy.viewport('iphone-4');
+    cy.viewport('iphone-x');
 
     for (let i = 0; i < 50; i++) {
         const j = 50 - i;
         cy.get('.code' + i).type(j * j);
     }
 
-    cy.get('iframe').invoke('css', 'display', 'none');
+    cy.get('[data-name=stop] iframe').invoke('css', 'display', 'none');
 
-    cy.get('button.stop').click();
+    cy.get('stop-button').shadow().find('button.stop').click();
 
 });
