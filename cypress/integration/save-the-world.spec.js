@@ -36,7 +36,6 @@ it('put codes', () => {
     }
 
     cy.get('[data-name=stop] iframe').invoke('css', 'display', 'none');
-
     cy.get('stop-button').shadow().find('button.stop').click();
 
 });
