@@ -137,17 +137,22 @@ npx wget -- -d test_cases/ $BASE_URL/test_cases/login_user.md
 ### 1.3. Пишем скрипт загрузки файлов
 
 <details>
-    <summary>Если ты на Windows</summary>
+    <summary>Если ты на Windows 🙋‍</summary>
 
-- [x] Поменяй символ переноса строки с `\r\n` на `\n` в Visual Code
+- [x] Поменяй символ переноса строки с `\r\n` на `\n` в настройках Visual Code
 
-<img src="assets/vs_settings.png">
-
-<img src="assets/vs_eol.png">
+<img width="500px" height="380px" src="assets/vs_eol.png">
 
 * ❓ Что такое `EOL`?
 * ❓ Что такое `CRLF`?
 * ❓ Что такое `LF`?
+
+- [x] В качестве терминала используй **Git Bash**
+
+<img src="assets/vs_bash.png">
+
+* ❓ Что такое `Git`?
+* ❓ Что такое `Bash`?
 
 </details>
 
