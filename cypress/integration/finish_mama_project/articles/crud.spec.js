@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
-import { login } from '../../../support/shared';
-import meUser from '../../../fixtures/me-user.json';
+import { login } from '/cypress/support/shared';
+import meUser from '/cypress/fixtures/me-user.json';
 
 function generateFakeArticle() {
 

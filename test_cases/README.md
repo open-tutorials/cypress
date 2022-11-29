@@ -12,10 +12,10 @@ This file contains test cases for [project](https://demo.realworld.io/)
 
 ## Global feed
 * [x] [display article list](articles/global_feed/display_article_list.md)
-* [ ] [open article detail page](articles/global_feed/open_article_detail_page.md)
-* [ ] like article
-* [ ] navigate in list by paging
-* [ ] filter articles by tag
+* [x] [open article detail page](articles/global_feed/open_article_detail_page.md)
+* [x] [like article](articles/global_feed/like_article.md)
+* [x] [navigate in list by paging](articles/global_feed/navigate_in_list_by_paging.md)
+* [x] [filter articles by tag](articles/global_feed/filter_articles_by_tag.md)
 
 # Commenting
 * [ ] [add comment](add_comment.md)

@@ -10,7 +10,7 @@ Add comment to article test case
 
 ## Add comment
 
-4. Click **Global Feed** in main menu
+4. Click **Global Feed** in feed toggle menu
 5. Select first article from list
 6. Scroll to form for posting comment
 7. Type `{comment}` into **Comment** form field

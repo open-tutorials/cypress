@@ -6,14 +6,19 @@ describe('Articles', () => {
     beforeEach(() => {
         cy.visit('/');
         cy.location('hash').should('eq', '#/');
+        // TODO: [data-cy=app-header]
         cy.get('.navbar').should('be.visible').as('appHeader');
     });
 
     describe('Global articles feed', () => {
 
+        beforeEach(() => {
+            cy.get('article-list').as('articlesList');
+        });
+
         it('should do display article list', () => {
 
-            cy.get('article-list article-preview')
+            cy.get('@articlesList').find('article-preview')
                 .should('have.length', 10)
                 .each(article => {
                     // TODO: read about within
@@ -36,13 +41,29 @@ describe('Articles', () => {
                 });
         });
 
-        it('should do open article detail page', () => {
+        function waitForLArticlesList() {
+
+            cy.get('@articlesList').contains('.article-preview', 'Loading')
+                .should('not.be.visible');
+
+        }
+
+        function selectRandomArticle() {
+
+            waitForLArticlesList();
 
             const rand = getRandomNumber(0, 9);
-            cy.get('article-list article-preview')
+            cy.get('@articlesList')
+                .find('article-preview')
                 .should('have.length', 10)
                 .eq(rand)
                 .as('randomArticle');
+
+        }
+
+        it('should do open article detail page', () => {
+
+            selectRandomArticle();
 
             cy.get('@randomArticle').find('h1')
                 .invoke('text')
@@ -70,15 +91,12 @@ describe('Articles', () => {
 
             cy.location('hash').should('eq', '#/');
 
+            // TODO: [data-cy=feed-menu] a[data-cy=global]
             cy.get('.feed-toggle ul > li:nth-child(2) a')
                 .click()
                 .should('have.class', 'active');
 
-            const rand = getRandomNumber(0, 9);
-            cy.get('article-list article-preview')
-                .should('have.length', 10)
-                .eq(rand)
-                .as('randomArticle');
+            selectRandomArticle();
 
             cy.get('@randomArticle')
                 .find('favorite-btn button')
@@ -105,6 +123,97 @@ describe('Articles', () => {
                             .should('eq', expectingLikes.toString());
                     });
                 });
+
+        });
+
+        it('should do navigate in list by paging', () => {
+
+            cy.get('list-pagination li')
+                .should('have.length.greaterThan', 10)
+                .as('availablePages')
+                .eq(0)
+                .should('have.class', 'active');
+
+            selectRandomArticle();
+
+            cy.get('@randomArticle').find('h1')
+                .invoke('text')
+                .invoke('trim')
+                .as('randomArticleTitle');
+
+            const rand = getRandomNumber(0, 9);
+
+            cy.get('@availablePages')
+                .eq(rand)
+                .find('a')
+                .click();
+
+            waitForLArticlesList();
+
+            // is 1st page active
+            cy.get('@availablePages')
+                .eq(rand)
+                .should('have.class', 'active');
+
+            cy.get('@randomArticleTitle').then(title => {
+                cy.get('article-list')
+                    .should('not.contains.text', title);
+            });
+
+            cy.get('@availablePages')
+                .eq(0)
+                .find('a')
+                .click();
+
+            // is 1st page active
+            cy.get('@availablePages')
+                .eq(0)
+                .should('have.class', 'active');
+
+            waitForLArticlesList();
+
+            cy.get('@randomArticleTitle').then(title => {
+                cy.get('@articlesList')
+                    .should('contains.text', title);
+            });
+
+        });
+
+        it.only('should do filter articles by tag', () => {
+
+            // we need waiting for initial loading
+            waitForLArticlesList();
+
+            cy.get('.sidebar .tag-list .tag-default')
+                .as('availableTags')
+                .should('have.length.greaterThan', 5);
+
+            const rand = getRandomNumber(0, 5);
+
+            cy.get('@availableTags')
+                .eq(rand)
+                .click()
+                .invoke('text')
+                .invoke('trim')
+                .as('randomTagName');
+
+            waitForLArticlesList();
+
+            cy.get('@randomTagName').then(tagName => {
+                // TODO: [data-cy=feed-menu] a[data-cy=filter-by-tag]
+                cy.get('.feed-toggle li:nth-child(3) a')
+                    .should('contains.text', tagName)
+                    .should('have.class', 'active');
+
+                cy.get('@articlesList')
+                    .find('article-preview')
+                    .should('have.length.greaterThan', 0)
+                    .each(article => {
+                        cy.wrap(article)
+                            .contains('.tag-list .tag-default', tagName)
+                            .should('have.length', 1);
+                    });
+            });
 
         });
 

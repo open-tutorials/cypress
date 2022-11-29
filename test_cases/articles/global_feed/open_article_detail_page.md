@@ -19,4 +19,4 @@ Open article detail page test case
 
 # Where:
 
-* `{random_article_title}` — title of clicked random article card
+* `{random_article_title}` — title of clicked random article

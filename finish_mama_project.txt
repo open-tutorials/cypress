@@ -10,4 +10,4 @@ cypress/support/shared.js|cypress/support/
 cypress/support/utils.js|cypress/support/
 
 cypress/integration/finish_mama_project/signup.spec.js|cypress/integration/
-cypress/integration/finish_mama_project/articles/crud/signup.spec.js|cypress/integration/articles/crud/
+cypress/integration/finish_mama_project/articles/crud.spec.js|cypress/integration/articles/
