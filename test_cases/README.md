@@ -6,12 +6,15 @@ This file contains test cases for [project](https://demo.realworld.io/)
 * [x] [logout user](logout_user.md)
 
 # Articles 
-* [x] [publish article](publish_article.md)
-* [x] [delete article](delete_article.md)
-* [x] [edit article](edit_article.md)
-* [ ] read article
+* [x] [publish article](articles/crud/publish_article.md)
+* [x] [delete article](articles/crud/delete_article.md)
+* [x] [edit article](articles/crud/edit_article.md)
+
+## Global feed
+* [x] [display article list](articles/global_feed/display_article_list.md)
+* [ ] [open article detail page](articles/global_feed/open_article_detail_page.md)
 * [ ] like article
-* [ ] global articles feed
+* [ ] navigate in list by paging
 * [ ] filter articles by tag
 
 # Commenting

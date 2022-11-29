@@ -1,0 +1,13 @@
+test_cases/login_user.md|test_cases/
+test_cases/logout_user.md|test_cases/
+test_cases/articles/crud/publish_article.md|test_cases/articles/crud/
+test_cases/articles/crud/delete_article.md|test_cases/articles/crud/
+test_cases/articles/crud/edit_article.md|test_cases/articles/crud/
+
+cypress/fixtures/me-user.json|cypress/fixtures/
+
+cypress/support/shared.js|cypress/support/
+cypress/support/utils.js|cypress/support/
+
+cypress/integration/finish_mama_project/signup.spec.js|cypress/integration/
+cypress/integration/finish_mama_project/articles/crud/signup.spec.js|cypress/integration/articles/crud/
