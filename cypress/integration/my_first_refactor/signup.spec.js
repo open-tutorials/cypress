@@ -1,5 +1,5 @@
-import { getRandomNumber } from '../../support/utils';
-import meUser from './../../fixtures/me-user.json';
+import { getRandomNumber } from '/cypress/support/utils';
+import meUser from '/cypress/fixtures/me-user.json';
 
 function login() {
 

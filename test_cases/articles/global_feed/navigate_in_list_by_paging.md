@@ -7,7 +7,7 @@ Navigate in list by paging test case
 1. Open https://demo.realworld.io/
 2. Url should be `/#/` — main page
 3. Available pages in pager > 10
-4. Active page in pager should be 1
+4. Active page in pager should be 1st
 
 ## Select random article
 
@@ -23,7 +23,7 @@ Navigate in list by paging test case
 ## Navigate back to 1st page
 
 8. Click 1st page button
-9. Active page in pager should be 1
+9. Active page in pager should be 1st
 10. Check article with `{random_article_title}` is presented in list
 
 # Where:

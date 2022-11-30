@@ -17,6 +17,6 @@ Like article test case
 ## Like/unlike article
 
 7. Click like button
-8. If was not liked before then 7 otherwise 8
+8. If was not liked before then 9 otherwise 10
 9. Likes count should be increased +1
 10. Likes count should be decreased -1
