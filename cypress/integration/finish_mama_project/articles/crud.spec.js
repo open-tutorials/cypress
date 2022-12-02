@@ -65,7 +65,7 @@ function checkArticle(article) {
     }
 
     // check Markdown is rendered to HTML
-    cy.get('@articlePage').find('[ng-bind-html$=content]')
+    cy.get('@articlePage').find('[ng-bind-html$=markdown]')
         .invoke('prop', 'innerHTML')
         .should('contains', '<strong>healthy</strong>')
         .should('contains', '<em>tasty.</em>')

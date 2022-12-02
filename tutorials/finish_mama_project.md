@@ -240,7 +240,7 @@ BASE_URL=https://raw.githubusercontent.com/breslavsky/hello-cypress/main node do
 
 - [x] Прогони все тесты `npx cypress run`
 - [x] Исправь 🔴 ошибки в тестах.
-- [x] Вспомни код и **выпиши** не понятные участки.
+- [x] Вспомни код и **выпиши** непонятные участки.
 
 Сразу хочешь сбежать 🤨 в подсказки? Нет, just do it сам! ~"Мотивация"
 
@@ -256,7 +256,7 @@ npm i @faker-js/faker --save-dev
 - [x] В файле `crud.spec.js` исправь:
 
 ```diff
-- 68 | cy.get('@articlePage').find('[ng-bind-html$=content]')
+- 68 | cy.get('@articlePage').find('[ng-bind-html$=markdown]')
 + 68 | cy.get('@articlePage').find('[ng-bind-html$=body]')
 ```
 

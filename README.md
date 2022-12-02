@@ -36,7 +36,7 @@
 
 # Челленджы
 
-1. [Спасибо мир от хакера Hакатика](https://md.epic1h.com/save_the_world)
+1. [Спасти мир от хакера Hакатика](https://md.epic1h.com/save_the_world)
 
 # Как контрибутить
 
