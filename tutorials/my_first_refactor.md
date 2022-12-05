@@ -215,7 +215,7 @@ import meUser from '/cypress/fixtures/me-user.json';
 
 - [x] Создай файл `~/js_examples/say_hello.js` с содержимым:
 
-```javascript
+```js
 function sayHelloFor(firstName, lastName) {
     const fullName = firstName + ' ' + lastName;
     console.log('Hello', fullName);

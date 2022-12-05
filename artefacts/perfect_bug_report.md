@@ -178,7 +178,7 @@ POST /api/login
 
 Ошибка в части кода файла [server.js](https://gitlab.com/epic1h/qa/sandbox/-/blob/main/ibank/server.js#L75)
 
-```javascript
+```diff
 - user.firstName.toUpperCase()
 + user.firstName
 ```

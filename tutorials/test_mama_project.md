@@ -125,7 +125,7 @@
 
 - [x] Создай файл `~/js_examples/rnd.js` с содержимым:
 
-```javascript
+```js
 const rnd = Math.round(Math.random() * 8999) + 1000;
 console.log('rnd =', rnd);
 const username = 'user_' + rnd;

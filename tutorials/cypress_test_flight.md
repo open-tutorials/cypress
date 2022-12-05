@@ -183,7 +183,7 @@
 - [x] Из папки `cypress/integration` удали `1-getting-started` и `2-advanced-examples`
 - [x] Создай файл `cypress/integration/hello-cypress.spec.js`:
 
-```javascript
+```js
 it('should do open site', () => {
 
 cy.visit('https://www.cypress.io/');
@@ -213,7 +213,7 @@ cy.visit('https://www.cypress.io/');
 **Visual Code** постоянно добавляет строчку `const { it } = require("mocha");` и код не работает?
 
 - [x] Пропиши в начале файла теста: ~"В конспект"
-```javascript
+```js
 ///<reference types="cypress" />
 ```
 </details>
@@ -233,7 +233,7 @@ cy.visit('https://www.cypress.io/');
 
 - [x] Добавь в начало файла теста:
 
-```javascript
+```js
 Cypress.on('uncaught:exception', () => false);
 ```
 
@@ -264,7 +264,7 @@ Cypress.on('uncaught:exception', () => false);
 - [x] Скопируй код селектора.
 - [x] Обнови код теста:
 
-```javascript
+```js
 it('should do subscribe to news letter', () => {
 
   cy.visit('https://www.cypress.io/');
@@ -299,7 +299,7 @@ it('should do subscribe to news letter', () => {
 - [x] Найди селектор для кнопки **Subscribe**.
 - [x] Обнови код теста:
 
-```javascript
+```js
 it('should do subscribe to news letter', () => {
 
   cy.visit('https://www.cypress.io/');
@@ -332,7 +332,7 @@ it('should do subscribe to news letter', () => {
 - [x] Найди селектор для элемента с сообщением **Thanks for submitting the form**.
 - [x] Обнови код теста:
 
-```javascript
+```js
 it('should subscribe to news letter', () => {
 
   cy.visit('https://www.cypress.io/');
@@ -392,7 +392,7 @@ it('should subscribe to news letter', () => {
 ## +11. Ломаем тест
 
 - [x] Сломай сообщение в коде:
-```javascript
+```js
 .should('have.text', 'Thanks for submitting the form!!!');
 ```
 - [x] Снова запусти Cypress `npm test`
@@ -436,7 +436,7 @@ it('should subscribe to news letter', () => {
 ## Скорость ввода текста
 
 500 мс между нажатием клавишей:
-```javascript
+```js
 cy.get('#input-footer-email')
   .type('test@test.ru', {delay: 500});
 ```
@@ -447,7 +447,7 @@ cy.get('#input-footer-email')
 
 Например, попробуй зайти: http://httpbin.org/basic-auth/foo/bar
 
-```javascript
+```js
 cy.visit('http://httpbin.org/basic-auth/foo/bar', {
   auth: {
     username: 'foo',
