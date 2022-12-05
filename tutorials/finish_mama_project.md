@@ -15,7 +15,7 @@
 * Ты инициализировал чистый **Node.js** проект `%/projects/cypress/finish_mama_project`
 * Ты установил Cypress `npm i cypress@9 --save-dev`
 
-# 🤩 Минутка мотивации
+# 💪 Минутка мотивации
 
 Твои коллеги по команде написали приложение для ведения блогов — аналог https://vc.ru/
 
@@ -124,13 +124,13 @@ echo $BASE_URL/test_cases/register_user.md
 - [x] Загрузи файл `register_user.md`
 
 ```bash
-npx wget -- -d test_cases/ $BASE_URL/test_cases/register_user.md
+npx wget -d test_cases/ $BASE_URL/test_cases/register_user.md
 ```
 
 - [x] Загрузи файл `login_user.md`
 
 ```bash
-npx wget -- -d test_cases/ $BASE_URL/test_cases/login_user.md
+npx wget -d test_cases/ $BASE_URL/test_cases/login_user.md
 ```
 
 - [x] Проверь, что файлы в папке `~/test_cases` появились.
@@ -219,6 +219,7 @@ BASE_URL=https://raw.githubusercontent.com/breslavsky/hello-cypress/main node do
 ```
 
 - [x] Проверь, что все файлы из `mama_files.txt` загрузились.
+- [x] В фикстуру `me-user.json` пропиши свои credentials.
 - [x] Проверь, что все ссылки в `README` открываются.
 - [x] Прочитай и выполни все доступные тест-кейсы.
 

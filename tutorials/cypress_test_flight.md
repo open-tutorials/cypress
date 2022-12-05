@@ -212,7 +212,7 @@ cy.visit('https://www.cypress.io/');
 
 **Visual Code** постоянно добавляет строчку `const { it } = require("mocha");` и код не работает?
 
-- [x] Пропиши в начале файла теста:
+- [x] Пропиши в начале файла теста: ~"В конспект"
 ```javascript
 ///<reference types="cypress" />
 ```

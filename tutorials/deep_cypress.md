@@ -14,7 +14,7 @@
 * Ты инициализировал чистый **Node.js** проект `%/projects/cypress/deep_cypress`
 * Ты установил Cypress `npm i cypress@9 --save-dev`
 
-# Дисклеймер
+# 🤝 Дисклеймер
 
 * 🤭 Ты не сможешь сразу понять все участки кода в туториале.
 * 😉 Делай свои собственные эксперименты с тем, что не понимаешь.
@@ -51,7 +51,7 @@
 - [x] Выполни команду:
 
 ```bash
-npx wget -- -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/main/apps/deep-cypress.html
+npx wget -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/main/apps/deep-cypress.html
 ```
 
 - [x] Проверь, что появился файл `~/apps/deep-cypress.html`
@@ -73,7 +73,7 @@ it.only('should do long like', () => {
 
     cy.get('section[data-cy=long-like]').as('section');
     cy.get('@section').find('button').click();
-    cy.get('@section').find('[data-cy=success]', { timeout: 5000 })
+    cy.get('@section').find('[data-cy=success]', {timeout: 5000})
         .should('have.text', 'Well done!');
 });
 ```
@@ -97,17 +97,12 @@ it.only('should do long like', () => {
 
 > Кстати в [Selenium](https://www.selenium.dev/documentation/webdriver/waits/#options) ты бы написал:
 >
-> ```js
+> ```python
 > const locator = By.css('section[data-cy=long-like] [data-cy=success]');
 > driver.wait(until.elementLocated(locator), 3000);
 > ```
 
-<details>
-  <summary>Мое объяснение 📹</summary>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jKYUAg3Y9i4?start=2115" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</details>
+📹 [Мое объяснение](https://www.youtube.com/watch?v=jKYUAg3Y9i4&t=2115)
 
 ***
 
@@ -125,6 +120,7 @@ it.only('should do long like', () => {
 - cy.get('@section').find('[data-cy=success]', { timeout: 3000 })
 + cy.get('@section').find('[data-cy=success]')
 ```
+
 - [x] Проверь, что тест снова выполняется 🟢 успешно.
 
 * ❓ Что делает параметр `defaultCommandTimeout`?
@@ -164,7 +160,8 @@ it.only('should do find child in tree', () => {
 
 > If the assertion that follows the `cy.get()` command 🟢 passes, then the command finishes successfully.
 
-- [x] Найди этот комментарий на [cypress.io](https://docs.cypress.io/guides/core-concepts/retry-ability#Commands-vs-assertions)
+- [x] Найди этот комментарий
+  на [cypress.io](https://docs.cypress.io/guides/core-concepts/retry-ability#Commands-vs-assertions)
 
 ***
 
@@ -174,6 +171,7 @@ it.only('should do find child in tree', () => {
 - cy.get('@section').find('[data-cy=daddy]').should('be.visible')
 + cy.get('@section').find('[data-cy=daddy]').should('not.contain', 'Loading')
 ```
+
 - [x] Проверь, что тест снова выполняется 🟢 успешно.
 
 * ❓ Почему тест снова проходит?
@@ -389,8 +387,10 @@ it.only('should do check hello from user', () => {
     <p>User should say hello.</p>
     <user-web-component>
         #shadow-root ↓
-            <style>p { color: red; }</style>
-            <p class="hello">Hello from shadow Anton!</p>
+        <style>p {
+            color: red;
+        }</style>
+        <p class="hello">Hello from shadow Anton!</p>
     </user-web-component>
 </section>
 ```
@@ -416,6 +416,8 @@ it.only('should do check hello from user', () => {
 ***
 
 ## +9. Инвоук
+
+### 9.1. Манипуляции DOM
 
 > Cypress может взаимодействовать с DOM: вызывать функции, читать и устанавливать свойства элементов и т.д.
 
@@ -448,6 +450,110 @@ it.only('should do change DOM', () => {
 * ❓ Что делает `invoke('css', ...)`?
 * ❓ Что делает `cy.window().invoke()`?
 * ❓ Что делает `invoke('html')`?
+
+***
+
+### 9.2. jQuery
+
+Cypress очень любит [jQuery](https://ru.wikipedia.org/wiki/JQuery) — в свое время популярную библиотеку на Java Script.
+
+- [x] Зайди на [google.com](https://www.google.com)
+- [x] Открой инструменты разработчика и выполни скрипт:
+
+```js
+document.querySelector('body').style.backgroundColor = 'red';
+```
+
+* ❓ Залил гугл красным?
+
+На jQuery ты бы написал:
+
+```js
+$('body').css('background-color', 'red');
+```
+
+`$` — супер функция предоставляющая доступ к возможностям [API](https://api.jquery.com/) библиотеки.
+
+Лозунг jQuery — пиши меньше, делай больше!
+
+### 9.3. Рецепты
+
+Для целей тестирования тебе могут быть полезны ряд рецептов для работы с DOM.
+
+* Взять **текст внутри элемента** и очистить его от пробелов и переносов строк:
+
+```js
+cy.get('selector')
+    .invoke('text')
+    .invoke('trim')
+    .should('eq', '?');
+```
+
+* Установить/взять **внутренний HTML** внутри элемента:
+
+```js
+cy.get('selector')
+    .invoke('html', '<b>Bold</b>');
+cy.get('selector')
+    .invoke('html')
+    .should('contains', '<b>Bold</b>');
+```
+
+* Установить/взять **CSS свойство** элемента:
+
+```js
+cy.get('selector').invoke('css', 'background-color', 'red');
+cy.get('selector').invoke('css', 'background-color').should('eq', 'red');
+```
+
+* Взять/установить **ширину и высоту** элемента:
+
+```js
+cy.get('selector').invoke('width', '200px');
+cy.get('selector').invoke('width').should('greaterThan', 200);
+cy.get('selector').invoke('height', '100px');
+cy.get('selector').invoke('height').should('greaterThan', 100);
+```
+
+* Взять **абсолютную позицию** элемента на странице:
+
+```js
+cy.get('selector').invoke('position').then(({left, top}) => {
+    cy.log(left, top);
+});
+```
+
+* Добавить/удалить **CSS класс** `active` у элемента:
+
+```js
+cy.get('selector')
+    .invoke('addClass', 'active')
+    .should('have.class', 'active');
+cy.get('selector')
+    .invoke('removeClass', 'active')
+    .should('not.have.class', 'active');
+```
+
+* Узнать наличие **CSS класса** `active` у элемента:
+
+```js
+cy.get('selector')
+    .invoke('hasClass', 'active')
+    .then(active => {
+        if (active) {
+            cy.log('has active class');
+        } else {
+            cy.log('has not active class');
+        }
+    });
+```
+
+* Взять/установить **аттрибут** элемента:
+
+```js
+cy.get('selector').invoke('attr', 'src', '?');
+cy.get('selector').invoke('attr').should('eq', '?');
+```
 
 ***
 
@@ -504,7 +610,9 @@ it.only('should do check mouse move', () => {
 ```
 
 - [x] Проверь, что тест 🟢 проходит.
-- [x] Прочитай [спецификацию](https://docs.cypress.io/api/commands/trigger#Specify-the-exact-clientX-and-clientY-the-event-should-have) на `mousemove`
+- [x] 
+  Прочитай [спецификацию](https://docs.cypress.io/api/commands/trigger#Specify-the-exact-clientX-and-clientY-the-event-should-have)
+  на `mousemove`
 
 * ❓ Что делает [`position()`](https://www.google.com/search?q=position())?
 * ❓ Что делает `its('top')`?
@@ -620,7 +728,7 @@ cy.url().should('include', '/');
 
 ```js
 describe.only('Navigation', () => {
-    
+
     beforeEach(() => {
         cy.get('section[data-cy=navigation]').should('be.visible').as('navigation');
     });
@@ -656,7 +764,7 @@ describe.only('Navigation', () => {
 
 ```js
 it.only('should do grab users', () => {
-    
+
     cy.get('section[data-cy=grab-users]').should('be.visible').as('section').scrollIntoView();
 
     cy.get('@section').find('table tbody tr')
@@ -747,13 +855,14 @@ it.only('should do check hero', () => {
 <details>
   <summary>Правда все просто? 😂</summary>
 
-<iframe src="https://giphy.com/embed/BbJdwrOsM7nTa" 
-    width="480" height="411" frameBorder="0" class="giphy-embed"></iframe>
+<iframe src="https://giphy.com/embed/BbJdwrOsM7nTa"
+width="480" height="411" frameBorder="0" class="giphy-embed"></iframe>
 </details>
 
 # Фидбек пожалуйста 🙏
 
 ? Полезный материал ?
+
 * 🤩 Очень полезный материал
 * 😃 В целом полезный
 * 😐 Возможно что-то пригодится
@@ -761,6 +870,7 @@ it.only('should do check hero', () => {
 * 😬 Абсолютно бесполезно
 
 ? Все ли было понятно ?
+
 * 🤩 Все понятно на 100%
 * 😃 В целом все понятно
 * 😐 Что-то понятно, что-то нет
@@ -768,6 +878,7 @@ it.only('should do check hero', () => {
 * 😬 Ничего не понял
 
 ? Как тебе такой формат туториала ?
+
 * 🤩 Очень удобно
 * 😃 Мне понравилось
 * 😐 Нормально

@@ -77,7 +77,7 @@ width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></i
 <details>
   <summary>Подсказка 1</summary>
 
-- [x] В Cypress через `invoke` задай цвет фона для каждой кнопки из файла `colors_for_digits.txt`
+В Cypress через `invoke` задай цвет фона для каждой кнопки из файла `colors_for_digits.txt`
 
 </details>
 
@@ -88,7 +88,7 @@ width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></i
 <details>
   <summary>Подсказка 2</summary>
 
-- [x] Пин — это дата запуска **Вояджера 1**, а именно 05.09.1977 но только в формате `DDMMYYYY`
+Пин — это дата запуска **Вояджера 1**, а именно 05.09.1977 но только в формате `DDMMYYYY`
 
 </details>
 
@@ -166,7 +166,7 @@ for (let i = 0; i < pin.length; i++) {
 <details>
   <summary>Подсказка 1</summary>
 
-- [x] В инструментах разработчика переключись на эмуляцию экрана телефона.
+В инструментах разработчика переключись на эмуляцию экрана телефона.
 
 </details>
 
@@ -177,7 +177,7 @@ for (let i = 0; i < pin.length; i++) {
 <details>
   <summary>Подсказка 2</summary>
 
-- [x] Вводить коды запуска нужно с последнего 50 до 1: `1, 4, 9, 16, 25, 36 ... 2500`
+Вводить коды запуска нужно с последнего 50 до 1: `1, 4, 9, 16, 25, 36 ... 2500`
 
 </details>
 

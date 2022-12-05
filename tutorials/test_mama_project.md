@@ -49,11 +49,11 @@
 
 ## +2. Пишем тест-кейсы на вход и регистрацию
 
-[Routing guidelines](https://realworld-docs.netlify.app/docs/specs/frontend-specs/routing/) — дает нам представление о структуре приложение и его функциональных возможностей.
+[Routing guidelines](https://realworld-docs.netlify.app/docs/specs/frontend-specs/routing/) — дает нам представление о структуре приложения и его функциональных возможностей.
 
 Это помогает понять, что мы будем тестировать.
 
-👇 Напишем тест-кейсы для фичей **регистрации** и **входа.**
+Напишем 👇 тест-кейсы для фичей **регистрации** и **входа.**
 
 <block>
 
@@ -137,7 +137,7 @@ console.log('email =', email);
 - [x] В терминале выполни `node js_examples/rnd.js`
 - [x] Повтори команду 3-5 раз.
 
-<img width="926" height="298" src="assets/test_mama_project/rnd.gif">
+<img width="800" height="257" src="assets/test_mama_project/rnd.gif">
 
 * ❓ Что делает `Math.random` и `Math.round`?
 * ❓ Что фактически хранится в константе `rnd`?
@@ -146,10 +146,9 @@ console.log('email =', email);
 
 Данные тест-кейсы можно объединить в тест-сьют **Sign up**, т.к. они оба связанны с авторизацией пользователя.
 
-- [x] Создай файл теста `~/cypress/integration/signup.spec.js`
-- [x] Добавь заготовку для кода теста:
+- [x] Заполни **пропуски** в коде:
 
-```javascript
+```js placeholders register_user
 describe('Sign up', () => {
     
     it.only('should do register user', () => {
@@ -158,16 +157,16 @@ describe('Sign up', () => {
         cy.visit('https://demo.realworld.io/');
         
         // click Sign Up link in app header
-        cy.get('?').click();
+        cy.get('?|.navbar a[href$="/register"]|?').click();
         
         // url should be /#/register
-        cy.url().should('include', '?');
+        cy.url().should('include', '?|/#/register|?');
 
         // page title should be Sign up
-        cy.get('?').should('have.text', '?');
+        cy.get('.auth-page h1').should('have.text', '?|Sign up|?');
 
         // page should have form
-        cy.get('?').should('be.visible');
+        cy.get('?|.auth-page form|?').should('be.visible');
 
         // generate random integer from 1000 to 9999
         const rnd = Math.round(Math.random() * 8999) + 1000;
@@ -179,20 +178,20 @@ describe('Sign up', () => {
         const email = username + '@gmail.com';
 
         // type username form field
-        cy.get('?').type(username);
+        cy.get('.auth-page form input[ng-model$=username]').type(username);
 
         // type email form field
-        cy.get('?').type(email);
+        cy.get('?|.auth-page form input[ng-model$=email]|?').type(email);
 
         // password should be with pattern [0-9a-zA-Z_]{6, 16}
         // type password form field
-        cy.get('?').type('xyzXYZ123_');
+        cy.get('?|.auth-page form input[ng-model$=password]|?').type('xyzXYZ123_');
 
         // click on Sign up button
-        cy.get('?').click();
+        cy.get('?|.auth-page form button[type=submit]|?').click();
 
         // header should contains {username}
-        cy.get('?').should('contain.text', username);
+        cy.get('?|.navbar|?').should('contain.text', username);
 
     });
 
@@ -204,7 +203,7 @@ describe('Sign up', () => {
 
 });
 ```
-- [x] Напиши тело теста регистрации пользователя самостоятельно.
+- [x] Перенеси код в файл `~/cypress/integration/signup.spec.js`
 
 * ❓ Зачем нужен `describe`?
 * ❓ Чем отличается `it.only()` от `it()`?
@@ -216,9 +215,9 @@ describe('Sign up', () => {
 
 *** 5:00 ***
 
-- [x] Добавь заготовку для кода теста логина:
+- [x] Заполни **пропуски** в коде:
 
-```js
+```js placeholders login_user
 describe('Sign up', () => {
     
     it('should register user', () => {
@@ -233,36 +232,36 @@ describe('Sign up', () => {
         cy.visit('https://demo.realworld.io/');
 
         // click Sign In link in app header
-        cy.get('?').click();
+        cy.get('?|.navbar a[href$="/login"]|?').click();
 
         // url should be /#/login
-        cy.url().should('include', '?');
+        cy.url().should('include', '?|/#/login|?');
 
         // page title should be Sign in
-        cy.get('?').should('have.text', '?');
+        cy.get('?|.auth-page h1|?').should('have.text', '?|Sign in|?');
 
         // page should have form
-        cy.get('?').should('be.visible');
+        cy.get('?|.auth-page form|?').should('be.visible');
 
         // type email form field
-        cy.get('?').type('?');
+        cy.get('?|.auth-page form input[ng-model$=email]|?').type('?');
 
         // type password form field
-        cy.get('?').type('?');
+        cy.get('?|.auth-page form input[ng-model$=password]|?').type('?');
 
         // click on sign in button
-        cy.get('?').click();
+        cy.get('?|.auth-page form button[type=submit]|?').click();
 
         // header should contains {username}
-        cy.get('?').should('contain.text', '?');
+        cy.get('?|.navbar|?').should('contain.text', '?');
         
     });
 
 });
 ```
 
+- [x] Перенеси код в файл теста.
 - [x] Зарегистрируй в ручную пользователя и пропиши его данные в код.
-- [x] Напиши тело теста.
 
 *** 10:00 ***
 
