@@ -210,7 +210,7 @@ describe('Sign up', () => {
 
 *** 15:00 ***
 
-- [x] Сверь свой код с [эталоном](cypress/integration/test_mama_project/signup1.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress/integration/test_mama_project/signup1.spec.js)
 - [x] Запусти тест в **Headless** режиме.
 
 *** 5:00 ***
@@ -265,7 +265,7 @@ describe('Sign up', () => {
 
 *** 10:00 ***
 
-- [x] Сверь свой код с [эталоном](cypress/integration/test_mama_project/signup2.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress/integration/test_mama_project/signup2.spec.js)
 - [x] Запусти тест в **Headless** режиме.
 
 *** 05:00 ***
@@ -285,7 +285,7 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 ```
 
 - [x] Создай файлы `test_cases/register_user.md` и `test_cases/login_user.md`
-- [x] Перенеси в них Markdown из примеров [register](test_cases/register_user.md?plain=1) и [login](test_cases/login_user.md?plain=1)
+- [x] Перенеси в них Markdown из примеров [register](/test_cases/register_user.md?plain=1) и [login](/test_cases/login_user.md?plain=1)
 - [x] Открой файл `README.md` в режиме просмотра <img src="assets/preview_md.png" width="30" height="30">
 
 <details>
@@ -305,12 +305,12 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 
 *** 10:00 ***
 
-- [x] Сверь свои результаты с [эталоном](test_cases/logout_user.md?plain=1)
+- [x] Сверь свои результаты с [эталоном](/test_cases/logout_user.md?plain=1)
 - [x] Напиши тест на Cypress.
 
 *** 10:00 ***
 
-- [x] Сверь свой код с [эталоном](cypress/integration/test_mama_project/signup3.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress/integration/test_mama_project/signup3.spec.js)
 - [x] Найди и выпиши участки кода которые повторяются.
 - [x] Запусти все тесты в Headless режиме.
 

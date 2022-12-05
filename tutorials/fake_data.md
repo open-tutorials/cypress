@@ -119,7 +119,7 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 
 - [x] Переведи тест-кейс на русский язык.
 - [x] Выполни тест в ручную.
-- [x] Создай файл `~/test_cases/publish_article.md` из [примера](../test_cases/articles/crud/publish_article.md?plain=1)
+- [x] Создай файл `~/test_cases/publish_article.md` из [примера](/test_cases/articles/crud/publish_article.md?plain=1)
 - [x] Добавь ссылку на тест-кейс в `README.md`
 
 * ❓ Зачем нам **To do**?
@@ -231,8 +231,8 @@ for (let i = 0; i <= 5; i++) {
 
 ### +2.3. Пишем код теста
 
-- [x] Добавь фикстуру `~/cypress/fixtures/me-user.json` из [примера](../cypress/fixtures/me-user.json)
-- [x] Создай файл `~/cypress/support/shared.js` из [примера](../cypress/support/shared.js)
+- [x] Добавь фикстуру `~/cypress/fixtures/me-user.json` из [примера](/cypress/fixtures/me-user.json)
+- [x] Создай файл `~/cypress/support/shared.js` из [примера](/cypress/support/shared.js)
 - [x] Создай файл теста `global-feed.spec.js`
 - [x] Напиши тест публикации статьи следуя описанию тест-кейса:
   * Используй функцию `login()` из `shared.js`
@@ -240,7 +240,7 @@ for (let i = 0; i <= 5; i++) {
 
 *** 05:00 ***
 
-- [x] Сверь свой код с [эталоном](../cypress/integration/fake_data/articles1.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress/integration/fake_data/articles1.spec.js)
 - [x] Разберись в каждой строчке кода мастера.
 - [x] Перенеси найденные улучшения к себе.
 - [x] Добавь отметку в `README.md` что тест написан.
@@ -291,7 +291,7 @@ for (let i = 0; i <= 5; i++) {
 
 - [x] Переведи тест-кейс на русский язык.
 - [x] Выполни тест в ручную.
-- [x] Создай файл `~/test_cases/delete_article.md` из [примера](../test_cases/articles/crud/delete_article.md?plain=1)
+- [x] Создай файл `~/test_cases/delete_article.md` из [примера](/test_cases/articles/crud/delete_article.md?plain=1)
 - [x] Добавь ссылку на тест-кейс в `README.md`
 
 ***
@@ -351,7 +351,7 @@ cy.get('@myArticles').contains(article.title)
 
 *** 05:00 ***
 
-- [x] Сверь свой код с [эталоном](../cypress/integration/fake_data/articles2.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress/integration/fake_data/articles2.spec.js)
 - [x] Разберись в каждой строчке кода мастера.
 - [x] Перенеси найденные улучшения к себе.
 - [x] Добавь отметку в `README.md` что тест готов.
@@ -360,7 +360,7 @@ cy.get('@myArticles').contains(article.title)
 
 ## +4. Тест редактирования статьи
 
-- [x] Создай файл `~/test_cases/edit_article.md` из [примера](../test_cases/articles/crud/edit_article.md?plain=1)
+- [x] Создай файл `~/test_cases/edit_article.md` из [примера](/test_cases/articles/crud/edit_article.md?plain=1)
 - [x] Добавь ссылку на тест-кейс в `README.md`
 - [x] Переведи тест-кейс на русский язык.
 - [x] Выполни тест в ручную.
@@ -377,7 +377,7 @@ cy.get('@myArticles').contains(article.title)
 
 *** 10:00 ***
 
-- [x] Сверь свой код с [эталоном](../cypress/integration/fake_data/articles3.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress/integration/fake_data/articles3.spec.js)
 - [x] Разберись в каждой строчке кода мастера.
 - [x] Перенеси найденные улучшения к себе.
 - [x] Добавь отметку в `README.md` что тест готов.

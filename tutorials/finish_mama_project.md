@@ -396,7 +396,7 @@ npm i @faker-js/faker --save-dev
 *** 10:00 ***
 
 - [x] Добавь ссылку в `README`
-- [x] Приведи свой тест-кейс в соответствии с [эталоном](test_cases/articles/global_feed/display_article_list.md)
+- [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/global_feed/display_article_list.md)
 - [x] Выполни тест в ручную.
 - [x] Напиши тест на Cypress.
 
@@ -409,7 +409,7 @@ npm i @faker-js/faker --save-dev
 *** 10:00 ***
 
 - [x] Добавь ссылку в `README`
-- [x] Приведи свой тест-кейс в соответствии с [эталоном](test_cases/articles/global_feed/open_article_detail_page.md)
+- [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/global_feed/open_article_detail_page.md)
 - [x] Выполни тест в ручную.
 - [x] Напиши тест на Cypress.
 
@@ -422,7 +422,7 @@ npm i @faker-js/faker --save-dev
 *** 10:00 ***
 
 - [x] Добавь ссылку в `README`
-- [x] Приведи свой тест-кейс в соответствии с [эталоном](test_cases/articles/global_feed/like_article.md)
+- [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/global_feed/like_article.md)
 - [x] Выполни тест в ручную.
 - [x] Напиши тест на Cypress.
 
@@ -435,7 +435,7 @@ npm i @faker-js/faker --save-dev
 *** 10:00 ***
 
 - [x] Добавь ссылку в `README`
-- [x] Приведи свой тест-кейс в соответствии с [эталоном](test_cases/articles/global_feed/navigate_in_list_by_paging.md)
+- [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/global_feed/navigate_in_list_by_paging.md)
 - [x] Выполни тест в ручную.
 - [x] Напиши тест на Cypress.
 
@@ -448,11 +448,11 @@ npm i @faker-js/faker --save-dev
 *** 10:00 ***
 
 - [x] Добавь ссылку в `README`
-- [x] Приведи свой тест-кейс в соответствии с [эталоном](test_cases/articles/global_feed/filter_articles_by_tag.md)
+- [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/global_feed/filter_articles_by_tag.md)
 - [x] Выполни тест в ручную.
 - [x] Напиши тест на Cypress.
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](cypress/integration/finish_mama_project/articles/global-feed.spec.js)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js)
 - [x] Поставь отметки, что тесты написаны в `README`

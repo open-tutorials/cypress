@@ -20,7 +20,7 @@
 ## +1. Готовим код
 
 - [x] Создай файл теста `~/cypress/integration/signup.spec.js`
-- [x] Скопируй код из [примера](cypress/integration/test_mama_project/signup3.spec.js)
+- [x] Скопируй код из [примера](/cypress/integration/test_mama_project/signup3.spec.js)
 - [x] Проанализируй код.
 - [x] Прогони тесты в Headless.
 
@@ -360,7 +360,7 @@ export function getRandomNumber(min, max) {
 
 ***
 
-- [x] Сверь свой код с [эталоном](cypress/integration/my_first_refactor/signup.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress/integration/my_first_refactor/signup.spec.js)
 - [x] Разберись в каждой строчке кода мастера.
 - [x] Перенеси найденные улучшения к себе.
 
