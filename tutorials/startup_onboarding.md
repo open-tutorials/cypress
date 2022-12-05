@@ -8,7 +8,7 @@
 {
   "from": {
     "name": "Антон",
-    "avatar": "/assets/images/anton.jpg"
+    "avatar": "assets/images/anton.jpg"
   },
   "src": "https://drive.google.com/uc?export=view&id=1l1kBR3XI1xDaSX02jLY8FfzxLibosE3P"
 }
@@ -217,7 +217,7 @@ robot]]
 {
   "from": {
     "name": "Антон",
-    "avatar": "/assets/images/anton.jpg"
+    "avatar": "assets/images/anton.jpg"
   },
   "src": "https://drive.google.com/uc?export=view&id=12aXyZ1SQRn6SHIamFNBxZQ4KLUVt6isY"
 }
