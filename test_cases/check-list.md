@@ -1,159 +1,171 @@
-This file contains check list for [project](https://demo.realworld.io/)
+This file contains check list for [project](https://demo.realworld.io/)  
 
-# Layout       
+# Contents
+
+- [Layout](#layout)    
+- [UI/UX](#uiux)       
+- [Features](#features)   
+- [Security](#security)  
+
+# Layout         
  
-## Header     
+## Header       
  
-- [ ] Header is visible  
-- [ ] Logo is presented with link to main page  
-- [ ] Menu items are presented    
+- [ ] Header is visible    
+- [ ] Logo is presented with link to main page    
+- [ ] Menu items are presented      
 
-### For anonymous user             
-- [ ] Menu items        
-    - [ ] **Home** page      
-    - [ ] **Sign in** page        
-    - [ ] **Sign up** page  
+### For anonymous user               
+- [ ] Menu items should contain          
+    - [ ] **Home** page        
+    - [ ] **Sign in** page          
+    - [ ] **Sign up** page    
 
-### For logged in user  
-- [ ] Menu items    
-    - [ ] **Home** page          
-    - [ ] **New Article** page            
-    - [ ] **Settings** page    
-    - [ ] link to user profile page    	
+### For logged in user    
+- [ ] Menu items should contain            
+    - [ ] **Home** page            
+    - [ ] **New Article** page              
+    - [ ] **Settings** page      
+    - [ ] Link to user profile page            	  
 	
-- [ ] Welcome-banner in the middle of the page        
-    - [ ] Name    
-    - [ ] Slogan  
-	
-## Main menu  
+## Content          
 
-- [ ] **Global Feed** tab with list of last articles on the left side    
-- [ ] **Popular Tags** field on the right side    
-- [ ] Paging at the bottom of a page  
+- [ ] Welcome banner in the middle of the page should contain               
+    - [ ] Name        
+    - [ ] Slogan           
+- [ ] List of articles on the left side  
+- [ ] Field with tags on the right side              
+- [ ] Paging at the bottom of a page    
   
 ## Footer   
-- [ ] GitHub link    
-- [ ] Contact information  
-- [ ] Legal information
+  
+- [ ] GitHub link      
+- [ ] Contact information    
+- [ ] Legal information  
 
-# UI / UX    
+# UI/UX      
 
-- [ ] All the links are valid and lead to correct pages  
-- [ ] All the fields have placeholders      
-- [ ] All the mandatory fields are validated    
-- [ ] All the mandatory fields have asterix sign  
-- [ ] All the error messages match with the field label  
-- [ ] Home link is on every single page  
-- [ ] Confirmation message is displayed for any kind of update and delete operation  
-- [ ] Scroll bar appears only if required                           
+- [ ] All the links are valid and lead to correct pages    
+- [ ] All the fields have placeholders        
+- [ ] All the mandatory fields are validated      
+- [ ] All the mandatory fields have asterix sign    
+- [ ] All the error messages match with the field label    
+- [ ] Home link is on every single page    
+- [ ] Confirmation message is displayed for any kind of update and delete operation    
+- [ ] Scroll bar appears only if required                             
 
 # Features  
 
-## Sign up    
+## Sign up      
   
-### Register user  
+### Register user    
   
-- [ ] Fill in registration form with valid data  
+- [ ] Fill in registration form with valid data    
+- [ ] Check header contains username        
+    
+### Login user    
+    
+- [ ] Fill in authorization form with valid data    
 - [ ] Check header contains username    
-    
-### Login user  
-    
-- [ ] Fill in authorization form with valid data  
-- [ ] Check header contains username  
   
-### Logout user  
+### Logout user    
   
-- [ ] Logout user       
-- [ ] Check header doesn't contain username  
+- [ ] Logout user         
+- [ ] Check header doesn't contain username    
            
-## Articles  
+## Articles    
 
-### Publish article  
+### Publish article    
     
-- [ ] Open editor    
-- [ ] Fill in form    
-- [ ] Save article    
-- [ ] Check article data  
+- [ ] Open editor      
+- [ ] Fill in form      
+- [ ] Save article      
+- [ ] Check article data    
   
-### Delete article  
+### Delete article    
   
-- [ ] Find my article    
-- [ ] Delete article    
-- [ ] Check article is deleted  
+- [ ] Find my article      
+- [ ] Delete article      
+- [ ] Check article is deleted    
   	
 ### Edit article  
     
-- [ ] Find article    
-- [ ] Edit article    
-- [ ] Check new article data  
+- [ ] Find article      
+- [ ] Edit article      
+- [ ] Check new article data    
     
-### Read article  
-  
-- [ ] Find article    
-- [ ] View article  
+## Global feed  
+
+### Display article  
+
+- [ ] Check article list  
+- [ ] Check article card  
+
+### Filter articles by tag      
       
-### Like article  
-  
-- [ ] Find article    
-- [ ] Mark article with "like" sign  
-- [ ] Check article in your favorite article list  
+- [ ] Select random tag    
+- [ ] Check articles list has the tag    
 
-### Unlike article  
+### Like article      
+  
+- [ ] Select random article       
+- [ ] Like/unlike article      
+- [ ] Likes count is increased +1/ Likes count is decreased -1  
 
-- [ ] Find your favorite article  
-- [ ] Mark article with "unlike" sign  
-- [ ] Check article is deleted from your favorite article list  
-  
-### Global articles feed  
-    
-- [ ] Open list with articles  
-  
-### Filter articles by tag  
-  
-- [ ] Open list with articles      
-- [ ] Choose tag
-- [ ] Check new tab with articles contains tag    
-  
-## Commenting  
+### Navigate in list by paging  
+
+- [ ] Select random article  
+- [ ] Navigate to random page  
+- [ ] Check the article is not presented in list  
+- [ ] Navigate back to 1st page  
+- [ ] Check the article is presented in list       
+
+### Open article detail page  
+
+- [ ] Open random article  
+- [ ] Check page title has the article's title    
+
+## Commenting    
  
-### Add comment to article  
+### Add comment to article    
   
-- [ ] Find article    
-- [ ] Fill in form with comment    
-- [ ] Check comment  
+- [ ] Select first article        
+- [ ] Fill in form with comment      
+- [ ] Check comments list has the comment     
   	
-### Delete comment to article  
+### Delete comment to article    
   
-- [ ] Find article    
-- [ ] Delete comment    
-- [ ] Check comment is deleted  
+- [ ] Select first article  
+- [ ] Add comment         
+- [ ] Delete comment      
+- [ ] Check comments list doesn't have the comment    
 
-## Social  
+## Social    
 
-### Subscribe to user  
+### Subscribe to user    
 
-- [ ] Find user  
-- [ ] Subscribe to user by following him  
-- [ ] Check user in your subscription list
+- [ ] Find user    
+- [ ] Subscribe to user by following him    
+- [ ] Check user in your subscription list  
 
-### Unsubscribe from user  
+### Unsubscribe from user    
 
-- [ ] Find user you are following  
-- [ ] Unsubscribe from user by unfollowing him  
-- [ ] Check user is deleted from your subscription list  
+- [ ] Find user you are following    
+- [ ] Unsubscribe from user by unfollowing him    
+- [ ] Check user is deleted from your subscription list    
 
-## User settings  
+## User settings    
 
-### Edit settings  
+### Edit settings    
 
-- [ ] Open settings form    
-- [ ] Edit form  
-- [ ] Check new settings data  
+- [ ] Open settings form      
+- [ ] Edit form    
+- [ ] Check new settings data    
 
-# Security  
+# Security    
 
-- [ ] HTTPs is used  
-- [ ] Important information like password displays in encrypted format  
-- [ ] If password is changed user can't login with old password  
-- [ ] Error messages don't display any important information  
-- [ ] Cookies don't store passwords    
+- [ ] HTTPs is used    
+- [ ] Important information like password displays in encrypted format    
+- [ ] If password is changed user can't login with old password    
+- [ ] Error messages don't display any important information    
+- [ ] Cookies don't store passwords      
