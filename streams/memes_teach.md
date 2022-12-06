@@ -69,11 +69,11 @@ width="600px" height="900px">
 
 ### Load vocabulary
 
-<img width="640" height="680" src="assets/memes_teach/load_vocabulary.png">
+<img width="320" height="340" src="assets/memes_teach/load_vocabulary.png">
 
 ### Learn word
 
-<img width="800" height="980" src="assets/memes_teach/learn_word.png">
+<img width="380" height="510" src="assets/memes_teach/learn_word.png">
 
 Кажется не плохо за 5 минут?
 
