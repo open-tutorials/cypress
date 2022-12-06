@@ -98,15 +98,56 @@ width="600px" height="900px">
 Пользователю можно предложить загрузить свой словарь в виде текста:
 
 ```text
+commit>фиксировать
+pull>тянуть
+push>толкать
+merge>соединять
 folder>папка
-property>свойство
-explanation>объяснение
-experience>опыт
-response>ответ
-simple>простой
+setup>устанавливать
+bundle>пакет
+implement>реализовывать
 allow>разрешать
+prohibit>запрещать
+persistent>постоянный
+layout>макет
+introduce>представлять
+validation>проверка
+template>шаблон
+reference>ссылка
+exception>исключение
+requirement>требование
+request>запрос
+button>кнопка
+network>сеть
 perform>выполнять
 string>строка
+purpose>цель
+deny>отказывать
+permission>разрешение
+column>столбец
+solution>решение
+settings>настройки
+bind>связывать
+reset>сбрасывать
+mandatory>обязательный
+batch>комплектовать
+switch>переключать
+amount>количество
+issue>проблема
+bootstrap>загружать
+free>свободный
+ability>способность
+integer>целое число
+timestamp>метка времени
+assemble>собирать
+wrapper>обертка
+clause>условие
+variable>переменная
+example>пример
+property>свойство
+explanation>объяснение
+split>разделять
+current>текущий
 credentials>учетные данные
 ```
 
