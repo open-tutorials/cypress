@@ -1,5 +1,7 @@
 # Квест: спасти мир от хакера Hакатика
 
+> После выполнения заданий посмотри полный видео-разбор внизу туториала 👇
+
 У нас плохие новости Док 😪
 
 Систему безопасности **Пентагона** взломал китайский ☠️ хакер **Hакатика Hаебyка**.
@@ -245,6 +247,10 @@ cy.get('stop-button').shadow().find('button.stop').click();
 ```
 
 </details>
+
+Видео-разбор
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/laXEn6chiEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Фидбек пожалуйста 🙏
 
