@@ -1,4 +1,3 @@
-
 ///<reference types="cypress" />
 
 it('should do register user', () => {

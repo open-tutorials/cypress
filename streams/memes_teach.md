@@ -252,7 +252,7 @@ memeElement.setAttribute('src', data[0].embed_url);
 
 На стриме мы только колхозим, остальные этапы за тобой! Не забывай использовать тайм-коды.
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/Pzq19bZMMSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="600" src="https://www.youtube.com/embed/KapDlFwcHUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Само приложение с которым можно поиграться https://stackblitz.com/edit/meme-for-en
 
