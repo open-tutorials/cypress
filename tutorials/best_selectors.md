@@ -348,7 +348,7 @@ cy.get('input[name=first_name]').type('Иван');
 
 **Контекст** для элемента: форма, группа, раздел — некоторая уникальная область интерфейса.
 
-<img width="600" height="342" src="assets/best_selectors/semantic_ui.png">
+<img width="634" height="382" src="assets/best_selectors/semantic_ui.png">
 
 Картинка взята у
 © [Sumudu Siriwardana](https://medium.com/codex/what-is-semantic-markup-and-why-you-should-use-it-44777543c29c)
