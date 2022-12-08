@@ -848,6 +848,129 @@ it.only('should do check hero', () => {
 
 ***
 
+## +17. Еще полезные рецепты
+
+### 17.1. Установка скоупа
+
+По умолчанию, `cy.get` ищет элементы внутри **всего** документа.
+
+```html
+<form name="signup">
+    <input name="email">
+    <input name="password">
+    <button type="submit">Register</button>
+</form>
+```
+
+👎 Вариант новичка:
+
+```js
+cy.get('form[name=signup] input[name=email]').type('?');
+cy.get('form[name=signup] input[name=password]').type('?');
+cy.get('form[name=signup] button[type=submit]').click();
+```
+
+👍 Ты уже знаешь, как сократить код через **алисы:**
+
+```js
+cy.get('form[name=signup]').as('signupForm');
+cy.get('signupForm').find('input[name=email]').type('?');
+cy.get('signupForm').get('input[name=password]').type('?');
+cy.get('signupForm').get('button[type=submit]').click();
+```
+
+😎 Можно сделать еще короче через установку **скоупа:**
+
+```js
+// scope документа
+cy.get('form[name=signup]').within(() => {
+    // scope формы
+    cy.get('input[name=email]').type('?');
+    cy.get('input[name=password]').type('?');
+    cy.get('button[type=submit]').click();
+});
+// снова scope документа
+```
+
+**Скоуп / scope** — позволяет определить область / рамки / границы действия команд. ~"В конспект"
+
+***
+
+### 17.2. Луп / loop по элементам
+
+**Кейс:** проверить корректность ссылок в верхнем меню.
+
+```html
+<div class="menu top">
+    <a href="/order">Order</a>
+    <a href="/delivery">Delivery</a>
+    <a href="/payment">Payment</a>
+</div>
+```
+
+👎 Твой «так себе» вариант:
+
+```js
+cy.get('.menu.top > a:nth-child(0)')
+    .invoke('attr', 'href')
+    .should('eq', '/order');
+cy.get('.menu.top > a:nth-child(1)')
+    .invoke('attr', 'href')
+    .should('eq', '/delivery');
+cy.get('.menu.top > a:nth-child(2)')
+    .invoke('attr', 'href')
+    .should('eq', '/payment');
+```
+
+👍 Лучший вариант:
+
+```js
+const urls = ['/order', '/delivery', '/payment'];
+cy.get('.menu.top > a').each((link, index) => {
+    const url = urls[index];
+    console.log('checking URL for link with index =', index);
+    cy.wrap(link).invoke('attr', 'href')
+        .should('eq', url);
+});
+```
+
+`.each((element, index) = {})` — позволяет пройтись по элементам в цикле. ~"В конспект"
+
+❓ Зачем нужен `wrap`?
+
+1. `cy.get('.menu.top > a')` дает обещание найти элементы в течение 4х секунд.
+2. `each` вызывается когда элементы найдены.
+3. `link` содержит ссылку на элемент с индексом `index`
+
+Что бы заставить Cypress снова перейти к обещаниям (промисам), нужно элемент обернуть — `wrap` ~"В конспект"
+
+Без `wrap` 🔴 нельзя написать `link.invoke('attr', 'href').should('eq', url)`
+
+***
+
+### 17.3. Взять элемент по индексу
+
+**Кейс:** кликнуть по случайной статье из списка.
+
+```html
+<div class="posts">
+    <a href="/post1">Post 1</a>
+    <a href="/post2">Post 2</a>
+    <a href="/post3">Post 3</a>
+</div>
+```
+
+Наш код:
+
+```js
+const rnd = Math.round(Math.round() * 2);
+cy.get('.posts a').eq(rnd).click(rnd);
+```
+
+`.eq(index)` — пытается взять элемент с нужным индексом. ~"В конспект"
+
+***
+
 Та да 🥳 Ты дошел до конца.
 
 Если, что вот [полный код](/cypress/integration/deep-cypress.spec.js) всех тестов.

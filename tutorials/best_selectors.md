@@ -350,9 +350,6 @@ cy.get('input[name=first_name]').type('Иван');
 
 <img width="634" height="382" src="assets/best_selectors/semantic_ui.png">
 
-Картинка взята у
-© [Sumudu Siriwardana](https://medium.com/codex/what-is-semantic-markup-and-why-you-should-use-it-44777543c29c)
-
 ### Как найти контекст
 
 * Ищи в иерархии элемента [семантические](https://html5css.ru/html/html5_semantic_elements.php) тэги `<form>`
