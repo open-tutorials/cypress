@@ -85,7 +85,7 @@ describe('Articles', () => {
 
         });
 
-        it('should do like article', () => {
+        it.only('should do like article', () => {
 
             login();
 
@@ -117,10 +117,11 @@ describe('Articles', () => {
                         .should('not.have.class', 'disabled');
 
                     cy.get('@likesBefore').then(likesBefore => {
-                        const expectingLikes = parseInt(likesBefore) + (likedBefore ? -1 : 1);
+                        const expectingLikes = likesBefore + (likedBefore ? -1 : 1);
                         cy.get('@likeButton')
                             .invoke('text')
                             .invoke('trim')
+                            .then(likes => parseInt(likes))
                             .should('eq', expectingLikes);
                     });
                 });

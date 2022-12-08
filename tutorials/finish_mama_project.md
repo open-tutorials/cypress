@@ -404,7 +404,6 @@ npm i @faker-js/faker --save-dev
 
 ```js
 cy.get('?')
-  .should('have.length', 10)
   .each(article => {
     cy.wrap(article).within(() => {
       // check article
@@ -461,17 +460,22 @@ cy.get('?')
   .as('likesBefore');
 
 cy.get('?')
-  .invoke('hasClass', 'btn-primary')
+  .invoke('hasClass', '?')
   .then(likedBefore => {
       cy.get('@likesBefore').then(likesBefore => {
-        const expectingLikes = parseInt(likesBefore) + (likedBefore ? -1 : 1);
+        const expectingLikes = likesBefore + (likedBefore ? -1 : 1);
+        cy.get('?')
+          .invoke('text')
+          .invoke('trim')
+          .then(likes => parseInt(likes))
+          .should('eq', expectingLikes);
       });
   }):
 ```
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#88)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L88)
 
 ***
 
@@ -488,7 +492,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#129)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L129)
 
 ***
 
@@ -505,7 +509,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#182)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L182)
 
 ***
 
