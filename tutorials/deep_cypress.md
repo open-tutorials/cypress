@@ -945,9 +945,9 @@ cy.get('form[name=signup] button[type=submit]').click();
 
 ```js
 cy.get('form[name=signup]').as('signupForm');
-cy.get('signupForm').find('input[name=email]').type('?');
-cy.get('signupForm').get('input[name=password]').type('?');
-cy.get('signupForm').get('button[type=submit]').click();
+cy.get('@signupForm').find('input[name=email]').type('?');
+cy.get('@signupForm').get('input[name=password]').type('?');
+cy.get('@signupForm').get('button[type=submit]').click();
 ```
 
 😎 Можно сделать еще короче через установку **скоупа:**
@@ -1005,7 +1005,7 @@ cy.get('.menu.top > a').each((link, index) => {
 });
 ```
 
-`.each((element, index) = {})` — позволяет пройтись по элементам в цикле. ~"В конспект"
+`.each((element, index) => {})` — позволяет пройтись по элементам в цикле. ~"В конспект"
 
 ❓ Зачем нужен `wrap`?
 
@@ -1015,7 +1015,7 @@ cy.get('.menu.top > a').each((link, index) => {
 
 Что бы заставить Cypress снова перейти к обещаниям (промисам), нужно элемент обернуть — `wrap` ~"В конспект"
 
-Без `wrap` 🔴 нельзя написать `link.invoke('attr', 'href').should('eq', url)`
+❗ Без `wrap` нельзя написать `link.invoke('attr', 'href').should('eq', url)`
 
 ***
 

@@ -105,6 +105,7 @@ describe('Articles', () => {
             cy.get('@likeButton')
                 .invoke('text')
                 .invoke('trim')
+                .then(likes => parseInt(likes))
                 .as('likesBefore');
 
             cy.get('@likeButton')
@@ -120,7 +121,7 @@ describe('Articles', () => {
                         cy.get('@likeButton')
                             .invoke('text')
                             .invoke('trim')
-                            .should('eq', expectingLikes.toString());
+                            .should('eq', expectingLikes);
                     });
                 });
 

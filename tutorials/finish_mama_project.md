@@ -400,7 +400,21 @@ npm i @faker-js/faker --save-dev
 - [x] Добавь ссылку в `README`
 - [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/global_feed/display_article_list.md)
 - [x] Выполни тест в ручную.
-- [x] Напиши тест на Cypress.
+- [x] Напиши тест на Cypress используя заготовку:
+
+```js
+cy.get('?')
+  .should('have.length', 10)
+  .each(article => {
+    cy.wrap(article).within(() => {
+      // check article
+    });
+  });
+```
+
+*** 10:00 ***
+
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L19)
 
 ***
 
@@ -413,7 +427,18 @@ npm i @faker-js/faker --save-dev
 - [x] Добавь ссылку в `README`
 - [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/global_feed/open_article_detail_page.md)
 - [x] Выполни тест в ручную.
-- [x] Напиши тест на Cypress.
+- [x] Напиши тест на Cypress используя заготовку:
+
+```js
+const rand = getRandomNumber(?, ?);
+cy.get('?')
+  .eq(rand)
+  .as('randomArticle');
+```
+
+*** 10:00 ***
+
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L64)
 
 ***
 
@@ -426,9 +451,29 @@ npm i @faker-js/faker --save-dev
 - [x] Добавь ссылку в `README`
 - [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/global_feed/like_article.md)
 - [x] Выполни тест в ручную.
-- [x] Напиши тест на Cypress.
+- [x] Напиши тест на Cypress используя заготовку:
+
+```js
+cy.get('?')
+  .invoke('text')
+  .invoke('trim')
+  .then(likes => parseInt(likes))
+  .as('likesBefore');
+
+cy.get('?')
+  .invoke('hasClass', 'btn-primary')
+  .then(likedBefore => {
+      cy.get('@likesBefore').then(likesBefore => {
+        const expectingLikes = parseInt(likesBefore) + (likedBefore ? -1 : 1);
+      });
+  }):
+```
 
 *** 10:00 ***
+
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#88)
+
+***
 
 ### +2.7. Навигация в списке через пейджинг
 
@@ -443,6 +488,10 @@ npm i @faker-js/faker --save-dev
 
 *** 10:00 ***
 
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#129)
+
+***
+
 ### +2.8. Фильтрация статей по тегам
 
 - [x] Опиши тест-кейс — **filter articles by tag**
@@ -456,5 +505,8 @@ npm i @faker-js/faker --save-dev
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#182)
+
+***
+
 - [x] Поставь отметки, что тесты написаны в `README`
