@@ -997,11 +997,13 @@ cy.get('.menu.top > a:nth-child(2)')
 
 ```js
 const urls = ['/order', '/delivery', '/payment'];
-cy.get('.menu.top > a').each((link, index) => {
-    const url = urls[index];
-    console.log('checking URL for link with index =', index);
-    cy.wrap(link).invoke('attr', 'href')
-        .should('eq', url);
+cy.get('.menu.top > a')
+    .should('have.length', 3)
+    .each((link, index) => {
+        const url = urls[index];
+        console.log('checking URL for link with index =', index);
+        cy.wrap(link).invoke('attr', 'href')
+            .should('eq', url);
 });
 ```
 
@@ -1009,7 +1011,7 @@ cy.get('.menu.top > a').each((link, index) => {
 
 ❓ Зачем нужен `wrap`?
 
-1. `cy.get('.menu.top > a')` дает обещание найти элементы в течение 4х секунд.
+1. `should('have.length', 3)` ждет элементы в течение 4х секунд.
 2. `each` вызывается когда элементы найдены.
 3. `link` содержит ссылку на элемент с индексом `index`
 
