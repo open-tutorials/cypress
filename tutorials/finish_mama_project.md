@@ -473,6 +473,8 @@ cy.get('?')
   }):
 ```
 
+❓ Что делает функция `parseInt`?
+
 *** 10:00 ***
 
 - [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L88)

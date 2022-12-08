@@ -181,7 +181,7 @@ describe('Articles', () => {
 
         });
 
-        it.only('should do filter articles by tag', () => {
+        it('should do filter articles by tag', () => {
 
             // we need waiting for initial loading
             waitForLArticlesList();
