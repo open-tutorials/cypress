@@ -1,3 +1,5 @@
+///<reference types="cypress" />
+
 describe('Basic авторизация', () => {
     it('открыть сайт', () => {
         cy.visit('http://httpbin.org/basic-auth/foo/bar', {

@@ -1,4 +1,6 @@
-it('put codes', () => {
+///<reference types="cypress" />
+
+it('should do save the world', () => {
 
     cy.visit('http://localhost:3000/apps/pentagon.html');
 

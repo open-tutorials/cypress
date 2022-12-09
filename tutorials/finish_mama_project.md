@@ -512,7 +512,50 @@ cy.get('?')
 *** 10:00 ***
 
 - [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L184)
+- [x] Поставь отметки, что тесты написаны в `README`
 
 ***
 
+## +3. Тест комментариев
+
+### +3.1. Добавление комментария
+
+- [x] Обнови `README`
+
+```diff
++
++ # Commenting
++ * [ ] add comment
++ * [ ] delete comment
+```
+
+- [x] Опиши тест-кейс — **add comment**
+
+*** 10:00 ***
+
+- [x] Добавь ссылку в `README`
+- [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/add_comment.md)
+- [x] Выполни тест в ручную.
+- [x] Напиши тест на Cypress.
+
+*** 10:00 ***
+
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/commneting.spec.js)
+
+***
+
+### +3.2. Удаление комментария
+
+- [x] Опиши тест-кейс — **delete comment**
+
+*** 10:00 ***
+
+- [x] Добавь ссылку в `README`
+- [x] Приведи свой тест-кейс в соответствии с [эталоном](/test_cases/articles/delete_comment.md)
+- [x] Выполни тест в ручную.
+- [x] Напиши тест на Cypress.
+
+*** 10:00 ***
+
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/commneting.spec.js)
 - [x] Поставь отметки, что тесты написаны в `README`

@@ -1,3 +1,5 @@
+///<reference types="cypress" />
+
 describe('Sign up', () => {
 
     it('should do register user', () => {

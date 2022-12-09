@@ -1,3 +1,5 @@
+///<reference types="cypress" />
+
 it('should pay by PayPal', () => {
     const paypal = {
         email: '',

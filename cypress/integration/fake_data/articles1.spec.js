@@ -1,3 +1,5 @@
+///<reference types="cypress" />
+
 import { login } from '/cypress/support/fake_data/shared';
 import { faker } from '@faker-js/faker';
 

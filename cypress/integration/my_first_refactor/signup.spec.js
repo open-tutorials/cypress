@@ -1,3 +1,5 @@
+///<reference types="cypress" />
+
 import { getRandomNumber } from '/cypress/support/utils';
 import meUser from '/cypress/fixtures/me-user.json';
 

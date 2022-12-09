@@ -18,13 +18,14 @@ This file contains test cases for [project](https://demo.realworld.io/)
 * [x] [filter articles by tag](articles/global_feed/filter_articles_by_tag.md)
 
 # Commenting
-* [ ] [add comment](add_comment.md)
-* [ ] [delete comment](delete_comment.md)
+* [x] [add comment](add_comment.md)
+* [x] [delete comment](delete_comment.md)
 
 # Social
 * [ ] subscribe to user
 * [ ] personal articles feed
 * [ ] unsubscribe from user
 
-# User settings
+# User account
 * [ ] edit settings
+* [ ] change password

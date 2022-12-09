@@ -10,7 +10,7 @@ Delete comment test case
 
 ## Add comment
 
-4. Repeat 4-9 from [add comment](add_comment.md)
+4. Repeat 4-8 from [add comment](add_comment.md)
 
 ## Delete comment
 

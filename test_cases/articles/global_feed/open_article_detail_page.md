@@ -9,13 +9,14 @@ Open article detail page test case
 
 ## Open random article
 
-3. List should have 10 article cards
-4. Click random article as `{random_article_title}`
+3. **Global Feed** item should be active in feed toggle menu
+4. List should have 10 article cards
+5. Click random article as `{random_article_title}`
 
 ## Check article
 
-5. Url should start `/#/article/` — article detail page
-6. Page title should be `{random_article_title}`
+6. Url should start `/#/article/` — article detail page
+7. Page title should be `{random_article_title}`
 
 # Where:
 

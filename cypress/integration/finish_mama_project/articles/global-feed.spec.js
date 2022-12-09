@@ -1,5 +1,27 @@
+///<reference types="cypress" />
+
 import { login } from '/cypress/support/shared';
 import { getRandomNumber } from '/cypress/support/utils';
+
+function waitForArticlesList() {
+
+    cy.get('@articlesList').contains('.article-preview', 'Loading')
+        .should('not.be.visible');
+
+}
+
+function selectRandomArticle() {
+
+    waitForArticlesList();
+
+    const rand = getRandomNumber(0, 9);
+    cy.get('@articlesList')
+        .find('article-preview')
+        .should('have.length', 10)
+        .eq(rand)
+        .as('randomArticle');
+
+}
 
 describe('Articles', () => {
 
@@ -40,26 +62,6 @@ describe('Articles', () => {
                     });
                 });
         });
-
-        function waitForLArticlesList() {
-
-            cy.get('@articlesList').contains('.article-preview', 'Loading')
-                .should('not.be.visible');
-
-        }
-
-        function selectRandomArticle() {
-
-            waitForLArticlesList();
-
-            const rand = getRandomNumber(0, 9);
-            cy.get('@articlesList')
-                .find('article-preview')
-                .should('have.length', 10)
-                .eq(rand)
-                .as('randomArticle');
-
-        }
 
         it('should do open article detail page', () => {
 
@@ -150,7 +152,7 @@ describe('Articles', () => {
                 .find('a')
                 .click();
 
-            waitForLArticlesList();
+            waitForArticlesList();
 
             // is 1st page active
             cy.get('@availablePages')
@@ -172,7 +174,7 @@ describe('Articles', () => {
                 .eq(0)
                 .should('have.class', 'active');
 
-            waitForLArticlesList();
+            waitForArticlesList();
 
             cy.get('@randomArticleTitle').then(title => {
                 cy.get('@articlesList')
@@ -184,7 +186,7 @@ describe('Articles', () => {
         it('should do filter articles by tag', () => {
 
             // we need waiting for initial loading
-            waitForLArticlesList();
+            waitForArticlesList();
 
             cy.get('.sidebar .tag-list .tag-default')
                 .as('availableTags')
@@ -199,7 +201,7 @@ describe('Articles', () => {
                 .invoke('trim')
                 .as('randomTagName');
 
-            waitForLArticlesList();
+                waitForArticlesList();
 
             cy.get('@randomTagName').then(tagName => {
                 // TODO: [data-cy=feed-menu] a[data-cy=filter-by-tag]

@@ -1,3 +1,5 @@
+///<reference types="cypress" />
+
 import { faker } from '@faker-js/faker';
 import { login } from '/cypress/support/fake_data/shared';
 import meUser from '/cypress/fixtures/me-user.json';
