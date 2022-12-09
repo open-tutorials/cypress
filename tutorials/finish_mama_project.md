@@ -540,7 +540,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/commneting.spec.js)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/commenting.spec.js#L73)
 
 ***
 
@@ -557,5 +557,5 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/commneting.spec.js)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/commenting.spec.js#L88)
 - [x] Поставь отметки, что тесты написаны в `README`
