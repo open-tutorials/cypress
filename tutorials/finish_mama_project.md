@@ -414,7 +414,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L19)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L41)
 
 ***
 
@@ -438,7 +438,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L64)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L66)
 
 ***
 
@@ -478,7 +478,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L88)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L90)
 
 ***
 
@@ -495,7 +495,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L131)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L133)
 
 ***
 
@@ -512,7 +512,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L184)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L186)
 - [x] Поставь отметки, что тесты написаны в `README`
 
 ***
