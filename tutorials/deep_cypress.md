@@ -592,17 +592,12 @@ it.only('should do check mouse move', () => {
     cy.get('section[data-cy=mouse-move]').as('section');
     cy.get('@section').find('.canvas').as('canvas');
 
-    cy.get('@canvas').then(e => e.position()).its('top').as('top');
-
-    cy.get('@top').should('not.null').then(top => {
-        for (let i = 200; i < 610; i += 10) {
-            cy.get('@canvas').trigger('mousemove', {
-                pageX: 100 + i,
-                pageY: top + 100 + Math.sin(i / 20) * 20
-            });
-            cy.wait(150);
-        }
-    });
+    for (let i = 200; i < 610; i += 10) {
+        const x = 100 + i;
+        const y = 100 + Math.sin(i / 20) * 20;
+        cy.get('@canvas').trigger('mousemove', 100 + i,  y);
+        cy.wait(150);
+    }
 
     cy.get('@canvas').find('.success').should('have.text', 'You win!');
 
