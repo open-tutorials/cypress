@@ -1,10 +1,8 @@
-**${me.username}**, добро пожаловать на стажировку в **стартап iBank!**
+Добро пожаловать на стажировку в **стартап iBank!**
 
 # Приветствие
 
-[[message
-
-```json
+```json message hello_from_anton
 {
   "from": {
     "name": "Антон",
@@ -13,8 +11,6 @@
   "src": "https://drive.google.com/uc?export=view&id=1l1kBR3XI1xDaSX02jLY8FfzxLibosE3P"
 }
 ```
-
-message]]
 
 <details>
     <summary>На всякий случай продублировал текстом 😉</summary>
@@ -133,9 +129,7 @@ message]]
 
 <img width="600" height="121" src="https://drive.google.com/uc?export=view&id=166I8Db3pqvUg0__fMSGshYgIYLuDJtc8">
 
-[[robot
-
-```json
+```json robot check_user
 {
   "id": "check_user",
   "endpoint": "check-user",
@@ -148,8 +142,6 @@ message]]
   ]
 }
 ```
-
-robot]]
 
 # Добавь меня как **ТимЛида** в проект
 
@@ -189,9 +181,7 @@ robot]]
 
 <img width="283" height="141" src="https://drive.google.com/uc?export=view&id=1Bqxmm1Ji2E1YD4NGrinvBEpf__GIaWS1">
 
-[[robot
-
-```json
+```json robot check_target_project
 {
   "id": "check_target_project",
   "endpoint": "check-target-project",
@@ -205,15 +195,11 @@ robot]]
 }
 ```
 
-robot]]
-
-Поздравляю **${me.username}**! Теперь ты готов к реальным задачам на нашем проекте 👍
+Поздравляю! Теперь ты готов к реальным задачам на нашем проекте 👍
 
 # Первая задача
 
-[[message
-
-```json
+```json message first_task
 {
   "from": {
     "name": "Антон",
@@ -222,8 +208,6 @@ robot]]
   "src": "https://drive.google.com/uc?export=view&id=12aXyZ1SQRn6SHIamFNBxZQ4KLUVt6isY"
 }
 ```
-
-message]]
 
 <details>
     <summary>Если что дублирую текстом 😉</summary>
@@ -250,9 +234,7 @@ ${ me.firstName}, ты делаешь успехи. И у меня как раз
 
 <img width="136" height="231" src="https://drive.google.com/uc?export=view&id=1adefT_aRc86i5G-IxB-MI5owprHzh1Pm">
 
-[[robot
-
-```json
+```json robot check_first_task
 {
   "id": "check_first_task",
   "endpoint": "check-first-task",
@@ -260,23 +242,17 @@ ${ me.firstName}, ты делаешь успехи. И у меня как раз
 }
 ```
 
-robot]]
-
 Проверь, пожалуйста, что **статус задачи** изменился на **Closed**:
 
 <img width="702" height="68" src="https://drive.google.com/uc?export=view&id=17vHkeGLQ8HnnoQHDXCzZBDHrNSajADSp">
 
-[[robot
-
-```json
+```json robot how_we_work
 {
   "id": "how_we_work",
   "endpoint": "how-we-work",
   "submit": "Продолжить"
 }
 ```
-
-robot]]
 
 На **Wiki** я добавил еще статью: **Как мы работаем в GitLab**
 
