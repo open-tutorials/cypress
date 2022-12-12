@@ -185,6 +185,8 @@ cy.visit('https://www.cypress.io/');
 </video>
 </details>
 
+> ❗ Всегда используй для названия тестов шаблон `it('should do something...`
+
 - [x] Отформатируй код ~"В конспект"
   * На Windows `SHIFT` + `ALT` + `F`
   * На MacOS `SHIFT` + `OPTION` + `F`
