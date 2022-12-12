@@ -1032,7 +1032,7 @@ cy.get('.menu.top > a')
 
 ```js
 const rnd = Math.round(Math.round() * 2);
-cy.get('.posts a').eq(rnd).click(rnd);
+cy.get('.posts a').eq(rnd).click();
 ```
 
 `.eq(index)` — пытается взять элемент с нужным индексом. ~"В конспект"
