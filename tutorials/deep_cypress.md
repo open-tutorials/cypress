@@ -95,12 +95,12 @@ it.only('should do long like', () => {
 * ❓ Почему при значении `5000` тест проходит, а при `3000` нет?
 * ❓ Какой `timeout` в Cypress [по умолчанию?](https://www.google.com/search?q=default+timeout+in+cypress)
 
-> Кстати в [Selenium](https://www.selenium.dev/documentation/webdriver/waits/#options) ты бы написал:
->
-> ```python
-> const locator = By.css('section[data-cy=long-like] [data-cy=success]');
-> driver.wait(until.elementLocated(locator), 3000);
-> ```
+Кстати, в [Selenium](https://www.selenium.dev/documentation/webdriver/waits/#options) ты бы написал:
+
+```python
+const locator = By.css('section[data-cy=long-like] [data-cy=success]');
+driver.wait(until.elementLocated(locator), 3000);
+```
 
 📹 [Мое объяснение](https://www.youtube.com/watch?v=jKYUAg3Y9i4&t=2115)
 
@@ -181,8 +181,8 @@ it.only('should do find child in tree', () => {
 ## +5. Работа с несколькими вкладками
 
 > По умолчанию, браузер [запрещает](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) взаимодействие между HTML документами загруженными из различных источников (доменов).
->
-> Если нам потребуется в Cypress переходить между различными сайтами, нам нужно отключить данную политику безопасности.
+
+Если нам потребуется в Cypress переходить между различными сайтами, нам нужно отключить данную политику безопасности.
 
 - [x] Добавь в файл `cypress.json`:
 
@@ -455,7 +455,7 @@ it.only('should do change DOM', () => {
 
 ### 9.2. jQuery
 
-Cypress очень любит [jQuery](https://ru.wikipedia.org/wiki/JQuery) — в свое время популярную библиотеку на Java Script.
+> Cypress очень любит [jQuery](https://ru.wikipedia.org/wiki/JQuery) — в свое время популярную библиотеку на Java Script.
 
 - [x] Зайди на [google.com](https://www.google.com)
 - [x] Открой инструменты разработчика и выполни скрипт:
@@ -474,7 +474,7 @@ $('body').css('background-color', 'red');
 
 `$` — супер функция предоставляющая доступ к возможностям [API](https://api.jquery.com/) библиотеки.
 
-Лозунг jQuery — пиши меньше, делай больше!
+> Лозунг jQuery — пиши меньше, делай больше!
 
 ### 9.3. Рецепты
 
@@ -701,7 +701,7 @@ it.only('should do catch get user HTTP request', () => {
 
 - [x] Поменяй имя в тесте на свое.
 
-> Кстати, так можно перехватить не только XHR запросы, но и картинки, стили даже iframe и т.д.
+Кстати, так можно перехватить не только XHR запросы, но и картинки, стили даже iframe и т.д.
 
 ***
 
@@ -753,7 +753,7 @@ describe.only('Navigation', () => {
 
 ## +15. Грабим сайты
 
-> Ничего криминального 🥴 grab — это захватывать.
+Ничего криминального 🥴 grab — это захватывать.
 
 - [x] Добавь новый тест:
 
@@ -867,7 +867,7 @@ console.log(пользователи);
 
 ## +16. Промисы для искушенных
 
-> Промисы — это основа [асинхронного программирования](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)🤯 в Java Script, а Cypress весь асинхронный!
+> Промисы — это основа [асинхронного программирования](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)🤯 в Java Script!
 
 - [x] Добавь новый тест:
 
@@ -928,7 +928,7 @@ it.only('should do check hero', () => {
 </form>
 ```
 
-👎 Вариант новичка:
+👎 Вариант джуна-джуна:
 
 ```js
 cy.get('form[name=signup] input[name=email]').type('?');
@@ -958,7 +958,7 @@ cy.get('form[name=signup]').within(() => {
 // снова scope документа
 ```
 
-**Скоуп / scope** — позволяет определить область / рамки / границы действия команд. ~"В конспект"
+> **Скоуп / scope** — позволяет определить область / рамки / границы действия команд. ~"В конспект"
 
 ***
 
@@ -999,7 +999,7 @@ cy.get('.menu.top > a')
         console.log('checking URL for link with index =', index);
         cy.wrap(link).invoke('attr', 'href')
             .should('eq', url);
-});
+    });
 ```
 
 `.each((element, index) => {})` — позволяет пройтись по элементам в цикле. ~"В конспект"
@@ -1049,29 +1049,3 @@ cy.get('.posts a').eq(rnd).click();
 <iframe src="https://giphy.com/embed/BbJdwrOsM7nTa"
 width="480" height="411" frameBorder="0" class="giphy-embed"></iframe>
 </details>
-
-# Фидбек пожалуйста 🙏
-
-? Полезный материал ?
-
-* 🤩 Очень полезный материал
-* 😃 В целом полезный
-* 😐 Возможно что-то пригодится
-* 😒 Нет ничего полезного
-* 😬 Абсолютно бесполезно
-
-? Все ли было понятно ?
-
-* 🤩 Все понятно на 100%
-* 😃 В целом все понятно
-* 😐 Что-то понятно, что-то нет
-* 😒 Понял только малую часть
-* 😬 Ничего не понял
-
-? Как тебе такой формат туториала ?
-
-* 🤩 Очень удобно
-* 😃 Мне понравилось
-* 😐 Нормально
-* 😒 Не удобно
-* 😬 Ужасно

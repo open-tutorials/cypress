@@ -38,6 +38,10 @@
 
 1. [Спасти мир от хакера Hакатика](https://md.epic1h.com/save_the_world)
 
+# Стримы
+
+1. [Стрим-практикум: мемы учат](https://md.epic1h.com/memes_teach)
+
 # Как контрибутить
 
 Присылайте пулрегвесты, если вы хотите улучшить [туториалы](tutorials) или добавить новые.
@@ -51,5 +55,5 @@ ffmpeg -i my_video.mov -vcodec h264 -acodec mp2 my_video.mp4
 
 Для конвертации видео в GIF:
 ```bash
-ffmpeg -i my-video.mov -pix_fmt rgb24 my-video.gif
+ffmpeg -i my_video.mov -pix_fmt rgb24 my_video.gif
 ```
