@@ -11,9 +11,7 @@
 # 🙋‍ Перед началом
 
 * Ты знаком с основами ручного тестирования приложений.
-* Ты знаешь как запустить [терминал командной строки](https://www.youtube.com/watch?v=M4CkQuOAFjw)
-* У тебя установлен [Visual Code](https://code.visualstudio.com/)
-* У тебя установлен [Node.js](https://nodejs.org/), если что [мини-инструкция](https://md.epic1h.com/install_node_js)
+* У тебя установлен [Node.js](https://nodejs.org/) и [Visual Code](https://code.visualstudio.com/)
 
 # 😍 Живая обратная связь
 
@@ -31,10 +29,7 @@
 
 # 📹 Видео-туториал
 
-Если ты любишь сначала смотреть, а потом делать 👇
-
-<iframe width="800" height="450" src="https://www.youtube.com/embed/lqqlaOuxrpM" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Если ты любишь сначала смотреть, а потом делать
 
 *****
 
@@ -48,7 +43,7 @@
 - [x] В **Visual Code** открой папку проекта.
 - [x] Открой **Терминал** → **Новый терминал**.
 - [x] Выполни в терминале `npm init`
-- [x] На все вопросы нажми `ENTER ↵`, а в конце введи `yes` + `ENTER ↵`
+- [x] На все вопросы нажми `ENTER ↵`, в конце введи `yes` + `ENTER ↵`
 - [x] Проверь что в папке проекта появился файл `package.json`
 
 <details>
@@ -357,7 +352,7 @@ it('should subscribe to news letter', () => {
 ```diff
 +  "scripts": {
 -    "test": "echo \"Error: no test specified\" && exit 1"
-+    "test": "cypress run",
++    "test": "cypress run"
 +  }
 ```
 
