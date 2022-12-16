@@ -132,7 +132,7 @@
 ```json robot check_user
 {
   "id": "check_user",
-  "endpoint": "check-user",
+  "endpoint": "https://ibank-robot.epic1h.com/check-user",
   "submit": "Проверить",
   "fields": [
     {
@@ -184,7 +184,7 @@
 ```json robot check_target_project
 {
   "id": "check_target_project",
-  "endpoint": "check-target-project",
+  "endpoint": "https://ibank-robot.epic1h.com/check-target-project",
   "submit": "Проверить",
   "fields": [
     {
@@ -212,7 +212,7 @@
 <details>
     <summary>Если что дублирую текстом 😉</summary>
 
-${ me.firstName}, ты делаешь успехи. И у меня как раз есть **первая задача** для тебя.
+Ты делаешь успехи. И у меня как раз есть **первая задача** для тебя.
 
 У нас **завтра презентация MVP** нашего приложения перед **инвесторами**. Нужно **протестировать функцию входа** в
 приложение.
@@ -237,7 +237,7 @@ ${ me.firstName}, ты делаешь успехи. И у меня как раз
 ```json robot check_first_task
 {
   "id": "check_first_task",
-  "endpoint": "check-first-task",
+  "endpoint": "https://ibank-robot.epic1h.com/check-first-task",
   "submit": "Проверить задачу"
 }
 ```
@@ -249,7 +249,7 @@ ${ me.firstName}, ты делаешь успехи. И у меня как раз
 ```json robot how_we_work
 {
   "id": "how_we_work",
-  "endpoint": "how-we-work",
+  "endpoint": "https://ibank-robot.epic1h.com/how-we-work",
   "submit": "Продолжить"
 }
 ```

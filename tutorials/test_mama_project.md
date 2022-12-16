@@ -29,7 +29,7 @@
 > 
 > The **mother** of all demo apps — exemplary fullstack https://www.medium.com clone.
 
-~"Задача:" познакомится со спецификацией на проект.**
+~"Задача:" познакомится со спецификацией на проект.
 
 - [x] Открой проект на [GitHub](https://github.com/gothinkster/realworld)
 - [x] Найди ссылку на спецификацию: **View our starter guide & spec**

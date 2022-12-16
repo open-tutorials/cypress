@@ -145,7 +145,7 @@ describe('Articles', () => {
                 .invoke('trim')
                 .as('randomArticleTitle');
 
-            const rand = getRandomNumber(0, 9);
+            const rand = getRandomNumber(1, 9);
 
             cy.get('@availablePages')
                 .eq(rand)
