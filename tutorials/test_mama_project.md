@@ -26,10 +26,10 @@
 ## +1. Мама всех демо-приложений
 
 [Conduit](https://demo.realworld.io/) — open source клон [medium.com](https://www.medium.com)
-> 
+
 > The **mother** of all demo apps — exemplary fullstack https://www.medium.com clone.
 
-~"Задача:" познакомится со спецификацией на проект.
+<mark>Задача: познакомится со спецификацией на проект.</mark>
 
 - [x] Открой проект на [GitHub](https://github.com/gothinkster/realworld)
 - [x] Найди ссылку на спецификацию: **View our starter guide & spec**
@@ -53,7 +53,7 @@
 
 Это помогает понять фичи которые мы будем тестировать.
 
-Напишем 👇 тест-кейсы для функций **регистрации** и **входа.**
+- [x] Напиши 👇 тест-кейсы для функций **регистрации** и **входа:**
 
 <block>
 
@@ -61,14 +61,14 @@
 
 #### It should do register user:
 1. Open https://demo.realworld.io/
-1. Click **Sign Up** link in app header
-1. Url should be `/#/register`
-1. Page title should be **Sign up**
+1. Click <md-placeholder value="Sign Up"></md-placeholder> link in app header
+1. Url path should be `/#/register`
+1. Page title should be <md-placeholder value="Sign up"></md-placeholder>
 1. Page should have form
 1. Type `{username}` into **Username** form field
-1. Type `{email}` into **Email** form field
-1. Type `{password}` into **Password** form field
-1. Click on **Sign up** button
+1. Type `{email}` into <md-placeholder value="Email"></md-placeholder> form field
+1. Type `{password}` into <md-placeholder value="Password"></md-placeholder> form field
+1. Click on <md-placeholder value="Sign up"></md-placeholder> button
 1. Header should contains `{username}`
 
 #### Where:
@@ -88,13 +88,13 @@
 
 #### It should do login user:
 1. Open https://demo.realworld.io/
-1. Click **Sign In** link in app header
-1. Url should be `/#/login`
-1. Page title should be **Sign in**
+1. Click <md-placeholder value="Sign In"></md-placeholder> link in app header
+1. Url path should be <md-placeholder value="/#/login"></md-placeholder>
+1. Page title should be <md-placeholder value="Sign in"></md-placeholder>
 1. Page should have form
-1. Type `{email}` into **Email** form field
-1. Type `{password}` into **Password** form field
-1. Click on **Sign in** button
+1. Type `{email}` into <md-placeholder value="Email"></md-placeholder> form field
+1. Type `{password}` into <md-placeholder value="Password"></md-placeholder> form field
+1. Click on <md-placeholder value="Sign in"></md-placeholder> button
 1. Header should contains `{username}`
 
 #### Where:
@@ -109,17 +109,21 @@
 - [x] Переведи тест-кейсы на русский язык и проговори их.
 - [x] Выполни их в ручную.
 
+<mark>Скучно 🥱? Неинтересно 🤮? Хочется сразу бежать писать код и на это забить 😜?</mark>
+
+> ❗ Прежде, чем писать код, тест-кейс нужно выполнить в ручную!
+
 *** 02:00 ***
 
 ## +3. Переносим тест-кейсы в код
 
-Задача любого теста — стабильно выполняться.
+> Задача любого теста — стабильно выполняться.
 
-Каждый запуск теста будет добавлять в базу данных указанные нами `username` и `email`
+Каждый запуск теста будет добавлять в базу данных на бекенде указанные нами `username` и `email`
 
 Если эти данные повторяться — тест будет 🔴 провален.
 
-На текущий момент у нас нет доступа к базе данных приложения.
+На текущий момент у нас нет доступа к базе данных приложения, что бы делать сброс перед прогоном.
 
 **❗ Поэтому, нам нужно генерировать новое имя пользователя и email при каждом запуске теста.**
 
@@ -136,6 +140,8 @@ console.log('email =', email);
 
 - [x] В терминале выполни `node js_examples/rnd.js`
 - [x] Повтори команду 3-5 раз.
+
+> Помни, самые полезные клавиши `TAB` и `↑` при работе с терминалом.
 
 <img width="800" height="257" src="assets/test_mama_project/rnd.gif">
 
@@ -266,7 +272,7 @@ describe('Sign up', () => {
 *** 10:00 ***
 
 - [x] Сверь свой код с [эталоном](/cypress/integration/test_mama_project/signup2.spec.js)
-- [x] Запусти тест в **Headless** режиме.
+- [x] Запусти тест в **Headless** режиме `npx cypress run`
 
 *** 05:00 ***
 
@@ -326,29 +332,6 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 Все подробности в Телеграм 👉 https://t.me/epic_one_hour 
 
 @[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
-
-# Фидбек пожалуйста 🙏
-
-? Полезный материал ?
-* 🤩 Очень полезный материал
-* 😃 В целом полезный
-* 😐 Возможно что-то пригодится
-* 😒 Нет ничего полезного
-* 😬 Абсолютно бесполезно
-
-? Все ли было понятно ?
-* 🤩 Все понятно на 100%
-* 😃 В целом все понятно
-* 😐 Что-то понятно, что-то нет
-* 😒 Понял только малую часть
-* 😬 Ничего не понял
-
-? Как тебе такой формат туториала ?
-* 🤩 Очень удобно
-* 😃 Мне понравилось
-* 😐 Нормально
-* 😒 Не удобно
-* 😬 Ужасно
 
 # Артефакты
 * [Артем Ерошенко — тест-кейсы как код](https://www.youtube.com/watch?v=Prm2-c_5mYs)
