@@ -6,7 +6,9 @@
 
 Чистый **концентрат** — все как на работе, сразу в бой.
 
-Я — Тимлид и **разработчик** с более чем **15-летним** опытом. Мне 36, живу и работаю в Берлине, и у меня есть огромное желание **делиться** знаниями.
+Я — Тимлид и **разработчик** с более чем **15-летним** опытом. 
+
+Мне 36, живу и работаю в Берлине, и у меня есть огромное желание **делиться** знаниями.
 
 # Мой подход
 
@@ -47,8 +49,8 @@ flowchart TB
     direction TB
     node_js(Node.js) --> package_json(package.json)
     node_js --> npm
-    npm --> npm_init(npm init)
-    npm --> npm_install(npm install)
+    npm --> npm_init(init)
+    npm --> npm_install(install)
     node_js --> node_modules
     node_js --> npx
     cypress --> cypress_open(open)
