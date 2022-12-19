@@ -35,8 +35,6 @@
 
 ## +1. Инициализируем проект
 
-<block>
-
 > **Node.js** — среда выполнения **Java Script** и менеджер пакетов **npm**.
 
 - [x] Создай папку `%/projects/cypress/test_flight`
@@ -53,8 +51,6 @@
   <source src="assets/test_flight/project_init.mp4" type="video/mp4">
 </video>
 </details>
-
-</block>
 
 ***
 
