@@ -37,6 +37,9 @@ cy.get('form.login input[name=password]').type('?');
 cy.get('form.login button[type=submit]').click();
 ```
 
+<iframe src="https://giphy.com/embed/vKHKDIdvxvN7vTAEOM" 
+  width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
 # 🙋‍ Перед началом
 
 * Ты знаком с основами ручного тестирования приложений.
