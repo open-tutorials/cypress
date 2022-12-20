@@ -181,16 +181,6 @@ cy.visit('https://www.cypress.io/');
 });
 ```
 
-<details>
-  <summary>Не получается 📹</summary>
-
-<video width="600px" controls>
-  <source src="assets/test_flight/write_own_test.mp4" type="video/mp4">
-</video>
-</details>
-
-> ❗ Всегда используй для названия тестов шаблон `it('should do something...`
-
 - [x] Отформатируй код ~"В конспект"
   * На Windows `SHIFT` + `ALT` + `F`
   * На MacOS `SHIFT` + `OPTION` + `F`
@@ -210,8 +200,18 @@ cy.visit('https://www.cypress.io/');
 ```
 </details>
 
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/test_flight/write_own_test.mp4" type="video/mp4">
+</video>
+</details>
+
 * ❓ Что такое `it`?
 * ❓ Что такое `cy.visit`?
+
+> ❗ Всегда используй для названия тестов шаблон `it('should do something...`
 
 📹 [Мое объяснение](https://www.youtube.com/watch?v=l6qbqBR_zZc&t=1719)
 

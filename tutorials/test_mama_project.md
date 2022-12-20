@@ -79,7 +79,7 @@
 
 #### It should do register user:
 1. Open https://demo.realworld.io/
-1. Click <md-placeholder value="Sign Up"></md-placeholder> link in app header
+1. Click <md-placeholder value="Sign up"></md-placeholder> link in app header
 1. Url path should be `/#/register`
 1. Page title should be <md-placeholder value="Sign up"></md-placeholder>
 1. Page should have form
@@ -106,7 +106,7 @@
 
 #### It should do login user:
 1. Open https://demo.realworld.io/
-1. Click <md-placeholder value="Sign In"></md-placeholder> link in app header
+1. Click <md-placeholder value="Sign in"></md-placeholder> link in app header
 1. Url path should be <md-placeholder value="/#/login"></md-placeholder>
 1. Page title should be <md-placeholder value="Sign in"></md-placeholder>
 1. Page should have form
