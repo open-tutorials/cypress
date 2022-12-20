@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<svg id="icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>.cls-1{fill:#35454b;}.cls-1,.cls-2,.cls-3,.cls-4{stroke:#526b77;}.cls-1,.cls-2,.cls-4{stroke-linejoin:round;}.cls-1,.cls-2{stroke-width:10px;}.cls-2{fill:#daa748;}.cls-3{fill:#f7e6b2;stroke-miterlimit:10;}.cls-3,.cls-4{stroke-width:5px;}.cls-4{font-size:131.38px;fill:#e2e155;stroke-linecap:round;font-family:Mont-HeavyDEMO,
+            Mont;}</style>
+    </defs>
+    <title />
+    <polygon class="cls-1"
+        points="447.96 173.29 411.9 256.08 448.04 339.04 247.99 338.87 247.91 173.11 447.96 173.29" />
+    <polygon class="cls-1"
+        points="63.96 173.32 100.14 256.05 64.2 339.07 264.15 338.52 263.91 172.76 63.96 173.32" />
+    <circle class="cls-2" cx="256" cy="256" r="115" />
+    <circle class="cls-3" cx="256" cy="256" r="87.1" />
+    <text class="cls-4" transform="translate(231.23 302.83)" />
+</svg>
