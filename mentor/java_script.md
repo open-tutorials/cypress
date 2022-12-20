@@ -48,6 +48,8 @@ dayRate(20);
 
 Обычная математика, ничего сложного.
 
+***
+
 ## Рабочих дней в бюджете
 
 ### Дано
@@ -68,6 +70,8 @@ function daysInBudget(budget, ratePerHour) {
 daysInBudget(10000, 20); 
 // => 62
 ```
+
+***
 
 ## Большие проекты
 
@@ -103,6 +107,8 @@ daysInBudget(20, 55, 0.1);
 // => 8096
 ```
 
+***
+
 ## Вывод ментора
 
 Код выглядит:
@@ -116,6 +122,8 @@ daysInBudget(20, 55, 0.1);
 > const WORK_HOURS_IN_DAY = 8;
 > const WORK_DAYS_IN_MONTH = 22;
 > ```
+
+***
 
 ## Итоговый код
 
@@ -140,6 +148,8 @@ function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
   return Math.ceil(numMonths * monthlyDiscountedRate + priceExtraDays);
 }
 ```
+
+***
 
 ## Отзыв менти
 
