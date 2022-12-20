@@ -20,6 +20,8 @@
 - [x] Если есть вопросы, сгенерируй ссылку-приглашение.
 - [x] Отправь ссылку в наш [комьюнити чат](https://t.me/epic_one_hour_community)
 
+***
+
 # +Freelancer Rates
 
 https://exercism.org/tracks/javascript/exercises/freelancer-rates
