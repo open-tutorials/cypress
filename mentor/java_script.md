@@ -36,6 +36,8 @@ https://exercism.org/tracks/javascript/exercises/freelancer-rates
 
 **Стоимость** 8и часового рабочего дня Бориса.
 
+### Решение
+
 ```js
 function dayRate(ratePerHour) { 
   return ratePerHour * 8; 
@@ -55,6 +57,8 @@ dayRate(20);
 ### Найти
 
 Сколько **целых рабочих** дней мы можем оплатить Борису.
+
+### Решение
 
 ```js
 function daysInBudget(budget, ratePerHour) {
@@ -78,6 +82,8 @@ daysInBudget(10000, 20);
 
 **Стоимость фрилансера** с учетом его скидки.
 
+### Решение
+
 ```js
 function priceWithMonthlyDiscount(ratePerHour, numDays, discount) { 
   const numMonths = Math.floor(numDays / 22);
@@ -97,6 +103,8 @@ daysInBudget(20, 55, 0.1);
 // => 8096
 ```
 
+## Вывод ментора
+
 Код выглядит:
 * логично,
 * названия функций и переменных понятны,
@@ -106,14 +114,14 @@ daysInBudget(20, 55, 0.1);
 > I only can recommend to create two constants:
 > ```js
 > const WORK_HOURS_IN_DAY = 8;
-> const DAYS_IN_MONTH = 22;
+> const WORK_DAYS_IN_MONTH = 22;
 > ```
 
-Итоговый код
+## Итоговый код
 
 ```js
 const WORK_HOURS_IN_DAY = 8;
-const DAYS_IN_MONTH = 22;
+const WORK_DAYS_IN_MONTH = 22;
 
 function dayRate(ratePerHour) { 
   return ratePerHour * WORK_HOURS_IN_DAY; 
@@ -124,13 +132,21 @@ function daysInBudget(budget, ratePerHour) {
 }
 
 function priceWithMonthlyDiscount(ratePerHour, numDays, discount) { 
-  const numMonths = Math.floor(numDays / DAYS_IN_MONTH);
-  const monthlyRate = DAYS_IN_MONTH * dayRate(ratePerHour); 
+  const numMonths = Math.floor(numDays / WORK_DAYS_IN_MONTH);
+  const monthlyRate = WORK_DAYS_IN_MONTH * dayRate(ratePerHour); 
   const monthlyDiscountedRate = (1 - discount) * monthlyRate;
-  const numExtraDays = numDays % DAYS_IN_MONTH;
+  const numExtraDays = numDays % WORK_DAYS_IN_MONTH;
   const priceExtraDays = numExtraDays * dayRate(ratePerHour);
   return Math.ceil(numMonths * monthlyDiscountedRate + priceExtraDays);
 }
 ```
+
+## Отзыв менти
+
+*По поводу exercism хочу добавить и смотивировать других начать там заниматься. И не обязательно нагружать именно Антона проверкой, т.к. там автосистема запроса обратной связи от ментора и в течении пары часов «кто-нибудь» да объявится. Кто-нибудь я взял в кавычки, т.к. на первый мой менторский запрос дал ответ мистер, который судя по линкедину, какое-то время отработал в гугле, хотя, конечно, раз на раз не приходится, но уверен — способы для улучшения вашего кода подскажут.*
+
+*Сразу как Антон скинул, я сам особо не понял в чём преимущество именно этого ресурса, т.к. хватает более популярных codewars и других, но да — самый главный плюс в бесплатном менторстве. Причём, если на сайтах с задачами просто необходимо решение, с которым будут проходить автотесты, то тут менторы даже в твоём правильном решении подскажут моменты, которые можно сделать лучше.*
+
+*Ну и дополнительный, немаловажный бонус, как по мне, так это отработка навыка общения по поводу кода на английском — формулирование вопроса и тд.*
 
 Понравилось? Ищи меня в [Telegram](https://t.me/epic_one_hour)
