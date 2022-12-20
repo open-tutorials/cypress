@@ -89,18 +89,20 @@ daysInBudget(10000, 20);
 ### ↓ Решение
 
 ```js
-function priceWithMonthlyDiscount(ratePerHour, numDays, discount) { 
-  const numMonths = Math.floor(numDays / 22);
-  // numMonths = 2
-  const monthlyRate = 22 * dayRate(ratePerHour); 
-  // monthlyRate = 3520
-  const monthlyDiscountedRate = (1 - discount) * monthlyRate;
-  // monthlyDiscountedRate = 0.9 * 3520 = 3168
-  const numExtraDays = numDays % 22;
-  // numExtraDays = 55 % 22 = 11
-  const priceExtraDays = numExtraDays * dayRate(ratePerHour);
+function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
+  const dayRate = dayRate(ratePerHour);
+  // dayRate = 160
+  const monthsWithDiscount = Math.floor(numDays / 22);
+  // monthsWithDiscount = 2
+  const monthRate = 22 * dayRate; 
+  // monthRate = 3520
+  const monthRateWithDiscount = monthRate * (1 - discount);
+  // monthRateWithDiscount = 0.9 * 3520 = 3168
+  const extraDays = numDays % 22;
+  // extraDays = 55 % 22 = 11
+  const priceExtraDays = extraDays * dayRate;
   // priceExtraDays = 11 * dayRate(20) = 11 * 160 = 1760
-  return Math.ceil(numMonths * monthlyDiscountedRate + priceExtraDays);
+  return Math.ceil(monthsWithDiscount * monthRateWithDiscount + priceExtraDays);
   // Math.ceil(2 * 3168 + 1760)
 }
 daysInBudget(20, 55, 0.1);
@@ -140,12 +142,15 @@ function daysInBudget(budget, ratePerHour) {
 }
 
 function priceWithMonthlyDiscount(ratePerHour, numDays, discount) { 
-  const numMonths = Math.floor(numDays / WORK_DAYS_IN_MONTH);
-  const monthlyRate = WORK_DAYS_IN_MONTH * dayRate(ratePerHour); 
-  const monthlyDiscountedRate = (1 - discount) * monthlyRate;
-  const numExtraDays = numDays % WORK_DAYS_IN_MONTH;
-  const priceExtraDays = numExtraDays * dayRate(ratePerHour);
-  return Math.ceil(numMonths * monthlyDiscountedRate + priceExtraDays);
+  const dayRate = dayRate(ratePerHour);
+  
+  const monthsWithDiscount = Math.floor(numDays / WORK_DAYS_IN_MONTH);
+  const monthRate = WORK_DAYS_IN_MONTH * dayRate; 
+  const monthRateWithDiscount = monthRate * (1 - discount);
+  
+  const extraDays = numDays % WORK_DAYS_IN_MONTH;
+  const priceExtraDays = extraDays * dayRate;
+  return Math.ceil(monthsWithDiscount * monthRateWithDiscount + priceExtraDays);
 }
 ```
 
