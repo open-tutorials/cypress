@@ -86,6 +86,10 @@ click best_selectors "https://md.epic1h.com/best_selectors"
 1. [Организуем баг-трекинг в стартапе](https://md.epic1h.com/bug_tracking)
 1. [Исследуем баги и пишем профессиональные баг-репорты](https://md.epic1h.com/perfect_bug_reports)
 
+# +Менторство
+
+1. [Java Script](https://md.epic1h.com/js_mentor)
+
 # +Челленджы
 
 1. [Спасти мир от хакера Hакатика](https://md.epic1h.com/save_the_world)
