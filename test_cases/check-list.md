@@ -148,6 +148,12 @@ This file contains check list for [project](https://demo.realworld.io/)
 - [ ] Subscribe to user by following him    
 - [ ] Check user in your subscription list  
 
+### Personal articles feed  
+
+- [ ] Publish article  
+- [ ] Open personal articles feed  
+- [ ] Check published article in personal articles feed      
+
 ### Unsubscribe from user    
 
 - [ ] Find user you are following    
