@@ -42,22 +42,31 @@
 12. Тестирование API в Cypress
 13. Визуальное тестирование через Cypress
 
+## Силлабус
+
+> **Силлабус / Syllabus** – это рабочая программа для студента 😂
+
 ```mermaid
 %%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
 flowchart TB
+  start(("<span style='font-size:40px'>🥚</span>"))
   subgraph g_cypress_test_flight [ ]
     direction TB
     node_js(Node.js) --> package_json(package.json)
     node_js --> npm
-    npm --> npm_init(init)
-    npm --> npm_install(install)
+    npm --> npm_init(npm init)
+    npm --> npm_install(npm install)
     node_js --> node_modules
     node_js --> npx
-    cypress --> cypress_open(open)
-    cypress --> cypress_run(run)
+    cypress_npx(cypress) --> cypress_open(open)
+    cypress_npx --> cypress_run(run)
     cypress_test_flight(<span style='font-size:25px'>Первый полет</span>)
     cypress_test_flight --> node_js
+    npx --> cypress_npx
     cypress_test_flight --> cypress
+    cypress ---> cy_get("cy.get")
+    cypress ---> cy_click("click")
+    cypress ---> cy_should("should")
   end
   subgraph g_best_selectors [ ]
       direction TB
@@ -70,12 +79,19 @@ flowchart TB
       best_selectors --> wget(Wget)
       best_selectors --> TDD
   end
-  g_cypress_test_flight --> g_best_selectors
+  start --> g_cypress_test_flight
+  g_cypress_test_flight --- finish_cypress_test_flight(("<span style='font-size:40px'>🐣</span>"))
+  finish_cypress_test_flight --> g_best_selectors
+  g_best_selectors --- finish_best_selectors(("<span style='font-size:40px'>🐥</span>"))
 
-style g_cypress_test_flight fill:lightgreen
-  
-style cypress_test_flight fill:#f9f,stroke:#333,stroke-width:4px
-style best_selectors fill:#f9f,stroke:#333,stroke-width:4px
+style g_cypress_test_flight stroke-dasharray: 5 5
+style g_best_selectors stroke-dasharray: 5 5
+
+style start fill:lightgreen,stroke:#333,stroke-width:4px  
+style cypress_test_flight fill:LightCoral,stroke:#333,stroke-width:4px
+style finish_cypress_test_flight fill:lightgreen,stroke:#333,stroke-width:4px  
+
+style best_selectors fill:LightCoral,stroke:#333,stroke-width:4px
 click cypress_test_flight "https://md.epic1h.com/cypress_test_flight"
 click best_selectors "https://md.epic1h.com/best_selectors"
 ```
