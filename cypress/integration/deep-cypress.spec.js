@@ -18,9 +18,9 @@ it('should do find child in tree', () => {
     cy.get('section[data-cy=child-in-tree]').as('section');
     cy.get('@section').find('button').click();
 
-    // cy.get('@section').find('[data-cy=daddy] [data-cy=child]').should('be.visible');
-    //cy.get('@section').find('[data-cy=daddy]').should('not.contain', 'Loading')
-    //    .find('[data-cy=child]').should('be.visible');
+    cy.get('@section').find('[data-cy=daddy] [data-cy=child]').should('be.visible');
+    cy.get('@section').find('[data-cy=daddy]').should('not.contain', 'Loading')
+        .find('[data-cy=child]').should('be.visible');
 
     cy.get('@section').find('[data-cy=daddy]').should('be.visible')
         .find('[data-cy=child]').should('be.visible');
@@ -155,7 +155,7 @@ it('should do check in mobile', () => {
 
     cy.get('section[data-cy=check-in-mobile]').should('be.visible').as('section').scrollIntoView();
     cy.get('@section').find('iframe').as('giphy').should('have.css', 'opacity', '0');
-    cy.viewport('iphone-14');
+    cy.viewport('iphone-8');
     cy.get('@giphy').should('have.css', 'opacity', '1');
 
 });
@@ -284,15 +284,15 @@ describe('jQuery features', () => {
             .should('have.length', 2);
     });
 
-    it('should do fade out', () => {
-        cy.get('@section').find('.fade-out')
-            .invoke('fadeOut')
+    it.only('should do fade out', () => {
+        cy.get('@section').find('.hide-me')
+            .invoke('hide')
             .should('not.be.visible');
     });
 
 });
 
-it.only('should do check QR code', () => {
+it('should do check QR code', () => {
     cy.get('section[data-cy=qr-code]').should('be.visible').as('section').scrollIntoView();
 
     cy.get('img').then(image => {
