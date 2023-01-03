@@ -1,22 +1,32 @@
 /// <reference types="cypress" />
-// ***********************************************************
-// This example plugins/index.js can be used to load plugins
-//
-// You can change the location of this file or turn off loading
-// the plugins file with the 'pluginsFile' configuration option.
-//
-// You can read more here:
-// https://on.cypress.io/plugins-guide
-// ***********************************************************
 
-// This function is called when a project is opened or re-opened (e.g. due to
-// the project's config changing)
+const wget = require('node-wget');
+const fs = require('fs');
+const path = require('path');
+const { parseQR } = require('qr-util');
 
-/**
- * @type {Cypress.PluginConfig}
- */
-// eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+// creating temp folder
+const TMP_FOLDER = 'tmp';
+if (!fs.existsSync(TMP_FOLDER)) {
+  fs.mkdirSync(TMP_FOLDER);
 }
+module.exports = (on, config) => {
+  on('task', {
+    readQRCode: (url) => {
+      console.log('checking QR code from URL', url);
+      return new Promise((done) => {
+        const tmpFile = path.join(TMP_FOLDER, 'qr_code.png');
+        wget({ url, dest: tmpFile }, () => {
+          console.log('file downloaded to', tmpFile);
+          const buffer = fs.readFileSync(tmpFile);
+          parseQR(buffer)
+            .then(content => {
+              console.log('code contents', content);
+              // fs.unlinkSync(tmpFile);
+              done(content);
+            });
+        });
+      });
+    }
+  })
+};

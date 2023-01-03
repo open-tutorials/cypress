@@ -135,7 +135,7 @@ it('should do check long mouse down', () => {
 
 });
 
-it.only('should do check mouse move', () => {
+it('should do check mouse move', () => {
 
     cy.get('section[data-cy=mouse-move]').as('section');
     cy.get('@section').find('.canvas').as('canvas');
@@ -143,7 +143,7 @@ it.only('should do check mouse move', () => {
     for (let i = 200; i < 610; i += 10) {
         const x = 100 + i;
         const y = 100 + Math.sin(i / 20) * 20;
-        cy.get('@canvas').trigger('mousemove', 100 + i,  y);
+        cy.get('@canvas').trigger('mousemove', 100 + i, y);
         cy.wait(150);
     }
 
@@ -288,6 +288,16 @@ describe('jQuery features', () => {
         cy.get('@section').find('.fade-out')
             .invoke('fadeOut')
             .should('not.be.visible');
+    });
+
+});
+
+it.only('should do check QR code', () => {
+    cy.get('section[data-cy=qr-code]').should('be.visible').as('section').scrollIntoView();
+
+    cy.get('img').then(image => {
+        const url = image.attr('src');
+        cy.task('readQRCode', url).should('eq', 'https://demo.realworld.io/')
     });
 
 });
