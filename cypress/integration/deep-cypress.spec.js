@@ -53,6 +53,25 @@ it('should do open conduit in window', () => {
 
 });
 
+it.only('should do replace prompt', () => {
+
+    cy.get('section[data-cy=replace-prompt]').as('section');
+
+    cy.window().then((window) => {
+        cy.stub(window, 'prompt').callsFake((message) => {
+            console.log('we have implemented own window.prompt function');
+            console.log(message);
+            return 'XYZ';
+        }).as('replacedWindowPrompt');
+    });
+
+    cy.get('@section').find('button').click();
+    cy.get('@replacedWindowPrompt').should('have.been.called');
+    cy.get('@section').find('button')
+        .invoke('css', 'background-color').should('eq', 'rgb(255, 0, 0)');
+
+});
+
 it('should do replace button click', () => {
 
     cy.get('section[data-cy=replace-button-click]').as('section');
@@ -284,7 +303,7 @@ describe('jQuery features', () => {
             .should('have.length', 2);
     });
 
-    it.only('should do fade out', () => {
+    it('should do fade out', () => {
         cy.get('@section').find('.hide-me')
             .invoke('hide')
             .should('not.be.visible');

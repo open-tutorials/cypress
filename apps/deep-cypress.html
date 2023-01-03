@@ -102,6 +102,22 @@
         <button type="button" onclick="window.open('https://demo.realworld.io/')">Open Conduit</button>
     </section>
 
+    <h1>Replace prompt</h1>
+    <section data-cy="replace-prompt">
+        <button type="button" onclick="showPrompt()">Show prompt</button>
+    </section>
+
+    <script>
+        {
+            const section = document.querySelector('section[data-cy=replace-prompt]');
+            function showPrompt() {
+                if (prompt('Type XYZ') === 'XYZ') {
+                    section.querySelector('button').style.backgroundColor = 'red';
+                }
+            }
+        }
+    </script>
+
     <h1>Replace button click</h1>
     <section data-cy="replace-button-click">
         <button type="button">Open Conduit</button>
@@ -336,8 +352,8 @@
 
     <h1>Read QR code</h1>
     <section data-cy="qr-code">
-        <img width="150" height="150" 
-        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://demo.realworld.io/">
+        <img width="150" height="150"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://demo.realworld.io/">
     </section>
 
 </body>

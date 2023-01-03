@@ -271,7 +271,41 @@ it.only('should do open conduit in window', () => {
 
 ***
 
-### +6.2. Переписываем клик по кнопке
+### +6.2. Переписываем window.prompt
+
+- [x] Добавь новый тест:
+
+```js
+it.only('should do replace prompt', () => {
+
+    cy.get('section[data-cy=replace-prompt]').as('section');
+
+    cy.window().then((window) => {
+        cy.stub(window, 'prompt').callsFake((message) => {
+            console.log('we have implemented own window.prompt function');
+            console.log(message);
+            return 'XYZ';
+        }).as('replacedWindowPrompt');
+    });
+
+    cy.get('@section').find('button').click();
+    cy.get('@replacedWindowPrompt').should('have.been.called');
+    cy.get('@section').find('button')
+        .invoke('css', 'background-color').should('eq', 'rgb(255, 0, 0)');
+
+});
+```
+
+- [x] Проверь, что тест 🟢 проходит.
+- [x] Проинспектируй HTML код кнопки.
+
+* ❓ Что такое [window.prompt](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)?
+* ❓ Что делает функция `showPrompt` внутри приложения?
+* ❓ Зачем мы возвращаем `XYZ`?
+
+***
+
+### +6.3. Переписываем клик по кнопке
 
 - [x] Добавь новый тест:
 
