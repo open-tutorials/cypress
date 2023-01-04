@@ -49,51 +49,112 @@
 ```mermaid
 %%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
 flowchart TB
-  start(("<span style='font-size:40px'>🥚</span>"))
-  subgraph g_cypress_test_flight [ ]
-    direction TB
-    node_js(Node.js) --> package_json(package.json)
-    node_js --> npm
-    npm --> npm_init(npm init)
-    npm --> npm_install(npm install)
-    node_js --> node_modules
-    node_js --> npx
-    cypress_npx(cypress) --> cypress_open(open)
-    cypress_npx --> cypress_run(run)
-    cypress_test_flight(<span style='font-size:25px'>Первый полет</span>)
-    cypress_test_flight --> node_js
-    npx --> cypress_npx
-    cypress_test_flight --> cypress
-    cypress ---> cy_get("cy.get")
-    cypress ---> cy_click("click")
-    cypress ---> cy_should("should")
-  end
-  subgraph g_best_selectors [ ]
-      direction TB
-      dev_tools(DevTools) --> $$($$)
-      dev_tools --> querySelectorAll
-      dev_tools --> XHR
-      TDD ---> it
-      best_selectors(<span style='font-size:25px'>Лучшие селекторы</span>) ---> dev_tools
-      best_selectors --> tiny_web_server(Tiny Web Server)
-      best_selectors --> wget(Wget)
-      best_selectors --> TDD
-  end
-  start --> g_cypress_test_flight
-  g_cypress_test_flight --- finish_cypress_test_flight(("<span style='font-size:40px'>🐣</span>"))
-  finish_cypress_test_flight --> g_best_selectors
-  g_best_selectors --- finish_best_selectors(("<span style='font-size:40px'>🐥</span>"))
+cypress_test_flight(<span style='font-size:25px'>Первый полет</span>)
+cypress_test_flight --> node_js(Node.js)
+node_js --> package_json(package.json)
+node_js --> npm
+npm --> npm_init(npm init)
+npm --> npm_install(npm install)
+node_js --> node_modules
+node_js --> npx
+npx --> cypress_npx(cypress)
+cypress_npx --> cypress_open(open)
+cypress_npx --> cypress_run(run)
+cypress_test_flight --> cypress(Cypress)
+cypress ---> cy_visit(visit)
+cypress ---> cy_get(get)
+cypress ---> cy_type(type)
+cypress ---> cy_click(click)
+cypress ---> cy_should(should)
+cy_should --> cy_should_have_text(have.text)
+cypress_test_flight --> TDD
+TDD ---> it
 
-style g_cypress_test_flight stroke-dasharray: 5 5
-style g_best_selectors stroke-dasharray: 5 5
-
-style start fill:lightgreen,stroke:#333,stroke-width:4px  
 style cypress_test_flight fill:LightCoral,stroke:#333,stroke-width:4px
-style finish_cypress_test_flight fill:lightgreen,stroke:#333,stroke-width:4px  
+click cypress_test_flight "https://md.epic1h.com/cypress_test_flight"
+```
+
+```mermaid
+%%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
+flowchart TB
+cypress_test_flight(<span style='font-size:25px'>Первый полет</span>)
+
+cypress_test_flight --> node_js(Node.js)
+node_js --> package_json(package.json)
+node_js --> npm
+
+npm --> npm_init(npm init)
+npm --> npm_install(npm install)
+
+node_js --> node_modules
+node_js --> npx
+npx --> cypress_npx(cypress)
+
+cypress_npx --> cypress_open(open)
+cypress_npx --> cypress_run(run)
+cypress_test_flight --> cypress(Cypress)
+
+cypress ---> cy_visit(visit)
+cypress ---> cy_get(get)
+cypress ---> cy_type(type)
+cypress ---> cy_click(click)
+cypress ---> cy_should(should)
+
+cy_should --> cy_should_have_text(have.text)
+cypress_test_flight --> TDD
+TDD ---> it
+
+style cypress_test_flight fill:LightCoral,stroke:#333,stroke-width:4px
+click cypress_test_flight "https://md.epic1h.com/cypress_test_flight"
+```
+
+```mermaid
+%%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
+flowchart TB
+best_selectors(<span style='font-size:25px'>Лучшие селекторы</span>)
+best_selectors ---> dev_tools(DevTools)
+
+dev_tools --> query_selector_all(querySelectorAll)
+dev_tools --> $$($$)
+
+best_selectors --> css_selectors(CSS selectors)
+css_selectors --> semantic_ui(Semantic UI)
+css_selectors --> data_cy("[data-cy]")
+
+best_selectors --> tiny_web_server(Tiny Web Server)
+best_selectors --> wget(Wget)
+
+best_selectors --> js_TODO(TODO)
 
 style best_selectors fill:LightCoral,stroke:#333,stroke-width:4px
-click cypress_test_flight "https://md.epic1h.com/cypress_test_flight"
 click best_selectors "https://md.epic1h.com/best_selectors"
+```
+
+```mermaid
+%%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
+flowchart TB
+test_mama_project(<span style='font-size:25px'>Тестируем мама проект</span>)
+test_mama_project --> conduit(Conduit)
+
+conduit --> login
+conduit --> register
+conduit --> logout
+
+test_mama_project --> tdd(TDD)
+tdd ---> tdd_describe(describe)
+test_mama_project --> java_script("Java Script")
+
+java_script --> js_math(Math)
+js_math --> js_random(random)
+js_math --> js_round(round)
+
+test_mama_project --> cypress(Cypress)
+cypress --> cy_it_only(it.only)
+cypress --> cy_should(should)
+cy_should --> cy_have_text(have.text)
+
+style test_mama_project fill:LightCoral,stroke:#333,stroke-width:4px
+click test_mama_project "https://md.epic1h.com/test_mama_project"
 ```
 
 # +Туториалы по ручному тестированию

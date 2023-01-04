@@ -53,7 +53,7 @@ it('should do open conduit in window', () => {
 
 });
 
-it.only('should do replace prompt', () => {
+it('should do replace prompt', () => {
 
     cy.get('section[data-cy=replace-prompt]').as('section');
 
@@ -311,12 +311,12 @@ describe('jQuery features', () => {
 
 });
 
-it('should do check QR code', () => {
+it.only('should do check QR code', () => {
     cy.get('section[data-cy=qr-code]').should('be.visible').as('section').scrollIntoView();
 
-    cy.get('img').then(image => {
+    cy.get('@section').find('img').then(image => {
         const url = image.attr('src');
-        cy.task('readQRCode', url).should('eq', 'https://demo.realworld.io/')
+        cy.task('readQRCode', url).should('eq', 'https://demo.realworld.io/');
     });
 
 });
