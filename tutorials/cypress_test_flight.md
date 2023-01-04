@@ -398,8 +398,9 @@ it('should subscribe to news letter', () => {
 ## +11. Ломаем тест
 
 - [x] Сломай сообщение в коде:
-```js
-.should('have.text', 'Thanks for submitting the form!!!');
+```diff
+- 'Thanks for submitting the form.'
++ 'Thanks for submitting the form!!!'
 ```
 - [x] Снова запусти Cypress `npm test`
 
