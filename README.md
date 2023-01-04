@@ -116,6 +116,7 @@ js_math --> js_round(round)
 
 test_mama_project --> cypress(Cypress)
 cypress --> cy_it_only(it.only)
+cypress --> cy_url(url)
 cypress --> cy_should(should)
 cy_should --> cy_have_text(have.text)
 
