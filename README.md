@@ -73,7 +73,7 @@ TDD ---> it
 style cypress_test_flight fill:LightCoral,stroke:#333,stroke-width:4px
 click cypress_test_flight "https://md.epic1h.com/cypress_test_flight" _blank
 click npm_init "https://youtu.be/lqqlaOuxrpM?t=194" _blank
-click cy_click https://youtu.be/lqqlaOuxrpM?t=591 _blank
+click cy_click "https://youtu.be/lqqlaOuxrpM?t=591" _blank
 ```
 
 ```mermaid
