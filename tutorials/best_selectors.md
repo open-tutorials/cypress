@@ -500,22 +500,22 @@ cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права з�
 
 # 📹 Видео-ответы
 
-1. [Зачем тестировщику доступ к исходному коду проекта?](https://www.youtube.com/watch?v=88CHSU2iI7M&t=381)
-2. [Какие еще навыки должны быть у тестировщика?](https://www.youtube.com/watch?v=88CHSU2iI7M&t=519)
-3. [Почему при обучении важно вести собственные конспекты?](https://www.youtube.com/watch?v=88CHSU2iI7M&t=942)
-4. [Почему можно тестировать только то, чем можно управлять?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=475)
-5. [Как скачать Google?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=1265)
-6. [Какими должны быть селекторы в авто-тестах?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=1716)
-7. [Что делает функция $$ в инструментах разработчика?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=1811)
-8. [Какой основной алгоритм для поиска селекторов?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=1999)
-9. [Что такое ага-эффект?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=3299)
-10. [Какие атрибуты добавлять к элементам для улучшения селекторов?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=3524)
-11. [Что такое CSS селектор по атрибуту?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=4409)
-12. [Как комбинировать CSS селекторы?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=4635)
-13. [Какие самые распространенные CSS селекторы?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=4742)
-14. [Как красиво оформлять сообщения в Telegram?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=4960)
-14. [Как правильно оформлять вопросы в Telegram?](https://www.youtube.com/watch?v=88CHSU2iI7M&t=1144)
-16. [Что такое Markdown и зачем он в ИТ?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=5128)
+1. [Зачем тестировщику доступ к исходному коду проекта?](https://www.youtube.com/watch?v=88CHSU2iI7M&t=381&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+2. [Какие еще навыки должны быть у тестировщика?](https://www.youtube.com/watch?v=88CHSU2iI7M&t=519&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+3. [Почему при обучении важно вести собственные конспекты?](https://www.youtube.com/watch?v=88CHSU2iI7M&t=942&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+4. [Почему можно тестировать только то, чем можно управлять?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=475&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+5. [Как скачать Google?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=1265&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+6. [Какими должны быть селекторы в авто-тестах?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=1716&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+7. [Что делает функция $$ в инструментах разработчика?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=1811&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+8. [Какой основной алгоритм для поиска селекторов?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=1999&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+9. [Что такое ага-эффект?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=3299&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+10. [Какие атрибуты добавлять к элементам для улучшения селекторов?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=3524&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+11. [Что такое CSS селектор по атрибуту?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=4409&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+12. [Как комбинировать CSS селекторы?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=4635&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+13. [Какие самые распространенные CSS селекторы?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=4742&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+14. [Как красиво оформлять сообщения в Telegram?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=4960&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+14. [Как правильно оформлять вопросы в Telegram?](https://www.youtube.com/watch?v=88CHSU2iI7M&t=1144&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+16. [Что такое Markdown и зачем он в ИТ?](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=5128&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
 
 # Артефакты
 

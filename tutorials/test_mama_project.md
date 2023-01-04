@@ -370,5 +370,27 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 
 @[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
 
-# Артефакты
+# Читать-смотреть
+
 * [Артем Ерошенко — тест-кейсы как код](https://www.youtube.com/watch?v=Prm2-c_5mYs)
+
+# 📹 Видео-ответы
+
+1. [С чего начинать тестирование нового проекта?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=682&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как определить состав фичей на проекте?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=922&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Что такое роутинг на фронтенде?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=966&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как писать тест-кейсы в Markdown?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=1111&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как связать тест-кейс с кодом?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=1349&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как сгенерировать целое случайное число в Java Script?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=2068&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как запустить только один тест в Cypress?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=2230&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Что такое README файлы?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=2518&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как не повторять шаги в тест-кейсах?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=2590&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как не дублировать код в авто-тестах?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=2665&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как добавить текущую дату к любой строке?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=3529&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как проверить что Markdown отображается корректно?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=3763&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Что значит не правильный селектор?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=4558&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Где использовать регулярные выражения в тестах?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=4919&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Почему тесты должны быть изолированы друг от друга?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=5009&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Какие частые ошибки у начинающих авто-тестировщиков?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=5548&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Что такое цепочка поиска элементов?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=5739&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Почему не получается запустить Java Script файл в Node.js?](https://www.youtube.com/watch?v=TD1X0-JB_Fs&t=5963&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)

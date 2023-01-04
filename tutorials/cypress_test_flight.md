@@ -433,12 +433,13 @@ it('should subscribe to news letter', () => {
 - [x] Оформи заказ.
 
 # 📹 Видео-ответы
-1. [Почему не получается установить Cypress 9?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=156)
-1. [Почему хорошо начать программировать через авто-тестирование?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=406)
-1. [Что важно знать при написании авто-тестов?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=779)
-1. [Как тестировщик взаимодействует с разработчиками?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=956)
-1. [Можно ли в Cypress через Xpath искать элементы?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1150)
-1. [Какой уровень английского должен быть у тестировщика?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1206)
-1. [Как заставить себя изучать английский язык?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1303)
-1. [В чем задача туториалов?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1442)
-1. [Как найти проект для портфолио тестировщика?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1495)
+
+1. [Почему не получается установить Cypress 9?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=156&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Почему хорошо начать программировать через авто-тестирование?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=406&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Что важно знать при написании авто-тестов?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=779&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как тестировщик взаимодействует с разработчиками?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=956&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Можно ли в Cypress через Xpath искать элементы?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1150&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Какой уровень английского должен быть у тестировщика?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1206&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как заставить себя изучать английский язык?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1303&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [В чем задача туториалов?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1442&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
+1. [Как найти проект для портфолио тестировщика?](https://www.youtube.com/watch?v=QYaMokV4k8A&t=1495&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)
