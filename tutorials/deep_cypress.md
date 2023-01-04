@@ -1073,17 +1073,6 @@ cy.get('.posts a').eq(rnd).click();
 
 ***
 
-Та да 🥳 Ты дошел до конца.
-
-Если, что вот [полный код](/cypress/integration/deep-cypress.spec.js) всех тестов.
-
-<details>
-  <summary>Правда все просто? 😂</summary>
-
-<iframe src="https://giphy.com/embed/BbJdwrOsM7nTa"
-width="480" height="411" frameBorder="0" class="giphy-embed"></iframe>
-</details>
-
 ## +18. Интересные кейсы
 
 ### +17.1 Проверка QR кода
@@ -1161,10 +1150,10 @@ module.exports = (on, config) => {
 2. Cypress запускает Chrome и управляет им встраиваясь в DOM.
 
 Код тестов внутри `it` запущенный в окружении браузера:
-* Доступ к DOM: window, document, location, и т.д.
-* Нет доступа к файловой системе.
+* Доступ к **DOM:** window, document, location, и т.д.
+* Нет доступа к **файловой системе.**
 
-Что бы получить доступ к файлам, необходимо передать управление Cypress внутри Node.Js через таски.
+Что бы получить доступ к файлам, необходимо **передать управление** Cypress внутри Node.Js через таски.
   
 ```mermaid
 sequenceDiagram
@@ -1174,3 +1163,16 @@ sequenceDiagram
     Note over browser, nodejs: waiting for promise
     nodejs ->> browser: results
 ```
+
+***
+
+Та да 🥳 Ты дошел до конца.
+
+Если, что вот [полный код](/cypress/integration/deep-cypress.spec.js) всех тестов.
+
+<details>
+  <summary>Правда все просто? 😂</summary>
+
+<iframe src="https://giphy.com/embed/BbJdwrOsM7nTa"
+width="480" height="411" frameBorder="0" class="giphy-embed"></iframe>
+</details>
