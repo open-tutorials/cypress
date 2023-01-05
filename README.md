@@ -91,7 +91,7 @@ cy_should --> cy_should_have_text(have.text)
 cypress_test_flight --> TDD
 TDD ---> it
 
-style cypress_test_flight fill:LightCoral,stroke:#333,stroke-width:4px
+style cypress_test_flight stroke:#333,stroke-width:4px
 click cypress_test_flight "https://md.epic1h.com/cypress_test_flight" _blank
 click npm_init "https://youtu.be/lqqlaOuxrpM?t=194" _blank
 click cy_click "https://youtu.be/lqqlaOuxrpM?t=591" _blank
@@ -115,7 +115,7 @@ best_selectors --> wget(Wget)
 
 best_selectors --> js_TODO(TODO)
 
-style best_selectors fill:LightCoral,stroke:#333,stroke-width:4px
+style best_selectors stroke:#333,stroke-width:4px
 click best_selectors "https://md.epic1h.com/best_selectors" _blank
 ```
 
@@ -145,7 +145,7 @@ cy_should --> cy_include(include)
 cy_should --> cy_contain_text(contain.text)
 cy_should --> cy_be_visible(be.visible)
 
-style test_mama_project fill:LightCoral,stroke:#333,stroke-width:4px
+style test_mama_project stroke:#333,stroke-width:4px
 click test_mama_project "https://md.epic1h.com/test_mama_project" _blank
 ```
 
@@ -173,7 +173,7 @@ signup_spec_js --> login_me(loginMe)
 my_first_refactor --> utils(utils.js)
 utils --> get_random_number(getRandomNumber)
 
-style my_first_refactor fill:LightCoral,stroke:#333,stroke-width:4px
+style my_first_refactor stroke:#333,stroke-width:4px
 click my_first_refactor "https://md.epic1h.com/my_first_refactor" _blank
 ```
 
