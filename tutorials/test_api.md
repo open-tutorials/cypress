@@ -50,7 +50,7 @@
 - [x] Выполни данный запрос в Postman.
 
 <img alt="GET запрос в Postman" 
-     width="800" src="assets/test_api/xhr_in_postman.png">
+     width="800" height="637" src="assets/test_api/xhr_in_postman.png">
 
 * ❓ За что отвечают параметры `limit=20` и `offset=0`?
 
@@ -60,7 +60,7 @@
 - [x] Найди запрос на этот эндпоинт в инструментах разработчика.
 
 <img alt="XHR запрос в Dev Tools" 
-     width="800" src="assets/test_api/xhr_in_dev_tools.png">
+     width="800" height="361" src="assets/test_api/xhr_in_dev_tools.png">
 
 * ❓ Что ты видишь на экране?
 * ❓ Где эти данные отражаются на сайте?
