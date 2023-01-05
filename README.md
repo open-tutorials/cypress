@@ -1,4 +1,19 @@
-# Туториалы по ИТ навыкам
+<h1 class="title">Туториалы<br>по ИТ навыкам</h1>
+
+<style>
+h1.title {
+  font-size: 5em;
+  background: #121FCF;
+  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+
+```text circle hello_from_anton5
+{
+  "video": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/circles/hello.mp4"
+}
 
 Привет, [Anton](https://t.me/breslavsky_anton) на связи 🤙
 
@@ -9,6 +24,7 @@
 Перед тобой 👇 серия практических туториалов по авто-тестам на **Cypress**
 
 Чистый **концентрат** — все как на работе, сразу в бой.
+```
 
 # Мой подход
 
