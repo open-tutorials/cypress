@@ -28,6 +28,7 @@
 * ❓ Что такое Swagger UI?
 * ❓ Зачем нужна спецификация на API?
 
+***
 
 ### +1.2. Играемся в Swagger UI
 
@@ -36,7 +37,7 @@
 - [x] Потом нажми **Execute**
 
 <img alt="Как использовать Swagger" 
-     width="800" src="assets/test_api/try_swagger_ui.gif">
+     width="800" height="354" src="assets/test_api/try_swagger_ui.gif">
 
 * ❓ Что произошло?
 * ❓ Что ты видишь на экране?
