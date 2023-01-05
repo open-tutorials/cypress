@@ -95,7 +95,7 @@ best_selectors --> wget(Wget)
 best_selectors --> js_TODO(TODO)
 
 style best_selectors fill:LightCoral,stroke:#333,stroke-width:4px
-click best_selectors "https://md.epic1h.com/best_selectors"
+click best_selectors "https://md.epic1h.com/best_selectors" _blank
 ```
 
 ```mermaid
@@ -125,7 +125,35 @@ cy_should --> cy_contain_text(contain.text)
 cy_should --> cy_be_visible(be.visible)
 
 style test_mama_project fill:LightCoral,stroke:#333,stroke-width:4px
-click test_mama_project "https://md.epic1h.com/test_mama_project"
+click test_mama_project "https://md.epic1h.com/test_mama_project" _blank
+```
+
+```mermaid
+%%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
+flowchart TB
+my_first_refactor(<span style='font-size:25px'>Мой первый рефактор</span>)
+
+
+my_first_refactor --> cypress(Cypress)
+cypress --> cypress_config(cypress.json)
+cypress_config --> base_url(Base URL)
+
+cypress --> hooks
+hooks --> before_each(Before Each)
+cypress --> aliases
+aliases --> as
+aliases --> get_alias("@")
+
+cypress --> fixtures
+fixtures --> me_user_json(me-user.json)
+
+my_first_refactor --> signup_spec_js(signup.spec.js)
+signup_spec_js --> login_me(loginMe)
+my_first_refactor --> utils(utils.js)
+utils --> get_random_number(getRandomNumber)
+
+style my_first_refactor fill:LightCoral,stroke:#333,stroke-width:4px
+click my_first_refactor "https://md.epic1h.com/my_first_refactor" _blank
 ```
 
 # +Туториалы по ручному тестированию
