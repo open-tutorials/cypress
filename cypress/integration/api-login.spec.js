@@ -1,25 +1,30 @@
 ///<reference types="cypress" />
 import meUser from '/cypress/fixtures/me-user.json';
 
-it('should do API login', () => {
-
-    const { email, password, username } = meUser;
+before(() => {
+    const { email, password } = meUser;
     cy.request('POST', 'https://api.realworld.io/api/users/login',
         { user: { email, password } })
         .then(({ status, body }) => {
             expect(status).to.eq(200);
-            expect(body).to.have.all.keys('user');
+            expect(body).to.have.key('user');
             const { user } = body;
             cy.wrap(user.token).as('token');
         });
+});
+
+function setJwtTokenToken(window, token) {
+    window.localStorage.setItem('jwtToken', token);
+}
+
+it('should do API login', () => {
+    const { username } = meUser;
 
     cy.get('@token')
         .should('not.be.empty')
         .then(token => {
             cy.visit('/', {
-                onBeforeLoad: (window) => {
-                    window.localStorage.setItem('jwtToken', token);
-                }
+                onBeforeLoad: (window) => setJwtTokenToken(window, token)
             });
         });
 

@@ -33,8 +33,7 @@
 ### +1.2. Играемся в Swagger UI
 
 - [x] В Swagger UI найди эндпоинт `GET /articles`
-- [x] Нажми **Try it out**
-- [x] Потом нажми **Execute**
+- [x] Нажми **Try it out** и **Execute**
 
 <img alt="Как использовать Swagger" 
      width="800" height="354" src="assets/test_api/try_swagger_ui.gif">
@@ -50,7 +49,29 @@
 - [x] Открой в новой вкладке браузера https://api.realworld.io/api/articles?limit=20&offset=0
 - [x] Выполни данный запрос в Postman.
 
+<img alt="GET запрос в Postman" 
+     width="800" src="assets/test_api/xhr_in_postman.png">
+
 * ❓ За что отвечают параметры `limit=20` и `offset=0`?
+
+***
+
+- [x] Открой https://demo.realworld.io/
+- [x] Найди запрос на этот эндпоинт в инструментах разработчика.
+
+<img alt="XHR запрос в Dev Tools" 
+     width="800" src="assets/test_api/xhr_in_dev_tools.png">
+
+* ❓ Что ты видишь на экране?
+* ❓ Где эти данные отражаются на сайте?
+
+***
+
+## Контракты на API
+
+https://github.com/gothinkster/realworld/blob/main/api/openapi.yml
+
+https://editor.swagger.io/
 
 https://www.chaijs.com/api/bdd/
 
