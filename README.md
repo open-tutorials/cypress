@@ -28,6 +28,8 @@
 
 # +Туториалы по Cypress
 
+## Путь героя
+
 1. [Первый полет на Cypress](https://md.epic1h.com/cypress_test_flight)
 2. [Находим лучшие селекторы](https://md.epic1h.com/best_selectors)
 3. [Тестируем мама проект на Cypress](https://md.epic1h.com/test_mama_project)
@@ -35,8 +37,11 @@
 5. [Фейк дата в тестах](https://md.epic1h.com/fake_data)
 6. [Как устроен Cypress внутри](https://md.epic1h.com/deep_cypress)
 7. [Заканчиваем мама проект](https://md.epic1h.com/finish_mama_project)
-8. Тестирование API в Cypress
-9. Обновляем Cypress до 12
+
+## Путь легенды
+
+8. Тестированием API в Cypress
+9.  Обновляем Cypress до 12
 10. Собираем проект локально
 11. Запускаем тестирование через CI/CD в GitLab
 12. Деплоим проект на своем сервере
