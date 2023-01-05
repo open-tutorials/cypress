@@ -1,4 +1,4 @@
-<h1 class="title">Туториалы<br>по ИТ навыкам</h1>
+<h1 class="title">Туториалы<br>по IT навыкам</h1>
 
 <style>
 h1.title {
@@ -10,8 +10,9 @@ h1.title {
 }
 </style>
 
-```text circle hello_from_anton5
+```text circle hello_from_anton
 {
+  "poster": "https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true",
   "video": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/circles/hello.mp4"
 }
 
