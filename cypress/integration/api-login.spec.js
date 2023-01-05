@@ -13,7 +13,7 @@ before(() => {
         });
 });
 
-function setJwtTokenToken(window, token) {
+function setJwtToken(window, token) {
     window.localStorage.setItem('jwtToken', token);
 }
 
@@ -24,9 +24,11 @@ it('should do API login', () => {
         .should('not.be.empty')
         .then(token => {
             cy.visit('/', {
-                onBeforeLoad: (window) => setJwtTokenToken(window, token)
+                onBeforeLoad: (window) => setJwtToken(window, token)
             });
         });
+
+        cy.visit('/');
 
     cy.location('hash').should('eq', '#/');
     cy.get('.navbar').should('be.visible')
