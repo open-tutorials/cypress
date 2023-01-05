@@ -234,7 +234,7 @@ it('should do register user', () => {
 В твоем тесте ты напишешь:
 
 ```js
-cy.get('[data-cy=register]').click();
+cy.get('button[data-cy=register]').click();
 ```
 
 **❗ Тестируй только то, что можешь контролировать!** ~"В конспект"
@@ -293,7 +293,7 @@ cy.get('[data-cy=register]').click();
 
 ```js
 // first name input field on registration form
-cy.get('form.registration input[name=firstName]')
+cy.get('form.registration input[name=first_name]')
 ```
 
 3. Короткий — задействует как можно **меньше элементов** и их атрибутов в иерархии.
