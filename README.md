@@ -182,7 +182,7 @@ style my_first_refactor stroke:#333,stroke-width:4px
 click my_first_refactor "https://md.epic1h.com/my_first_refactor" _blank
 ```
 
-# Туториалы по ручному тестированию
+# Ручное тестированию
 
 1. [Ломаем приложение онлайн-банка](https://md.epic1h.com/became_a_tester)
 1. [Организуем баг-трекинг в стартапе](https://md.epic1h.com/bug_tracking)
