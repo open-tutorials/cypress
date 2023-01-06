@@ -35,6 +35,61 @@
             src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://demo.realworld.io/">
     </section>
 
+    <h1>Slow UI</h1>
+    <section data-cy="slow-ui">
+        <button data-cy="start-booking" onclick="startBooking()">Start booking</button>
+
+        <form name="booking">
+            <label>Please input target date in format D/M/YYYY</label>
+            <input name="target_date">
+            <p style="color:red">By default we will select tomorrow, but our UI in slow, please wait 2 seconds...</p>
+            <button data-cy="submit" type="button" onclick="confirmBooking()">Finish</button>
+        </form>
+
+        <script>
+            {
+                const section = document.querySelector('section[data-cy=slow-ui]');
+                const form = section.querySelector('form[name=booking]');
+                const targetDate = form.querySelector('input[name=target_date]');
+
+                function startBooking() {
+                    form.style.display = 'block';
+                    form.setAttribute('class', 'busy');
+
+                    setTimeout(() => {
+                        const today = new Date();
+                        const tomorrow = new Date();
+                        tomorrow.setDate(today.getDate() + 1);
+                        targetDate.value = tomorrow.toLocaleDateString('en-US');
+                        form.removeAttribute('class');
+                    }, 2000);
+                }
+
+                function confirmBooking() {
+                    const submit = section.querySelector('button[data-cy=submit]');
+                    submit.disabled = true;
+
+                    setTimeout(() => {
+                        const success = document.createElement('p');
+                        success.setAttribute('class', 'success');
+                        success.innerHTML = 'You booked date ' + targetDate.value;
+                        form.appendChild(success);
+                    }, 2500);
+                }
+            }
+        </script>
+
+        <style>
+            [data-cy=slow-ui] form {
+                display: none;
+            }
+
+            [data-cy=slow-ui] .success {
+                color: green;
+            }
+        </style>
+    </section>
+
 </body>
 
 </html>
