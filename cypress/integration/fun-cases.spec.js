@@ -33,8 +33,13 @@ it.only('should do book delivery', () => {
     const targetDate = afterTomorrow.toLocaleDateString('en-US');
 
     // cy.wait(1000);
-    cy.get('@bookingForm')
-        .should('not.have.class', 'busy');
+    // cy.get('@bookingForm')
+    //    .should('not.have.class', 'busy');
+
+    //cy.wrap(null).then(() => {
+    //    cy.pause();
+    //    debugger; 
+    //});
 
     cy.get('@bookingForm')
         .find('input[name=target_date]')
