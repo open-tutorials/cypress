@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Fun cases in Cypress</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        div {
+            border: 1px solid red;
+            margin: 5px 0;
+            padding: 5px;
+        }
+
+        button {
+            background-color: silver;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Read QR code</h1>
+    <section data-cy="qr-code">
+        <img width="150" height="150"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://demo.realworld.io/">
+    </section>
+
+</body>
+
+</html>
