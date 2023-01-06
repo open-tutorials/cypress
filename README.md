@@ -1,5 +1,3 @@
-<h1 class="title">Туториалы<br>по IT навыкам</h1>
-
 <style>
 h1 {
   background: #121FCF;
@@ -9,9 +7,13 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 h1.title {
+  margin-top: 0;
   font-size: 5em;
 }
 </style>
+
+<md-slide>
+<h1 class="title">Туториалы<br>по IT навыкам</h1>
 
 ```text circle hello_from_anton
 {
@@ -31,6 +33,7 @@ h1.title {
 
 Ну что? Погнали 👇
 ```
+</md-slide>
 
 # Мой подход
 
