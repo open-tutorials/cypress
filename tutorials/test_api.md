@@ -35,8 +35,12 @@
 - [x] В Swagger UI найди эндпоинт `GET /articles`
 - [x] Нажми **Try it out** и **Execute**
 
+<details>
+  <summary>Вот так вот 📹</summary>
+
 <img alt="Как использовать Swagger" 
      width="800" height="354" src="assets/test_api/try_swagger_ui.gif">
+</details>
 
 * ❓ Что произошло?
 * ❓ Что ты видишь на экране?
@@ -49,8 +53,13 @@
 - [x] Открой в новой вкладке браузера https://api.realworld.io/api/articles?limit=20&offset=0
 - [x] Выполни данный запрос в Postman.
 
+<details>
+  <summary>Вот так вот 🖼️</summary>
+
 <img alt="GET запрос в Postman" 
      width="800" height="637" src="assets/test_api/xhr_in_postman.png">
+
+</details>
 
 * ❓ За что отвечают параметры `limit=20` и `offset=0`?
 
@@ -59,8 +68,13 @@
 - [x] Открой https://demo.realworld.io/
 - [x] Найди запрос на этот эндпоинт в инструментах разработчика.
 
+<details>
+  <summary>Вот так вот 🖼️</summary>
+
 <img alt="XHR запрос в Dev Tools" 
      width="800" height="361" src="assets/test_api/xhr_in_dev_tools.png">
+
+</details>
 
 * ❓ Что ты видишь на экране?
 * ❓ Где эти данные отражаются на сайте?
