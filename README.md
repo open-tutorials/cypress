@@ -15,8 +15,8 @@ h1.title {
 
 ```text circle hello_from_anton
 {
-  "poster": "https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true",
-  "video": "https://github.com/breslavsky/hello-cypress/raw/main/assets/hello_from_anton.mp4"
+  "poster": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/anton.jpg",
+  "video": "https://raw.githubusercontent.com/hello-cypress/raw/main/assets/hello_from_anton.mp4"
 }
 
 Привет, [Anton](https://t.me/breslavsky_anton) на связи 🤙
