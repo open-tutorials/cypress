@@ -234,7 +234,7 @@ const memeElement = document.getElementById('meme');
 memeElement.setAttribute('src', data[0].embed_url);
 ```
 
-#### Риски и риски
+#### Риски ириски
 
 Получается, для поисках мемов мы используем сторонний сервис Giphy и его API.
 

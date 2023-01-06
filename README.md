@@ -15,7 +15,7 @@ h1.title {
 
 ```text circle hello_from_anton
 {
-  "poster": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/anton.jpg",
+  "time": 1.7,
   "video": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/hello_from_anton.mp4"
 }
 
