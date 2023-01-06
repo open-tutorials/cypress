@@ -199,3 +199,4 @@ click my_first_refactor "https://md.epic1h.com/my_first_refactor" _blank
 # Стримы
 
 1. [Стрим-практикум: мемы учат](https://md.epic1h.com/memes_teach)
+1. [ИИ решает тестовое задание по QA](https://www.youtube.com/watch?v=NP6LL5e52vU)
