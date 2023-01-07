@@ -199,6 +199,7 @@ cypress --> g_should
 
 subgraph g_should [" "]
     direction LR
+    should --> eq
     should --> contain_text(contain.text)
     should --> contain_html(contain.html)
     should --> have_clazz(have.class)
@@ -224,6 +225,9 @@ subgraph g_articles_spec_js [" "]
     articles_spec_js --> open_my_article(openMyArticle)
     articles_spec_js --> clear_article(clearArticle)
 end
+
+style fake_data stroke:#333,stroke-width:4px
+click fake_data "https://md.epic1h.com/fake_data" _blank
 ```
 
 </details>
