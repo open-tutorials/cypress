@@ -171,7 +171,7 @@ cypress --> cypress_config(cypress.json)
 cypress_config --> base_url(Base URL)
 
 cypress --> hooks
-cypress --> find
+cypress --> _find(find)
 hooks --> before_each(Before Each)
 cypress --> aliases
 aliases --> as
@@ -202,7 +202,7 @@ subgraph g_should [" "]
     should --> eq
     should --> contain_text(contain.text)
     should --> contain_html(contain.html)
-    should --> have_clazz(have.class)
+    should --> have_class_(have.class)
     should --> have_length(have.length)
     should --> have_length_greater_than(have.length.greaterThan)
 end
