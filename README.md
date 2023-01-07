@@ -199,7 +199,6 @@ cypress --> g_should
 
 subgraph g_should [" "]
     direction LR
-    should --> eq
     should --> contain_text(contain.text)
     should --> contain_html(contain.html)
     should --> have_class_(have.class)
@@ -295,18 +294,18 @@ click deep_cypress "https://md.epic1h.com/deep_cypress" _blank
 
 ## 🦸 Путь героя
 
-1. [Первый полет на Cypress](https://md.epic1h.com/cypress_test_flight)
-2. [Находим лучшие селекторы](https://md.epic1h.com/best_selectors)
-3. [Тестируем мама проект на Cypress](https://md.epic1h.com/test_mama_project)
-4. [Мой первый рефактор в Cypress](https://md.epic1h.com/my_first_refactor)
-5. [Фейк дата в тестах](https://md.epic1h.com/fake_data)
-6. [Как устроен Cypress внутри](https://md.epic1h.com/deep_cypress)
-7. [Заканчиваем мама проект](https://md.epic1h.com/finish_mama_project)
-8. [Забавные кейсы](https://md.epic1h.com/fun_cases)
+1. <md-progress for="cypress_test_flight"></md-progress> [Первый полет на Cypress](https://md.epic1h.com/cypress_test_flight)
+2. <md-progress for="best_selectors"></md-progress> [Находим лучшие селекторы](https://md.epic1h.com/best_selectors)
+3. <md-progress for="test_mama_project"></md-progress> [Тестируем мама проект на Cypress](https://md.epic1h.com/test_mama_project)
+4. <md-progress for="my_first_refactor"></md-progress> [Мой первый рефактор в Cypress](https://md.epic1h.com/my_first_refactor)
+5. <md-progress for="fake_data"></md-progress> [Фейк дата в тестах](https://md.epic1h.com/fake_data)
+6. <md-progress for="deep_cypress"></md-progress> [Как устроен Cypress внутри](https://md.epic1h.com/deep_cypress)
+7. <md-progress for="finish_mama_project"></md-progress> [Заканчиваем мама проект](https://md.epic1h.com/finish_mama_project)
+8. <md-progress for="fun_cases"></md-progress> [Забавные кейсы](https://md.epic1h.com/fun_cases)
 
 ## 🥷 Путь ниндзя
 
-9. [Тестируем API в Cypress](https://md.epic1h.com/test_api) ~"Черновик"
+9. <md-progress for="test_api"></md-progress> [Тестируем API в Cypress](https://md.epic1h.com/test_api) ~"Черновик"
 10. Обновляем Cypress до 12
 11. Собираем Conduit локально
 12. Запускаем тестирование через CI/CD
@@ -320,19 +319,19 @@ click deep_cypress "https://md.epic1h.com/deep_cypress" _blank
 
 # Ручное тестирование
 
-1. [Ломаем приложение онлайн-банка](https://md.epic1h.com/became_a_tester)
-1. [Организуем баг-трекинг в стартапе](https://md.epic1h.com/bug_tracking)
-1. [Исследуем баги и пишем профессиональные баг-репорты](https://md.epic1h.com/perfect_bug_reports)
+1. <md-progress for="became_a_tester"></md-progress> [Ломаем приложение онлайн-банка](https://md.epic1h.com/became_a_tester)
+1. <md-progress for="bug_tracking"></md-progress> [Организуем баг-трекинг в стартапе](https://md.epic1h.com/bug_tracking)
+1. <md-progress for="perfect_bug_reports"></md-progress> [Исследуем баги и пишем профессиональные баг-репорты](https://md.epic1h.com/perfect_bug_reports)
 
 # Менторство
 
-1. [Java Script](https://md.epic1h.com/js_mentor)
+1. <md-progress for="js_mentor"></md-progress> [Java Script](https://md.epic1h.com/js_mentor)
 
 # Челленджы
 
-1. [Спасти мир от хакера Hакатика](https://md.epic1h.com/save_the_world)
+1. <md-progress for="save_the_world"></md-progress> [Спасти мир от хакера Hакатика](https://md.epic1h.com/save_the_world)
 
 # Стримы
 
-1. [Стрим-практикум: мемы учат](https://md.epic1h.com/memes_teach)
+1. <md-progress for="memes_teach"></md-progress> [Стрим-практикум: мемы учат](https://md.epic1h.com/memes_teach)
 1. [ИИ решает тестовое задание по QA](https://www.youtube.com/watch?v=NP6LL5e52vU)
