@@ -152,7 +152,7 @@ npx wget -d test_cases/ $BASE_URL/test_cases/login_user.md
 
 - [x] Поменяй символ переноса строки с `\r\n` на `\n` в настройках Visual Code
 
-<img width="500px" height="380px" src="assets/vs_eol.png">
+<img class="cornered" width="500px" height="380px" src="assets/vs_eol.png">
 
 * ❓ Что такое `EOL`?
 * ❓ Что такое `CRLF`?
@@ -160,7 +160,7 @@ npx wget -d test_cases/ $BASE_URL/test_cases/login_user.md
 
 - [x] В качестве терминала открой **Git Bash**
 
-<img width="200px" height="256px" src="assets/vs_bash.png">
+<img class="cornered" width="200px" height="256px" src="assets/vs_bash.png">
 
 * ❓ Что такое `Git`?
 * ❓ Что такое `Bash`?

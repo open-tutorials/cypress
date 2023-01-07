@@ -38,7 +38,7 @@
 <details>
   <summary>Вот так вот 📹</summary>
 
-<img alt="Как использовать Swagger" 
+<img class="cornered" alt="Как использовать Swagger" 
      width="800" height="354" src="assets/test_api/try_swagger_ui.gif">
 </details>
 
@@ -56,7 +56,7 @@
 <details>
   <summary>Вот так вот 🖼️</summary>
 
-<img alt="GET запрос в Postman" 
+<img class="cornered" alt="GET запрос в Postman" 
      width="800" height="637" src="assets/test_api/xhr_in_postman.png">
 
 </details>
@@ -71,7 +71,7 @@
 <details>
   <summary>Вот так вот 🖼️</summary>
 
-<img alt="XHR запрос в Dev Tools" 
+<img class="cornered" alt="XHR запрос в Dev Tools" 
      width="800" height="361" src="assets/test_api/xhr_in_dev_tools.png">
 
 </details>

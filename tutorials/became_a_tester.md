@@ -128,7 +128,7 @@
 <details>
   <summary>Лучший интерфейс в мире 😂</summary>
 
-  <img width="600" height="414" src="img/ms_word.jpeg">
+  <img class="cornered" width="600" height="414" src="img/ms_word.jpeg">
 
 </details>
 
@@ -199,7 +199,7 @@
 
 ## Что было 👎
 
-<img src="img/broken_ibank.png" width="478">
+<img class="cornered" src="img/broken_ibank.png" width="478">
 
 ## Что стало 👍
 
@@ -247,7 +247,7 @@
 
 ### Панель устройств
 
-Активируй **панель устройств** <img width="22" height="22" src="img/devices_toolbar.png">
+Активируй **панель устройств** <img class="cornered" width="22" height="22" src="img/devices_toolbar.png">
 
 - [x] Попробуй выбрать различные типы устройств.
 - [x] Поменяй масштаб и ориентацию.
@@ -275,7 +275,7 @@ POST http://localhost:3000/api/login → 404
 <details>
   <summary>Кто такой Фронтенд и Бекенд? 😂</summary>
 
-  <img src="img/backend_vs_frontend.jpg" width="500">
+  <img class="cornered" src="img/backend_vs_frontend.jpg" width="500">
 
 </details>
 

@@ -167,7 +167,7 @@ console.log('email =', email);
 
 > Помни про самые полезные клавиши `TAB` и `↑` при работе с терминалом.
 
-<img width="800" height="257" src="assets/test_mama_project/rnd.gif">
+<img class="cornered" width="800" height="257" src="assets/test_mama_project/rnd.gif">
 
 * ❓ Что делает `Math.random` и `Math.round`?
 * ❓ Что фактически хранится в константе `rnd`?

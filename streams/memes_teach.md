@@ -69,11 +69,11 @@ width="600px" height="900px">
 
 ### Load vocabulary
 
-<img width="320" height="340" src="assets/memes_teach/load_vocabulary.png">
+<img class="cornered" width="320" height="340" src="assets/memes_teach/load_vocabulary.png">
 
 ### Learn word
 
-<img width="380" height="510" src="assets/memes_teach/learn_word.png">
+<img class="cornered" width="380" height="510" src="assets/memes_teach/learn_word.png">
 
 Кажется не плохо за 5 минут?
 
@@ -192,7 +192,7 @@ fork>ответвление
 
 https://giphy.com/gifs/culture--think-hmm-d3mlE7uhX8KFgEmY
 
-<img width="500" height="247" src="assets/memes_teach/giphy_embed.png">
+<img class="cornered" width="500" height="247" src="assets/memes_teach/giphy_embed.png">
 
 ```html
 <iframe id="meme"
@@ -223,7 +223,7 @@ https://api.giphy.com/v1/gifs/search?api_key=bDCakdbTSXSK6sIeIflTEEywQxSsdEdW&li
 
 Что-то мне подсказывает, что это то, что мы ищем.
 
-<img width="600" height="288" src="assets/memes_teach/giphy_json.png">
+<img class="cornered" width="600" height="288" src="assets/memes_teach/giphy_json.png">
 
 По сути нам нужно взять `embed_url` первого мема и подсунуть его в свойство `src` фрейма внутри HTML.
 

@@ -12,7 +12,7 @@
 
 На левой панели нажимаем кнопку `Share`
 
-<img src="img/share_session.png" width="400px">
+<img class="cornered" src="img/share_session.png" width="400px">
 
 ## 3. Авторизуемся через `GitHub`
 
@@ -24,4 +24,4 @@
 
 Отправляет коллеге любым мессенджером.
 
-<img src="img/get_session_link.png" width="400px">
+<img class="cornered" src="img/get_session_link.png" width="400px">

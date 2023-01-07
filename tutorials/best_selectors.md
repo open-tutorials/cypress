@@ -179,7 +179,7 @@ it('should do register user', () => {
 
 - [x] Активируй **selector playground.**
 
-<img width="200" src="assets/selector_playground.png">
+<img class="cornered" width="200" src="assets/selector_playground.png">
 
 - [x] Наведи на поле **фамилия** и скопируй код селектора.
 - [x] Обнови код теста:
@@ -363,7 +363,7 @@ cy.get('input[name=first_name]').type('Иван');
 
 **Контекст** для элемента: форма, группа, раздел — некоторая уникальная область интерфейса.
 
-<img width="634" height="382" src="assets/best_selectors/semantic_ui.png">
+<img class="cornered" width="634" height="382" src="assets/best_selectors/semantic_ui.png">
 
 ### Как найти контекст
 

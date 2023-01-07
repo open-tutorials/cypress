@@ -251,7 +251,7 @@ Cypress.on('uncaught:exception', () => false);
 - [x] Прокрути страницу до формы подписки на рассылку.
 - [x] Активируй **selector playground**.
 
-<img width="200" src="assets/selector_playground.png">
+<img class="cornered" width="200" src="assets/selector_playground.png">
 
 - [x] Наведи на поле ввода **email**.
 - [x] Скопируй код селектора.

@@ -63,7 +63,7 @@
 <details>
   <summary>Что такое qwerty 🤢?</summary>
 
-<img src="img/qwerty.gif" width="465" height="600">
+<img class="cornered" src="img/qwerty.gif" width="465" height="600">
 
 </details>
 
