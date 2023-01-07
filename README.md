@@ -154,9 +154,9 @@ test_mama_project --> cypress(Cypress)
 cypress --> it_only(it.only)
 cypress --> url
 cypress --> should
-cy_should --> include
-cy_should --> contain_text(contain.text)
-cy_should --> be_visible(be.visible)
+should --> include
+should --> contain_text(contain.text)
+should --> be_visible(be.visible)
 
 style test_mama_project stroke:#333,stroke-width:4px
 click test_mama_project "https://md.epic1h.com/test_mama_project" _blank
