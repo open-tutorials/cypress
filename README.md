@@ -44,7 +44,7 @@ h1.title {
 
 Мне 36, живу и работаю в Берлине, и у меня есть огромное желание **делиться** знаниями.
 
-Я разработал серию практических туториалов по авто-тестам на **Cypress**
+Я разработал серию практических туториалов по авто-тестам на **Cypress**.
 
 Чистый **концентрат** — все как на работе, сразу в бой.
 
@@ -84,7 +84,6 @@ h1.title {
   <summary>Syllabus – учебный план&nbsp;<img width="18" height="18" src="assets/icons/syllabus.svg"></summary>
 
 ```mermaid
-%%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
 flowchart TB
 cypress_test_flight(<span style='font-size:25px'>Первый полет</span>)
 cypress_test_flight --> node_js(Node.js)
@@ -114,7 +113,6 @@ click cy_click "https://youtu.be/lqqlaOuxrpM?t=591" _blank
 ```
 
 ```mermaid
-%%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
 flowchart TB
 best_selectors(<span style='font-size:25px'>Лучшие селекторы</span>)
 best_selectors ---> dev_tools(DevTools)
@@ -136,7 +134,6 @@ click best_selectors "https://md.epic1h.com/best_selectors" _blank
 ```
 
 ```mermaid
-%%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
 flowchart TB
 test_mama_project(<span style='font-size:25px'>Тестируем мама проект</span>)
 test_mama_project --> conduit(Conduit)
@@ -166,16 +163,15 @@ click test_mama_project "https://md.epic1h.com/test_mama_project" _blank
 ```
 
 ```mermaid
-%%{ init: { 'flowchart': { 'curve': 'monotoneX' } } }%%
 flowchart TB
 my_first_refactor(<span style='font-size:25px'>Мой первый рефактор</span>)
-
 
 my_first_refactor --> cypress(Cypress)
 cypress --> cypress_config(cypress.json)
 cypress_config --> base_url(Base URL)
 
 cypress --> hooks
+cypress --> find
 hooks --> before_each(Before Each)
 cypress --> aliases
 aliases --> as
@@ -191,6 +187,43 @@ utils --> get_random_number(getRandomNumber)
 
 style my_first_refactor stroke:#333,stroke-width:4px
 click my_first_refactor "https://md.epic1h.com/my_first_refactor" _blank
+```
+
+```mermaid
+flowchart TB
+fake_data(<span style='font-size:25px'>Фейк дата в тестах</span>)
+fake_data --> faker
+
+fake_data --> cypress(Cypress)
+cypress --> g_should
+
+subgraph g_should [" "]
+    direction LR
+    should --> contain_text(contain.text)
+    should --> contain_html(contain.html)
+    should --> have_clazz(have.class)
+    should --> have_length(have.length)
+    should --> have_length_greater_than(have.length.greaterThan)
+end
+
+cypress --> parents
+
+fake_data --> shared_js(shared.js)
+shared_js --> login
+
+fake_data --> g_articles_spec_js
+
+subgraph g_articles_spec_js [" "]
+    direction LR
+    articles_spec_js(articles.spec.js)
+    articles_spec_js --> generate_fake_article(generateFakeArticle)
+    articles_spec_js --> fill_article(fillArticle)
+    articles_spec_js --> check_article(checkArticle)
+    articles_spec_js --> add_article(addArticle)
+    articles_spec_js --> open_my_articles(openMyArticles)
+    articles_spec_js --> open_my_article(openMyArticle)
+    articles_spec_js --> clear_article(clearArticle)
+end
 ```
 
 </details>
@@ -214,10 +247,11 @@ click my_first_refactor "https://md.epic1h.com/my_first_refactor" _blank
 12. Запускаем тестирование через CI/CD
 13. Деплоим проект на своем сервере
 14. Визуальное тестирование через Cypress
+15. Отладка тестов в Visual Code
 
 ## 🧘 Путь джедая
 
-15. RPA через Cypress & Tag UI
+16. RPA через Cypress & Tag UI
 
 # Ручное тестирование
 

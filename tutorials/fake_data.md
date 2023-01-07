@@ -233,7 +233,7 @@ for (let i = 0; i <= 5; i++) {
 
 - [x] Добавь фикстуру `~/cypress/fixtures/me-user.json` из [примера](/cypress/fixtures/me-user.json)
 - [x] Создай файл `~/cypress/support/shared.js` из [примера](/cypress/support/shared.js)
-- [x] Создай файл теста `global-feed.spec.js`
+- [x] Создай файл теста `articles.spec.js`
 - [x] Напиши тест публикации статьи следуя описанию тест-кейса:
   * Используй функцию `login()` из `shared.js`
   * Используй **Faker** для заполнения формы.

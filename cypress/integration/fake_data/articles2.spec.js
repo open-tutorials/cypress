@@ -1,7 +1,7 @@
 ///<reference types="cypress" />
 
 import { faker } from '@faker-js/faker';
-import { login } from '/cypress/support/fake_data/shared';
+import { login } from '/cypress/support/shared';
 import meUser from '/cypress/fixtures/me-user.json';
 
 function generateFakeArticle() {
@@ -92,10 +92,9 @@ describe('Articles', () => {
 
         // check Markdown is rendered to HTML
         cy.get('@articlePage').find('[ng-bind-html$=body]')
-            .invoke('prop', 'innerHTML')
-            .should('contains', '<strong>healthy</strong>')
-            .should('contains', '<em>tasty.</em>')
-            .should('contains', '<li>banana</li>');
+            .should('contain.html', '<strong>healthy</strong>')
+            .should('contain.html', '<em>tasty.</em>')
+            .should('contain.html', '<li>banana</li>');
 
         // TODO: check author & date
 
@@ -118,7 +117,7 @@ describe('Articles', () => {
         cy.get('.article-actions span:not(.ng-hide) button').click();
 
         // we redirected to / ?
-        cy.url().should('match', /\/\#\/$/);
+        cy.url().should('eq', 'https://demo.realworld.io/#/');
 
         openMyArticles();
 
