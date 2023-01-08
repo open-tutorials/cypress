@@ -16,6 +16,7 @@ it('should do check QR code', () => {
 });
 
 it.only('should do book delivery', () => {
+    
     cy.get('section[data-cy=slow-ui]').should('be.visible').as('section');
 
     cy.get('@section')
@@ -32,14 +33,7 @@ it.only('should do book delivery', () => {
 
     const targetDate = afterTomorrow.toLocaleDateString('en-US');
 
-    // cy.wait(1000);
-    cy.get('@bookingForm')
-        .should('not.have.class', 'busy');
-
-    //cy.wrap(null).then(() => {
-    //    cy.pause();
-    //    debugger; 
-    //});
+    cy.get('@bookingForm').should('not.have.class', 'busy');
 
     cy.get('@bookingForm')
         .find('input[name=target_date]')
