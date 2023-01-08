@@ -155,7 +155,7 @@ cy.get('p.success').should('have.text', 'You logged!');
 В поле по умолчанию заполняется завтрашний день, но **через 2 секунды.**
 
 <img class="cornered" alt="Медленный UI" 
-     width="800" height="354" src="assets/fun_cases/delivery_case.gif">
+     width="707" height="250" src="assets/fun_cases/delivery_case.gif">
 </details>
 
 Почему? Например, программисту требуется с бекенда загрузить список всех доступных дат.
