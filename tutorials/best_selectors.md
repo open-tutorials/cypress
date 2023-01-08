@@ -487,6 +487,16 @@ cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права з�
 >
 > `data-for-test`, `data-ui-id`, `data-test-id` и т.д.
 
+***
+
+Та да 🥳 Ты дошел до конца.
+
+# 👨‍🎓 Чему ты научился
+
+```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/best_selectors.mm
+
+```
+
 # 😭 Домашка
 
 Найди **лучшие селекторы** для [формы регистрации](https://demo.realworld.io/#/register) и заполни ниже:

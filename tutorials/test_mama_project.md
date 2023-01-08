@@ -357,7 +357,15 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 - [x] Запусти все тесты в Headless режиме.
 - [x] Найди и выпиши участки кода которые повторяются.
 
+***
+
 Та да 🥳 Ты дошел до конца.
+
+# 👨‍🎓 Чему ты научился
+
+```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/test_mama_project.mm
+
+```
 
 # Что дальше
 
