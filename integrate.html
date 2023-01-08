@@ -1,0 +1,20 @@
+<iframe id="platform" style="display:none" src="https://platform.epic1h.com/token"></iframe>
+<style>
+    #platform {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+    #lp {
+        margin: 16px 0 48px 0;
+    }
+</style>
+<script src="https://platform.epic1h.com/lp/runtime.js" type="module"></script>
+<script src="https://platform.epic1h.com/lp/polyfills.js" type="module"></script>
+<script src="https://platform.epic1h.com/lp/main.js" type="module"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://platform.epic1h.com/lp/styles.css">
+
+<div id="platform">
+    <app-lp-me></app-lp-me>
+    <app-lp id="lp">Загрузка...</app-lp>
+</div>

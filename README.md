@@ -109,6 +109,8 @@ h1.title {
 
 </details>
 
+Думаешь оставить на завтра? Начни прямо сегодня.
+
 ## 🦸 Путь героя
 
 1. <md-progress for="cypress_test_flight"></md-progress> [Первый полет на Cypress](https://md.epic1h.com/cypress_test_flight)
