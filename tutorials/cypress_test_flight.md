@@ -426,6 +426,12 @@ it('should subscribe to news letter', () => {
 
 *****
 
+# Чему ты научился
+
+```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/test_flight.mm
+
+```
+
 # 🤩 Хочу еще
 
 Не хватило? Поиграйся с https://automationteststore.com/
