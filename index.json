@@ -78,7 +78,7 @@
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
     },
-    "fun_cases": {
+    "fun_cases_in_cypress": {
       "title": "Туториал: прикольные кейсы",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/fun_cases.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
