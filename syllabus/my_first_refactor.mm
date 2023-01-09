@@ -21,4 +21,4 @@ my_first_refactor --> utils(utils.js)
 utils --> get_random_number(getRandomNumber)
 
 style my_first_refactor stroke:#333,stroke-width:4px
-click my_first_refactor "https://md.epic1h.com/my_first_refactor" _blank
+click my_first_refactor "/my_first_refactor" _blank

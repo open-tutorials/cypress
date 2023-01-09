@@ -15,4 +15,4 @@ best_selectors --> wget(Wget)
 best_selectors --> js_TODO(TODO)
 
 style best_selectors stroke:#333,stroke-width:4px
-click best_selectors "https://md.epic1h.com/best_selectors" _blank
+click best_selectors "/best_selectors" _blank

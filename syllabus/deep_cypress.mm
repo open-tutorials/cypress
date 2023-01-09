@@ -55,4 +55,4 @@ subgraph g_cypress2 [" "]
 end
 
 style deep_cypress stroke:#333,stroke-width:4px
-click deep_cypress "https://md.epic1h.com/deep_cypress" _blank
+click deep_cypress "/deep_cypress" _blank

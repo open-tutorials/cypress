@@ -34,4 +34,4 @@ subgraph g_articles_spec_js [" "]
 end
 
 style fake_data stroke:#333,stroke-width:4px
-click fake_data "https://md.epic1h.com/fake_data" _blank
+click fake_data "/fake_data" _blank
