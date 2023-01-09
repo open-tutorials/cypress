@@ -16,3 +16,9 @@ best_selectors --> js_TODO(TODO)
 
 style best_selectors stroke:#333,stroke-width:4px
 click best_selectors "/best_selectors" _blank
+click query_selector_all "https://youtu.be/tK2F2wNvcWI?t=1853" _blank
+click $$ "https://youtu.be/tK2F2wNvcWI?t=1764" _blank
+click semantic_ui "https://youtu.be/tK2F2wNvcWI?t=2000" _blank
+click tiny_web_server "https://youtu.be/tK2F2wNvcWI?t=610" _blank
+click wget "https://youtu.be/tK2F2wNvcWI?t=1025" _blank
+click js_TODO "https://youtu.be/tK2F2wNvcWI?t=3058" _blank

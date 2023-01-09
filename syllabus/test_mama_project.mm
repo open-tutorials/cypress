@@ -24,3 +24,5 @@ should --> be_visible(be.visible)
 
 style test_mama_project stroke:#333,stroke-width:4px
 click test_mama_project "/test_mama_project" _blank
+click js_random "https://youtu.be/TD1X0-JB_Fs?t=2080" _blank
+click js_round "https://youtu.be/TD1X0-JB_Fs?t=2107" _blank

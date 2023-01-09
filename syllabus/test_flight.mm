@@ -22,5 +22,16 @@ TDD ---> it
 
 style cypress_test_flight stroke:#333,stroke-width:4px
 click cypress_test_flight "/cypress_test_flight" _blank
+click node_js "https://youtu.be/lqqlaOuxrpM?t=136" _blank
+click package_json "https://youtu.be/lqqlaOuxrpM?t=194" _blank
 click npm_init "https://youtu.be/lqqlaOuxrpM?t=194" _blank
+click npm_install "https://youtu.be/lqqlaOuxrpM?t=239" _blank
+click cypress_open "https://youtu.be/lqqlaOuxrpM?t=287" _blank
+click cy_visit "https://youtu.be/lqqlaOuxrpM?t=370" _blank
+click cy_get "https://youtu.be/lqqlaOuxrpM?t=558" _blank
+click cy_type "https://youtu.be/lqqlaOuxrpM?t=563" _blank
 click cy_click "https://youtu.be/lqqlaOuxrpM?t=591" _blank
+click cy_should "https://youtu.be/lqqlaOuxrpM?t=637" _blank
+click cy_should_have_text "https://youtu.be/lqqlaOuxrpM?t=639" _blank
+click cypress_run "https://youtu.be/lqqlaOuxrpM?t=708" _blank
+click it "https://youtu.be/lqqlaOuxrpM?t=365" _blank
