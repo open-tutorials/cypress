@@ -230,7 +230,7 @@ it.only('should do open conduit by link', () => {
 
 ## +6. Заглушка функций
 
-### +6.1. Переписываем window.open
+### 6.1. Переписываем window.open
 
 - [x] Добавь новый тест:
 
@@ -271,7 +271,7 @@ it.only('should do open conduit in window', () => {
 
 ***
 
-### +6.2. Переписываем window.prompt
+### 6.2. Переписываем window.prompt
 
 - [x] Добавь новый тест:
 
@@ -305,7 +305,7 @@ it.only('should do replace prompt', () => {
 
 ***
 
-### +6.3. Переписываем клик по кнопке
+### 6.3. Переписываем клик по кнопке
 
 - [x] Добавь новый тест:
 
@@ -593,7 +593,7 @@ cy.get('selector').invoke('attr').should('eq', '?');
 
 ## +10. Триггеры
 
-## +10.1. Нажатие мышкой
+### 10.1. Нажатие мышкой
 
 - [x] Добавь новый тест:
 
@@ -618,7 +618,7 @@ it.only('should do check long mouse down', () => {
 
 ***
 
-## +10.2. Движение мышкой
+### 10.2. Движение мышкой
 
 ```js
 it.only('should do check mouse move', () => {
