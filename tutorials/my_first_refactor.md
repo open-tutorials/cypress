@@ -243,7 +243,7 @@ const fullName = lastName + ' ' + firstName;
 
 ***
 
-### +6.1 Функция loginMe
+### 6.1 Функция loginMe
 
 **❗ Мы повторяем большой участок кода входа пользователя.**
 
@@ -322,7 +322,7 @@ const fullName = lastName + ' ' + firstName;
 
 ***
 
-### +6.2. Функция getRandomNumber
+### 6.2. Функция getRandomNumber
 
 В нашем коде есть участок, где мы генерируем случайное число от 1000 до 9999.
 

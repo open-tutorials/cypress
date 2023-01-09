@@ -1,7 +1,7 @@
 {
   "tutorials": {
     "home": {
-      "title": "Серия туториалов по авто-тестированию",
+      "title": "Туториалы по IT навыкам: Cypress, Java Script",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/LP.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
