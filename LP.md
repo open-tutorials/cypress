@@ -120,7 +120,7 @@ h1.title {
 5. <md-progress for="fake_data"></md-progress> [Фейк дата в тестах](https://www.epic1h.com/fake_data)
 6. <md-progress for="deep_cypress"></md-progress> [Как устроен Cypress внутри](https://www.epic1h.com/deep_cypress)
 7. <md-progress for="finish_mama_project"></md-progress> [Заканчиваем мама проект](https://www.epic1h.com/finish_mama_project)
-8. <md-progress for="fun_cases"></md-progress> [Забавные кейсы](https://www.epic1h.com/fun_cases_in_cypress)
+8. <md-progress for="fun_cases_in_cypress"></md-progress> [Забавные кейсы](https://www.epic1h.com/fun_cases_in_cypress)
 
 ## 🥷 Путь ниндзя
 
