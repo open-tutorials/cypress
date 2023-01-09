@@ -265,9 +265,14 @@ cy.get('button[data-cy=register]').click();
     * Элемента с текстом **Все права защищены**.
     * Кнопки **Сбросить** на форме регистрации.
 
-* ❓ Это хорошие селекторы?
-    * `body > :nth-child(1) > :nth-child(4)`
-    * `#k9b1c2e4b1 > [data-cy="reset"]`
+❓ Это хорошие селекторы?
+  * `body > :nth-child(1) > :nth-child(4)`
+  * `#k9b1c2e4b1 > [data-cy="reset"]`
+
+```markdown quiz is_good_selectors horizontal
+- [ ] Отличные 
+- [x] Плохие
+```
 
 ***
 
