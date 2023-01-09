@@ -1,14 +1,8 @@
 {
   "tutorials": {
-    "index": {
-      "title": "Серия туториалов по авто-тестированию",
-      "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/README.md",
-      "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
-    },
     "home": {
       "title": "Серия туториалов по авто-тестированию",
-      "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/README.md",
+      "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/LP.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
     },
