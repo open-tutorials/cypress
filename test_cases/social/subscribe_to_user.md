@@ -10,29 +10,32 @@ Subscribe to user test case
 
 ## Delete all subscriptions
 
-4.  In feed toggle menu should be active **Your Feed**
-5.  Select random article
-6.  Click button **Unsubscribe**
-7.  Confirm that the button text changes to **Subscribe**
-8.  Click **Home**
-9.  Check **Your Feed** contain text "No articles are here... yet."
+4.  In feed toggle menu should be activ **Your Feed**
+5.  Your Feed contains text "No articles are here... yet"?
+    * No, continue.
+    * Yes, go to 11.
+6. Select first article    
+7.  Click button **Unfollow**
+8.  Confirm that the button text changes to **Follow**
+9.  Click **Home**
+10. Back to step 4
 
 ## Select random article
 
-10. Click **Global Feed** in feed toggle menu
-11. List should have 10 article cards
-12. Select random article
+11. Click **Global Feed** in feed toggle menu
+12. List should have 10 article cards
+13. Select first article
 
 ## Subscribe to user by following him
 
-13. Click buttun **Follow**
-14. Confirm that the button text changes to **Unsubscribe**
+14. Click buttun **Follow**
+15. Confirm that the button text changes to **Unfollow**
 
 ## Check user in your subscription list
 
-15. Click **Home**
-16. In feed toggle menu should be active **Your Feed**
-17. Check `{author}` should be visible
+16. Click **Home**
+17. In feed toggle menu should be activ **Your Feed**
+18. Check `{author}` should be visible
 
 ## Where:
 

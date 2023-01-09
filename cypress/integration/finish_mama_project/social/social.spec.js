@@ -1,59 +1,69 @@
-///<reference types="cypress" />
-import { getRandomNumber } from "/cypress/support/utils.js";
-import { login } from "/cypress/support/shared.js";
+///<reference types='cypress' />
+import { getRandomNumber } from '/cypress/support/utils.js';
+import { login } from '/cypress/support/shared.js';
 
-function selectRandomArticle() {
+function selectFirstArticle() {
   waitForLoadArticleList();
-  const random_article_title = getRandomNumber(0, 9);
-  cy.get("@articleList")
-    .find("article-preview")
-    .should("have.length", 10)
-    .eq(random_article_title)
-    .as("randomArticle");
+  cy.get('@articleList')
+    .find('article-preview')
+    .should('have.length', 10)
+    .eq(0)
+    .as('randomArticle');
 }
 function waitForLoadArticleList() {
-  cy.get("@articleList")
-    .find("article-preview")
-    .should("not.contain", "Loading");
+  cy.get('@articleList')
+    .find('article-preview')
+    .should('not.contain', 'Loading');
 }
 
 function openGlobalFeed() {
-  cy.get(".feed-toggle a.nav-link[ng-class*=all]").click();
+  cy.get('.feed-toggle a.nav-link[ng-class*=all]').click();
 }
 
-describe("Social", () => {
+function checkActiveYourFeed() {
+  cy.get('.feed-toggle a.nav-link.active[ng-class*=feed]').should('be.exist');
+}
+
+describe('Social', () => {
   beforeEach(() => {
-    cy.visit("/");
-    cy.get(".navbar").should("be.visible").as("appHeader");
+    cy.visit('/');
+    cy.get('.navbar').should('be.visible').as('appHeader');
     login();
-    cy.get("article-list").as("articleList");
-    cy.location("hash").should("eq", "#/");
+    cy.get('article-list').as('articleList');
+    cy.location('hash').should('eq', '#/');
   });
 
-  it("should do subscribe to user", () => {
-    openGlobalFeed();
-    selectRandomArticle();
-    cy.get("@randomArticle").find(".author").as("describedAuthor").click();
-    cy.get("@describedAuthor")
-      .invoke("text")
-      .invoke("trim")
-      .as("describedNameAuthor");
+  it('should do subscribe to user', () => {
 
-    cy.get("@describedNameAuthor").then((element) => {
+    checkActiveYourFeed();
+    
+    openGlobalFeed();
+
+    selectFirstArticle();
+    
+    cy.get('@randomArticle').find('.author').as('describedAuthor').click();
+    cy.get('@describedAuthor')
+      .invoke('text')
+      .invoke('trim')
+      .as('subscribedAuthorName');
+
+    cy.get('@subscribedAuthorName').then((element) => {
       cy.log(element);
       console.log(element);
 
-      cy.get("follow-btn button")
-        .should("contain", "Follow")
+      cy.get('follow-btn button')
+        .should('contain', 'Follow')
         .click()
-        .as("followButton");
-      cy.get("@followButton").should("contain", "Unfollow");
+        .as('followButton');
+      // TODO:  improve css
+      cy.get('@followButton').should('contain', 'Unfollow');
 
-      cy.get("@appHeader")
-        .find("[show-authed=true] [ui-sref='app.home']")
+      cy.get('@appHeader')
+        .find('[show-authed=true] [ui-sref="app.home"]')
         .click();
 
-      cy.get(".home-page").should("contain", element);
+      cy.get('.home-page').should('contain', element);
+
     });
   });
 });
