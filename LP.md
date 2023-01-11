@@ -35,7 +35,8 @@ h1.title {
 ```text circle hello_from_anton
 {
   "time": 1.7,
-  "video": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/hello_from_anton.mp4"
+  "type": "video/webm",
+  "video": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/hello_from_anton.webm"
 }
 
 Привет, [Anton](https://t.me/breslavsky_anton) на связи 🤙
@@ -132,10 +133,12 @@ h1.title {
 14. Визуальное тестирование через Cypress
 15. Отладка тестов в Visual Code
 16. Оформляем проект-портфолио на GitHub
+17. Кроссбраузерное тестирование
+18. Тегирование тестов
 
 ## 🧘 Путь джедая
 
-17. RPA через Cypress & Tag UI
+19. RPA через Cypress & Tag UI
 
 # Ручное тестирование
 

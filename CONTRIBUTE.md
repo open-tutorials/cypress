@@ -6,7 +6,12 @@
 
 Для сжатия скринкастов в MP4:
 ```bash
-ffmpeg -i my_video.mov -vcodec h264 -acodec mp2 my_video.mp4
+ffmpeg -i hello_from_anton.mp4 -vcodec h264 -acodec mp2 hello_from_anton1.mp4
+
+ffmpeg -i hello_from_anton.mp4 -vcodec libx265 -crf 28 -acodec mp2 hello_from_anton2.mp4
+
+ffmpeg -i hello_from_anton.mp4 -b:v 750k -quality good -speed 0 -crf 33 \
+-c:v libvpx-vp9 -c:a libopus hello_from_anton.webm
 ```
 
 Для конвертации видео в GIF:

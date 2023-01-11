@@ -16,7 +16,7 @@ it('should do check QR code', () => {
 });
 
 it.only('should do book delivery', () => {
-    
+
     cy.get('section[data-cy=slow-ui]').should('be.visible').as('section');
 
     cy.get('@section')

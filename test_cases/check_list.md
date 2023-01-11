@@ -56,6 +56,28 @@ This file contains check list for [project](https://demo.realworld.io/)
 - [ ] Confirmation message is displayed for any kind of update and delete operation
 - [ ] Scroll bar appears only if required
 
+# Security
+
+- [ ] HTTPs is used
+- [ ] Important information like password displays in encrypted format
+- [ ] If password is changed user can't login with old password
+- [ ] Error messages don't display any important information
+- [ ] Cookies don't store passwords
+
+# Cross browser testing
+
+- [ ] Chrome >= 60
+- [ ] FireFox >= ?
+- [ ] Safari >= ?
+- [ ] Opera >= ?
+- [ ] Yandex >= ?
+
+# Cross device testing
+
+- [ ] iPhone >= 6
+  - [ ] Chrome
+  - [ ] Safari
+
 # Features
 
 ## Sign up
@@ -174,11 +196,3 @@ This file contains check list for [project](https://demo.realworld.io/)
 - [ ] Open settings form
 - [ ] Edit form
 - [ ] Check new settings data
-
-# Security
-
-- [ ] HTTPs is used
-- [ ] Important information like password displays in encrypted format
-- [ ] If password is changed user can't login with old password
-- [ ] Error messages don't display any important information
-- [ ] Cookies don't store passwords
