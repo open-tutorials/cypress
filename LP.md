@@ -35,7 +35,7 @@ h1.title {
 ```text circle hello_from_anton
 {
   "time": 1.7,
-  "type": "video/webm",
+  "type": "video/webm; codecs=vp9,vorbis",
   "video": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/hello_from_anton.webm"
 }
 
