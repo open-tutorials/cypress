@@ -34,7 +34,11 @@
       "title": "Туториал: первый полет на Cypress",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/cypress_test_flight.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто хочет начать писать автоматизированные тесты. Создадим чистый Java Script проект на Node.js. Установим Cypress через менеджер пакетов npm. Напишем авто-тест подписки на рассылку Cypress.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/test_flight/thumbnail.jpg"
+      }
     },
     "best_selectors": {
       "title": "Туториал: находим лучшие селекторы для UI элементов",
