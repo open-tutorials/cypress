@@ -31,9 +31,9 @@ hello_from_anton_6.webm
 Для конвертации видео в GIF:
 
 ```bash
-ffmpeg -i delivery_case.mov \
--vf "fps=10,scale=1600:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=32[p];[s1][p]paletteuse=dither=bayer" \
-delivery_case.gif
+ffmpeg -i articles_response.mov \
+-vf "fps=10,scale=1340:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=16[p];[s1][p]paletteuse=dither=bayer" \
+articles_response.gif
 ```
 
 # Диаграммы

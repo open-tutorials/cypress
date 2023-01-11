@@ -97,20 +97,33 @@ sequenceDiagram
     Program B ->> Program A: Return results
 ```
 
-**Фронтент** — программа запущенная на клиенте, **Бекенд** — на сервере.
+**Фронтент** — программа запущенная на клиенте в браузере, **Бекенд** — на веб-сервере.
 
 ```mermaid
 sequenceDiagram
     Front-end ->> Back-end: Request to /articles
     Back-end ->> Front-end: Response
-    Note over Front-end, Back-end: API over HTTP
+    Note over Front-end, Back-end: API over HTTP over TCP/IP
 ```
 
-HTTP — нужен, т.к. программы запущены на разных компьютерах.
+**TCP/IP** — т.к. программы запущены на разных компьютерах.
 
-**API** — это канал через который программы общаются.
+**HTTP** — потому что исторически браузер и веб-сервер используют этот протокол в Интернете.
 
-**Контракт на API** — это набор правил для общения.
+```markdown quiz have_we_comments_count horizontal
+❓ Это плохой API?
+
+- [ ] 1
+- [ ] 2
+- [ ] 3
+
+
+<img class="cornered" alt="Плохой API" width="400" src="assets/test_api/bad.jpg">
+```
+
+***
+
+<mark>Зафиналим: API = способ + правила общения</mark>
 
 Как показывает [мой опыт](https://habr.com/ru/post/599127/), даже зрелые разработчики не всегда понимают, что такое **контракт на API.**
 
@@ -144,11 +157,141 @@ HTTP — нужен, т.к. программы запущены на разны�
 
 </details>
 
+* ❓ Как был создан файл `openapi.yml`?
 * ❓ Что такое `YAML`?
 * ❓ Что такое `required`?
 * ❓ Что такое `default`?
 * ❓ Что такое `enum`?
 * ❓ Мы уже можем сделать запрос к серверу с `sorting`?
 
-https://www.chaijs.com/api/bdd/
+***
 
+- [x] Найди описание ответа от сервера на данный запрос.
+- [x] Проинспектируй модель данных.
+- [x] Найди описание модели `Articles` в `YAML`
+
+<details>
+  <summary>Вот так вот 📹</summary>
+
+<img class="cornered" alt="Как использовать Swagger" 
+     width="670" height="605" src="assets/test_api/articles_response.gif">
+</details>
+
+- [x] Добавь в DTO `Articles` новое поле `commentsCount`
+- [x] Проверь, что в Swagger UI контракт обновлен.
+
+* ❓ Какого типа будет поле?
+* ❓ Что такое DTO?
+* ❓ Что такое `$ref` в YAML?
+
+```markdown quiz have_we_comments_count horizontal
+❓ На сервере это поле уже появилось?
+
+- [ ] Да
+- [x] Нет
+
+
+Конечно нет! Мы только добавили поле в контракт.
+
+Теперь нужно идти к бекенд разработчикам и:
+* Согласовать изменения в контракте.
+* Дождаться обновления кода бекенда.
+```
+
+***
+
+## 3. Тестирование ендпойнта
+
+- [x] Добавь новый файл теста `test-api.spec.js` с содержимым:
+
+```js
+///<reference types="cypress" />
+import { getRandomNumber } from '/cypress/support/utils';
+
+const BACKEND_BASE_URL = 'https://api.realworld.io/';
+const DEFAULT_BASE_URL = Cypress.config('baseUrl');
+
+before(() => {
+    cy.log('set base url to backend');
+    Cypress.config('baseUrl', BACKEND_BASE_URL);
+});
+
+after(() => {
+    cy.log('reset base url');
+    Cypress.config('baseUrl', DEFAULT_BASE_URL);
+});
+
+describe('API', () => {
+
+    describe('Articles', () => {
+
+        it('should do retrieve articles list', () => {
+
+            cy.request('GET', '/api/articles')
+                .then(({ status, body }) => {
+                    // checking HTTP status
+                    expect(status).to.eq(200);
+
+                    // checking base response
+                    expect(body).to.have.all.keys('articles', 'articlesCount');
+
+                    // checking random article
+                    const rnd = getRandomNumber(0, 9);
+                    cy.log(`checking ${rnd} article`);
+                    const article = body.articles[rnd];
+                    expect(article).to.have.all.keys(
+                        'slug',
+                        'title',
+                        'createdAt',
+                        'author',
+                        'description',
+                        'tagList',
+                        'body',
+                        'favorited',
+                        'favoritesCount',
+                        'updatedAt'
+                    );
+                    expect(article.slug).to.not.be.empty;
+                    expect(article.title).to.not.be.empty;
+                    expect(article.createdAt).to.not.be.empty;
+                    expect(article.author).to.not.be.empty;
+                    expect(article.description).to.not.be.empty;
+                    expect(article.body).to.not.be.empty;
+
+                    expect(article.favorited).to.be.a('boolean');
+                    expect(article.favoritesCount).to.be.a('number');
+
+                    // checking author
+                    const { author } = article;
+                    expect(author).to.have.all.keys('bio', 'following', 'image', 'username');
+                    expect(author.following).to.be.a('boolean');
+
+                    expect(author.username).to.not.be.empty;
+                    expect(author.image).to.match(/^https/);
+
+                    debugger;
+                });
+
+        });
+
+    });
+
+});
+```
+
+- [x] Сделай так, что бы тест заработал.
+- [x] Проверь, что тест 🟢 проходит.
+
+* ❓ За что отвечает `Cypress.config`?
+* ❓ Зачем нужны хуки `before` и `after`?
+
+***
+
+## 4. Инспектирование ответа от API
+
+- [x] Открой инструменты разработчика в Сypress.
+- [x] Перезапусти тест.
+
+`expect` – это супер функция 
+
+https://www.chaijs.com/api/bdd/

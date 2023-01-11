@@ -1,12 +1,11 @@
-import { getRandomNumber } from '/cypress/support/utils';
-
 ///<reference types="cypress" />
+import { getRandomNumber } from '/cypress/support/utils';
 
 const BACKEND_BASE_URL = 'https://api.realworld.io/';
 const DEFAULT_BASE_URL = Cypress.config('baseUrl');
 
 before(() => {
-    cy.log('set base url for backend');
+    cy.log('set base url to backend');
     Cypress.config('baseUrl', BACKEND_BASE_URL);
 });
 
