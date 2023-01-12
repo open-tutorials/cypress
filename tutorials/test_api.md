@@ -313,13 +313,13 @@ export function getRandomNumber(min, max) {
 
 ## +5. Инспектирование ответа от API
 
-А сейчас, я еще сэкономлю тебе кучу времени в будущем!
+А сейчас, я еще **сэкономлю тебе кучу времени** в будущем!
 
 - [x] Открой инструменты разработчика в Сypress.
 - [x] Перезапусти тест.
 - [x] Проинспектируй код теста в отладчике.
 
-<video width="600px" controls>
+<video class="cornered" width="600px" controls>
   <source src="assets/test_api/use_debugger.mp4" type="video/mp4">
 </video>
 

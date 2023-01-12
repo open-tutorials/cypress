@@ -5,7 +5,7 @@
 # Сжатие изображений
 
 ```bash
-convert thumbnail.jpg -quality 80 thumbnail.jpg
+convert thumbnail.png -quality 80 thumbnail.jpg
 ```
 
 # Скринкасты и GIF

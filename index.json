@@ -88,7 +88,13 @@
       "title": "Тестируем API в Cypress",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/test_api.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто хочет научиться выполнять HTTP запросы в Cypress. Научимся использовать Swagger и Postman. Научимся тестировать ответы API бекенда в Cypress. Научимся делать логин пользователя через API.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/test_api/thumbnail.jpg",
+        "keywords": "Swagger, Postman, Test API",
+        "site": "Туториалы по Cypress"
+      }
     },
     "install_node_js": {
       "title": "Установка Node.js",
