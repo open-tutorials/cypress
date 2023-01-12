@@ -18,6 +18,7 @@
   "homepage": "https://github.com/breslavsky/cypress-tutorial#readme",
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
+    "chai": "^4.3.7",
     "cypress": "~9.7.0",
     "node-wget": "^0.4.3",
     "qr-util": "^1.0.1",

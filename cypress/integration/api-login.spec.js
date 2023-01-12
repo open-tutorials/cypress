@@ -28,8 +28,6 @@ it('should do API login', () => {
             });
         });
 
-        cy.visit('/');
-
     cy.location('hash').should('eq', '#/');
     cy.get('.navbar').should('be.visible')
         .should('contain.text', username);
