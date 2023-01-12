@@ -437,7 +437,7 @@ expect(article.updatedAt).match(DATE_FORMAT, 'wrong updated at date format');
 ```text
 ↓ Request
 POST https://api.realworld.io/api/users/login
-{ "user": { "email": "?", "password": "?" }
+{ "user": { "email": "?", "password": "?" } }
 
 ↓ Response
 {
