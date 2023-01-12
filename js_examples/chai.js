@@ -5,7 +5,7 @@ const article = {
     title: 'Test article',
     createdAt: '10-01-2022',
     description: 'Some article key topics',
-    tagList: ['tag1', 'tag2'],
+    tagList: ['tagX', 'tagY', 'tagZ'],
     body: 'Some article content',
     favorited: false,
     favoritesCount: 5,
