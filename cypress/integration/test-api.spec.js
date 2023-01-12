@@ -22,6 +22,8 @@ describe('API', () => {
 
             cy.request('GET', '/api/articles')
                 .then(({ status, body }) => {
+                    debugger;
+
                     // checking HTTP status
                     expect(status).to.eq(200);
 
@@ -61,8 +63,6 @@ describe('API', () => {
 
                     expect(author.username).to.not.be.empty;
                     expect(author.image).to.match(/^https/);
-
-                    debugger;
                 });
 
         });

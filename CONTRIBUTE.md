@@ -12,7 +12,7 @@ convert thumbnail.jpg -quality 80 thumbnail.jpg
 
 Для сжатия скринкастов в MP4:
 ```bash
-ffmpeg -i screen.mp4 -vcodec h264 -acodec mp2 screen.mp4
+ffmpeg -i use_debugger.mov -vcodec h264 -acodec mp2 use_debugger.mp4
 ```
 
 ## WebM

@@ -228,6 +228,8 @@ describe('API', () => {
 
             cy.request('GET', '/api_articles')
                 .then(({ status, body }) => {
+                    debugger;
+
                     // checking HTTP status
                     expect(status).to.eq(201);
 
@@ -267,8 +269,6 @@ describe('API', () => {
 
                     expect(author.username).to.not.be.empty;
                     expect(author.image).to.match(/^https/);
-
-                    debugger;
                 });
 
         });
@@ -319,7 +319,11 @@ export function getRandomNumber(min, max) {
 - [x] Перезапусти тест.
 - [x] Проинспектируй код теста в отладчике.
 
-<!-- <video> -->
+<video width="600px" controls>
+  <source src="assets/test_api/use_debugger.mp4" type="video/mp4">
+</video>
+
+* ❓ Что позволяет сделать `debugger` в коде?
 
 ***
 
