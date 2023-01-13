@@ -4,6 +4,7 @@ it('should do subscribe to news letter', () => {
 
     cy.visit('https://www.cypress.io/');
     cy.get('.footer-form > .border').click();
+    cy.wait(1000);
     cy.get('#subscribe-email').type('test@test.ru');
     cy.get('.flex > .block').click();
     cy.get('.border-t > .border').click();

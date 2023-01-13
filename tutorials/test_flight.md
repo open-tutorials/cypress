@@ -40,6 +40,10 @@
 
 # 🔢 Шаги
 
+> ❗ Внимание! Cypress обновил свой сайт после выхода видео.
+> 
+> Записанное видео, немного не соответствует туториалу и будет скоро перезаписано.
+
 Если ты любишь сначала смотреть, а потом делать [📹 Видео-туториал](https://youtu.be/lqqlaOuxrpM)
 
 ## +1. Инициализируем проект
@@ -229,12 +233,12 @@ cy.visit('https://www.cypress.io/');
 - [x] Прокрути страницу в самый низ до кнопки **Subscribe to our newsletter.**
 - [x] Активируй **selector playground.**
 
-<img class="cornered" width="200" src="assets/selector_playground.png">
+<img class="cornered" width="200" height="110" src="assets/selector_playground.png">
 
 - [x] Наведи курсор на кнопку.
 - [x] Скопируй код селектора.
 
-<img class="cornered" width="564" src="assets/test_flight/copy_selector.png">
+<img class="cornered" width="564" height="91" src="assets/test_flight/copy_selector.png">
 
 - [x] Обнови код теста:
 
@@ -258,6 +262,7 @@ it('should do subscribe to news letter', () => {
 
     cy.visit('https://www.cypress.io/');
     cy.get('.footer-form > .border').click();
+    cy.wait(1000);
     cy.get('#subscribe-email').type('test@test.ru');
 
 });
@@ -279,6 +284,7 @@ it('should do subscribe to news letter', () => {
 * ❓ Что такое `cy.get()`? ~"В конспект"
 * ❓ Что такое `#subscribe-email`?
 * ❓ Что такое `.type()`? ~"В конспект"
+* ❓ Что такое `cy.wait(1000)`?
 
 📹 [Мое объяснение](https://www.youtube.com/watch?v=l6qbqBR_zZc&t=1995)
 
@@ -296,6 +302,7 @@ it('should do subscribe to news letter', () => {
 
     cy.visit('https://www.cypress.io/');
     cy.get('.footer-form > .border').click();
+    cy.wait(1000);
     cy.get('#subscribe-email').type('test@test.ru');
     cy.get('.flex > .block').click();
     cy.get('.border-t > .border').click();
@@ -331,6 +338,7 @@ it('should subscribe to news letter', () => {
 
     cy.visit('https://www.cypress.io/');
     cy.get('.footer-form > .border').click();
+    cy.wait(1000);
     cy.get('#subscribe-email').type('test@test.ru');
     cy.get('.flex > .block').click();
     cy.get('.border-t > .border').click();
