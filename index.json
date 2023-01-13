@@ -61,7 +61,7 @@
       "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
       "meta": {
         "description": "Подойдет тем, кто хочет научиться писать авто-тесты на примере реального WEB-приложения. Опишем тест-кейсы в Markdown на основании спецификации на проект. Прокачаем твой Java Script для Cypress на конкретных примерах. Напишем тесты для регистрации, логина и выхода пользователя.",
-        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/best_selectors/thumbnail.jpg",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/test_mama_project/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
