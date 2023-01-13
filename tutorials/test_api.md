@@ -70,7 +70,7 @@
 
 ***
 
-- [x] Открой в новой вкладке браузера https://api.realworld.io/api/articles?limit=20&offset=0
+- [x] Открой в новой вкладке браузера https://api.realworld.io/api/articles?limit=10&offset=0
 - [x] Выполни данный запрос в Postman.
 
 <details>
@@ -81,7 +81,7 @@
 
 </details>
 
-* ❓ За что отвечают параметры `limit=20` и `offset=0`?
+* ❓ За что отвечают параметры `limit=10` и `offset=0`?
 
 ***
 
@@ -498,6 +498,7 @@ export function setJwtToken(window, token) {
 
 ```js
 import meUser from '/cypress/fixtures/me-user.json';
+import { setJwtToken } from '/cypress/support/utils';
 
 it('should do publish article', () => {
   

@@ -46,43 +46,85 @@
       "title": "Туториал: находим лучшие селекторы для UI элементов",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/best_selectors.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто хочет писать устойчивые, понятные и короткие селекторы в авто-тестах. Напишем тесты регистрации и входа для веб-приложения на Cypress. Научимся находить и тестировать селекторы через инструменты разработчика Chrome. Изучим лучшие практики и анти-паттерны при составлении селекторов.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/best_selectors/thumbnail.jpg",
+        "keywords": "Cypress, Auto QA, Java Script",
+        "site": "Туториалы по Cypress"
+      }
     },
     "test_mama_project": {
       "title": "Туториал: тестируем мама проект на Cypress",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/test_mama_project.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто хочет научиться писать авто-тесты на примере реального WEB-приложения. Опишем тест-кейсы в Markdown на основании спецификации на проект. Прокачаем твой Java Script для Cypress на конкретных примерах. Напишем тесты для регистрации, логина и выхода пользователя.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/best_selectors/thumbnail.jpg",
+        "keywords": "Cypress, Auto QA, Java Script",
+        "site": "Туториалы по Cypress"
+      }
     },
     "my_first_refactor": {
       "title": "Туториал: мой первый рефактор в Cypress",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/my_first_refactor.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто хочет начать писать чистый код тестов на Cypress. Наведем чистоту в коде тестов проекта. Узнаем про базовый URL, хуки, алиасы, фикстуры в Cypress. Научимся писать функции на Java Script и использовать их в тестах.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/my_first_refactor/thumbnail.jpg",
+        "keywords": "Cypress, Auto QA, Java Script",
+        "site": "Туториалы по Cypress"
+      }
     },
     "fake_data": {
       "title": "Туториал: фейк дата в тестах",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/fake_data.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто хочет научиться генерировать и использовать фейковые данные. Узнаем про фейк данные и научимся использовать их в Cypress тестах. Опишем тест-кейсы в Markdown для добавления, удаления и редактирования статей в приложении блогов. Разберем и напишем оптимальный код с хуками, алиасами, функциями и т.д.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/fake_data/thumbnail.jpg",
+        "keywords": "Cypress, Auto QA, Java Script",
+        "site": "Туториалы по Cypress"
+      }
     },
     "deep_cypress": {
       "title": "Туториал: как устроен Cypress внутри",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/deep_cypress.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто хочет понять как работает Cypress. Проведем 10+ экспериментов в Cypress. Узнаем про: таумауты, стабы, триггеры, инвоукы, вьюпорты, врапы, промисы и т.д. Научимся делать 📸 скриншоты, читать и записывать файлы через Cypress. Сграбим данные пользователей с сайта через Cypress.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/deep_cypress/thumbnail.jpg",
+        "keywords": "Cypress, Auto QA, Java Script",
+        "site": "Туториалы по Cypress"
+      }
     },
     "finish_mama_project": {
       "title": "Туториал: как устроен Cypress внутри",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/finish_mama_project.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто хочет покрыть тестами целый проект на Cypress и добавить его к себе в портфолио. Напишем еще 10+ тестов для приложения блогов. Научимся делать декомпозицию UI. Закрепим скилл написания тест-кейсов в Markdown. Организуем код на проекте по феншую. В качестве бонуса: напишем скрипт загрузки файлов на JS.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/finish_mama_project/thumbnail.jpg",
+        "keywords": "Cypress, Auto QA, Java Script",
+        "site": "Туториалы по Cypress"
+      }
     },
     "fun_cases_in_cypress": {
       "title": "Туториал: прикольные кейсы",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/fun_cases.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто хочет познакомится с кейсам из жизни авто-тестировщика на Сypress. Научимся тестировать QR коды на Cypress. Научимся делать отладку приложения и тестов. Научимся перехватывать ошибки на сайте.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/fun_cases/thumbnail.jpg",
+        "keywords": "Cypress, Auto QA, Java Script",
+        "site": "Туториалы по Cypress"
+      }
     },
     "test_api": {
       "title": "Тестируем API в Cypress",
