@@ -32,7 +32,7 @@
     },
     "cypress_test_flight": {
       "title": "Туториал: первый полет на Cypress",
-      "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/cypress_test_flight.md",
+      "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/test_flight.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
       "meta": {

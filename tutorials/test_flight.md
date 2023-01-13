@@ -114,8 +114,8 @@
 <details>
   <summary>Почему мы используем Cypress 9, а не 12?</summary>
   
-* Твоя задача изучить основы, который не меняются от версии к версии.
-* Я отдельно научу тебя обновлять фреймворк до любой версии.
+* Твоя задача **изучить основы,** который **не меняются** от версии к версии.
+* Я отдельно **научу** тебя **обновлять фреймворк** до любой версии.
 </details>
 
 ### 🤷‍♂️ Зачем мне это?
@@ -181,7 +181,7 @@
 - [x] Создай файл `cypress/integration/hello-cypress.spec.js`:
 
 ```js
-it('should do open site', () => {
+it('should do subscribe to news letter', () => {
 
 cy.visit('https://www.cypress.io/');
 
@@ -224,51 +224,41 @@ cy.visit('https://www.cypress.io/');
 
 *****
 
-## +6. Перехват ошибок на сайте
+## +6. Открываем форму подписки
 
-На самом сайте Cypress есть ошибка в коде, которая мешает нашему тесту успешно выполниться.
-
-Что бы наш тест проходил, нужно перехватить эту ошибку.
-
-- [x] Добавь в начало файла теста:
-
-```js
-// only for cypress.io
-Cypress.on('uncaught:exception', () => false);
-```
-
-- [x] Отформатируй код и сохрани файл
-
-<details>
-  <summary>Не получается 📹</summary>
-
-<video width="600px" controls>
-  <source src="assets/test_flight/catch_exceptions.mp4" type="video/mp4">
-</video>
-</details>
-
-* ❓ Теперь тест проходит успешно?
-
-📹 [Мое объяснение](https://www.youtube.com/watch?v=l6qbqBR_zZc&t=1829)
-
-*****
-
-## +7. Вводим email для подписки
-
-- [x] Прокрути страницу до формы подписки на рассылку.
-- [x] Активируй **selector playground**.
+- [x] Прокрути страницу в самый низ до кнопки **Subscribe to our newsletter.**
+- [x] Активируй **selector playground.**
 
 <img class="cornered" width="200" src="assets/selector_playground.png">
 
-- [x] Наведи на поле ввода **email**.
+- [x] Наведи курсор на кнопку.
+- [x] Скопируй код селектора.
+
+<img class="cornered" width="564" src="assets/test_flight/copy_selector.png">
+
+- [x] Обнови код теста:
+
+```js
+it('should do subscribe to news letter', () => {
+
+    cy.visit('https://www.cypress.io/');
+    cy.get('.footer-form > .border').click();
+
+});
+```
+
+## +7. Заполняем форму подписки
+
+- [x] Так же через **selector playground** наведи курсор на поле **Email.**
 - [x] Скопируй код селектора.
 - [x] Обнови код теста:
 
 ```js
 it('should do subscribe to news letter', () => {
 
-  cy.visit('https://www.cypress.io/');
-  cy.get('#input-footer-email').type('test@test.ru');
+    cy.visit('https://www.cypress.io/');
+    cy.get('.footer-form > .border').click();
+    cy.get('#subscribe-email').type('test@test.ru');
 
 });
 ```
@@ -287,24 +277,28 @@ it('should do subscribe to news letter', () => {
 
 * ❓ Что происходит в Chrome?
 * ❓ Что такое `cy.get()`? ~"В конспект"
-* ❓ Что такое `#input-footer-email`?
+* ❓ Что такое `#subscribe-email`?
 * ❓ Что такое `.type()`? ~"В конспект"
 
 📹 [Мое объяснение](https://www.youtube.com/watch?v=l6qbqBR_zZc&t=1995)
 
 *****
 
-## +8. Подписываемся на рассылку
+## +8. Отправляем форму подписки
 
-- [x] Найди селектор для кнопки **Subscribe**.
+- [x] Найди селектор для:
+  * галочки — **I agree to receive emails** 
+  * кнопки — **Subscribe today**
 - [x] Обнови код теста:
 
 ```js
 it('should do subscribe to news letter', () => {
 
-  cy.visit('https://www.cypress.io/');
-  cy.get('#input-footer-email').type('test@test.ru');
-  cy.get('.styled__Submit-sc-10l91w3-12').click();
+    cy.visit('https://www.cypress.io/');
+    cy.get('.footer-form > .border').click();
+    cy.get('#subscribe-email').type('test@test.ru');
+    cy.get('.flex > .block').click();
+    cy.get('.border-t > .border').click();
 
 });
 ```
@@ -329,16 +323,18 @@ it('should do subscribe to news letter', () => {
 
 ## +9. Проверяем подписку
 
-- [x] Найди селектор для элемента с сообщением **Thanks for submitting the form**.
+- [x] Найди селектор для элемента с сообщением **Thank you for subscribing!**
 - [x] Обнови код теста:
 
 ```js
 it('should subscribe to news letter', () => {
 
-  cy.visit('https://www.cypress.io/');
-  cy.get('#input-footer-email').type('test@test.ru');
-  cy.get('.styled__Submit-sc-10l91w3-12').click();
-  cy.get('.Subscribe__Label-sc-1hdnlrs-1').should('have.text', 'Thanks for submitting the form.');
+    cy.visit('https://www.cypress.io/');
+    cy.get('.footer-form > .border').click();
+    cy.get('#subscribe-email').type('test@test.ru');
+    cy.get('.flex > .block').click();
+    cy.get('.border-t > .border').click();
+    cy.get('.leading-36px').should('have.text', 'Thank you for subscribing!');
 
 });
 ```
@@ -352,13 +348,13 @@ it('should subscribe to news letter', () => {
 </video>
 </details>
 
-* ❓ Что такое `.Subscribe__Label-sc-1hdnlrs-1`?
+* ❓ Что такое `.leading-36px`?
 * ❓ Что такое `.should('have.text', '?')`? ~"В конспект"
 
 ### 🤷‍♂️ Зачем мне это?
 
-❗ Тесты не просто должны **кликать** по кнопкам!
-
+> ❗ Тесты не просто должны кликать по кнопкам!
+> 
 > Задача тестов — **проверять правильность** работы программы!
 > 
 > Кликнул → проверь результат! ~"В конспект"
@@ -407,8 +403,8 @@ it('should subscribe to news letter', () => {
 - [x] Сломай сообщение в коде:
 
 ```diff
-- 'Thanks for submitting the form.'
-+ 'Thanks for submitting the form!!!'
+- 'Thank you for subscribing!'
++ 'Thank you for subscribing!!!'
 ```
 - [x] Снова запусти Cypress `npm test`
 

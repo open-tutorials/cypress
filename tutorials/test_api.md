@@ -310,6 +310,13 @@ describe('API', () => {
 + cy.request('GET', '/api/articles')
 ```
 
+- [x] Исправь код ответа:
+
+```diff
+- expect(status).to.eq(201)
++ expect(status).to.eq(200)
+```
+
 - [x] Создай файл `~/cypress/support/utils.js`
 
 ```js
