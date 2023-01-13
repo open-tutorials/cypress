@@ -4,7 +4,13 @@
       "title": "Туториалы по IT навыкам: Cypress, Java Script",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/LP.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
+      "meta": {
+        "description": "Уникальный практический и 🔥 бесплатный курс по Cypress с живой обратной связью от ментора. Идеально подходит для **начала изучения** программирования с нуля.",
+        "thumbnail": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/home/thumbnail.jpg",
+        "keywords": "Cypress, Auto QA, Java Script",
+        "site": "Туториалы по Cypress"
+      }
     },
     "js_mentor": {
       "title": "Менторство по Java Script",
