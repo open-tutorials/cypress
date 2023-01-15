@@ -120,7 +120,7 @@ describe('API', () => {
 
     });
 
-    it.only('should do get logged me user', () => {
+    it('should do get logged me user', () => {
 
         cy.get('@token')
             .should('not.be.empty')
