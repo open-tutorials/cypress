@@ -127,7 +127,7 @@
       }
     },
     "fun_cases_in_cypress": {
-      "title": "Туториал: прикольные кейсы",
+      "title": "Туториал: забавные кейсы в Cypress",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/fun_cases.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
@@ -139,7 +139,7 @@
       }
     },
     "test_api": {
-      "title": "Тестируем API в Cypress",
+      "title": "Туториал: тестируем API в Cypress",
       "source": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/tutorials/test_api.md",
       "baseUrl": "https://github.com/breslavsky/hello-cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main",
