@@ -251,29 +251,3 @@ cy.get('stop-button').shadow().find('button.stop').click();
 # +📹 Видео-разбор
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/laXEn6chiEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-# Фидбек пожалуйста 🙏
-
-? Полезный материал ?
-
-* 🤩 Очень полезный материал
-* 😃 В целом полезный
-* 😐 Возможно что-то пригодится
-* 😒 Нет ничего полезного
-* 😬 Абсолютно бесполезно
-
-? Все ли было понятно ?
-
-* 🤩 Все понятно на 100%
-* 😃 В целом все понятно
-* 😐 Что-то понятно, что-то нет
-* 😒 Понял только малую часть
-* 😬 Ничего не понял
-
-? Как тебе такой формат туториала ?
-
-* 🤩 Очень удобно
-* 😃 Мне понравилось
-* 😐 Нормально
-* 😒 Не удобно
-* 😬 Ужасно
