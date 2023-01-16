@@ -159,11 +159,12 @@ sequenceDiagram
   in: query
   description: How to sort results
   required: false
-  type: string
-  default: 'by_date_desc'
-  enum:
-    - 'by_date_desc'
-    - 'mostly_liked'
+  schema:
+    type: string
+    default: 'by_date_desc'
+    enum:
+        - 'by_date_desc'
+        - 'mostly_liked'
 ```
 - [x] Проверь, что в Swagger UI параметр отразился.
 
