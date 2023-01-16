@@ -178,7 +178,7 @@
 ## 3. Твой первый баг-репорт
 
 - [x] В новой вкладке снова открой **Markdown** редактор https://markdownlivepreview.com/ 
-- [x] Скопируйте в него исходное содержимое [примера баг-репорта](https://raw.githubusercontent.com/breslavsky/hello-cypress/main/artefacts/bug_report.md)
+- [x] Скопируйте в него исходное содержимое [примера баг-репорта](https://raw.githubusercontent.com/open-tutorials/cypress/main/artefacts/bug_report.md)
 
 ***
 

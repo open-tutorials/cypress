@@ -363,7 +363,7 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 
 # 👨‍🎓 Чему ты научился
 
-```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/test_mama_project.mm
+```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/test_mama_project.mm
 
 ```
 

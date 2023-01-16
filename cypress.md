@@ -64,7 +64,7 @@
 
 
 { 
-  "assetsUrl": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets",
+  "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets",
   "tutorials": [
     { "slug": "cypress_test_flight", "thumbnail": "test_flight", "title": "Первый полет на Cypress" },
     { "slug": "best_selectors", "thumbnail": "best_selectors", "title": "Находим лучшие селекторы" },

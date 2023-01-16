@@ -92,15 +92,15 @@ This file contains test cases for [Conduit](https://demo.realworld.io/) project.
 ручками, но ты же девелопер 🧑‍💻
 
 **Задача:** загрузить
-файлы [register_user.md](https://raw.githubusercontent.com/breslavsky/hello-cypress/main/test_cases/register_user.md)
-и [login_user.md](https://raw.githubusercontent.com/breslavsky/hello-cypress/main/test_cases/login_user.md)
+файлы [register_user.md](https://raw.githubusercontent.com/open-tutorials/cypress/main/test_cases/register_user.md)
+и [login_user.md](https://raw.githubusercontent.com/open-tutorials/cypress/main/test_cases/login_user.md)
 автоматически.
 
 - [x] Установи wget `npm i node-wget --save-dev`
 - [x] Установи **базовый URL** в терминале, что бы не повторять его в командах:
 
 ```bash
-BASE_URL=https://raw.githubusercontent.com/breslavsky/hello-cypress/main
+BASE_URL=https://raw.githubusercontent.com/open-tutorials/cypress/main
 ```
 
 - [x] Проверь, что **переменная окружения** установлена:
@@ -214,7 +214,7 @@ for (const line of lines) {
 - [x] Запусти в терминале:
 
 ```bash
-BASE_URL=https://raw.githubusercontent.com/breslavsky/hello-cypress/main node download.js
+BASE_URL=https://raw.githubusercontent.com/open-tutorials/cypress/main node download.js
 ```
 
 - [x] Проверь, что все файлы из `mama_files.txt` загрузились.

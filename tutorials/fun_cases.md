@@ -16,7 +16,7 @@
 * Ты загрузил тестовое приложение в папку `~/apps`
 
 ```bash
-npx wget -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/main/apps/fun-cases.html
+npx wget -d apps/ https://raw.githubusercontent.com/open-tutorials/cypress/main/apps/fun-cases.html
 ```
 
 # 🔢 Кейсы

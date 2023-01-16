@@ -51,7 +51,7 @@
 - [x] Выполни команду:
 
 ```bash
-npx wget -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/main/apps/deep-cypress.html
+npx wget -d apps/ https://raw.githubusercontent.com/open-tutorials/cypress/main/apps/deep-cypress.html
 ```
 
 - [x] Проверь, что появился файл `~/apps/deep-cypress.html`

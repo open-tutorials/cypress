@@ -36,7 +36,7 @@ h1.title {
 {
   "time": 1.7,
   "type": "video/webm; codecs=vp9,vorbis",
-  "video": "https://raw.githubusercontent.com/breslavsky/hello-cypress/main/assets/hello_from_anton.webm"
+  "video": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/hello_from_anton.webm"
 }
 
 Привет, [Anton](https://t.me/breslavsky_anton) на связи 🤙
@@ -90,27 +90,27 @@ h1.title {
 <details>
   <summary>Syllabus – учебный план&nbsp;<img width="18" height="18" src="assets/icons/syllabus.svg"></summary>
 
-```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/test_flight.mm
+```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/test_flight.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/best_selectors.mm
+```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/best_selectors.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/test_mama_project.mm
+```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/test_mama_project.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/my_first_refactor.mm
+```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/my_first_refactor.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/fake_data.mm
+```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/fake_data.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/deep_cypress.mm
+```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/deep_cypress.mm
 
 ```
 

@@ -110,7 +110,7 @@ cy.get('form.login button[type=submit]').click();
 - [x] В терминале выполни команду:
 
 ```bash
-npx wget -d apps/ https://raw.githubusercontent.com/breslavsky/hello-cypress/main/apps/tesla.html
+npx wget -d apps/ https://raw.githubusercontent.com/open-tutorials/cypress/main/apps/tesla.html
 ```
 
 - [x] Проверь, что появился файл `~/apps/tesla.html`
@@ -501,7 +501,7 @@ cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права з�
 
 # 👨‍🎓 Чему ты научился
 
-```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/best_selectors.mm
+```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/best_selectors.mm
 
 ```
 
