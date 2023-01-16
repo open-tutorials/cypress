@@ -15,6 +15,8 @@
 * Ты установил Tiny Web Server.
 * Ты загрузил тестовое приложение в папку `~/apps`
 
+Если забыл, глянь в наш [первый туториал](https://www.epic1h.com/cypress_test_flight#1-инициализируем-проект)
+
 ```bash
 npx wget -d apps/ https://raw.githubusercontent.com/open-tutorials/cypress/main/apps/fun-cases.html
 ```
