@@ -506,7 +506,7 @@ cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права з�
 
 # 👨‍🎓 Чему ты научился
 
-```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/best_selectors.mm
+```mermaid /syllabus/best_selectors.mm
 
 ```
 

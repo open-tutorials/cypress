@@ -90,27 +90,27 @@ h1.title {
 <details>
   <summary>Syllabus – учебный план&nbsp;<img width="18" height="18" src="assets/icons/syllabus.svg"></summary>
 
-```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/test_flight.mm
+```mermaid /syllabus/test_flight.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/best_selectors.mm
+```mermaid /syllabus/best_selectors.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/test_mama_project.mm
+```mermaid /syllabus/test_mama_project.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/my_first_refactor.mm
+```mermaid /syllabus/my_first_refactor.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/fake_data.mm
+```mermaid /syllabus/fake_data.mm
 
 ```
 
-```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/deep_cypress.mm
+```mermaid /syllabus/deep_cypress.mm
 
 ```
 
