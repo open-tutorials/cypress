@@ -266,3 +266,7 @@ Cypress.on('uncaught:exception', () => false);
 * ❓ Теперь тест проходит успешно?
 
 📹 [Мое объяснение](https://www.youtube.com/watch?v=l6qbqBR_zZc&t=1829)
+
+# Фидбек пожалуйста 🙏
+
+<import from="/partials/tutorial_feedback.md"></import>

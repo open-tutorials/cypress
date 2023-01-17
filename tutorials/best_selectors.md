@@ -521,6 +521,10 @@ cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права з�
 
 📹 [Мой разбор](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=3893)
 
+# Фидбек пожалуйста 🙏
+
+<import from="/partials/tutorial_feedback.md"></import>
+
 # 📹 Видео-ответы
 
 1. [Зачем тестировщику доступ к исходному коду проекта?](https://www.youtube.com/watch?v=88CHSU2iI7M&t=381&list=PL1W_vbf7JRLDqwf56BkD44yGYbtDaK9Ak)

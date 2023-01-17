@@ -397,3 +397,7 @@ cy.get('@myArticles').contains(article.title)
 <iframe src="https://giphy.com/embed/VhWVAa7rUtT3xKX6Cd" 
   width="480" height="360" frameBorder="0" class="giphy-embed"></iframe>
 </details>
+
+# Фидбек пожалуйста 🙏
+
+<import from="/partials/tutorial_feedback.md"></import>

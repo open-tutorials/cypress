@@ -382,5 +382,8 @@ export function getRandomNumber(min, max) {
   width="480" height="282" frameBorder="0" class="giphy-embed"></iframe>
 </details>
 
-
 Еще больше туториалов 👉 https://t.me/epic_one_hour 
+
+# Фидбек пожалуйста 🙏
+
+<import from="/partials/tutorial_feedback.md"></import>

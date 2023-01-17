@@ -1088,3 +1088,7 @@ cy.get('.posts a').eq(rnd).click();
 <iframe src="https://giphy.com/embed/BbJdwrOsM7nTa"
 width="480" height="411" frameBorder="0" class="giphy-embed"></iframe>
 </details>
+
+# Фидбек пожалуйста 🙏
+
+<import from="/partials/tutorial_feedback.md"></import>
