@@ -448,48 +448,11 @@ it('should subscribe to news letter', () => {
 
 # Фидбек пожалуйста 🙏
 
-Полезный материал?
-
-```markdown poll is_useful_tutorial
-* 🤩 Очень полезный материал
-* 😃 В целом полезный
-* 😐 Возможно что-то пригодится
-* 😒 Нет ничего полезного
-* 😬 Абсолютно бесполезно
-
-
-**Спасибо за ответ!**
-```
-
-Все ли было понятно?
-
-```markdown poll is_clear_tutorial
-* 🤩 Все понятно на 100%
-* 😃 В целом все понятно
-* 😐 Что-то понятно, что-то нет
-* 😒 Понял только малую часть
-* 😬 Ничего не понял
-
-
-**Спасибо за ответ!**
-```
-
-Как тебе такой формат туториала?
-
-```markdown poll is_convenient_tutorial
-* 🤩 Очень удобно
-* 😃 Мне понравилось
-* 😐 Нормально
-* 😒 Не удобно
-* 😬 Ужасно
-
-
-**Спасибо за ответ!**
-```
+<import from="/partials/tutorial_feedback.md"></import>
 
 # 👨‍🎓 Чему ты научился
 
-```mermaid https://raw.githubusercontent.com/open-tutorials/cypress/main/syllabus/test_flight.mm
+```mermaid /syllabus/test_flight.mm
 ```
 
 # 🤩 Хочу еще
