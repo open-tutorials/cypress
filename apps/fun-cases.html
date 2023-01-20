@@ -91,8 +91,10 @@
     </section>
 
     <section data-cy="check-xlsx-report">
-        <a href="users_report.xlsx">Download in XLSX</a>
-        <table>
+        <a class="download" target="_blank" href="https://open-tutorials.github.io/cypress/assets/fun_cases/users_report.xlsx">Download in XLSX</a>
+        |
+        <button onclick="downloadReport()">Download in XLSX</button>
+        <table border="1">
             <thead>
                 <th>First Name</th>
                 <th>Last Name</th>
@@ -111,6 +113,12 @@
                 </tr>
             </tbody>
         </table>
+
+        <script>
+            function downloadReport() {
+                open('https://open-tutorials.github.io/cypress/assets/fun_cases/users_report.xlsx');
+            }
+        </script>
     </section>
 
 </body>

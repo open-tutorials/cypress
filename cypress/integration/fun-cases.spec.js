@@ -50,8 +50,59 @@ it('should do book delivery', () => {
         .should('contain.text', targetDate);
 });
 
-it('should do check report in XLSX', () => {
+describe.only('Report in XLSX', () => {
 
-    cy.get('section[data-cy=check-xlsx-report]').should('be.visible').as('section');
+    beforeEach(() => {
+
+        cy.get('section[data-cy=check-xlsx-report]').should('be.visible').as('section');
+
+    });
+
+    function checkSpreadsheet() {
+
+        cy.get('@spreadsheetInJson')
+            .should('not.be.empty')
+            .then(spreadsheet => {
+                const [sheet1] = spreadsheet;
+                expect(sheet1.name).be.eq('Sheet1');
+                const { data: rows } = sheet1;
+                expect(rows).eql([
+                    ['First Name', 'Last Name', 'Email'],
+                    ['Elon', 'Musk', 'elon@gmail.com'],
+                    ['Bill', 'Gates', 'bill@gmail.com']
+                ]);
+            });
+
+    }
+
+    it('should do check report by link', () => {
+
+        cy.get('@section').find('a.download')
+            .invoke('attr', 'href')
+            .then(href => {
+                cy.task('xlsxToJson', href).as('spreadsheetInJson');
+            });
+
+        checkSpreadsheet();
+    });
+
+    it('should do check report by button', () => {
+
+        cy.window().then((window) => {
+            cy.stub(window, 'open').callsFake((url) => {
+                return url;
+            }).as('replacedWindowOpen');
+        });
+
+        cy.get('@section').find('button').click();
+        cy.get('@replacedWindowOpen').should('have.been.called')
+            .its('returnValues.0')
+            .then(url => {
+                cy.task('xlsxToJson', url).as('spreadsheetInJson');
+            });
+
+        checkSpreadsheet();
+
+    });
 
 });

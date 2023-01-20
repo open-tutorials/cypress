@@ -21,6 +21,7 @@
     "chai": "^4.3.7",
     "cypress": "~9.7.0",
     "node-wget": "^0.4.3",
+    "node-xlsx": "^0.21.0",
     "qr-util": "^1.0.1",
     "tiny-server": "^1.1.0"
   }

@@ -270,3 +270,11 @@ Cypress.on('uncaught:exception', () => false);
 # Фидбек пожалуйста 🙏
 
 <import from="/partials/tutorial_feedback.md"></import>
+
+## +4. Проверка Excel файла
+
+- [x] Установи пакет для работы с XLSX файлами
+
+```bash
+npm i node-xlsx --save-dev
+```
