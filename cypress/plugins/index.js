@@ -32,7 +32,7 @@ module.exports = (on, config) => {
     },
 
     xlsxToJson: (url) => {
-      console.log('checking QR code from URL', url);
+      console.log('parse XLSX file to JSON', url);
       return new Promise((done) => {
         const tmpFile = path.join(TMP_FOLDER, 'file.xlsx');
         wget({ url, dest: tmpFile }, () => {
@@ -42,4 +42,5 @@ module.exports = (on, config) => {
       });
     }
   })
+
 };
