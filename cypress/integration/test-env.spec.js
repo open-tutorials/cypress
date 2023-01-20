@@ -13,4 +13,5 @@ describe('ENV', () => {
         console.log(Cypress.env());
         expect(Cypress.env('USER_LAST_NAME')).to.eq('breslavskii');
     });
+    
 });
