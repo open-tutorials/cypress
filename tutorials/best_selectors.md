@@ -107,7 +107,7 @@ cy.get('form.login button[type=submit]').click();
 ## +2. Загрузка тестового приложения
 
 Веб-сервер готов, нужно
-скачать [тестовое приложение](https://github.com/open-tutorials/cypress/blob/main/apps/tesla.html) с **GitHub**.
+скачать [тестовое приложение](https://open-tutorials.github.io/cypress/apps/tesla.html) с **GitHub**.
 
 - [x] Открой **Терминал** → **Новый терминал**
 - [x] Установи пакет `npm install node-wget`
@@ -115,7 +115,7 @@ cy.get('form.login button[type=submit]').click();
 - [x] В терминале выполни команду:
 
 ```bash
-npx wget -d apps/ https://raw.githubusercontent.com/open-tutorials/cypress/main/apps/tesla.html
+npx wget -d apps/ https://open-tutorials.github.io/cypress/apps/tesla.html
 ```
 
 - [x] Проверь, что появился файл `~/apps/tesla.html`

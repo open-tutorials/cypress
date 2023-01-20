@@ -15,7 +15,7 @@ it('should do check QR code', () => {
 
 });
 
-it.only('should do book delivery', () => {
+it('should do book delivery', () => {
 
     cy.get('section[data-cy=slow-ui]').should('be.visible').as('section');
 
@@ -48,4 +48,10 @@ it.only('should do book delivery', () => {
         .find('p.success')
         .should('be.visible')
         .should('contain.text', targetDate);
+});
+
+it('should do check report in XLSX', () => {
+
+    cy.get('section[data-cy=check-xlsx-report]').should('be.visible').as('section');
+
 });
