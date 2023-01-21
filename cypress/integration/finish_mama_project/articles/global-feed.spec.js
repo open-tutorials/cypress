@@ -201,7 +201,7 @@ describe('Articles', () => {
                 .invoke('trim')
                 .as('randomTagName');
 
-                waitForArticlesList();
+            waitForArticlesList();
 
             cy.get('@randomTagName').then(tagName => {
                 // TODO: [data-cy=feed-menu] a[data-cy=filter-by-tag]

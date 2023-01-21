@@ -52,10 +52,11 @@ it('should do book delivery', () => {
 
 describe.only('Report in XLSX', () => {
 
+    const REPORT_FILE_NAME = 'users_report.xlsx';
+
     beforeEach(() => {
-
-        cy.get('section[data-cy=check-xlsx-report]').should('be.visible').as('section');
-
+        cy.get('section[data-cy=check-xlsx-report]')
+            .should('be.visible').as('section');
     });
 
     function checkSpreadsheet() {
@@ -64,7 +65,7 @@ describe.only('Report in XLSX', () => {
             .should('not.be.empty')
             .then(spreadsheet => {
                 const [sheet1] = spreadsheet;
-                expect(sheet1.name).be.eq('Sheet1');
+                expect(sheet1.name).be.eq('Users');
                 const { data: rows } = sheet1;
                 expect(rows).eql([
                     ['First Name', 'Last Name', 'Email'],
@@ -80,7 +81,9 @@ describe.only('Report in XLSX', () => {
         cy.get('@section').find('a.download')
             .invoke('attr', 'href')
             .then(href => {
-                cy.task('xlsxToJson', href).as('spreadsheetInJson');
+                cy.task('downloadFile', [href, REPORT_FILE_NAME])
+                    .then(tmpFile => cy.task('xlsxToJson', tmpFile)
+                        .as('spreadsheetInJson'));
             });
 
         checkSpreadsheet();
@@ -98,8 +101,22 @@ describe.only('Report in XLSX', () => {
         cy.get('@replacedWindowOpen').should('have.been.called')
             .its('returnValues.0')
             .then(url => {
-                cy.task('xlsxToJson', url).as('spreadsheetInJson');
+                cy.task('downloadFile', [url, REPORT_FILE_NAME])
+                    .then(tmpFile => cy.task('xlsxToJson', tmpFile)
+                        .as('spreadsheetInJson'));
             });
+
+        checkSpreadsheet();
+
+    });
+
+    it('should do check report by browser download', () => {
+
+        cy.get('@section').find('a.download').click();
+
+        cy.task('waitFile', 'cypress/downloads/users_report.xlsx')
+            .then(tmpFile => cy.task('xlsxToJson', tmpFile)
+                .as('spreadsheetInJson'));
 
         checkSpreadsheet();
 

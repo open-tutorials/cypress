@@ -24,21 +24,51 @@ module.exports = (on, config) => {
           parseQR(buffer)
             .then(content => {
               console.log('code contents', content);
-              // fs.unlinkSync(tmpFile);
               done(content);
+              fs.unlinkSync(tmpFile);
             });
         });
       });
     },
 
-    xlsxToJson: (url) => {
-      console.log('parse XLSX file to JSON', url);
+    downloadFile: ([url, tmpFileName]) => {
       return new Promise((done) => {
-        const tmpFile = path.join(TMP_FOLDER, 'file.xlsx');
+        console.log('download file', url, tmpFileName);
+        const tmpFile = path.join(TMP_FOLDER, tmpFileName);
         wget({ url, dest: tmpFile }, () => {
-          console.log('file downloaded to', tmpFile);
-          done(xlsx.parse(tmpFile));
+          // TODO: Looks like a bug in wget. Waiting 1 sec. for closing file.
+          setTimeout(() => {
+            console.log('file downloaded to', tmpFile);
+            done(tmpFile);
+          }, 100);
         });
+      });
+    },
+
+    waitFile: (file) => {
+      return new Promise((done) => {
+        console.log('looking file', file);
+        let attempts = 5;
+        const checkExists = () => {
+          if (!fs.existsSync(file)) {
+            if (--attempts > 0) {
+              setTimeout(checkExists, 1000);
+            } else {
+              throw new Error('File not found');
+            }
+          } else {
+            done(file);
+          }
+        };
+
+        checkExists();
+      });
+    },
+
+    xlsxToJson: (file) => {
+      return new Promise((done) => {
+        console.log('parse XLSX file to JSON', file);
+        done(xlsx.parse(file));
       });
     }
   })

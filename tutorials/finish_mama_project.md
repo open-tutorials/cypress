@@ -54,7 +54,9 @@
 Возвращаемся к мама проекту [Conduit](https://demo.realworld.io/)
 
 Как ты помнишь в `README` на [GitHub](https://github.com/gothinkster/realworld) мы
-нашли [спецификацию на роутинг](https://realworld-docs.netlify.app/docs/specs/frontend-specs/routing/) — что дает нам представление о функциональных возможностях приложения.
+нашли [спецификацию на роутинг](https://realworld-docs.netlify.app/docs/specs/frontend-specs/routing/)
+
+Что дает нам представление о функциональных возможностях приложения.
 
 * ❓ Что такое **спецификация**?
 * ❓ Что такое **роутинг**?
