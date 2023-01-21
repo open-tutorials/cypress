@@ -267,14 +267,158 @@ Cypress.on('uncaught:exception', () => false);
 
 📹 [Мое объяснение](https://www.youtube.com/watch?v=l6qbqBR_zZc&t=1829)
 
-# Фидбек пожалуйста 🙏
-
-<import from="/partials/tutorial_feedback.md"></import>
-
 ## +4. Проверка Excel файла
 
-- [x] Установи пакет для работы с XLSX файлами
+- [x] Установи пакет для работы с XLSX файлами для Node.Js
 
 ```bash
 npm i node-xlsx --save-dev
 ```
+
+- [x] Обнови файл `~/cypress/plugins/index.js`
+
+```diff
++ const xlsx = require('node-xlsx');
+
+  module.exports = (on, config) => {
+    on('task', {
+    
++     downloadFile: ([url, tmpFileName]) => {
++       return new Promise((done) => {
++         console.log('download file', url, tmpFileName);
++         const tmpFile = path.join(TMP_FOLDER, tmpFileName);
++         wget({ url, dest: tmpFile }, () => {
++           // TODO: Looks like a bug in wget. Waiting 1 sec. for closing file.
++           setTimeout(() => {
++             console.log('file downloaded to', tmpFile);
++             done(tmpFile);
++           }, 100);
++         });
++       });
++     },
+
++     waitFile: (file) => {
++       return new Promise((done) => {
++         console.log('looking file', file);
++         let attempts = 5;
++         const checkExists = () => {
++           if (!fs.existsSync(file)) {
++             if (--attempts > 0) {
++               setTimeout(checkExists, 1000);
++             } else {
++               throw new Error('File not found');
++             }
++           } else {
++             done(file);
++           }
++         };
++ 
++         checkExists();
++       });
++     },
++ 
++     xlsxToJson: (file) => {
++       return new Promise((done) => {
++         console.log('parse XLSX file to JSON', file);
++         done(xlsx.parse(file));
++       });
++     }
++ 
++   })
++ 
++ };
+```
+
+- [x] Добавь новые тесты:
+
+```js
+describe.only('Report in XLSX', () => {
+
+    const REPORT_FILE_NAME = 'users_report.xlsx';
+
+    beforeEach(() => {
+        cy.get('section[data-cy=check-xlsx-report]')
+            .should('be.visible').as('section');
+    });
+
+    function checkSpreadsheet() {
+
+        cy.get('@spreadsheetInJson')
+            .should('not.be.empty')
+            .then(spreadsheet => {
+                const [sheet1] = spreadsheet;
+                expect(sheet1.name).be.eq('Users');
+                const { data: rows } = sheet1;
+                expect(rows).eql([
+                    ['First Name', 'Last Name', 'Email'],
+                    ['Elon', 'Musk', 'elon@gmail.com'],
+                    ['Bill', 'Gates', 'bill@gmail.com']
+                ]);
+            });
+
+    }
+
+    it('should do check report by link', () => {
+
+        cy.get('@section').find('a.download')
+            .invoke('attr', 'href')
+            .then(href => {
+                cy.task('downloadFile', [href, REPORT_FILE_NAME])
+                    .then(tmpFile => cy.task('xlsxToJson', tmpFile)
+                        .as('spreadsheetInJson'));
+            });
+
+        checkSpreadsheet();
+    });
+
+    it('should do check report by button', () => {
+
+        cy.window().then((window) => {
+            cy.stub(window, 'open').callsFake((url) => {
+                return url;
+            }).as('replacedWindowOpen');
+        });
+
+        cy.get('@section').find('button').click();
+        cy.get('@replacedWindowOpen').should('have.been.called')
+            .its('returnValues.0')
+            .then(url => {
+                cy.task('downloadFile', [url, REPORT_FILE_NAME])
+                    .then(tmpFile => cy.task('xlsxToJson', tmpFile)
+                        .as('spreadsheetInJson'));
+            });
+
+        checkSpreadsheet();
+
+    });
+
+    it('should do check report by browser download', () => {
+
+        cy.get('@section').find('a.download').click();
+
+        cy.task('waitFile', 'cypress/downloads/users_report.xlsx')
+            .then(tmpFile => cy.task('xlsxToJson', tmpFile)
+                .as('spreadsheetInJson'));
+
+        checkSpreadsheet();
+
+    });
+
+});
+```
+
+***
+
+В случае проблем, держи эталоны файлов [fun-cases.spec.js](/cypress/integration/fun-cases.spec.js) и [plugins/index.js](/cypress/plugins/index.js)
+
+- [x] Прогони все тесты в Headless.
+
+# Что дальше
+
+У тебя есть интересный кейс и ты хотел бы его разобрать?
+
+Подключайся в [наш уютный чат](https://t.me/epic_one_hour_community) и предлагай!
+
+# Фидбек пожалуйста 🙏
+
+<import from="/partials/tutorial_feedback.md"></import>

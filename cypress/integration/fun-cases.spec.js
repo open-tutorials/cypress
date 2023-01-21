@@ -50,7 +50,7 @@ it('should do book delivery', () => {
         .should('contain.text', targetDate);
 });
 
-describe.only('Report in XLSX', () => {
+describe('Report in XLSX', () => {
 
     const REPORT_FILE_NAME = 'users_report.xlsx';
 
