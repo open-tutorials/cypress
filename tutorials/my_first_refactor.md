@@ -384,6 +384,6 @@ export function getRandomNumber(min, max) {
 
 Еще больше туториалов 👉 https://t.me/epic_one_hour 
 
-# Фидбек пожалуйста 🙏
+# 🙏 Фидбек пожалуйста
 
 <import from="/partials/tutorial_feedback.md"></import>

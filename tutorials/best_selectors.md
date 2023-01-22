@@ -521,7 +521,7 @@ cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права з�
 
 📹 [Мой разбор](https://www.youtube.com/watch?v=tK2F2wNvcWI&t=3893)
 
-# Фидбек пожалуйста 🙏
+# 🙏 Фидбек пожалуйста
 
 <import from="/partials/tutorial_feedback.md"></import>
 

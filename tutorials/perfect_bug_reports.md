@@ -300,7 +300,7 @@ SELECT * FROM sessions WHERE user = 2
 ~~~
 </details>
 
-# Фидбек пожалуйста 🙏
+# 🙏 Фидбек пожалуйста
 
 <import from="/partials/tutorial_feedback.md"></import>
 

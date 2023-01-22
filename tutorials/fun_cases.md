@@ -419,6 +419,6 @@ describe.only('Report in XLSX', () => {
 
 Подключайся в [наш уютный чат](https://t.me/epic_one_hour_community) и предлагай!
 
-# Фидбек пожалуйста 🙏
+# 🙏 Фидбек пожалуйста
 
 <import from="/partials/tutorial_feedback.md"></import>

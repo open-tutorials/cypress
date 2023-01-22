@@ -398,6 +398,6 @@ cy.get('@myArticles').contains(article.title)
   width="480" height="360" frameBorder="0" class="giphy-embed"></iframe>
 </details>
 
-# Фидбек пожалуйста 🙏
+# 🙏 Фидбек пожалуйста
 
 <import from="/partials/tutorial_feedback.md"></import>
