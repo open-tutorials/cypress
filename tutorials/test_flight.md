@@ -430,7 +430,7 @@ it('should subscribe to news letter', () => {
 
 ### 🤷‍♂️ Зачем мне это?
 
-Тесты всегда будут ломаться, типа **падать с ошибкой.** Ты должен уметь искать причины падений и исправлять их.
+Тесты могут ломаться в будущем. Ты должен уметь искать причины и исправлять их.
 
 *****
 
@@ -443,6 +443,130 @@ it('should subscribe to news letter', () => {
 # 👨‍🎓 Чему ты научился
 
 ```mermaid /syllabus/test_flight.mm
+```
+
+# 😭 Домашка
+
+- [ ] [Прочитай](https://www.w3schools.com/cssref/css_selectors.php) про все типы CSS селекторов.
+- [ ] [Поиграйся](https://www.w3schools.com/cssref/trysel.php) с тренажером.
+- [ ] Пройди тест ниже.
+
+Выбери **точный** селектор для элемента:
+
+```html
+<p id="success">Thank you for subscribing!</p>
+```
+
+```markdown quiz selector_for_id
+- [ ] `cy.get('id=success')`
+- [x] `cy.get('p#success')`
+- [ ] `cy.get('p.success')`
+
+
+Селектор по [id](https://www.w3schools.com/cssref/sel_id.php)
+```
+
+***
+
+```html
+<p class="success message">Thank you for subscribing!</p>
+```
+
+```markdown quiz selector_for_class
+- [ ] `cy.get('[class=success]')`
+- [ ] `cy.get('p#class')`
+- [x] `cy.get('p.success.message')`
+
+
+Селектор по классам `class="xyz zyx"`
+```
+
+***
+
+```html
+<p data-cy="success">Thank you for subscribing!</p>
+```
+
+```markdown quiz selector_for_attribute
+- [x] `cy.get('p[data-cy=success]')`
+- [ ] `cy.get('data-cy=success')`
+- [ ] `cy.get('p.data-cy.success')`
+
+
+Селектор по [аттрибутам](https://www.w3schools.com/cssref/sel_attribute_value.php)
+```
+
+***
+
+```html
+<p data-cy="success xyzXYZ">Thank you for subscribing!</p>
+```
+
+```markdown quiz selector_for_starts
+- [x] `cy.get('p[data-cy^=success]')`
+- [ ] `cy.get('p[data-cy.=success]')`
+- [ ] `cy.get('p[data-cy?=success]')`
+
+
+Селектор по [начальному значению аттрибута](https://www.w3schools.com/cssref/sel_attr_begin.php)
+```
+
+***
+
+```html
+<p data-cy="xyzXYZ success">Thank you for subscribing!</p>
+```
+
+```markdown quiz selector_for_ends
+- [ ] `cy.get('p[data-cy.=success]')`
+- [x] `cy.get('p[data-cy$=success]')`
+- [ ] `cy.get('p[data-cy#=success]')`
+
+
+Селектор по [конечному значению аттрибута](https://www.w3schools.com/cssref/sel_attribute_value_lang.php)
+```
+
+***
+
+```html
+<p data-cy="xyzXYZ success XYZxyz">Thank you for subscribing!</p>
+```
+
+```markdown quiz selector_for_contain
+- [ ] `cy.get('p[data-cy^=success]')`
+- [x] `cy.get('p[data-cy*=success]')`
+- [ ] `cy.get('p[data-cy$=success]')`
+
+
+Селектор по [содержимому значения аттрибута](https://www.w3schools.com/cssref/sel_attr_contain.php)
+```
+
+***
+
+У тебя есть HTML документ:
+
+```html
+<h1 class="subscription">News letter subscription</h1>
+<form>
+  <input name="email" type="email">
+  <input name="confirm-email" type="email">
+  <button type="submit">Submit</button>
+</form>
+
+<h1 class="disclaimer">Disclaimer</h1>
+<p>The content of this message is confidential.</p>
+```
+
+Заполни код:
+
+```js placeholders find_selectors_for_form
+cy.get('?|h1.subscription|?').should('have.text', 'News letter subscription');
+// email input
+cy.get('?|input[name=email]|?').type('?');
+// confirm email input
+cy.get('?|input[name=confirm-email]|?').type('?');
+// submit button
+cy.get('?|button[type=submit]|?').click();
 ```
 
 # 🤩 Хочу еще

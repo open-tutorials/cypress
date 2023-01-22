@@ -530,7 +530,7 @@ before(() => {
             expect(status).to.eq(200);
             expect(body).to.have.key('user');
             const { user } = body;
-            cy.wrap(user.token).as('token');
+            cy.writeFile('token.txt', user.token);
         });
 });
 ```
@@ -551,7 +551,7 @@ import { setJwtToken } from '/cypress/support/utils';
 
 it('should do publish article', () => {
   
-  cy.get('@token')
+  cy.readFile('token.txt')
     .should('not.be.empty')
     .then(token => {
         cy.visit('/', {
@@ -586,7 +586,7 @@ Authorization: Token XYZ
 
 ❗ Это не всегда может быть так. Как реализовать авторизацию решают сами разработчики!
 
-- [x] Залогинся на фронтенде https://demo.realworld.io/
+- [x] Залогинься на фронтенде https://demo.realworld.io/
 - [x] Найди данный заголовок в XHR запросах.
 - [x] Напиши тест для ендпойнта `GET /user`
 
