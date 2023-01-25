@@ -49,7 +49,7 @@ node download.js
 - [x] Прогони все тесты в Headless режиме.
 - [x] Исправь 🔴 ошибки в тестах.
 
-Сразу хочешь сбежать 🤨 в подсказки? Нет, just do it сам! ~"Мотивация"
+Сразу хочешь сбежать 🤨 в подсказки? А кто потом на работе это будет делать?
 
 <details>
   <summary>Что делать?</summary>
@@ -58,20 +58,6 @@ node download.js
 
 ```bash
 npm i @faker-js/faker --save-dev
-```
-
-- [x] В файле `crud.spec.js` исправь:
-
-```diff
-- 68 | cy.get('@articlePage').find('[ng-bind-html$=markdown]')
-+ 68 | cy.get('@articlePage').find('[ng-bind-html$=body]')
-```
-
-- [x] В файле `signup.spec.js` исправь:
-
-```diff
-- 19 | cy.get('@registerPage').find('form').should('be.visible').as('signupForm');
-+ 19 | cy.get('@registerPage').find('form').should('be.visible').as('registerForm');
 ```
 
 </details>
@@ -120,13 +106,13 @@ npm i @faker-js/faker --save-dev
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 10000,
-  browser: {
-    chromeWebSecurity: false
-  },
-  e2e: {
-    baseUrl: 'https://demo.realworld.io/',
-  }
+    defaultCommandTimeout: 10000,
+    browser: {
+        chromeWebSecurity: false
+    },
+    e2e: {
+        baseUrl: 'https://demo.realworld.io/',
+    }
 });
 ```
 
@@ -136,24 +122,96 @@ module.exports = defineConfig({
 2. Необходимо перенести код в `cypress.config.js` &rarr; `e2e.setupNodeEvents`
 
 - [x] Удали файл `cypress/plugin/index.js`
-
-```js
-```
-
 - [x] Перенеси код в `cypress.config.js`
 
-```js
+```diff
+  e2e: {
++     setupNodeEvents(on, config) {
++
++         on('task', {
++ 
++             // this plugin just for demonstration
++             echo: (message) => {
++                 console.log('echo to Node.js console', message);
++                 return new Promise((done) => {
++                     // return message back to browser
++                     done(message);
++                 });
++             }
++
++         });
++
++     }
 ```
 
 ## [Support file](https://docs.cypress.io/guides/references/migration-guide#supportFile)
 
 - [x] Переименуй файл `~/cypress/support/index.js` в `~/cypress/support/e2e.js`.
 
-
 ### [Updated test file locations](https://docs.cypress.io/guides/references/migration-guide#Updated-Test-File-Locations)
 
-Файл тестов теперь должны быть расположены в папке `cypress/e2e`
+1. Файл тестов теперь должны быть расположены в папке `cypress/e2e`
+2. Cypress поменял шаблон имен файлов тестов на `test_name.cy.js`
 
 - [x] Переименуй папку `cypress/integration` в `cypress/e2e`
+- [x] Переименуй файлы `cypress/e2e/*.spec.js` в `cypress/e2e/*.cy.js`
+
 
 Остальные разделы относятся к функциям Cypress которые мы не использовали.
+
+## 4. Обновление Cypress
+
+Никогда не перепрыгивай через версии!
+
+Если твоя текущая мажорная версия 9 сначала обновись до 10, потом до 11 и т.д.
+
+- [x] На все выпущенные версии https://www.npmjs.com/package/cypress?activeTab=versions
+- [x] Найди минимальную мажорную версию для 10.
+- [x] В файле манифеста `package.json`
+
+```diff
+- "cypress": "~9.7.0",
++ "cypress": "~10.0.0",
+```
+
+- [x] Проверь текущий файл манифеста пакета Cypress:
+
+```bash
+head -n 5 node_modules/cypress/package.json
+```
+
+- [x] Заставь пакетный менеджер загрузить новую версию:
+
+```bash
+npm i
+```
+
+- [x] Проверь новый файл манифеста пакета Cypress:
+
+```bash
+head -n 5 node_modules/cypress/package.json
+```
+
+- [x] Проверь, что пакетный менеджер видит нужную верси
+```bash
+npm list
+```
+
+- [x] Запусти cypress `npx cypress open`
+- [x] Прогони тесты в файле `signup.cy.js`
+- [x] Прогони этот файл в Headless режиме:
+
+```bash
+npx cypress run --spec cypress/e2e/signup.cy.js
+```
+
+- [x] Прогони все тесты в Headless режиме.
+- [x] Обнови Cypress до последней минорной версии в мажоре 10:
+
+`major.minor.build = 10.?.?`
+
+```diff
+- "cypress": "~10.0.0",
++ "cypress": "~10.11.0",
+```
+
