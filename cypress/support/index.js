@@ -28,6 +28,6 @@ before(() => {
             expect(status).to.eq(200);
             expect(body).to.have.key('user');
             const { user } = body;
-            cy.wrap(user.token).as('token');
+            cy.writeFile('token.txt', user.token);
         });
 });

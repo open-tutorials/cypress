@@ -66,7 +66,7 @@ width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></i
 
 ## Что делать
 
-- [x] Открой взломанную хакером [оболочку](https://breslavsky.github.io/hello-cypress/apps/pentagon.html) в Chrome и
+- [x] Открой взломанную хакером [оболочку](https://open-tutorials.github.io/cypress/apps/pentagon.html) в Chrome и
   Cypress.
 - [x] Попробуй понять зачем нужны данные из первого файла.
 - [x] Подготовь кнопки цифр для ввода пина.
@@ -102,7 +102,7 @@ width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></i
   <summary>Подсказка 3</summary>
 
 ```js
-cy.visit('https://breslavsky.github.io/hello-cypress/apps/pentagon.html');
+cy.visit('https://open-tutorials.github.io/cypress/apps/pentagon.html');
 
 const colors = [
     'rgb(255, 0, 0)',
@@ -157,7 +157,7 @@ for (let i = 0; i < pin.length; i++) {
 
 ## Что делать
 
-- [x] Открой [оболочку](https://breslavsky.github.io/hello-cypress/apps/pentagon.html#codes) на этапе ввода кодов отмены
+- [x] Открой [оболочку](https://open-tutorials.github.io/cypress/apps/pentagon.html#codes) на этапе ввода кодов отмены
   в Chrome.
 - [x] Попробуй понять, что ты видишь на экране и что делать.
 - [x] Как увидишь поля ввода, экспериментируй с вводом.
@@ -208,7 +208,7 @@ for (let i = 0; i < 50; i++) {
 
 ## Что делать
 
-- [x] Открой [оболочку](https://breslavsky.github.io/hello-cypress/apps/pentagon.html#stop) на этапе отмены запуска в
+- [x] Открой [оболочку](https://open-tutorials.github.io/cypress/apps/pentagon.html#stop) на этапе отмены запуска в
   Chrome.
 - [x] Найди селектор кнопки и попробуй на нее нажать в Cypress.
 

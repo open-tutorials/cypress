@@ -50,7 +50,7 @@ it('should do book delivery', () => {
         .should('contain.text', targetDate);
 });
 
-describe('Report in XLSX', () => {
+describe.only('Report in XLSX', () => {
 
     const REPORT_FILE_NAME = 'users_report.xlsx';
 
@@ -65,8 +65,10 @@ describe('Report in XLSX', () => {
             .should('not.be.empty')
             .then(spreadsheet => {
                 const [sheet1] = spreadsheet;
+                debugger;
                 expect(sheet1.name).be.eq('Users');
                 const { data: rows } = sheet1;
+                
                 expect(rows).eql([
                     ['First Name', 'Last Name', 'Email'],
                     ['Elon', 'Musk', 'elon@gmail.com'],
@@ -76,7 +78,7 @@ describe('Report in XLSX', () => {
 
     }
 
-    it('should do check report by link', () => {
+    it.only('should do check report by link', () => {
 
         cy.get('@section').find('a.download')
             .invoke('attr', 'href')

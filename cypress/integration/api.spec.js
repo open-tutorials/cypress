@@ -122,7 +122,7 @@ describe('API', () => {
 
     it('should do get logged me user', () => {
 
-        cy.get('@token')
+        cy.readFile('token.txt')
             .should('not.be.empty')
             .then(token => {
                 cy.request({
