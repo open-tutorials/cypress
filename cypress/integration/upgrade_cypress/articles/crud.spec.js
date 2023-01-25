@@ -67,7 +67,7 @@ function checkArticle(article) {
     }
 
     // check Markdown is rendered to HTML
-    cy.get('@articlePage').find('[ng-bind-html$=markdown]')
+    cy.get('@articlePage').find('[ng-bind-html$=body]')
         .invoke('prop', 'innerHTML')
         .should('contains', '<strong>healthy</strong>')
         .should('contains', '<em>tasty.</em>')
@@ -134,6 +134,7 @@ describe('Articles', () => {
             });
 
         cy.get('.navbar').should('be.visible').as('appHeader');
+        cy.get('@appHeader').should('contain.text', meUser.username);
     });
 
     it('should do publish article', () => {

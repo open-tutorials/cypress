@@ -71,7 +71,7 @@ module.exports = (on, config) => {
         done(xlsx.parse(file));
       });
     }
-    
+
   })
 
 };

@@ -11,7 +11,7 @@ module.exports = (on, config) => {
         done(message);
       });
     }
-    
-  })
+
+  });
 
 };
