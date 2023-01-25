@@ -95,7 +95,7 @@ it('should do replace button click', () => {
 
 });
 
-it.only('should do open conduit signup in iframe', () => {
+it('should do open conduit signup in iframe', () => {
 
     const iframes = [
         {

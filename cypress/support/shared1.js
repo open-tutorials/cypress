@@ -16,7 +16,3 @@ export function login() {
     cy.get('@appHeader').should('contain.text', meUser.username);
 
 }
-
-export function setJwtToken(window, token) {
-    window.localStorage.setItem('jwtToken', token);
-}

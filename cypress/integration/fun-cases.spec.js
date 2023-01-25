@@ -50,7 +50,7 @@ it('should do book delivery', () => {
         .should('contain.text', targetDate);
 });
 
-describe.only('Report in XLSX', () => {
+describe('Report in XLSX', () => {
 
     const REPORT_FILE_NAME = 'users_report.xlsx';
 
@@ -78,7 +78,7 @@ describe.only('Report in XLSX', () => {
 
     }
 
-    it.only('should do check report by link', () => {
+    it('should do check report by link', () => {
 
         cy.get('@section').find('a.download')
             .invoke('attr', 'href')

@@ -9,5 +9,5 @@ describe('Plugins', () => {
         cy.task('echo', message).should('eq', message);
 
     });
-    
+
 });

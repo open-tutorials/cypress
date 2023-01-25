@@ -23,16 +23,18 @@
 cypress/fixtures/me-user.json|cypress/fixtures/
 
 cypress/support/index.js|cypress/support/
-cypress/support/shared.js|cypress/support/
+cypress/support/commands.js|cypress/support/
+cypress/support/shared2.js|cypress/support/|shared.js
 cypress/support/utils.js|cypress/support/
-cypress/plugins/index1.js|cypress/plugins/index.js
+cypress/plugins/index1.js|cypress/plugins/|index.js
 
-cypress/integration/finish_mama_project/signup.spec.js|cypress/integration/
-cypress/integration/finish_mama_project/articles/crud.spec.js|cypress/integration/articles/
-cypress/integration/finish_mama_project/articles/global-feed.spec.js|cypress/integration/articles/
-cypress/integration/finish_mama_project/commenting.spec.js|cypress/integration/
-cypress/integration/finish_mama_project/api.spec.js|cypress/integration/
-cypress/integration/finish_mama_project/plugins.spec.js|cypress/integration/
+cypress/integration/upgrade_cypress/signup.spec.js|cypress/integration/
+cypress/integration/upgrade_cypress/articles/crud.spec.js|cypress/integration/articles/
+cypress/integration/upgrade_cypress/articles/global-feed.spec.js|cypress/integration/articles/
+cypress/integration/upgrade_cypress/commenting.spec.js|cypress/integration/
+cypress/integration/api.spec.js|cypress/integration/
+cypress/plugins.spec.js|cypress/integration/
+cypress.json|./
 ```
 
 - [x] Установи wget `npm i node-wget --save-dev`
@@ -45,6 +47,34 @@ node download.js
 
 - [x] Проверь, что файлы проекта загрузились.
 - [x] Прогони все тесты в Headless режиме.
+- [x] Исправь 🔴 ошибки в тестах.
+
+Сразу хочешь сбежать 🤨 в подсказки? Нет, just do it сам! ~"Мотивация"
+
+<details>
+  <summary>Что делать?</summary>
+
+- [x] Поставь пакет [Faker](https://github.com/faker-js/faker)
+
+```bash
+npm i @faker-js/faker --save-dev
+```
+
+- [x] В файле `crud.spec.js` исправь:
+
+```diff
+- 68 | cy.get('@articlePage').find('[ng-bind-html$=markdown]')
++ 68 | cy.get('@articlePage').find('[ng-bind-html$=body]')
+```
+
+- [x] В файле `signup.spec.js` исправь:
+
+```diff
+- 19 | cy.get('@registerPage').find('form').should('be.visible').as('signupForm');
++ 19 | cy.get('@registerPage').find('form').should('be.visible').as('registerForm');
+```
+
+</details>
 
 ## 3. Читаем примечания к выпуску
 

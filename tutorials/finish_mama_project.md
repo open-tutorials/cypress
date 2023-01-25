@@ -188,7 +188,7 @@ test_cases/articles/crud/edit_article.md|test_cases/articles/crud/
 
 cypress/fixtures/me-user.json|cypress/fixtures/
 
-cypress/support/shared.js|cypress/support/
+cypress/support/shared.js1|cypress/support/|shared.js
 cypress/support/utils.js|cypress/support/
 
 cypress/integration/finish_mama_project/signup.spec.js|cypress/integration/
@@ -210,13 +210,15 @@ for (const line of lines) {
     if (!line) {
         continue;
     }
-    const [file, dest] = line.split('|');
+    const [file, folder, newFileName] = line.split('|');
     const url = process.env.BASE_URL + '/' + file;
+    const dest = './' + folder;
     console.log('download', url, 'to', dest);
     if (!fs.existsSync(dest)) {
-        fs.mkdirSync(dest, {recursive: true});
+        fs.mkdirSync(dest, { recursive: true });
     }
-    wget({url, dest}, () => console.log('done'));
+    wget({ url, dest: !!newFileName ? dest + newFileName : dest },
+        () => console.log('done'));
 }
 ```
 
