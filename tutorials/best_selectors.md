@@ -492,10 +492,10 @@ cy.get('input[placeholder=Имя]').type('?');
 ```js
 it('should do check copyrights', () => {
 
-    // TODO: улучшить селектор footer [data-cy=copyrights]
-    // временно используем contains
+    // TODO: should be [data-cy=copyrights]
+    // we can use contains
     cy.contains('Все права защищены').should('be.visible');
-    // или строгую иерархию
+    // or exact hierarchy
     cy.get('body > div > footer p').should('have.text', 'Все права защищены.');
 
 });
@@ -516,7 +516,7 @@ it('should do check copyrights', () => {
 - [x] Обнови селектор в тесте:
 
 ```js
-cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права защищены.');
+cy.get('footer p[data-cy=copyrights]').should('have.text', 'Все права защищены.');
 ```
 
 > Названия аттрибутов для целей тестирования могут быть разными: 
