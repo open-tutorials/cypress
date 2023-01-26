@@ -154,7 +154,13 @@
       "title": "Туториал: обновляем Cypress",
       "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/upgrade_cypress.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "meta": {
+        "description": "Подойдет тем, кто понять весь процесс обновления пакетов в Node.js. Научимся читать ченджлог и примечания к выпуску **новых** версий пакетов. Выполним обновление Cypress в ручную. Выполним обновление автоматически.",
+        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/upgrade_cypress/thumbnail.jpg",
+        "keywords": "Changelog, Release notes, NPM, Cypress",
+        "site": "Туториалы по Cypress"
+      }
     },
     "install_node_js": {
       "title": "Установка Node.js",

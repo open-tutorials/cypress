@@ -73,7 +73,8 @@
     { "slug": "fake_data", "thumbnail": "fake_data", "title": "Фейк дата в тестах" },
     { "slug": "deep_cypress", "thumbnail": "deep_cypress", "title": "Как устроен Cypress внутри" },
     { "slug": "fun_cases_in_cypress", "thumbnail": "fun_cases", "title": "Забавные кейсы" },
-    { "slug": "test_api", "thumbnail": "test_api", "title": "Тестируем API в Cypress" }
+    { "slug": "test_api", "thumbnail": "test_api", "title": "Тестируем API в Cypress" },
+    { "slug": "upgrade_cypress", "thumbnail": "upgrade_cypress", "title": "Обновляем Cypress" }
   ]
 }
 ```
