@@ -252,6 +252,12 @@ module.exports = (on, config) => {
 + "cypress": "^10.0.0",
 ```
 
+<details>
+    <summary>Если ты на Windows 🙋‍</summary>
+
+<import from="/partials/git_bash.md"></import>
+</details>
+
 - [x] Проверь текущий файл манифеста пакета Cypress:
 
 ```bash

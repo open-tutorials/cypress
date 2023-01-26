@@ -446,6 +446,29 @@ cy.visit('http://localhost:3000/apps/tesla.html?lang=en');
 
 ***
 
+Мини-тест. Это хороший селектор?
+
+```js
+cy.get('input[placeholder=Имя]').type('?');
+```
+
+```markdown quiz selector_by_placeholder horizontal
+- [ ] Да, конечно
+- [x] Нет, нет, нет
+
+
+Неееет! Это тоже самое, что и с `contents` 
+
+**При смене языка, тест перестанет работать!**
+
+<iframe src="https://giphy.com/embed/wYyTHMm50f4Dm" 
+  width="480" height="277" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+```
+
+> Всегда используй селекторы, устойчивые к изменениям конфигурации приложения.
+
+***
+
 ## +9. TODO для разработчиков
 
 ❗ Что делать, если нельзя найти хороший селектор:
