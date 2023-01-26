@@ -3,9 +3,9 @@
 Правильная версия https://www.epic1h.com/cypress_test_flight
 </md-hidden>
 
-# Туториал: первый полет на Cypress
+# Туториал: обновляем Cypress
 
-Подойдет тем, кто хочет начать писать автоматизированные тесты.
+Подойдет тем, кто понять весь процесс обновления пакетов в Node.js.
 
 # 🙋‍ Перед началом
 
@@ -14,7 +14,7 @@
 
 # 🔢 Шаги
 
-## 1. Загружаем проект
+## +1. Загружаем проект
 
 - [x] Создай скрипт загрузки файлов проекта `download.js` с [содержимым](/download.js)
 - [x] Создай файл `mama_files.txt` со списком загрузки:
@@ -33,8 +33,8 @@ cypress/integration/upgrade_cypress/articles/crud.spec.js|cypress/integration/ar
 cypress/integration/upgrade_cypress/articles/global-feed.spec.js|cypress/integration/articles/
 cypress/integration/upgrade_cypress/commenting.spec.js|cypress/integration/
 cypress/integration/api.spec.js|cypress/integration/
-cypress/plugins.spec.js|cypress/integration/
-cypress.json|./
+cypress/integration/plugins.spec.js|cypress/integration/
+cypress.json|
 ```
 
 - [x] Установи wget `npm i node-wget --save-dev`
@@ -60,12 +60,16 @@ node download.js
 npm i @faker-js/faker --save-dev
 ```
 
+И всего-то!
+
 </details>
 
-## 3. Читаем примечания к выпуску
+***
+
+## +2. Примечания к выпуску
 
 - [x] Загугли **cypress changelog**
-- [x] Открой release notes для версии [10.0.0](https://docs.cypress.io/guides/references/changelog#10-0-0)
+- [x] Открой **release notes** для версии [10.0.0](https://docs.cypress.io/guides/references/changelog#10-0-0)
 
 * ❓ Что такое **Changelog?**
 * ❓ Что такое **Release notes?**
@@ -77,18 +81,42 @@ npm i @faker-js/faker --save-dev
 
 - [x] Переведи комментарий на русский язык.
 
-* ❓ Что такое **Migration guide**?
-* ❓ Что такое **Breaking changes**?
+* ❓ Что такое **Migration guide?**
+* ❓ Что такое **Breaking changes?**
+
+***
+
+Типичный **Changelog** любой программы:
+
+| **major.minor.build** | **notes**                        |
+|-----------------------|----------------------------------|
+| 0.0.1                 | MVP                              |
+| 1.0.0                 | first release 🥳                 |
+| 1.0.1                 | small bug fixes 😓 after release |
+| 1.1.0                 | add feature XYZ 🤪               |
+| 1.1.1                 | bug fixes in feature XYZ 😡      |
+| 2.0.0                 | killer feature ZYX released 😍   |
+| 2.0.1                 | bug fixes again 😓               |
+
+> Никогда **не перепрыгивай** через мажорные версии!
+>
+> Если твоя текущая мажорная версия 9 сначала обновись до 10, потом до 11 и т.д.
+
+***
+
+## +3. Работаем ручками
 
 - [x] Открой [инструкцию по миграции](https://docs.cypress.io/guides/references/migration-guide#Migrating-to-Cypress-100) на 10 версию.
 
-Читаем документацию и выписываем чек-лист по миграции.
+Читаем документацию и выписываем **чек-лист** по миграции.
 
-### [Configuration file changes](https://docs.cypress.io/guides/references/migration-guide#Configuration-File-Changes)
+### 3.1. Configuration file changes
 
-1. Cypress перешел на конфигурацию на базе Java Script файла `cypress.config.js`
-2. Файл конфигурации `cypress.json` был удален и больше не поддерживается.
-3. Часть опций была переименована и перенесена в другие разделы.
+- [x] Прочитай [заметки](https://docs.cypress.io/guides/references/migration-guide#Configuration-File-Changes) к разделу.
+
+1. Cypress перешел на **конфигурацию на базе Java Script** файла `cypress.config.js`
+2. Файл конфигурации `cypress.json` был **удален** и больше не поддерживается.
+3. Часть **опций** была **переименована** и **перенесена** в другие разделы.
 
 - [x] Удали файл `cypress.json`
 
@@ -116,12 +144,38 @@ module.exports = defineConfig({
 });
 ```
 
-### [Plugins file removed](https://docs.cypress.io/guides/references/migration-guide#Plugins-File-Removed)
+***
 
-1. Файл `cypress/plugin/index.js` бы удален и больше не поддерживается.
-2. Необходимо перенести код в `cypress.config.js` &rarr; `e2e.setupNodeEvents`
+### 3.2. Plugins file removed
+
+- [x] Прочитай [заметки](https://docs.cypress.io/guides/references/migration-guide#Plugins-File-Removed) к разделу.
+
+1. Файл `cypress/plugin/index.js` был **удален** и больше не поддерживается.
+2. Необходимо **перенести** код в `cypress.config.js` в раздел `e2e.setupNodeEvents`
 
 - [x] Удали файл `cypress/plugin/index.js`
+
+```js
+/// <reference types="cypress" />
+
+module.exports = (on, config) => {
+  on('task', {
+
+    // this plugin just for demonstration
+    echo: (message) => {
+      console.log('echo to Node.js console', message);
+      return new Promise((done) => {
+        // return message back to browser
+        done(message);
+      });
+    }
+
+  });
+
+};
+```
+
+
 - [x] Перенеси код в `cypress.config.js`
 
 ```diff
@@ -144,34 +198,38 @@ module.exports = defineConfig({
 +     }
 ```
 
-## [Support file](https://docs.cypress.io/guides/references/migration-guide#supportFile)
+***
 
-- [x] Переименуй файл `~/cypress/support/index.js` в `~/cypress/support/e2e.js`.
+### 3.3. Support file
 
-### [Updated test file locations](https://docs.cypress.io/guides/references/migration-guide#Updated-Test-File-Locations)
+- [x] Прочитай [заметки](https://docs.cypress.io/guides/references/migration-guide#supportFile) к разделу.
+- [x] Переименуй файл `~/cypress/support/index.js` в `~/cypress/support/e2e.js`
 
-1. Файл тестов теперь должны быть расположены в папке `cypress/e2e`
-2. Cypress поменял шаблон имен файлов тестов на `test_name.cy.js`
+***
+
+### 3.4. Updated test file locations
+
+- [x] Прочитай [заметки](https://docs.cypress.io/guides/references/migration-guide#Updated-Test-File-Locations) к разделу.
+
+1. **Файлы тестов** теперь должны лежать в папке `cypress/e2e`
+2. Cypress поменял **шаблон имен файлов** тестов на `test_name.cy.js`
 
 - [x] Переименуй папку `cypress/integration` в `cypress/e2e`
 - [x] Переименуй файлы `cypress/e2e/*.spec.js` в `cypress/e2e/*.cy.js`
 
+Остальные примечания к выпуску относятся к функциям Cypress которые мы **не использовали** в нашем проекте.
 
-Остальные разделы относятся к функциям Cypress которые мы не использовали.
+***
 
-## 4. Обновление Cypress
+## +4. Up версии Cypress
 
-Никогда не перепрыгивай через версии!
-
-Если твоя текущая мажорная версия 9 сначала обновись до 10, потом до 11 и т.д.
-
-- [x] На все выпущенные версии https://www.npmjs.com/package/cypress?activeTab=versions
-- [x] Найди минимальную мажорную версию для 10.
+- [x] Найди все выпущенные версии https://www.npmjs.com/package/cypress?activeTab=versions
+- [x] Найди минимальную мажорную версию для Cypress 10.
 - [x] В файле манифеста `package.json`
 
 ```diff
-- "cypress": "~9.7.0",
-+ "cypress": "~10.0.0",
+- "cypress": "^9.7.0",
++ "cypress": "^10.0.0",
 ```
 
 - [x] Проверь текущий файл манифеста пакета Cypress:
@@ -180,23 +238,14 @@ module.exports = defineConfig({
 head -n 5 node_modules/cypress/package.json
 ```
 
-- [x] Заставь пакетный менеджер загрузить новую версию:
-
-```bash
-npm i
-```
-
+- [x] Заставь пакетный менеджер загрузить новую версию `npm i`
 - [x] Проверь новый файл манифеста пакета Cypress:
 
 ```bash
 head -n 5 node_modules/cypress/package.json
 ```
 
-- [x] Проверь, что пакетный менеджер видит нужную верси
-```bash
-npm list
-```
-
+- [x] Проверь, что пакетный менеджер видит нужную версию `npm list`
 - [x] Запусти cypress `npx cypress open`
 - [x] Прогони тесты в файле `signup.cy.js`
 - [x] Прогони этот файл в Headless режиме:
@@ -208,10 +257,39 @@ npx cypress run --spec cypress/e2e/signup.cy.js
 - [x] Прогони все тесты в Headless режиме.
 - [x] Обнови Cypress до последней минорной версии в мажоре 10:
 
-`major.minor.build = 10.?.?`
-
 ```diff
 - "cypress": "~10.0.0",
 + "cypress": "~10.11.0",
 ```
 
+- [x] Снова прогони все тесты в Headless режиме.
+
+Мы обновляем миноры обычно на шару ;-) 
+
+Если что-то упало, только тогда бежим в release notes.
+
+***
+
+## +5. Обновляем Cypress по няшному
+
+<iframe src="https://giphy.com/embed/sIfLhexLUqwik" 
+  width="480" height="281" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+- [x] Инициализируй новый чистый проект `%/projects/cypress/upgrade_cypress_nyan`
+- [x] Установи Cypress `npm i cypress@9 --save-dev`
+- [x] Повтори все действия из шага — **1. Загружаем проект**
+- [x] Повтори все действия из шага — **4. Up версии Cypress**
+- [x] Просто запусти `npx cypress open`
+- [x] Наслаждайся!
+
+***
+
+## +6. Актуализируем Cypress
+
+- [x] Обнови Cypress до 11.
+- [x] Обнови Cypress до 12.
+- [x] Обнови Cypress до самой свежей версии.
+
+# 🙏 Фидбек пожалуйста
+
+<import from="/partials/tutorial_feedback.md"></import>

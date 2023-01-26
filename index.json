@@ -150,6 +150,12 @@
         "site": "Туториалы по Cypress"
       }
     },
+    "upgrade_cypress": {
+      "title": "Туториал: обновляем Cypress",
+      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/upgrade_cypress.md",
+      "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
+      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+    },
     "install_node_js": {
       "title": "Установка Node.js",
       "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/install_node_js.md",

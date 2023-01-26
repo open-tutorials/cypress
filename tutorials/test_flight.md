@@ -100,9 +100,9 @@
 </details>
 
 * ❓ Зачем нужна папка `node_modules`?
-* ❓ Какой версии установлен **Cypress**?
+* ❓ Какой версии установлен **Cypress?**
 * ❓ Зачем нужен раздел **devDependencies** в `package.json`?
-* ❓ Что такое **JSON**?
+* ❓ Что такое **JSON?**
 
 <details>
   <summary>Где найти все доступные версии Cypress?</summary>

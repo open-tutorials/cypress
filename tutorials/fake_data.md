@@ -129,7 +129,7 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 - [x] Создай файл `~/test_cases/publish_article.md` из [примера](/test_cases/articles/crud/publish_article.md?plain=1)
 - [x] Добавь ссылку на тест-кейс в `README.md`
 
-* ❓ Зачем нам **To do**?
+* ❓ Зачем нам **To do?**
 
 ***
 

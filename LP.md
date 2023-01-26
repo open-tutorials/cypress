@@ -137,7 +137,7 @@ h1.title {
 ## 🥷 Путь ниндзя
 
 9. <md-progress for="test_api"></md-progress> [Тестируем API в Cypress](@test_api)
-10. Обновляем Cypress до 12
+10. <md-progress for="upgrade_cypress"></md-progress> [Обновляем Cypress](@upgrade_cypress)
 11. Собираем Conduit локально
 12. Запускаем тестирование через CI/CD
 13. Деплоим проект на своем сервере
