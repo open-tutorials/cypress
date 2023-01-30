@@ -20,6 +20,18 @@ import './commands'
 // require('./commands')
 import meUser from '/cypress/fixtures/me-user.json';
 
+// before(() => {
+//     const { email, password } = meUser;
+//     cy.request('POST', 'https://api.realworld.io/api/users/login',
+//         { user: { email, password } })
+//         .then(({ status, body }) => {
+//             expect(status).to.eq(200);
+//             expect(body).to.have.key('user');
+//             const { user } = body;
+//             cy.wrap(user.token).as('token');
+//         });
+// });
+
 before(() => {
     const { email, password } = meUser;
     cy.request('POST', 'https://api.realworld.io/api/users/login',
@@ -28,6 +40,6 @@ before(() => {
             expect(status).to.eq(200);
             expect(body).to.have.key('user');
             const { user } = body;
-            cy.wrap(user.token).as('token');
+            cy.writeFile('token.txt', user.token);
         });
 });
