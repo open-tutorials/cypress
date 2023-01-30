@@ -15,8 +15,8 @@ function selectFirstArticle() {
 }
 function waitForArticlesList() {
   cy.get('@articleList')
-    .contains("div.article-preview", "Loading")
-    .should("not.be.visible");
+    .contains('.article-preview', 'Loading')
+    .should('not.be.visible');
 }
 
 function openGlobalFeed() {
@@ -38,7 +38,7 @@ function subscribeFromUser() {
     .should('contain', 'Follow')
     .click()
     .as('followButton');
-  // TODO:  improve css
+  // TODO:  improve selector
   cy.get('@followButton').should('contain', 'Unfollow');
 }
 
@@ -54,7 +54,7 @@ function unsubscribeFromUser() {
     .should('contain', 'Unfollow')
     .click()
     .as('UnfollowButton');
-  // TODO:  improve css
+  // TODO:  improve selector
   cy.get('@UnfollowButton').should('contain', 'Follow');
 
 }
@@ -109,7 +109,8 @@ describe('Social', () => {
     cy.visit('/');
     cy.get('.navbar').should('be.visible').as('appHeader');
 
-    cy.get('@token')
+    // cy.get('@token')
+    cy.readFile('token.txt')
       .should('not.be.empty')
       .then(token => {
         cy.visit('/', {
