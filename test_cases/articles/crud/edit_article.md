@@ -24,18 +24,19 @@ Edit article test case
 
 10. Url should start from `/#/editor/`
 11. Page should have form
-12. Type `{new_title}` into **Title** form field
-13. Type `{new_description}` into **Description** form field
-14. Type `{new_body}` into **Body** form field
-15. Type `{new_tags}` into **Tags** form field
-16. Click on **Publish Article** button
+12. Clear all forms fields at **Editor** form
+13. Type `{new_title}` into **Title** form field
+14. Type `{new_description}` into **Description** form field
+15. Type `{new_body}` into **Body** form field
+16. Type `{new_tags}` into **Tags** form field
+17. Click on **Publish Article** button
 
 ## Check article
 
-17. Url should be `/#/article/{slug}`
-18. Page title should be `{new_title}`
-19. Article body should contain `{new_body}` rendered Markdown
-20. Article should have `{new_tags}`
+18. Url should be `/#/article/{slug}`
+19. Page title should be `{new_title}`
+20. Article body should contain `{new_body}` rendered Markdown
+21. Article should have `{new_tags}`
 
 # Where:
 
