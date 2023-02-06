@@ -51,6 +51,8 @@ cy.get('form.login button[type=submit]').click();
 * Ты инициализировал чистый **Node.js** проект `%/projects/cypress/best_selectors`
 * Ты установил Cypress `npm i cypress@9 --save-dev`
 
+Если забыл, глянь в наш [первый туториал](https://www.epic1h.com/cypress_test_flight#1-инициализируем-проект)
+
 # 🫵 Наставления
 
 **Помни:** никто тебя ничему не научит, если ты сам этого не захочешь!
@@ -492,10 +494,10 @@ cy.get('input[placeholder=Имя]').type('?');
 ```js
 it('should do check copyrights', () => {
 
-    // TODO: улучшить селектор footer [data-cy=copyrights]
-    // временно используем contains
+    // TODO: should be [data-cy=copyrights]
+    // we can use contains
     cy.contains('Все права защищены').should('be.visible');
-    // или строгую иерархию
+    // or exact hierarchy
     cy.get('body > div > footer p').should('have.text', 'Все права защищены.');
 
 });
@@ -516,7 +518,7 @@ it('should do check copyrights', () => {
 - [x] Обнови селектор в тесте:
 
 ```js
-cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права защищены.');
+cy.get('footer p[data-cy=copyrights]').should('have.text', 'Все права защищены.');
 ```
 
 > Названия аттрибутов для целей тестирования могут быть разными: 

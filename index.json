@@ -115,7 +115,7 @@
       }
     },
     "finish_mama_project": {
-      "title": "Туториал: как устроен Cypress внутри",
+      "title": "Туториал: заканчиваем мама проект",
       "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/finish_mama_project.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
