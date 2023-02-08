@@ -492,7 +492,7 @@ cy.get('input[placeholder=Имя]').type('?');
 ```js
 it('should do check copyrights', () => {
 
-    // TODO: should be [data-cy=copyrights]
+    // TODO: should be p[data-cy=copyrights]
     // we can use contains
     cy.contains('Все права защищены').should('be.visible');
     // or exact hierarchy

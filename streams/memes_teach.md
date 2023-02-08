@@ -103,7 +103,7 @@ pull>тянуть
 push>толкать
 merge>соединять
 folder>папка
-setup>устанавливать
+set up>устанавливать
 bundle>пакет
 implement>реализовывать
 allow>разрешать
