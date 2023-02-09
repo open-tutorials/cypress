@@ -180,6 +180,12 @@
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
     },
+    "packman": {
+      "title": "Стрим-практикум: обещание Пакмана",
+      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/streams/packman.md",
+      "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
+      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+    },
     "startup_onboarding": {
       "title": "Онбординг в стартап",
       "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/startup_onboarding.md",
