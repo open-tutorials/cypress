@@ -180,9 +180,9 @@
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
     },
-    "packman": {
+    "pacman": {
       "title": "Стрим-практикум: обещание Пакмана",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/streams/packman.md",
+      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/streams/pacman.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
       "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
     },
