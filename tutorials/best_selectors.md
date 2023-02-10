@@ -72,7 +72,7 @@ cy.get('form.login button[type=submit]').click();
 
 Тебе нужно разместить тестовое веб-приложение на локальном веб-сервере.
 
-- [x] Установи через терминал пакет `npm install tiny-server`
+- [x] Установи через терминал пакет `npm i tiny-server --save-dev`
 - [x] В `package.json` добавь команду `start` в раздел `scripts` для запуска сервера:
 
 ```diff
@@ -112,7 +112,7 @@ cy.get('form.login button[type=submit]').click();
 скачать [тестовое приложение](https://open-tutorials.github.io/cypress/apps/tesla.html) с **GitHub**.
 
 - [x] Открой **Терминал** → **Новый терминал**
-- [x] Установи пакет `npm install node-wget`
+- [x] Установи пакет `npm i node-wget --save-dev`
 - [x] Создай папку `apps` в корне проекта.
 - [x] В терминале выполни команду:
 

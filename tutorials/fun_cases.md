@@ -17,14 +17,14 @@
 
 * Ты инициализировал чистый **Node.js** проект `%/projects/cypress/fun_cases`
 * Ты установил Cypress `npm i cypress@9 --save-dev`
-* Ты установил Tiny Web Server.
+* Ты установил Tiny Web Server и Wget `npm i tiny-server node-wget --save-dev`
 * Ты загрузил тестовое приложение в папку `~/apps`
-
-Если забыл, глянь в наш [первый туториал](https://www.epic1h.com/cypress_test_flight#1-инициализируем-проект)
 
 ```bash
 npx wget -d apps/ https://raw.githubusercontent.com/open-tutorials/cypress/main/apps/fun-cases.html
 ```
+
+Если забыл, глянь в наш [второй туториал](https://www.epic1h.com/best_selectors#1-подготовка-веб-сервера)
 
 # 🔢 Кейсы
 
@@ -33,7 +33,7 @@ npx wget -d apps/ https://raw.githubusercontent.com/open-tutorials/cypress/main/
 - [x] Установи нужные пакеты:
 
 ```bash
-npm i --save-dev node-wget qr-util
+npm i qr-util --save-dev
 ```
 
 - [x] Создай файл теста `fun-cases.spec.js` с содержимым:
