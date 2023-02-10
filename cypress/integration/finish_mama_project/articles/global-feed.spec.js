@@ -65,6 +65,9 @@ describe('Articles', () => {
 
         it('should do open article detail page', () => {
 
+            cy.get('.feed-toggle ul > li:nth-child(2) a')
+                .should('have.class', 'active');
+
             selectRandomArticle();
 
             cy.get('@randomArticle').find('h1')
