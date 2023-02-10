@@ -1,6 +1,6 @@
 Delete comment test case
 
-# It should add comment:
+# It should delete comment:
 
 ## Before
 
