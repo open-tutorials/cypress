@@ -19,7 +19,7 @@
 | Anton Breslavsky | Петрович |
 
 - [x] Заполни профиль: аватар, био.
-- [x] Открой терминал - Git Bash.
+- [x] Открой терминал — Git Bash.
 
 <img class="cornered" title="Как запустить Git Bash" 
     width="670" height="435"
@@ -50,9 +50,9 @@ cat ~/.ssh/id_rsa.pub
 
 <img class="cornered" title="Как добавить SSH ключ в GitHub" 
     width="820" height="507"
-    src="assets/build_conduit/add_ssh_key.png">
+    src="assets/build_conduit/add_ssh_key.webp">
 
-- [x] Проверь подключения через Git Bash:
+- [x] Проверь подключение через Git Bash:
 
 ```bash
 ssh -T git@github.com
@@ -76,6 +76,7 @@ You've successfully authenticated, but GitHub does not provide shell access.
 * ❓ У кого хранится закрытый ключ?
 * ❓ Кому можно передавать открытый ключ?
 * ❓ Что RSA?
+* ❓ Как через открытый ключ GitHub нас идентифицировал?
 
 ## 2. Форкаем Conduit
 
@@ -94,20 +95,20 @@ Conduit имеет **множество реализаций** на разных
 - [x] Выбери в меню **Fullstack.**
 - [x] Найди **Express + React + Sequelize**
 - [x] Перейди по ссылке [TonyMckes/conduit-realworld-example-ap](https://github.com/TonyMckes/conduit-realworld-example-app)
-- [x] Нажми **Fork** <img class="cornered" title="Form проекта на GitHub" width="148" height="41" src="assets/build_conduit/github_fork.webp"> на странице репозитория проекта.
+- [x] Нажми **Fork** <img class="cornered" title="Form проекта на GitHub" width="191" height="28" src="assets/build_conduit/github_fork.webp"> на странице репозитория проекта.
 - [x] Создай Fork проекта **внутри своего аккаунта.**
 
 <img class="cornered" title="Как сделать Fork проекта" 
     width="748" height="527"
     src="assets/build_conduit/fork_conduit.webp">
 
-- [x] Проверь, что репозиторий создан.
-o
+- [x] Проверь, что репозиторий создан:
+
 <img class="cornered" title="Fork проекта Conduit" 
     width="519" height="63"
     src="assets/build_conduit/forked_conduit.webp">
 
-- [x] Прочитай и переведи README проекта. 
+- [x] Прочитай и переведи `README.md` проекта. 
 
 * ❓ Что такое Fullstack?
 * ❓ Что такое React?
@@ -124,7 +125,7 @@ o
 - [x] Нажми **Clone** на странице репозитория и **скопируй путь.**
 
 <img class="cornered" title="Clone проекта на GitHub" 
-    width="670" height="612"
+    width="400" height="365"
     src="assets/build_conduit/git_clone.gif">
 
 - [x] Открой терминал - Git Bash.
@@ -166,7 +167,7 @@ npm run dev
 
 Текущая реализация Conduit требует СУБД Postgres.
 
-Можно поставить Postgres отдельно, а можно по трушному — через Docker.
+Можно поставить Postgres отдельно, а можно по **трушному** — через Docker.
 
 - [x] Останови проект в терминале `CTRL`+`C`
 - [x] Скачай и установи Docker с https://www.docker.com/

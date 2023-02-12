@@ -38,6 +38,10 @@ ffmpeg -i install_docker.mov \
 install_docker.gif
 ```
 
+```bash
+ffmpeg -i git_clone.gif -vf "scale=400:-1" git_clone.gif
+```
+
 # Диаграммы
 
 Онлайн редактор https://mermaid.live/
