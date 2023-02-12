@@ -33,9 +33,9 @@ hello_from_anton_6.webm
 Для конвертации видео в GIF:
 
 ```bash
-ffmpeg -i install_docker.mov \
--vf "fps=10,scale=1340:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=16[p];[s1][p]paletteuse=dither=bayer" \
-install_docker.gif
+ffmpeg -i check_postgres.mov \
+-vf "fps=10,split[s0][s1];[s0]palettegen=max_colors=16[p];[s1][p]paletteuse=dither=bayer" \
+check_postgres.gif
 ```
 
 ```bash
