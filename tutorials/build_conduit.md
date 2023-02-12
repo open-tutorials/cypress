@@ -117,7 +117,7 @@ Conduit имеет **множество реализаций** на разных
 - [x] Выбери в меню **Fullstack.**
 - [x] Найди **Express + React + Sequelize**
 - [x] Перейди по ссылке [TonyMckes/conduit-realworld-example-ap](https://github.com/TonyMckes/conduit-realworld-example-app)
-- [x] Нажми **Fork** <img class="cornered" title="Form проекта на GitHub" width="191" height="28" src="assets/build_conduit/github_fork.webp"> на странице репозитория проекта.
+- [x] Нажми **Fork** <img class="cornered" title="Form проекта на GitHub" width="141" height="28" src="assets/build_conduit/github_fork.webp"> на странице репозитория проекта.
 - [x] Создай Fork проекта **внутри своего аккаунта.**
 
 <img class="cornered" title="Как сделать Fork проекта" 
