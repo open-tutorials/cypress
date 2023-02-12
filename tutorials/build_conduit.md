@@ -34,6 +34,9 @@
 | Anton Breslavsky | Петрович |
 
 - [x] Заполни профиль: аватар, био.
+
+***
+
 - [x] Открой терминал — Git Bash.
 
 <img class="cornered" title="Как запустить Git Bash" 
@@ -67,6 +70,8 @@ cat ~/.ssh/id_rsa.pub
     width="820" height="507"
     src="assets/build_conduit/add_ssh_key.webp">
 
+***
+
 - [x] Проверь подключение через Git Bash:
 
 ```bash
@@ -93,6 +98,8 @@ You've successfully authenticated, but GitHub does not provide shell access.
 * ❓ Что RSA?
 * ❓ Что SSH и shell access?
 * ❓ Как через открытый ключ GitHub нас идентифицировал?
+
+***
 
 ## 2. Форкаем Conduit
 
@@ -123,6 +130,8 @@ Conduit имеет **множество реализаций** на разных
 <img class="cornered" title="Fork проекта Conduit" 
     width="519" height="63"
     src="assets/build_conduit/forked_conduit.webp">
+
+***
 
 - [x] Прочитай и переведи `README.md`
 
@@ -161,6 +170,8 @@ git clone git@github.com:{your_account}/conduit-realworld-example-app.git
 * ❓ Что делает `git clone`?
 * ❓ Куда ведет папка `~`?
 
+***
+
 ## 3. Запускаем проект
 
 - [x] Открой папку проекта в **Visual Code.**
@@ -180,11 +191,13 @@ npm run dev
 
 * ❓ Откуда мы знаем про эти команды?
 
+***
+
 ## 4. Ставим Postgres
 
 Текущая реализация Conduit требует СУБД Postgres.
 
-<mark>Можно поставить Postgres отдельно, а можно по **трушному** — через Docker.</mark>
+<mark>Можно поставить Postgres просто, а можно по **трушному** — через Docker.</mark>
 
 - [x] Останови проект в терминале `CTRL`+`C`
 - [x] Скачай и установи Docker с https://www.docker.com/
@@ -195,6 +208,9 @@ npm run dev
 
 - [x] Если потребуется перезагрузи систему. 
 - [x] Запусти  Docker Desktop.
+
+***
+
 - [x] Открой терминал Git Bash в Visual Code в проекте.
 - [x] Запусти контейнер для Postgres:
 
