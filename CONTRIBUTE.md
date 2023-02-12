@@ -6,6 +6,8 @@
 
 ```bash
 convert thumbnail.png -quality 80 thumbnail.jpg
+convert thumbnail.png thumbnail.webp
+identify fork_conduit.webp
 ```
 
 # Скринкасты и GIF
@@ -31,9 +33,9 @@ hello_from_anton_6.webm
 Для конвертации видео в GIF:
 
 ```bash
-ffmpeg -i articles_response.mov \
+ffmpeg -i install_docker.mov \
 -vf "fps=10,scale=1340:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=16[p];[s1][p]paletteuse=dither=bayer" \
-articles_response.gif
+install_docker.gif
 ```
 
 # Диаграммы
