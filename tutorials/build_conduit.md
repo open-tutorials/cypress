@@ -91,6 +91,7 @@ You've successfully authenticated, but GitHub does not provide shell access.
 * ❓ У кого хранится закрытый ключ?
 * ❓ Кому можно передавать открытый ключ?
 * ❓ Что RSA?
+* ❓ Что SSH и shell access?
 * ❓ Как через открытый ключ GitHub нас идентифицировал?
 
 ## 2. Форкаем Conduit
@@ -123,7 +124,7 @@ Conduit имеет **множество реализаций** на разных
     width="519" height="63"
     src="assets/build_conduit/forked_conduit.webp">
 
-- [x] Прочитай и переведи `README.md` проекта. 
+- [x] Прочитай и переведи `README.md`
 
 * ❓ Что такое Fullstack?
 * ❓ Что такое React?
