@@ -163,10 +163,11 @@
       }
     },
     "build_conduit": {
+      "version": "2",
       "title": "Туториал: собираем Conduit локально",
       "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/build_conduit.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://open-tutorials.github.io/cypress"
     },
     "install_node_js": {
       "title": "Установка Node.js",
