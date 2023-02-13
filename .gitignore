@@ -6,3 +6,4 @@ package-lock.json
 cypress/screenshots
 cypress/videos
 tmp/
+.hypothesis

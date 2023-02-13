@@ -10,7 +10,7 @@ User logout test case
 ## Logout user
 
 3. Click **Settings** item in app header menu
-4. Page title should be **Your Settings**
+4. Page heading should be **Your Settings**
 5. Click **Logout** button in page bottom
 6. Header should not contains `{user_name}`
 

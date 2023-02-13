@@ -10,7 +10,7 @@ User sign up test case
 
 2. Click **Sign Up** link in app header
 3. Url should be `/#/register`
-4. Page title should be **Sign up**
+4. Page heading should be **Sign up**
 
 ## Fill register form
 

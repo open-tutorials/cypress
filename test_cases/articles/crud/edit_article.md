@@ -34,7 +34,7 @@ Edit article test case
 ## Check article
 
 18. Url should be `/#/article/{slug}`
-19. Page title should be `{new_title}`
+19. Page heading should be `{new_title}`
 20. Article body should contain `{new_body}` rendered Markdown
 21. Article should have `{new_tags}`
 

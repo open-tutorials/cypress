@@ -28,7 +28,7 @@ Publish article test case
 ## Check article data
 
 12. Url should be `/#/article/{slug}`
-13. Page title should be `{title}`
+13. Page heading should be `{title}`
 14. Article body should contains `{body}` rendered Markdown
 15. Article should have `{tags}`
 

@@ -16,7 +16,7 @@ Open article detail page test case
 ## Check article
 
 6. Url should start `/#/article/` — article detail page
-7. Page title should be `{random_article_title}`
+7. Page heading should be `{random_article_title}`
 
 # Where:
 

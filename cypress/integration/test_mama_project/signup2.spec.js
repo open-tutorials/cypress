@@ -19,7 +19,7 @@ describe('Sign up', () => {
         // url should be /#/login
         cy.url().should('include', '/#/login');
 
-        // page title should be Sign in
+        // page heading should be Sign in
         cy.get('.auth-page h1').should('have.text', 'Sign in');
 
         // page should have form

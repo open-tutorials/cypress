@@ -10,7 +10,7 @@ User sign in test case
 
 2. Click **Sign In** link in app header
 3. Url should be `/#/login`
-4. Page title should be **Sign in**
+4. Page heading should be **Sign in**
 
 ## Fill login form
 
