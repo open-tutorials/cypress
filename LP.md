@@ -41,7 +41,7 @@ h1.title {
 {
   "time": 1.7,
   "type": "video/webm; codecs=vp9,vorbis",
-  "video": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/hello_from_anton.webm"
+  "video": "assets/hello_from_anton.webm"
 }
 
 Привет, [Anton](https://t.me/breslavsky_anton) на связи 🤙
