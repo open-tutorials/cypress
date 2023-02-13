@@ -45,3 +45,10 @@ ffmpeg -i git_clone.gif -vf "scale=400:-1" git_clone.gif
 # Диаграммы
 
 Онлайн редактор https://mermaid.live/
+
+# Выпуск
+
+```bash
+git tag v1.16.4
+git push origin --tags
+```
