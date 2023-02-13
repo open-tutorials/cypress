@@ -165,9 +165,15 @@
     "build_conduit": {
       "version": "2",
       "title": "Туториал: собираем Conduit локально",
-      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress/tutorials/build_conduit.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.1/tutorials/build_conduit.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://open-tutorials.github.io/cypress"
+      "assetsUrl": "https://open-tutorials.github.io/cypress",
+      "meta": {
+        "description": "Подойдет тем, кто хочет научится запускать проекты в режиме разработки. Форкнем проект на GitHub. Установим Postgres в Docker контейнере. Запустим локально фронтенд и бекенд проекта. Научимся сбрасывать базу перед запуском End-To-End тестов.",
+        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/build_conduit/thumbnail.jpg",
+        "keywords": "Docker, Postgres",
+        "site": "Туториалы по Cypress"
+      }
     },
     "install_node_js": {
       "title": "Установка Node.js",
