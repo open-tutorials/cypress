@@ -2,162 +2,162 @@
   "tutorials": {
     "home": {
       "title": "Туториалы по IT навыкам: Cypress, Java Script",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/LP.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/LP.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Уникальный практический и 🔥 бесплатный курс по Cypress с живой обратной связью от ментора. Идеально подходит для начала изучения программирования с нуля.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/home/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/home/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
     },
     "cypress": {
       "title": "Уникальный практический и бесплатный курс по Cypress",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/cypress.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/cypress.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     },
     "js_mentor": {
       "title": "Менторство по Java Script",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/mentor/java_script.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/mentor/java_script.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     },
     "became_a_tester": {
       "title": "Туториал: ломаем приложение онлайн-банка",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/became_a_tester.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/became_a_tester.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     },
     "bug_tracking": {
       "title": "Туториал: организуем баг-трекинг в стартапе",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/bug_tracking.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/bug_tracking.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     },
     "perfect_bug_reports": {
       "title": "Туториал: исследуем баги и пишем профессиональные баг-репорты",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/perfect_bug_reports.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/perfect_bug_reports.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     },
     "cypress_test_flight": {
       "title": "Туториал: первый полет на Cypress",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/test_flight.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/test_flight.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет начать писать автоматизированные тесты. Создадим чистый Java Script проект на Node.js. Установим Cypress через менеджер пакетов npm. Напишем авто-тест подписки на рассылку Cypress.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/test_flight/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/test_flight/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
     },
     "best_selectors": {
       "title": "Туториал: находим лучшие селекторы для UI элементов",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/best_selectors.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/best_selectors.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет писать устойчивые, понятные и короткие селекторы в авто-тестах. Напишем тесты регистрации и входа для веб-приложения на Cypress. Научимся находить и тестировать селекторы через инструменты разработчика Chrome. Изучим лучшие практики и анти-паттерны при составлении селекторов.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/best_selectors/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/best_selectors/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
     },
     "test_mama_project": {
       "title": "Туториал: тестируем мама проект на Cypress",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/test_mama_project.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/test_mama_project.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет научиться писать авто-тесты на примере реального WEB-приложения. Опишем тест-кейсы в Markdown на основании спецификации на проект. Прокачаем твой Java Script для Cypress на конкретных примерах. Напишем тесты для регистрации, логина и выхода пользователя.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/test_mama_project/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/test_mama_project/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
     },
     "my_first_refactor": {
       "title": "Туториал: мой первый рефактор в Cypress",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/my_first_refactor.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/my_first_refactor.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет начать писать чистый код тестов на Cypress. Наведем чистоту в коде тестов проекта. Узнаем про базовый URL, хуки, алиасы, фикстуры в Cypress. Научимся писать функции на Java Script и использовать их в тестах.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/my_first_refactor/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/my_first_refactor/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
     },
     "fake_data": {
       "title": "Туториал: фейк дата в тестах",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/fake_data.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/fake_data.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет научиться генерировать и использовать фейковые данные. Узнаем про фейк данные и научимся использовать их в Cypress тестах. Опишем тест-кейсы в Markdown для добавления, удаления и редактирования статей в приложении блогов. Разберем и напишем оптимальный код с хуками, алиасами, функциями и т.д.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/fake_data/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/fake_data/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
     },
     "deep_cypress": {
       "title": "Туториал: как устроен Cypress внутри",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/deep_cypress.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/deep_cypress.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет понять как работает Cypress. Проведем 10+ экспериментов в Cypress. Узнаем про: таумауты, стабы, триггеры, инвоукы, вьюпорты, врапы, промисы и т.д. Научимся делать 📸 скриншоты, читать и записывать файлы через Cypress. Сграбим данные пользователей с сайта через Cypress.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/deep_cypress/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/deep_cypress/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
     },
     "finish_mama_project": {
       "title": "Туториал: заканчиваем мама проект",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/finish_mama_project.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/finish_mama_project.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет покрыть тестами целый проект на Cypress и добавить его к себе в портфолио. Напишем еще 10+ тестов для приложения блогов. Научимся делать декомпозицию UI. Закрепим скилл написания тест-кейсов в Markdown. Организуем код на проекте по феншую. В качестве бонуса: напишем скрипт загрузки файлов на JS.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/finish_mama_project/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/finish_mama_project/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
     },
     "fun_cases_in_cypress": {
       "title": "Туториал: забавные кейсы в Cypress",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/fun_cases.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/fun_cases.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет познакомится с кейсам из жизни авто-тестировщика на Сypress. Научимся тестировать QR коды на Cypress. Научимся делать отладку приложения и тестов. Научимся перехватывать ошибки на сайте.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/fun_cases/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/fun_cases/thumbnail.jpg",
         "keywords": "Cypress, Auto QA, Java Script",
         "site": "Туториалы по Cypress"
       }
     },
     "test_api": {
       "title": "Туториал: тестируем API в Cypress",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/test_api.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/test_api.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет научиться выполнять HTTP запросы в Cypress. Научимся использовать Swagger и Postman. Научимся тестировать ответы API бекенда в Cypress. Научимся делать логин пользователя через API.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/test_api/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/test_api/thumbnail.jpg",
         "keywords": "Swagger, Postman, Test API",
         "site": "Туториалы по Cypress"
       }
     },
     "upgrade_cypress": {
       "title": "Туториал: обновляем Cypress",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/upgrade_cypress.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/upgrade_cypress.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто понять весь процесс обновления пакетов в Node.js. Научимся читать ченджлог и примечания к выпуску **новых** версий пакетов. Выполним обновление Cypress в ручную. Выполним обновление автоматически.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/upgrade_cypress/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/upgrade_cypress/thumbnail.jpg",
         "keywords": "Changelog, Release notes, NPM, Cypress",
         "site": "Туториалы по Cypress"
       }
@@ -165,45 +165,46 @@
     "build_conduit": {
       "version": "2",
       "title": "Туториал: собираем Conduit локально",
-      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/build_conduit.md",
+      "tags": "https://api.github.com/repos/open-tutorials/cypress/tags",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}//tutorials/build_conduit.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://open-tutorials.github.io/cypress",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3",
       "meta": {
         "description": "Подойдет тем, кто хочет научится запускать проекты в режиме разработки. Форкнем проект на GitHub. Установим Postgres в Docker контейнере. Запустим локально фронтенд и бекенд проекта. Научимся сбрасывать базу перед запуском End-To-End тестов.",
-        "thumbnail": "https://raw.githubusercontent.com/open-tutorials/cypress/main/assets/build_conduit/thumbnail.jpg",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/assets/build_conduit/thumbnail.jpg",
         "keywords": "Docker, Postgres",
         "site": "Туториалы по Cypress"
       }
     },
     "install_node_js": {
       "title": "Установка Node.js",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/install_node_js.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/install_node_js.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     },
     "save_the_world": {
       "title": "Квест: спасти мир от хакера Накатика",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/quests/save_the_world.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/quests/save_the_world.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     },
     "memes_teach": {
       "title": "Стрим-практикум: мемы учат",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/streams/memes_teach.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/streams/memes_teach.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     },
     "pacman": {
       "title": "Стрим-практикум: обещание Пакмана",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/streams/pacman.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/streams/pacman.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     },
     "startup_onboarding": {
       "title": "Онбординг в стартап",
-      "source": "https://raw.githubusercontent.com/open-tutorials/cypress/main/tutorials/startup_onboarding.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/startup_onboarding.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://raw.githubusercontent.com/open-tutorials/cypress/main"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3"
     }
   }
 }

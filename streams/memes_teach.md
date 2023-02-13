@@ -17,6 +17,8 @@
 <details>
   <summary>Смотри, что у нас получится 👇</summary>
 
+Если, видишь белый экран, вот прямая ссылка https://stackblitz.com/edit/meme-for-en  
+
 <iframe frameborder="0" src="https://stackblitz.com/edit/meme-for-en?hideDevTools=1&view=preview"
 width="600px" height="900px">
 </iframe>
