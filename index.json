@@ -165,7 +165,7 @@
     "build_conduit": {
       "version": "2",
       "title": "Туториал: собираем Conduit локально",
-      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.1/tutorials/build_conduit.md",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@v1.16.3/tutorials/build_conduit.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
       "assetsUrl": "https://open-tutorials.github.io/cypress",
       "meta": {
