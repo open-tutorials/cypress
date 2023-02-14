@@ -338,6 +338,14 @@ DB_PASSWORD=zyxxyz
 DB_DATABASE=conduit
 ```
 
+- [x] ❗ Если ты на Windows, установи дополнительно пакет:
+
+```bash
+npm i -g win-node-env
+```
+
+Более подробно об этом можно почитать на [Stack Overflow](https://stackoverflow.com/questions/11928013/node-env-is-not-recognized-as-an-internal-or-external-command-operable-comman)
+
 - [x] Создай базу данных:
 
 ```bash
