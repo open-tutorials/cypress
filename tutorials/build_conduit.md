@@ -592,7 +592,10 @@ services:
     image: "postgres"
     environment:
       - POSTGRES_PASSWORD=zyxxyz
-    command: postgres -c ssl=on -c ssl_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem -c ssl_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+    command: >
+      postgres -c ssl=on 
+      -c ssl_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem 
+      -c ssl_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 10s
@@ -656,7 +659,7 @@ docker-compose up
 
 ```bash
 docker rm conduit_postgres
-docker system prune
+docker system prune --all
 docker build
 docker-compose up --build
 ```
