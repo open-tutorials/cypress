@@ -6,6 +6,6 @@
 - [x] Подними руку или напиши вопрос в чате.
 - [x] В случае необходимости, будь готов пошарить свой экран.
 
-@[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
+@[Anton Breslavsky|https://t.me/breslavsky_anton|assets/anton.jpg]
 
 Что бы следить за анонсами новых туториалов подписывайся на [телеграмм канал](https://t.me/epic_one_hour)

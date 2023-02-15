@@ -493,23 +493,30 @@ select count(id) from "Articles";
 npm i cypress --save-dev
 ```
 
+- [x] Создай файл конфигурации Cypress `~/cypress.config.js`
+
+```js
+module.exports = defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:3000/'
+  }
+});
+```
+
 - [x] Создай файл `~/cypress/e2e/signup.cy.js`:
 
 ```js
 describe('Sign up', () => {
 
     before(() => {
+        cy.exec('npx -w backend sequelize-cli db:seed:undo:all')
+            .its('code').should('eq', 0);
         cy.exec('npx -w backend sequelize-cli db:seed:all')
             .its('code').should('eq', 0);
     });
 
-    after(() => {
-        cy.exec('npx -w backend sequelize-cli db:seed:undo:all')
-            .its('code').should('eq', 0);
-    });
-
     beforeEach(() => {
-        cy.visit('http://localhost:3000/');
+        cy.visit('/');
         cy.get('.navbar').should('be.visible').as('appHeader');
     });
 
@@ -547,15 +554,111 @@ describe('Sign up', () => {
 * ❓ Что возвращает `its('code')`?
 * ❓ Что делает `db:seed:undo:all`?
 
+***
+
+## +9. Докер компоуз
+
+<mark>Внимание! Все файлы конфигурации ниже были написаны **опытным DevOps инженером.**</mark>
+
+Вот этот парень @[Stanislav Lapshin|https://t.me/slapshin|assets/stas.jpg]
+
+- [x] Создай файл `~/Dockerfile`
+
+```text
+FROM node:16.0
+ENV NODE_ENV=production \
+    PORT=80
+WORKDIR /app
+RUN apt-get update
+COPY . .
+RUN npm ci --only=production
+RUN npm -w frontend run build
+EXPOSE 80
+CMD npx -w backend sequelize-cli db:create;npm run start -w backend
+```
+
+- [x] Создай файл `~/.dockerignore`
+
+```text
+node_modules
+```
+
+- [x] Создай файл `~/docker-compose.yml` для описания сервисов проекта:
+
+```yaml
+version: '3.2'
+services:
+  postgres:
+    image: "postgres"
+    environment:
+      - POSTGRES_PASSWORD=zyxxyz
+    command: postgres -c ssl=on -c ssl_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem -c ssl_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  conduit:
+    build: .
+    ports:
+      - 8080:80
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: curl --fail http://localhost || exit 1
+      interval: 5s
+      retries: 5
+      start_period: 2s
+      timeout: 10s
+  cypress:
+    image: "cypress/included:12.5.1"
+    depends_on:
+      conduit:
+        condition: service_healthy
+    environment:
+      - CYPRESS_baseUrl=http://conduit:80
+      - NODE_ENV=production
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+    command: npm i && npx cypress run
+```
+
+- [x] **Собери и запусти** все сервисы через Docker:
+
+```bash
+docker-compose up
+```
+
+- [x] Проверь, что тест выполнился в контейнере cypress!
+
+<img class="cornered" title="Запуск Cypress в Docker" 
+    width="794" height="275"
+    src="assets/build_conduit/cypress_in_docker.webp">
+
+- [x] Посмотри видео прогона теста **внутри контейнера** `~/cypress/videos`
+
+<iframe src="https://giphy.com/embed/Y9pvW54NNPRacOKg2D" 
+    width="480" height="318" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+- [x] Открой в Chrome http://localhost:8080/
+
+* ❓ Где сейчас запущены Front-End и Back-End?
+* ❓ Где сейчас запускался Cypress?
+* ❓ Чем это отличается от запуска через терминал?
+
 Та да 🥳 Ты дошел до конца.
 
 # 😭 Домашка
 
-- [ ] Научись пересоздавать контейнер:
+- [ ] Изучи еще полезные Docker команды:
 
 ```bash
 docker rm conduit_postgres
 docker system prune
+docker build
+docker-compose up --build
 ```
 
 - [ ] Напиши тесты используя **best practices:**

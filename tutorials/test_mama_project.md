@@ -383,7 +383,7 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 
 Все подробности в Телеграм 👉 https://t.me/epic_one_hour 
 
-@[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
+@[Anton Breslavsky|https://t.me/breslavsky_anton|assets/anton.jpg]
 
 # 🙏 Фидбек пожалуйста
 

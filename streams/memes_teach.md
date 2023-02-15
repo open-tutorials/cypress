@@ -284,4 +284,4 @@ memeElement.setAttribute('src', data[0].embed_url);
 
 Все подробности в Телеграм 👉 https://t.me/epic_one_hour
 
-@[Anton Breslavsky|https://t.me/breslavsky_anton|https://s.epic1h.com/api/public/dl/nfCyhZhd?inline=true]
+@[Anton Breslavsky|https://t.me/breslavsky_anton|assets/anton.jpg]
