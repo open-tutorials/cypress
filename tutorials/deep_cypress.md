@@ -1078,6 +1078,23 @@ cy.get('.posts a').eq(rnd).click();
 
 `.eq(index)` — пытается взять элемент с нужным индексом. ~"В конспект"
 
+***
+
+### 17.4. Проверка валидации поля
+
+```html
+<form>
+    <input name="email" type="email">
+    <button type="submit">Submit</button>
+</form>
+```
+
+```js
+cy.get('button[type=submit]').click();
+cy.get('input:invalid').should('have.length', 1);
+cy.get('input[name=email]').its('0.validity.valid').should('be.false');
+```
+
 Та да 🥳 Ты дошел до конца.
 
 Если, что вот [полный код](/cypress/integration/deep-cypress.spec.js) всех тестов.
