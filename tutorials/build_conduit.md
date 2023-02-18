@@ -555,7 +555,7 @@ describe('Sign up', () => {
 
 - [x] Запусти Cypress.
 - [x] Проверь, что тест 🟢 проходит.
-- [x] Закомментируй хук `after`
+- [x] ю `before`
 
 * ❓ Почему тест 🔴 провален?
 
@@ -589,6 +589,18 @@ RUN npm ci --only=production
 RUN npm -w frontend run build
 EXPOSE 80
 CMD npx -w backend sequelize-cli db:create; npm run start -w backend
+```
+
+- [x] Отредактируй файл `~/backend/.env`
+
+```text
+# Production
+# NODE_ENV=production
+PG_USER=postgres
+PG_PASSWORD=zyxxyz
+PG_HOST=postgres
+# PG_PORT=
+PG_DATABASE=conduit
 ```
 
 - [x] Создай файл `~/.dockerignore`
@@ -662,6 +674,7 @@ docker-compose up
 - [x] Открой в Chrome http://localhost:8080/
 
 * ❓ Где сейчас запущены Front-End и Back-End?
+* ❓ Зачем нужно было снова редактировать `.env` файл?
 * ❓ Где сейчас запускался Cypress?
 * ❓ Как базовый URL использовал Cypress (смотри видео)?
 * ❓ Чем это отличается от запуска до этого?

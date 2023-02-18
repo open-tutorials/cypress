@@ -49,6 +49,6 @@ ffmpeg -i git_clone.gif -vf "scale=400:-1" git_clone.gif
 # Выпуск
 
 ```bash
-git tag v1.16.4
+git tag v1.16.11
 git push origin --tags
 ```
