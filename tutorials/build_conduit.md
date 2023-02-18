@@ -555,7 +555,7 @@ describe('Sign up', () => {
 
 - [x] Запусти Cypress.
 - [x] Проверь, что тест 🟢 проходит.
-- [x] ю `before`
+- [x] Закомментируй хук `before`
 
 * ❓ Почему тест 🔴 провален?
 
@@ -683,7 +683,7 @@ docker-compose up
 
 # Читать и смотреть
 
-* [VM или Docker?](https://www.docker.com/resources/what-container/)
+* [Что такое контейнер](https://www.docker.com/resources/what-container/)
 * [Docker для Начинающих](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
 
 # 😭 Домашка
