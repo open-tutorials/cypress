@@ -154,7 +154,7 @@ cy.get('app-root').should('not.have.class', 'busy');
 cy.get('input[name=cities]').should('have.class', 'loaded');
 ```
 
-* Всегда **после действия** проверяй, что UI изменился как ожидалось.
+❗ Всегда **после любого действия** проверяй, что UI изменился как ожидалось.
 
 ```js
 cy.get('form.login button[type=submit]').click();
