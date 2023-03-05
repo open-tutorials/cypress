@@ -256,13 +256,11 @@ docker-compose up --build
 - [x] Обнови файл `.gitignore`
 
 ```diff
-  yarn-error.log*
-
 + cypress/videos
 + cypress/screenshots
 ```
 
-- [x] Создай файл `.github/ci-cd.yml`
+- [x] Создай файл `.github/workflow/ci-cd.yml`
 
 ```yml
 name: CI/CD
@@ -295,7 +293,7 @@ jobs:
 git status
 ```
 
-- [x] Добавь в Git все файлы для фиксации изменений:
+- [x] Добавь в Git все измененные файлы для фиксации изменений:
 
 ```bash
 git add *
@@ -304,7 +302,7 @@ git add *
 - [x] Скрытые файлы и папки нужно добавлять отдельно:
 
 ```bash
-git add .gitignore .dockerignore .github/ci-cd.yml
+git add .gitignore .dockerignore .github/workflow/ci-cd.yml
 ```
 
 - [x] Снова проверь статус:
@@ -337,6 +335,7 @@ git push
     <source src="assets/cypress_cicd/check_commit.webm" type="video/webm">
 </video>
 
+* ❓ Что такое workflow?
 * ❓ Зачем нужен файл `.gitignore`?
 * ❓ Зачем мы обновляли этот файл?
 * ❓ Что такое коммит?
