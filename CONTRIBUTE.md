@@ -15,6 +15,7 @@
 # Выпуск
 
 ```bash
-git tag v1.16.11
+git tag | sort -V
+git tag v1.16.14
 git push origin --tags
 ```

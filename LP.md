@@ -147,7 +147,7 @@ h1.title {
 9. <md-progress for="test_api"></md-progress> [Тестируем API в Cypress](@test_api)
 10. <md-progress for="upgrade_cypress"></md-progress> [Обновляем Cypress](@upgrade_cypress)
 11. <md-progress for="build_conduit"></md-progress> [Собираем Conduit локально](@build_conduit)
-12. Запускаем тестирование через CI/CD
+12. <md-progress for="build_cicd"></md-progress> [Запускаем тестирование через CI/CD](@build_cicd)
 13. Деплоим проект на своем сервере
 14. Визуальное тестирование через Cypress
 15. Отладка тестов в Visual Code
@@ -158,8 +158,9 @@ h1.title {
 ## 🧘 Путь джедая
 
 19.  Тегирование тестов
-20.  Cucumber + Cypress
-21.  Type Script + Cypress
+20.  Параллельный запуск тестов
+21.  Cucumber и Cypress
+22.  Type Script и Cypress
 
 # Ручное тестирование
 

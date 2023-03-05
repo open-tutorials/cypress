@@ -38,7 +38,7 @@
 
 * Ведите конспект.
 * Выписывай термины своими словами.
-* Выписывай вопросы со скриншотами для стендапа.
+* Выписывай вопросы со скриншотами для стендапа с мастером.
 
 # 🔢 Шаги
 
@@ -48,18 +48,18 @@
 
 Создай красивый **логин:**
 
-|         🟢        |     🔴     |
-|------------------|------------|
+| 🟢                | 🔴          |
+| ---------------- | ---------- |
 | breslavsky       | vovan2023  |
 | abreslavsky      | malishka15 |
 | anton_breslavsky | test271631 |
 
 Заполни имя на **английском:**
 
-|         🟢        |    🔴    |
-|:----------------:|:--------:|
+|        🟢         |    🔴     |
+| :--------------: | :------: |
 | Anton Breslavsky | Петрович |
-| Anton Breslavsky | Иришка   |
+| Anton Breslavsky |  Иришка  |
 | Anton Breslavsky | Сталкер  |
 
 - [x] Заполни профиль на английском: аватар, био, город, ссылку на LinedIn профиль.
@@ -113,20 +113,21 @@ ssh -T git@github.com
 You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-<img class="cornered" title="Как проверить подключение к GitHub" 
-    width="670" height="359"
-    src="assets/build_conduit/check_github.gif">
+<video class="how-to" title="Как проверить подключение к GitHub"
+    width="711" height="305" loop autoplay muted>
+    <source src="assets/build_conduit/check_github.webm" type="video/webm">
+</video>
 
 - [x] Переведи сообщение на русский.
 
 * ❓ Почему GitHub must have №1 в IT?
 * ❓ Зачем его используют программисты?
-* ❓ Почему ключи пара?
+* ❓ Почему ключей пара?
 * ❓ Что такое открытый и закрытый ключ?
 * ❓ У кого хранится закрытый ключ?
 * ❓ Кому можно передавать открытый ключ?
-* ❓ Что RSA?
-* ❓ Что SSH и shell access?
+* ❓ Что такое RSA?
+* ❓ Что такое SSH и shell access?
 * ❓ Как через открытый ключ GitHub нас идентифицировал?
 
 ***
@@ -149,7 +150,7 @@ Conduit имеет **множество реализаций** на разных
 - [x] Перейди по ссылке [backends](https://codebase.show/projects/realworld?category=backend)
 - [x] Выбери в меню **Fullstack.**
 - [x] Найди **Express + React + Sequelize**
-- [x] Перейди по ссылке [TonyMckes/conduit-realworld-example-ap](https://github.com/TonyMckes/conduit-realworld-example-app)
+- [x] Перейди по ссылке [TonyMckes/conduit-realworld-example-app](https://github.com/TonyMckes/conduit-realworld-example-app)
 - [x] Нажми <img class="cornered" title="Form проекта на GitHub" width="141" height="28" src="assets/build_conduit/git_fork.webp"> на странице **репозитория** проекта.
 - [x] Создай Fork проекта **внутри своего аккаунта.**
 
@@ -181,9 +182,10 @@ Conduit имеет **множество реализаций** на разных
 
 - [x] Нажми **Code** на странице репозитория и **скопируй путь.**
 
-<img class="cornered" title="Clone проекта на GitHub" 
-    width="400" height="365"
-    src="assets/build_conduit/git_clone.gif">
+<video class="how-to"  title="Clone проекта на GitHub"
+    width="414" height="381" loop autoplay muted>
+    <source src="assets/build_conduit/git_clone.webm" type="video/webm">
+</video>
 
 - [x] Открой терминал — Git Bash.
 - [x] Выведи текущую папку:
@@ -215,7 +217,7 @@ git clone git@github.com:{your_account}/conduit-realworld-example-app.git
 - [x] Установи **зависимости** проекта из файла манифеста:
 
 ```bash
-npm i
+npm ci
 ```
 
 - [x] Запусти проект в режиме разработки:
@@ -228,6 +230,8 @@ npm run dev
 
 * ❓ Откуда мы знаем про эти команды?
 * ❓ Где хранится файл манифеста?
+* ❓ Что делает `npm ci`?
+* ❓ За что отвечает файл `package-lock.json`?
 
 ***
 
@@ -282,28 +286,6 @@ exit
 <img class="cornered" title="Проверка подключения к Postgres" 
     width="738" height="232"
     src="assets/build_conduit/check_postgres.gif">
-
-***
-
-- [x] Останови контейнер:
-
-```bash
-docker stop conduit_postgres
-```
-
-- [x] Проверь, что контейнер остановлен:
-
-```bash
-docker ps
-```
-
-- [x] Снова запусти контейнер:
-
-```bash
-docker start conduit_postgres
-```
-
-- [x] Проверь, что контейнер запущен.
 
 * ❓ Что такое СУБД?
 * ❓ Что такое Postgres?
@@ -563,121 +545,12 @@ describe('Sign up', () => {
 
 - [x] Верни **хук** обратно.
 
+* ❓ Что делает `cy.exec`?
 * ❓ Что за параметр `-w backend`?
 * ❓ Что возвращает `its('code')`?
 * ❓ Что делает `db:seed:undo:all`?
 
 ***
-
-## +9. Докер компоуз
-
-<mark>Дисклеймер! Все файлы конфигурации ниже были написаны **опытным DevOps инженером.**</mark>
-
-Вот этот парень @[Stanislav Lapshin|https://t.me/slapshin|assets/stas.jpg]
-
-- [x] Останови `CTRL`+`C` и закрой все терминалы.
-- [x] Создай файл `~/Dockerfile`
-
-```text
-FROM node:16.0
-ENV NODE_ENV=production \
-    PORT=80
-WORKDIR /app
-RUN apt-get update
-COPY . .
-RUN npm ci --only=production
-RUN npm -w frontend run build
-EXPOSE 80
-CMD npx -w backend sequelize-cli db:create; npm run start -w backend
-```
-
-- [x] Отредактируй файл `~/backend/.env`
-
-```text
-# Production
-# NODE_ENV=production
-PG_USER=postgres
-PG_PASSWORD=zyxxyz
-PG_HOST=postgres
-# PG_PORT=
-PG_DATABASE=conduit
-```
-
-- [x] Создай файл `~/.dockerignore`
-
-```text
-node_modules
-```
-
-- [x] Создай файл `~/docker-compose.yml` для описания сервисов проекта:
-
-```yaml
-version: '3.2'
-services:
-  postgres:
-    image: "postgres"
-    environment:
-      - POSTGRES_PASSWORD=zyxxyz
-    command: >
-      postgres -c ssl=on 
-      -c ssl_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem 
-      -c ssl_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-  conduit:
-    build: .
-    ports:
-      - 8080:80
-    depends_on:
-      postgres:
-        condition: service_healthy
-    healthcheck:
-      test: curl --fail http://localhost || exit 1
-      interval: 5s
-      retries: 5
-      start_period: 2s
-      timeout: 10s
-  cypress:
-    image: "cypress/included:12.5.1"
-    depends_on:
-      conduit:
-        condition: service_healthy
-    environment:
-      - CYPRESS_baseUrl=http://conduit:80
-      - NODE_ENV=production
-    working_dir: /e2e
-    volumes:
-      - ./:/e2e
-    command: npm i && npx cypress run
-```
-
-- [x] В новом терминале **собери и запусти** все сервисы:
-
-```bash
-docker-compose up
-```
-
-- [x] Проверь, что тест выполнился **в контейнере cypress!**
-
-<img class="cornered" title="Запуск Cypress в Docker" 
-    width="794" height="275"
-    src="assets/build_conduit/cypress_in_docker.webp">
-
-- [x] Посмотри видео прогона теста **внутри контейнера** `~/cypress/videos`
-
-<iframe src="https://giphy.com/embed/Y9pvW54NNPRacOKg2D" 
-    width="480" height="318" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-
-- [x] Открой в Chrome http://localhost:8080/
-
-* ❓ Где сейчас запущены Front-End и Back-End?
-* ❓ Зачем нужно было снова редактировать `.env` файл?
-* ❓ Где сейчас запускался Cypress?
-* ❓ Как базовый URL использовал Cypress (смотри видео)?
-* ❓ Чем это отличается от запуска до этого?
 
 Та да 🥳 Ты дошел до конца.
 
@@ -685,30 +558,20 @@ docker-compose up
 
 * [Что такое контейнер](https://www.docker.com/resources/what-container/)
 * [Docker для Начинающих](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
+* [Полный гайд по NPM для новичков](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
 
 # 😭 Домашка
 
 - [ ] Изучи еще полезные Docker команды:
 
 ```bash
+docker ps
+docker logs --follow conduit_postgres
+docker stop conduit_postgres
+docker start conduit_postgres
 docker rm conduit_postgres
 docker system prune --all
-docker build
-docker-compose up --build
 ```
-
-- [ ] Напиши тесты используя **best practices:**
-  * Публикации статьи.
-  * Удаления статьи.
-  * Редактирования статьи.
-  * Добавление комментария к статье.
-  * Удаление комментария.
-- [ ] Изучи исходный код файлов в папке `~/backend/seeders`
-- [ ] Сделай запросы в базу данных:
-  * Вывод списка пользователей.
-  * Вывод всех статей.
-  * Вывод всех комментариев.
-  * Вывод всех тегов.
 
 # 🙏 Фидбек пожалуйста
 

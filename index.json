@@ -191,6 +191,13 @@
         "site": "Туториалы по Cypress"
       }
     },
+    "cypress_cicd": {
+      "title": "Туториал: запускаем тесты через CI/CD",
+      "tags": "https://api.github.com/repos/open-tutorials/cypress/tags",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}/tutorials/cypress_cicd.md",
+      "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}"
+    },
     "install_node_js": {
       "title": "Установка Node.js",
       "tags": "https://api.github.com/repos/open-tutorials/cypress/tags",
