@@ -30,7 +30,7 @@
 
 В `README` на [GitHub](https://github.com/gothinkster/realworld) мы нашли [спецификацию на роутинг](https://realworld-docs.netlify.app/docs/specs/frontend-specs/routing/) — это дает нам представление о структуре приложения и его функциональных возможностей.
 
-**Задача:** составить список функциональных тестов для работы со статьями.
+<mark>Задача — составить список функциональных тестов для работы со статьями.</mark>
 
 - [x] Создай файл `~/test_cases/README.md`
 - [x] Добавь Markdown:
@@ -135,7 +135,7 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 
 ### +2.2. Играемся с фейками
 
-**Задача:** заполнить поля формы.
+<mark>Задача — заполнить поля формы.</mark>
 
 В качестве решения мы можем:
 

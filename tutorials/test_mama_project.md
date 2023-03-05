@@ -52,7 +52,7 @@
 
 > The **mother** of all demo apps — exemplary fullstack https://www.medium.com clone.
 
-<mark>Задача: познакомится со спецификацией на проект.</mark>
+<mark>Задача — познакомится со спецификацией на проект.</mark>
 
 - [x] Найди ссылку на спецификацию: **View our starter guide & spec**
 - [x] В спецификации перейди в раздел: **Frontend → Routing**
