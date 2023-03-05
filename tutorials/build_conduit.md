@@ -481,10 +481,13 @@ npm i cypress --save-dev
 - [x] Создай файл конфигурации Cypress `~/cypress.config.js`
 
 ```js
+const { defineConfig } = require('cypress');
+
 module.exports = defineConfig({
-  e2e: {
-    baseUrl: 'http://localhost:3000/'
-  }
+    e2e: {
+        baseUrl: 'http://localhost:3000/',
+        supportFile: false
+    }
 });
 ```
 
@@ -556,8 +559,10 @@ describe('Sign up', () => {
 
 # Читать и смотреть
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jlvK4pLoViI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 * [Что такое контейнер](https://www.docker.com/resources/what-container/)
-* [Docker для Начинающих](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
+* [Docker для начинающих](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
 * [Полный гайд по NPM для новичков](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
 
 # 😭 Домашка
