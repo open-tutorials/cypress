@@ -196,7 +196,13 @@
       "tags": "https://api.github.com/repos/open-tutorials/cypress/tags",
       "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}/tutorials/cypress_cicd.md",
       "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
-      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}"
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}",
+      "meta": {
+        "description": "Подойдет тем, кто хочет научится запускать тесты на Cypress автоматически через CI/CD на GitHub. Опишем сервисы проекта: фронтенда / бекенда / БД для Docker. Напишем API бекенда для сброса базы данных перед прогоном тестов. Научимся отправлять изменения в проекте на GitHub. Запустим тесты на CI/СD GitHub.",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}/assets/cypress_cicd/thumbnail.jpg",
+        "keywords": "Docker, GitHub, CI/CD, Cypress",
+        "site": "Туториалы по Cypress"
+      }
     },
     "install_node_js": {
       "title": "Установка Node.js",
