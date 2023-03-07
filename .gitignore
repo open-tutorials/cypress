@@ -7,4 +7,4 @@
 **/videos
 **/tmp
 **/.env
-cypress.env.json
+**/cypress.env.json
