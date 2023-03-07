@@ -5,5 +5,5 @@ package-lock.json
 .vscode
 cypress/screenshots
 cypress/videos
-tmp/
+**/tmp
 .hypothesis

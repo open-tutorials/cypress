@@ -1097,7 +1097,7 @@ cy.get('input[name=email]').its('0.validity.valid').should('be.false');
 
 Та да 🥳 Ты дошел до конца.
 
-Если, что вот [полный код](/cypress/integration/deep-cypress.spec.js) всех тестов.
+Если, что вот [полный код](/cypress_09/cypress/integration/deep-cypress.spec.js) всех тестов.
 
 <details>
   <summary>Правда все просто? 😂</summary>

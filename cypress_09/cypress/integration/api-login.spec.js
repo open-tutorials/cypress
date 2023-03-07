@@ -20,7 +20,7 @@ function setJwtToken(window, token) {
 it('should do API login', () => {
     const { username } = meUser;
 
-    cy.readFile('token.txt')
+    cy.readFile('tmp/token.txt')
         .should('not.be.empty')
         .then(token => {
             cy.visit('/', {

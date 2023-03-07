@@ -417,14 +417,14 @@ cy.get('input[name=first_name]').type('Иван');
 * `form[name=registration] button` — что делает кнопка?
 
 - [x] Найди **контекст** для всех полей формы и обнови код теста.
-- [x] Сверь свой исходный код с [эталоном](/cypress/integration/best-selectors.spec.js)
+- [x] Сверь свой исходный код с [эталоном](/cypress_09/cypress/integration/best-selectors.spec.js)
 
 ***
 
 ## +7. Тест формы входа
 
 - [x] Напиши тест **should do login user**.
-- [x] Сверь свой исходный код с [эталоном](/cypress/integration/best-selectors.spec.js)
+- [x] Сверь свой исходный код с [эталоном](/cypress_09/cypress/integration/best-selectors.spec.js)
 
 ***
 

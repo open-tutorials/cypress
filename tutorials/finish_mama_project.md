@@ -186,13 +186,13 @@ test_cases/articles/crud/publish_article.md|test_cases/articles/crud/
 test_cases/articles/crud/delete_article.md|test_cases/articles/crud/
 test_cases/articles/crud/edit_article.md|test_cases/articles/crud/
 
-cypress/fixtures/me-user.json|cypress/fixtures/
+/cypress_09/cypress/fixtures/me-user.json|cypress/fixtures/
 
-cypress/support/shared.js1|cypress/support/|shared.js
-cypress/support/utils.js|cypress/support/
+/cypress_09/cypress/support/shared.js1|cypress/support/|shared.js
+/cypress_09/cypress/support/utils.js|cypress/support/
 
-cypress/integration/finish_mama_project/signup.spec.js|cypress/integration/
-cypress/integration/finish_mama_project/articles/crud.spec.js|cypress/integration/articles/
+/cypress_09/cypress/integration/finish_mama_project/signup.spec.js|cypress/integration/
+/cypress_09/cypress/integration/finish_mama_project/articles/crud.spec.js|cypress/integration/articles/
 ```
 
 - [x] Создай скрипт `download.js`
@@ -425,7 +425,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L41)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L41)
 
 ***
 
@@ -450,7 +450,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L66)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L66)
 
 ***
 
@@ -490,7 +490,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L90)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L90)
 
 ***
 
@@ -507,7 +507,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L133)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L133)
 
 ***
 
@@ -524,7 +524,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L186)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/finish_mama_project/articles/global-feed.spec.js#L186)
 - [x] Поставь отметки, что тесты написаны в `README`
 
 ***
@@ -553,7 +553,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/commenting.spec.js#L73)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/finish_mama_project/commenting.spec.js#L73)
 
 ***
 
@@ -570,7 +570,7 @@ cy.get('?')
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/finish_mama_project/commenting.spec.js#L88)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/finish_mama_project/commenting.spec.js#L88)
 - [x] Поставь отметки, что тесты написаны в `README`
 
 # 🙏 Фидбек пожалуйста

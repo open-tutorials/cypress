@@ -125,7 +125,7 @@ describe('Articles', () => {
 
     beforeEach(() => {
 
-        cy.readFile('token.txt')
+        cy.readFile('tmp/token.txt')
             .should('not.be.empty')
             .then(token => {
                 cy.visit('/', {

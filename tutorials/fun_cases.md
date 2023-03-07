@@ -409,7 +409,7 @@ describe.only('Report in XLSX', () => {
 
 ***
 
-В случае проблем, держи эталоны файлов [fun-cases.spec.js](/cypress/integration/fun-cases.spec.js) и [plugins/index.js](/cypress/plugins/index.js)
+В случае проблем, держи эталоны файлов [fun-cases.spec.js](/cypress_09/cypress/integration/fun-cases.spec.js) и [plugins/index.js](/cypress/plugins/index.js)
 
 - [x] Прогони все тесты в Headless.
 

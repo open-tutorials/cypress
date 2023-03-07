@@ -252,7 +252,7 @@ describe('Sign up', () => {
 
 *** 15:00 ***
 
-- [x] Сверь свой код с [эталоном](/cypress/integration/test_mama_project/signup1.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress_09/cypress/integration/test_mama_project/signup1.spec.js)
 - [x] Запусти тест в **Headless** режиме.
 
 *** 5:00 ***
@@ -309,7 +309,7 @@ describe('Sign up', () => {
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/test_mama_project/signup2.spec.js)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/test_mama_project/signup2.spec.js)
 - [x] Запусти тест в **Headless** режиме `npx cypress run`
 
 *** 05:00 ***
@@ -360,7 +360,7 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 
 *** 10:00 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/test_mama_project/signup3.spec.js)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/test_mama_project/signup3.spec.js)
 - [x] Запусти все тесты в Headless режиме.
 - [x] Найди и выпиши участки кода которые повторяются.
 

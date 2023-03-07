@@ -247,7 +247,7 @@ for (let i = 0; i <= 5; i++) {
 
 *** 05:00 ***
 
-- [x] Сверь свой код с [эталоном](/cypress/integration/fake_data/articles1.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress_09/cypress/integration/fake_data/articles1.spec.js)
 - [x] Разберись в каждой строчке кода мастера.
 - [x] Перенеси найденные улучшения к себе.
 - [x] Добавь отметку в `README.md` что тест написан.
@@ -358,7 +358,7 @@ cy.get('@myArticles').contains(article.title)
 
 *** 05:00 ***
 
-- [x] Сверь свой код с [эталоном](/cypress/integration/fake_data/articles2.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress_09/cypress/integration/fake_data/articles2.spec.js)
 - [x] Разберись в каждой строчке кода мастера.
 - [x] Перенеси найденные улучшения к себе.
 - [x] Добавь отметку в `README.md` что тест готов.
@@ -384,7 +384,7 @@ cy.get('@myArticles').contains(article.title)
 
 *** 10:00 ***
 
-- [x] Сверь свой код с [эталоном](/cypress/integration/fake_data/articles3.spec.js)
+- [x] Сверь свой код с [эталоном](/cypress_09/cypress/integration/fake_data/articles3.spec.js)
 - [x] Разберись в каждой строчке кода мастера.
 - [x] Перенеси найденные улучшения к себе.
 - [x] Добавь отметку в `README.md` что тест готов.

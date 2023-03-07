@@ -40,21 +40,21 @@
 - [x] Создай файл `mama_files.txt` со списком загрузки:
 
 ```text
-cypress/fixtures/me-user.json|cypress/fixtures/
+cypress_09/cypress/fixtures/me-user.json|cypress/fixtures/
 
-cypress/support/index.js|cypress/support/
-cypress/support/commands.js|cypress/support/
-cypress/support/shared2.js|cypress/support/|shared.js
-cypress/support/utils.js|cypress/support/
-cypress/plugins/index1.js|cypress/plugins/|index.js
+cypress_09/cypress/support/index.js|cypress/support/
+cypress_09/cypress/support/commands.js|cypress/support/
+cypress_09/cypress/support/shared2.js|cypress/support/|shared.js
+cypress_09/cypress/support/utils.js|cypress/support/
+cypress_09/cypress/plugins/index1.js|cypress/plugins/|index.js
 
-cypress/integration/upgrade_cypress/signup.spec.js|cypress/integration/
-cypress/integration/upgrade_cypress/articles/crud.spec.js|cypress/integration/articles/
-cypress/integration/upgrade_cypress/articles/global-feed.spec.js|cypress/integration/articles/
-cypress/integration/upgrade_cypress/commenting.spec.js|cypress/integration/
-cypress/integration/api.spec.js|cypress/integration/
-cypress/integration/plugins.spec.js|cypress/integration/
-cypress.json|
+cypress_09/cypress/integration/upgrade_cypress/signup.spec.js|cypress/integration/
+cypress_09/cypress/integration/upgrade_cypress/articles/crud.spec.js|cypress/integration/articles/
+cypress_09/cypress/integration/upgrade_cypress/articles/global-feed.spec.js|cypress/integration/articles/
+cypress_09/cypress/integration/upgrade_cypress/commenting.spec.js|cypress/integration/
+cypress_09/cypress/integration/api.spec.js|cypress/integration/
+cypress_09/cypress/integration/plugins.spec.js|cypress/integration/
+cypress_09/cypress.json|
 ```
 
 - [x] Установи wget `npm i node-wget --save-dev`

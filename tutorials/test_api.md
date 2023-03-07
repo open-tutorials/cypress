@@ -419,7 +419,7 @@ expect(article.updatedAt).match(DATE_FORMAT, 'wrong updated at date format');
 
 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/api.spec.js#L73)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/api.spec.js#L73)
 
 * ❓ За что отвечает поле `token` в ответе от сервера?
 
@@ -478,7 +478,7 @@ it.only('should not do register user with empty data', () => {
 
 `cy.request` в Сypress можно использовать не только для тестирования API, но и для вспомогательных задач.
 
-Вспомни [свой код](cypress/integration/finish_mama_project/articles/crud.spec.js) из туториала [заканчиваем мама проект](@finish_mama_project)
+Вспомни [свой код](/cypress_09/cypress/integration/finish_mama_project/articles/crud.spec.js) из туториала [заканчиваем мама проект](@finish_mama_project)
 
 Перед всеми тестами требующими **авторизацию пользователя** ты повторял **шаги входа**, функция – `login()`
 
@@ -530,7 +530,7 @@ before(() => {
             expect(status).to.eq(200);
             expect(body).to.have.key('user');
             const { user } = body;
-            cy.writeFile('token.txt', user.token);
+            cy.writeFile('tmp/token.txt', user.token);
         });
 });
 ```
@@ -551,7 +551,7 @@ import { setJwtToken } from '/cypress/support/utils';
 
 it('should do publish article', () => {
   
-  cy.readFile('token.txt')
+  cy.readFile('tmp/token.txt')
     .should('not.be.empty')
     .then(token => {
         cy.visit('/', {
@@ -592,7 +592,7 @@ Authorization: Token XYZ
 
 ***
 
-- [x] Приведи свой код в соответствии с [эталоном](/cypress/integration/api.spec.js#L123)
+- [x] Приведи свой код в соответствии с [эталоном](/cypress_09/cypress/integration/api.spec.js#L123)
 
 Та да 🥳 Ты дошел до конца.
 

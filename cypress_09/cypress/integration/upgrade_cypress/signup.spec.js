@@ -54,7 +54,7 @@ describe('Sign up', () => {
 
     it('should do logout user', () => {
 
-        cy.readFile('token.txt')
+        cy.readFile('tmp/token.txt')
             .should('not.be.empty')
             .then(token => {
                 cy.visit('/', {

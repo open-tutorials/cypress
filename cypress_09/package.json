@@ -1,0 +1,25 @@
+{
+  "name": "cypress_09",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tiny-server",
+    "test": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "chai": "^4.3.7",
+    "cypress": "^9.7.0",
+    "node-wget": "^0.4.3",
+    "node-xlsx": "^0.21.0",
+    "qr-util": "^1.0.1",
+    "tiny-server": "^1.1.0"
+  },
+  "dependencies": {
+    "mailgun-js": "^0.22.0"
+  }
+}

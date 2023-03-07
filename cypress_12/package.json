@@ -1,0 +1,19 @@
+{
+  "name": "cypress_12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tiny-server",
+    "test": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.7.0",
+    "@faker-js/faker": "^7.6.0",
+    "node-wget": "^0.4.3",
+    "tiny-server": "^1.1.0"
+  }
+}
