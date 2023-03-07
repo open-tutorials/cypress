@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { parseQR } = require('qr-util');
 const xlsx = require('node-xlsx');
+const MailSlurp = require('mailslurp-client').default;
 
 // creating temp folder
 const TMP_FOLDER = 'tmp';
@@ -12,6 +13,9 @@ if (!fs.existsSync(TMP_FOLDER)) {
   fs.mkdirSync(TMP_FOLDER);
 }
 module.exports = (on, config) => {
+  const MAIL_SLURP_API_KEY = config.env.MAIL_SLURP_API_KEY;
+  const MAIL_SLURP = new MailSlurp({ apiKey: MAIL_SLURP_API_KEY });
+
   on('task', {
 
     readQRCode: (url) => {
@@ -67,8 +71,30 @@ module.exports = (on, config) => {
 
     xlsxToJson: (file) => {
       return new Promise((done) => {
-        console.log('parse XLSX file to JSON', file);
         done(xlsx.parse(file));
+      });
+    },
+
+    createDisposableMailbox: () => {
+      return new Promise((done) => {
+        MAIL_SLURP.createInbox().then(inbox =>
+          done({ id: inbox.id, emailAddress: inbox.emailAddress }));
+      });
+    },
+
+    deleteMailbox: (inboxId) => {
+      return new Promise((done) => {
+        MAIL_SLURP.deleteInbox(inboxId).then(() => done(true));
+      });
+    },
+
+    getLastMessage: (inboxId) => {
+      return new Promise((done) => {
+        MAIL_SLURP.waitController.waitForLatestEmail({
+          inboxId,
+          unreadOnly: true,
+          timeout: 10000
+        }).then(({ subject, body }) => done({ subject, body }));
       });
     }
 

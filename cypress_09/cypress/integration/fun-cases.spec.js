@@ -1,10 +1,9 @@
 ///<reference types="cypress" />
-
-beforeEach(() => {
-    cy.visit('http://localhost:3000/apps/fun-cases.html');
-});
+import { faker } from '@faker-js/faker';
 
 it('should do check QR code', () => {
+
+    cy.visit('/apps/fun-cases.html');
 
     cy.get('section[data-cy=qr-code]').should('be.visible').as('section').scrollIntoView();
 
@@ -16,6 +15,8 @@ it('should do check QR code', () => {
 });
 
 it('should do book delivery', () => {
+
+    cy.visit('/apps/fun-cases.html');
 
     cy.get('section[data-cy=slow-ui]').should('be.visible').as('section');
 
@@ -55,6 +56,8 @@ describe('Report in XLSX', () => {
     const REPORT_FILE_NAME = 'users_report.xlsx';
 
     beforeEach(() => {
+        cy.visit('/apps/fun-cases.html');
+
         cy.get('section[data-cy=check-xlsx-report]')
             .should('be.visible').as('section');
     });
@@ -68,7 +71,7 @@ describe('Report in XLSX', () => {
                 debugger;
                 expect(sheet1.name).be.eq('Users');
                 const { data: rows } = sheet1;
-                
+
                 expect(rows).eql([
                     ['First Name', 'Last Name', 'Email'],
                     ['Elon', 'Musk', 'elon@gmail.com'],
@@ -122,6 +125,80 @@ describe('Report in XLSX', () => {
 
         checkSpreadsheet();
 
+    });
+
+});
+
+describe.only('Signup', () => {
+
+    const BACKEND_BASE_URL = 'http://localhost:8081/';
+    const DEFAULT_BASE_URL = Cypress.config('baseUrl');
+
+    before(() => {
+        cy.log('set base url to backend');
+        Cypress.config('baseUrl', BACKEND_BASE_URL);
+    });
+
+    after(() => {
+        cy.log('reset base url');
+        Cypress.config('baseUrl', DEFAULT_BASE_URL);
+    });
+
+    it('register user by email by confirmation', () => {
+
+        cy.task('createDisposableMailbox')
+            .then(({ id, emailAddress }) => {
+                const payload = { email: emailAddress };
+
+                cy.request({ method: 'POST', url: '/confirm-email', body: payload })
+                    .then(({ status }) => {
+                        expect(status).to.eq(200);
+                    });
+
+                cy.task('getLastMessage', id).then(({ body }) => {
+                    expect(body).to.not.be.empty;
+                    const [, code] = body.match(/code\sis\s(\d{4})/);
+                    cy.log(code);
+                    return cy.wrap({ id, email: emailAddress, code });
+                }).as('confirmationCode');
+            });
+
+        cy.get('@confirmationCode')
+            .should('not.be.empty')
+            .then(({ id, email, code }) => {
+                const name = faker.name.fullName();
+                const payload = { email, code, name };
+                cy.request({ method: 'POST', url: '/register', body: payload })
+                    .then(({ status, body }) => {
+                        expect(status).to.eq(200);
+                        expect(body).to.includes(name);
+                    });
+                cy.pause();
+
+                cy.task('deleteMailbox', id)
+                    .then(success => {
+                        expect(success).to.be.true;
+                        cy.log('mailbox deleted');
+                    });
+            });
+    });
+
+    it('register user by email by secret', () => {
+        const secret = Cypress.env('SECRET');
+        expect(secret).to.not.be.empty;
+
+        const name = faker.name.fullName();
+        const payload = { email: faker.email, name };
+        cy.request({
+            method: 'POST',
+            url: '/register', body: payload,
+            headers: {
+                'x-secret': secret
+            }
+        }).then(({ status, body }) => {
+            expect(status).to.eq(200);
+            expect(body).to.includes(name);
+        });
     });
 
 });

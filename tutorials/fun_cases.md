@@ -409,6 +409,199 @@ describe.only('Report in XLSX', () => {
 
 ***
 
+## +5. Регистрация с подтверждением email
+
+При регистрации в системе на указанную почту отправляется специальный код или ссылка.
+
+Основные способы:
+* Использовать сервисы Disposable Email типа https://temp-mail.org/
+* Добавить на бекенд для целей тестирования секреты.
+
+### Подготовка сервера
+
+- [x] Зарегистрируйся на сервисе [Mail Slurp](https://app.mailslurp.com/login/)
+- [x] Создай файл сервера тестового `server.js` с содержимым [/cypress_09/server.js]
+- [x] Установи нужные пакеты:
+
+```bash
+npm i express dotenv mailslurp-client
+```
+
+- [x] Скопируй **API KEY** из **Mail Slurp** в буфер.
+- [x] Перейди Mail Slurp &rarr; Inboxes &rarr; Create.
+- [x] Создай новый почтовый ящик с именем Outbox.
+- [x] Создай файл `.env`
+
+```bash
+MAIL_SLURP_API_KEY=xxxXXX
+OUTBOX=yyyYYYY
+SECRET=bibika
+node server.js
+```
+
+- [x] Запусти тестовый сервер:
+
+```bash
+node server.js
+```
+
+### Проверка сервера
+
+- [x] Создай новый почтовый ящик с именем Inbox.
+- [x] Отправь запрос через Postman:
+
+```text
+↓
+POST http://localhost:8081/confirm-email
+{ "email": "xxxXXX@mailslurp.com" }
+
+↓ 200
+Please check your email
+```
+
+- [x] Проверь почтовый ящик.
+- [x] Отправь запрос через Postman:
+
+```text
+↓
+POST http://localhost:8081/register
+{
+    "email": "xxxXXX@mailslurp.com",
+    "code": "???",
+    "name": "Anton Breslavsky"
+}
+
+↓ 200
+You has been registered Anton Breslavsky!
+```
+
+### Тест на Cypress
+
+- [x] Добавь новый тест:
+
+```js
+describe.only('Signup', () => {
+
+    const BACKEND_BASE_URL = 'http://localhost:8081/';
+    const DEFAULT_BASE_URL = Cypress.config('baseUrl');
+
+    before(() => {
+        cy.log('set base url to backend');
+        Cypress.config('baseUrl', BACKEND_BASE_URL);
+    });
+
+    after(() => {
+        cy.log('reset base url');
+        Cypress.config('baseUrl', DEFAULT_BASE_URL);
+    });
+
+    it('register user by email by confirmation', () => {
+
+        cy.task('createDisposableMailbox')
+            .then(({ id, emailAddress }) => {
+                const payload = { email: emailAddress };
+
+                cy.request({ method: 'POST', url: '/confirm-email', body: payload })
+                    .then(({ status }) => {
+                        expect(status).to.eq(200);
+                    });
+
+                cy.task('getLastMessage', id).then(({ body }) => {
+                    expect(body).to.not.be.empty;
+                    const [, code] = body.match(/code\sis\s(\d{4})/);
+                    cy.log(code);
+                    return cy.wrap({ id, email: emailAddress, code });
+                }).as('confirmationCode');
+            });
+
+        cy.get('@confirmationCode')
+            .should('not.be.empty')
+            .then(({ id, email, code }) => {
+                const name = faker.name.fullName();
+                const payload = { email, code, name };
+                cy.request({ method: 'POST', url: '/register', body: payload })
+                    .then(({ status, body }) => {
+                        expect(status).to.eq(200);
+                        expect(body).to.includes(name);
+                    });
+                // cy.pause();
+
+                cy.task('deleteMailbox', id)
+                    .then(success => {
+                        expect(success).to.be.true;
+                        cy.log('mailbox deleted');
+                    });
+            });
+    });
+
+    it('register user by email by secret', () => {
+        const secret = Cypress.env('SECRET');
+        expect(secret).to.not.be.empty;
+
+        const name = faker.name.fullName();
+        const payload = { email: faker.email, name };
+        cy.request({
+            method: 'POST',
+            url: '/register', body: payload,
+            headers: {
+                'x-secret': secret
+            }
+        }).then(({ status, body }) => {
+            expect(status).to.eq(200);
+            expect(body).to.includes(name);
+        });
+    });
+
+});
+```
+
+- [x] Добавь плагины в файл `~/cypress/plugins/index.js`
+
+```diff
+  const xlsx = require('node-xlsx');
++ const MailSlurp = require('mailslurp-client').default;
+
+
+  on('task', {
+
++     createDisposableMailbox: () => {
++         return new Promise((done) => {
++             MAIL_SLURP.createInbox().then(inbox =>
++                 done({ id: inbox.id, emailAddress: inbox.emailAddress }));
++         });
++     },
++ 
++     deleteMailbox: (inboxId) => {
++         return new Promise((done) => {
++             MAIL_SLURP.deleteInbox(inboxId).then(() => done(true));
++         });
++     },
++ 
++     getLastMessage: (inboxId) => {
++         return new Promise((done) => {
++             MAIL_SLURP.waitController.waitForLatestEmail({
++                 inboxId,
++                 unreadOnly: true,
++                 timeout: 10000
++             }).then(({ subject, body }) => done({ subject, body }));
++         });
++     }
+  
+  }
+```
+
+- [x] Запусти Cypress командой:
+
+```bash
+CYPRESS_MAIL_SLURP_API_KEY=d61898797d446ac8deda3c6320d3f67a40f01957b832dddf53cbd9d9d0edd1a6 \
+CYPRESS_SECRET=bibika \
+npx cypress open
+```
+
+- [x] Прогони все тесты.
+
+***
+
 В случае проблем, держи эталоны файлов [fun-cases.spec.js](/cypress_09/cypress/integration/fun-cases.spec.js) и [plugins/index.js](/cypress/plugins/index.js)
 
 - [x] Прогони все тесты в Headless.
