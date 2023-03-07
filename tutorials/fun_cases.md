@@ -595,12 +595,13 @@ describe.only('Signup', () => {
     }
 ```
 
-- [x] Запусти Cypress командой:
+- [x] Создай файл `cypress.env.json`
 
-```bash
-CYPRESS_MAIL_SLURP_API_KEY=d61898797d446ac8deda3c6320d3f67a40f01957b832dddf53cbd9d9d0edd1a6 \
-CYPRESS_SECRET=bibika \
-npx cypress open
+```json
+{
+    "MAIL_SLURP_API_KEY": "xxxXXX",
+    "CYPRESS_SECRET": "bibika"
+}
 ```
 
 - [x] Прогони все тесты.
