@@ -420,11 +420,12 @@ describe.only('Report in XLSX', () => {
 ### Подготовка сервера
 
 - [x] Зарегистрируйся на сервисе [Mail Slurp](https://app.mailslurp.com/login/)
-- [x] Создай файл сервера тестового `server.js` с содержимым [/cypress_09/server.js]
+- [x] Создай файл тестового сервера `server.js` с [содержимым](/cypress_09/server.js)
 - [x] Установи нужные пакеты:
 
 ```bash
-npm i express dotenv mailslurp-client
+npm i express dotenv mailslurp-client --save
+npm i @faker-js/faker --save-dev
 ```
 
 - [x] Скопируй **API KEY** из **Mail Slurp** в буфер.
@@ -477,7 +478,7 @@ You has been registered Anton Breslavsky!
 
 ### Тест на Cypress
 
-- [x] Добавь новый тест:
+- [x] Добавь новый тесты:
 
 ```js
 describe.only('Signup', () => {
@@ -561,33 +562,37 @@ describe.only('Signup', () => {
   const xlsx = require('node-xlsx');
 + const MailSlurp = require('mailslurp-client').default;
 
+  module.exports = (on, config) => {
 
-  on('task', {
++   const MAIL_SLURP_API_KEY = config.env.MAIL_SLURP_API_KEY;
++   const MAIL_SLURP = new MailSlurp({ apiKey: MAIL_SLURP_API_KEY });
 
-+     createDisposableMailbox: () => {
-+         return new Promise((done) => {
-+             MAIL_SLURP.createInbox().then(inbox =>
-+                 done({ id: inbox.id, emailAddress: inbox.emailAddress }));
-+         });
-+     },
+    on('task', {
+
++       createDisposableMailbox: () => {
++           return new Promise((done) => {
++               MAIL_SLURP.createInbox().then(inbox =>
++                   done({ id: inbox.id, emailAddress: inbox.emailAddress }));
++           });
++       },
 + 
-+     deleteMailbox: (inboxId) => {
-+         return new Promise((done) => {
-+             MAIL_SLURP.deleteInbox(inboxId).then(() => done(true));
-+         });
-+     },
++       deleteMailbox: (inboxId) => {
++           return new Promise((done) => {
++               MAIL_SLURP.deleteInbox(inboxId).then(() => done(true));
++           });
++       },
 + 
-+     getLastMessage: (inboxId) => {
-+         return new Promise((done) => {
-+             MAIL_SLURP.waitController.waitForLatestEmail({
-+                 inboxId,
-+                 unreadOnly: true,
-+                 timeout: 10000
-+             }).then(({ subject, body }) => done({ subject, body }));
-+         });
-+     }
++       getLastMessage: (inboxId) => {
++           return new Promise((done) => {
++               MAIL_SLURP.waitController.waitForLatestEmail({
++                   inboxId,
++                   unreadOnly: true,
++                   timeout: 10000
++               }).then(({ subject, body }) => done({ subject, body }));
++           });
++       }
   
-  }
+    }
 ```
 
 - [x] Запусти Cypress командой:
@@ -602,7 +607,7 @@ npx cypress open
 
 ***
 
-В случае проблем, держи эталоны файлов [fun-cases.spec.js](/cypress_09/cypress/integration/fun-cases.spec.js) и [plugins/index.js](/cypress/plugins/index.js)
+В случае проблем, держи эталоны файлов [fun-cases.spec.js](/cypress_09/cypress/integration/fun-cases.spec.js) и [plugins/index.js](/cypress_09/cypress/plugins/index.js)
 
 - [x] Прогони все тесты в Headless.
 
