@@ -21,7 +21,7 @@
 * Ты загрузил тестовое приложение в папку `~/apps`
 
 ```bash
-npx wget -d apps/ https://raw.githubusercontent.com/open-tutorials/cypress/main/apps/fun-cases.html
+npx wget -d apps/ https://open-tutorials.github.io/cypress/apps/fun-cases.html
 ```
 
 Если забыл, глянь в наш [второй туториал](https://www.epic1h.com/best_selectors#1-подготовка-веб-сервера)

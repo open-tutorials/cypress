@@ -150,6 +150,9 @@ describe.only('Signup', () => {
             .then(({ id, emailAddress }) => {
                 const payload = { email: emailAddress };
 
+                cy.log(emailAddress);
+                cy.pause();
+
                 cy.request({ method: 'POST', url: '/confirm-email', body: payload })
                     .then(({ status }) => {
                         expect(status).to.eq(200);
@@ -183,7 +186,7 @@ describe.only('Signup', () => {
             });
     });
 
-    it('register user by email by secret', () => {
+    it.only('register user by email by secret', () => {
         const secret = Cypress.env('SECRET');
         expect(secret).to.not.be.empty;
 
@@ -191,7 +194,8 @@ describe.only('Signup', () => {
         const payload = { email: faker.email, name };
         cy.request({
             method: 'POST',
-            url: '/register', body: payload,
+            url: '/register',
+            body: payload,
             headers: {
                 'x-secret': secret
             }
@@ -199,6 +203,7 @@ describe.only('Signup', () => {
             expect(status).to.eq(200);
             expect(body).to.includes(name);
         });
+
     });
 
 });

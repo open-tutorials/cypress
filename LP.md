@@ -230,4 +230,7 @@ h1.title {
 
 1. <md-progress for="memes_teach"></md-progress> [Стрим-практикум: мемы учат](@memes_teach)
 2. [ИИ решает тестовое задание по QA](https://www.youtube.com/watch?v=NP6LL5e52vU)
-3. RPA через Cypress & Tag UI
+2. [Делаем Пакмана на Java Script](https://www.youtube.com/watch?v=GhXFBB7o2SM)
+2. [Docker для QA и Cypress](https://www.youtube.com/watch?v=jlvK4pLoViI)
+2. [Пишем свой Интернет на Java Script](https://www.youtube.com/watch?v=sGYNjdmrPso)
+4. RPA через Cypress & Tag UI

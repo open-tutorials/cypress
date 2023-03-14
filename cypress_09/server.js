@@ -50,9 +50,16 @@ app.post('/confirm-email', (req, res) => {
 app.post('/register', async (req, res) => {
     const { email, code, name } = req.body;
     console.log('check code for', email, codes[email], '=', code);
-    if (codes[email] !== code && req.header('x-secret') !== process.env.SECRET) {
-        res.status(400).send('Wrong confirmation code');
-        return;
+
+    if (!process.env.SECRET || req.header('x-secret') !== process.env.SECRET) {
+        if (!code) {
+            res.status(400).send('Code was not passed');
+            return;
+        }
+        if (codes[email] !== code) {
+            res.status(400).send('Wrong confirmation code');
+            return;
+        }
     }
 
     res.status(200).send(`You has been registered ${name}!`);
