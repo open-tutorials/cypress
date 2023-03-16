@@ -338,9 +338,13 @@ git push
 
 - [x] Проверь свой коммит на GitHub.
 
-<video class="how-to" width="974" height="597" loop autoplay muted>
-    <source src="assets/cypress_cicd/check_commit.webm" type="video/webm">
-</video>
+```json how-to
+{
+  "video": "assets/cypress_cicd/check_commit.webm",
+  "width": 974,
+  "height": 597
+}
+```
 
 * ❓ Что такое workflow?
 * ❓ Зачем нужен файл `.gitignore`?
