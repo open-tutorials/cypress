@@ -361,9 +361,13 @@ git push
 - [x] Открой текущую запущенную пайплайну.
 - [x] Проверь лог выполнения.
 
-<video class="how-to" width="1063" height="586" loop autoplay muted>
-    <source src="assets/cypress_cicd/check_job.webm" type="video/webm">
-</video>
+```json how-to
+{
+  "video": "assets/cypress_cicd/check_job.webm",
+  "width": 1063,
+  "height": 586
+}
+```
 
 * ❓ Что такое Pipeline?
 * ❓ Кто запустил эту пайплайну и когда?
