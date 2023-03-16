@@ -122,6 +122,14 @@ You've successfully authenticated, but GitHub does not provide shell access.
 
 - [x] Переведи сообщение на русский.
 
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/build_conduit/github_account.webm" type="video/webm">
+</video>
+</details>
+
 * ❓ Почему GitHub must have №1 в IT?
 * ❓ Зачем его используют программисты?
 * ❓ Почему ключей пара?
@@ -170,6 +178,14 @@ Conduit имеет **множество реализаций** на разных
 
 - [x] Прочитай и переведи `README.md`
 
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/build_conduit/conduit_forking.webm" type="video/webm">
+</video>
+</details>
+
 * ❓ Что такое Fullstack?
 * ❓ Что такое React?
 * ❓ Что такое Express?
@@ -208,6 +224,14 @@ cd ~/projects/cypress/
 git clone git@github.com:{your_account}/conduit-realworld-example-app.git
 ```
 
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/build_conduit/repository_cloning.webm" type="video/webm">
+</video>
+</details>
+
 * ❓ Что делает `git clone`?
 * ❓ Куда ведет папка `~`?
 
@@ -229,6 +253,14 @@ npm run dev
 ```
 
 - [x] Открой в Chrome http://localhost:3000/
+
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/build_conduit/project_start.webm" type="video/webm">
+</video>
+</details>
 
 * ❓ Откуда мы знаем про эти команды?
 * ❓ Где хранится файл манифеста?
@@ -288,6 +320,14 @@ exit
 <img class="cornered" title="Проверка подключения к Postgres" 
     width="738" height="232"
     src="assets/build_conduit/check_postgres.gif">
+
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/build_conduit/postgres_install.webm" type="video/webm">
+</video>
+</details>
 
 * ❓ Что такое СУБД?
 * ❓ Что такое Postgres?
@@ -353,6 +393,14 @@ npm run dev
 ```
 
 - [x] Открой в Chrome http://localhost:3000/
+
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/build_conduit/bd_init.webm" type="video/webm">
+</video>
+</details>
 
 * ❓ Что делает команда `cp`?
 * ❓ Почему мы прописали пользователя `postgres`?
@@ -468,6 +516,14 @@ select count(id) from "Articles";
 - [x] Обнови страницу http://localhost:3000/
 - [x] Убедись, что видишь статьи.
 
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/build_conduit/filling_bd.webm" type="video/webm">
+</video>
+</details>
+
 * ❓ Что такое `seed`?
 
 ***
@@ -549,6 +605,14 @@ describe('Sign up', () => {
 ***
 
 - [x] Верни **хук** обратно.
+
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/build_conduit/testing.webm" type="video/webm">
+</video>
+</details>
 
 * ❓ Что делает `cy.exec`?
 * ❓ Что за параметр `-w backend`?
