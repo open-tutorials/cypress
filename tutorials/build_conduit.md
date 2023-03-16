@@ -126,7 +126,7 @@ You've successfully authenticated, but GitHub does not provide shell access.
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="assets/build_conduit/github_account.webm" type="video/webm">
+  <source src="assets/build_conduit/get_github.webm" type="video/webm">
 </video>
 </details>
 
@@ -182,7 +182,7 @@ Conduit имеет **множество реализаций** на разных
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="assets/build_conduit/conduit_forking.webm" type="video/webm">
+  <source src="assets/build_conduit/fork_conduit.webm" type="video/webm">
 </video>
 </details>
 
@@ -228,7 +228,7 @@ git clone git@github.com:{your_account}/conduit-realworld-example-app.git
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="assets/build_conduit/repository_cloning.webm" type="video/webm">
+  <source src="assets/build_conduit/clone_repository.webm" type="video/webm">
 </video>
 </details>
 
@@ -258,7 +258,7 @@ npm run dev
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="assets/build_conduit/project_start.webm" type="video/webm">
+  <source src="assets/build_conduit/run_conduit.webm" type="video/webm">
 </video>
 </details>
 
@@ -325,7 +325,7 @@ exit
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="assets/build_conduit/postgres_install.webm" type="video/webm">
+  <source src="assets/build_conduit/install_postgres.webm" type="video/webm">
 </video>
 </details>
 
@@ -398,7 +398,7 @@ npm run dev
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="assets/build_conduit/bd_init.webm" type="video/webm">
+  <source src="assets/build_conduit/create_db.webm" type="video/webm">
 </video>
 </details>
 
@@ -520,7 +520,7 @@ select count(id) from "Articles";
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="assets/build_conduit/filling_bd.webm" type="video/webm">
+  <source src="assets/build_conduit/db_seed.webm" type="video/webm">
 </video>
 </details>
 
@@ -610,7 +610,7 @@ describe('Sign up', () => {
   <summary>Не получается 📹</summary>
 
 <video width="600px" controls>
-  <source src="assets/build_conduit/testing.webm" type="video/webm">
+  <source src="assets/build_conduit/reset_db.webm" type="video/webm">
 </video>
 </details>
 

@@ -116,8 +116,9 @@ services:
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
-      timeout: 5s
-      retries: 5
+      retries: 15
+      start_period: 2s
+      timeout: 10s
 
   conduit:
     build: ./
@@ -131,8 +132,8 @@ services:
       - JWT_KEY=secret
     healthcheck:
       test: curl --fail http://localhost || exit 1
-      interval: 5s
-      retries: 5
+      interval: 10s
+      retries: 15
       start_period: 2s
       timeout: 10s
 
@@ -266,7 +267,7 @@ docker compose up --build
 + cypress/screenshots
 ```
 
-- [x] Создай файл `.github/workflow/ci-cd.yml`
+- [x] Создай файл `.github/workflows/ci-cd.yml`
 
 ```yml
 name: CI/CD
@@ -308,7 +309,7 @@ git add *
 - [x] Скрытые файлы и папки нужно добавлять отдельно:
 
 ```bash
-git add .gitignore .dockerignore .github/workflow/ci-cd.yml
+git add .gitignore .dockerignore .github/workflows/ci-cd.yml
 ```
 
 - [x] Снова проверь статус:
@@ -320,7 +321,7 @@ git status
 - [x] Зафиксируй изменения в репозитории:
 
 ```bash
-git commit -m "Run CI/CD workflow on GitHub"
+git commit -m "Run CI/CD workflows on GitHub"
 ```
 
 - [x] Снова проверь статус:
