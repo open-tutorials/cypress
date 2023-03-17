@@ -279,11 +279,6 @@ npm run dev
 
 - [x] Останови проект в терминале `CTRL`+`C`
 - [x] Скачай и установи Docker с https://www.docker.com/
-
-<img class="cornered" title="Fork проекта Conduit" 
-    width="670" height="471"
-    src="assets/build_conduit/install_docker.gif">
-
 - [x] Если потребуется, перезагрузи систему. 
 - [x] Запусти  Docker Desktop.
 
@@ -631,7 +626,7 @@ describe('Sign up', () => {
 
 * [Что такое контейнер](https://www.docker.com/resources/what-container/)
 * [Docker для начинающих](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
-* [Полный гайд по NPM для новичков](https://www.youtube.com/watch?v=n9uCgUzfeRQ)
+* [Полный гайд по NPM для новичков](https://www.youtube.com/watch?v=FDfvuNbSs4U)
 
 # 😭 Домашка
 
