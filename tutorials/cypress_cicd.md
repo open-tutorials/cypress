@@ -287,6 +287,7 @@ jobs:
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: artifacts
           path: |
