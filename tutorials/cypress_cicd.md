@@ -59,6 +59,14 @@ test: {
 + "start": "node index.js",
 ```
 
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/cypress_cicd/test_environment.webm" type="video/webm">
+</video>
+</details>
+
 * ❓ За что отвечают эти настройки?
 * ❓ Кто использует этот файл и зачем?
 * ❓ За что отвечают другие разделы **development** и **production**?
@@ -160,6 +168,14 @@ docker compose up
 - [x] Посмотри видео прогона теста `~/cypress/videos`
 - [x] Открой в Chrome http://localhost:8080/
 
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/cypress_cicd/docker_compouse.webm" type="video/webm">
+</video>
+</details>
+
 * ❓ Что такое Deploy?
 * ❓ Зачем нужен файл `.dockerignore`?
 * ❓ Где сейчас запущен Back-End?
@@ -251,6 +267,14 @@ docker compose up --build
 
 <iframe src="https://giphy.com/embed/Y9pvW54NNPRacOKg2D" 
     width="480" height="318" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/cypress_cicd/rpc_server.webm" type="video/webm">
+</video>
+</details>
 
 * ❓ Что такое RPC?
 * ❓ Где теперь выполняются команды сброса и заполнения БД?
@@ -347,6 +371,14 @@ git push
 }
 ```
 
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/cypress_cicd/start_test_on_github.webm" type="video/webm">
+</video>
+</details>
+
 * ❓ Что такое workflow?
 * ❓ Зачем нужен файл `.gitignore`?
 * ❓ Зачем мы обновляли этот файл?
@@ -369,6 +401,14 @@ git push
   "height": 586
 }
 ```
+
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/cypress_cicd/pipeline_status.webm" type="video/webm">
+</video>
+</details>
 
 * ❓ Что такое Pipeline?
 * ❓ Кто запустил эту пайплайну и когда?
@@ -407,6 +447,14 @@ git push
 
 - [x] Посмотри видео прогона теста из артефактов.
 - [x] Исправь тест обратно.
+
+<details>
+  <summary>Не получается 📹</summary>
+
+<video width="600px" controls>
+  <source src="assets/cypress_cicd/broken_test.webm" type="video/webm">
+</video>
+</details>
 
 * ❓ Что такое артефакты?
 
