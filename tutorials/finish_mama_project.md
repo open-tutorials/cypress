@@ -97,7 +97,7 @@ This file contains test cases for [Conduit](https://demo.realworld.io/) project.
 
 Мы **уже разработали** часть тестов в прошлых туториалах. Как **доставить** этот код в текущий проект?
 
-Все файлы лежат на [GitHub](https://raw.githubusercontent.com/open-tutorials/cypress/tree/main/test_cases/) и можно скачать их
+Все файлы лежат на [GitHub](https://www.github.com/open-tutorials/cypress/tree/main/test_cases/) и можно скачать их
 ручками, но ты же девелопер 🧑‍💻
 
 <mark>Задача — загрузить
