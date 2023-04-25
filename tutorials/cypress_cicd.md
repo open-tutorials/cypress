@@ -343,7 +343,7 @@ git add .gitignore .dockerignore .github/workflows/ci-cd.yml
 git status
 ```
 
-- [x] Зафиксируй изменения в репозитории:
+- [x] Зафиксируй изменения в локальном репозитории:
 
 ```bash
 git commit -m "Run CI/CD workflows on GitHub"
@@ -353,6 +353,12 @@ git commit -m "Run CI/CD workflows on GitHub"
 
 ```bash
 git status
+```
+
+- [x] Посмотри сводку по текущему состоянию локального репозитория:
+
+```bash
+git show --summary
 ```
 
 - [x] Отправь изменения на удаленный репозиторий на GitHub:
@@ -390,7 +396,7 @@ git push
 
 ## +5. Проверка статуса пайплайны
 
-- [x] Зайди на GitHub в раздел **Actions.**
+- [x] Зайди GitHub &rarr; Репозиторий &rarr; **Actions.**
 - [x] Открой текущую запущенную пайплайну.
 - [x] Проверь лог выполнения.
 
@@ -420,7 +426,7 @@ git push
 
 ## +6. Поломка теста
 
-- [x] Сломай намеренно тест `~/cypress/e2e/signup.cy.js`
+- [x] Сломай **намеренно** тест `~/cypress/e2e/signup.cy.js`
 
 ```diff
 - cy.get('.auth-page').as('registerPage');
@@ -435,6 +441,7 @@ git add *
 git status
 git commit -m "Break signup test for testing CI/CD"
 git push
+git show --summary
 ```
 
 - [x] Снова найди пайплайну на GitHub.
