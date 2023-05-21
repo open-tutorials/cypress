@@ -204,6 +204,19 @@
         "site": "Туториалы по Cypress"
       }
     },
+    "deploy_conduit": {
+      "title": "Деплоим проект на своем сервере",
+      "tags": "https://api.github.com/repos/open-tutorials/cypress/tags",
+      "source": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}/tutorials/deploy_conduit.md",
+      "baseUrl": "https://github.com/open-tutorials/cypress/blob/main",
+      "assetsUrl": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}",
+      "meta": {
+        "description": "Подойдет тем, кто хочет научится публиковать проекты используя Docker на своем сервере. Соберем и запустим локально проект платформы для ведения блогов на Docker Swarm. Научимся публиковать образ проекта на Docker Hub с нужным тегом. Настроим свой сервер на хостинг провайдере через SSH. Развернем проект на внешнем IP адресе в Интернет.",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/open-tutorials/cypress@{TAG}/assets/deploy_conduit/thumbnail.jpg",
+        "keywords": "Docker, GitHub, CI/CD, Cypress",
+        "site": "Туториалы по Cypress"
+      }
+    },
     "install_node_js": {
       "title": "Установка Node.js",
       "tags": "https://api.github.com/repos/open-tutorials/cypress/tags",
