@@ -16,6 +16,17 @@
 * Настроим свой сервер у хостинг провайдера через SSH.
 * Развернем проект на внешнем IP адресе в Интернет.
 
+# 😍 Живая обратная связь
+
+<import from="/partials/zoom_standups.md"></import>
+
+# 💪 Минутка мотивации
+
+Свой сервер звучит круто! Скоро у тебя будет своя прелесть 🤣
+
+<iframe src="https://giphy.com/embed/JQxvzmyA3bo3e" 
+    width="480" height="347" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
 ***
 
 # 🔢 Шаги
@@ -180,7 +191,6 @@ RUN npm ci --only=production
 RUN npm -w frontend run build
 EXPOSE 80
 CMD npm run start -w backend
-
 ```
 
 * ❓ На каком порту будет запущен бекенд <md-placeholder value="80"></md-placeholder> ?
@@ -376,7 +386,7 @@ docker service logs app_blogs_conduit
 docker ps --format '{{.Names}}'
 ```
 
-```
+```text
 app_postgres.1.xyz
 ```
 
@@ -669,7 +679,7 @@ docker service update app_blogs_conduit --force
 npx -w backend sequelize-cli db:seed:all
 ```
 
-- [x] Открой http://{external_ip}/
+- [x] Открой `http://{external_ip}/`
 
 # 😭 Домашка
 
