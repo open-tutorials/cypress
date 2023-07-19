@@ -90,7 +90,7 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 
 #### Before
 1. Open https://demo.realworld.io/
-2. Repeat 2-9 from [login user](login_user.md)
+2. Repeat 2-9 from [login user](/test_cases/login_user.md)
 3. Url should be `/#/` — home page
 
 #### Open editor
@@ -270,11 +270,11 @@ for (let i = 0; i <= 5; i++) {
 
 #### Before
 1. Open https://demo.realworld.io/
-2. Repeat 2-9 from [login user](login_user.md)
+2. Repeat 2-9 from [login user](/test_cases/login_user.md)
 3. Url should be `/#/` — main page
 
 #### Add article
-4. Repeat 4-11 from [publish article](publish_article.md)
+4. Repeat 4-11 from [publish article](/test_cases/articles/crud/publish_article.md)
 
 #### Open me profile
 5. Click `{user_name}` link in app header
